@@ -44,11 +44,12 @@ for feature in line_layer.getFeatures():
         line_layer.deleteFeatures([feature.id()])
     else:
         vertices = geom.asPolyline()
-        angle = vertices[1].azimuth(vertices[0])
-        if angle > 0: #turn segment around such that all edges are oriented to the right
+        angle = vertices[0].azimuth(vertices[1])
+        if angle < 0: #turn segment around such that all edges are oriented to the right
             vertices.reverse()
             geom = QgsGeometry.fromPolylineXY(vertices)
             line_layer.changeGeometry(feature.id(), geom)
+            angle = vertices[0].azimuth(vertices[1])
         line_layer.changeAttributeValue(feature.id(), attr_id, angle)
         
         ### interpolate equal distances if segment is larger than threshold

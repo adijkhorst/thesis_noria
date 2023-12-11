@@ -7,16 +7,19 @@ Created on Fri Nov 17 16:41:00 2023
 import networkx as nx
 import numpy as np
 
+import network_creation
+
 # import the networkx graph from network_creation.py!
-G = nx.Graph()
+G = network_creation.create_network()
 
-b = np.random.random(len(G))
-b = b/np.sum(b)
+# b = np.random.random(len(G))
+# b = b/np.sum(b)
+b = [G.nodes[node]['init_probability'] for node in G.nodes()]
 
-A = nx.adjacency_matrix(G, weight = None).toarray()
-C = np.random.random(np.shape(A))*A
-row_sums = C.sum(axis=1)
-C = C / row_sums[:, np.newaxis]
+A = nx.adjacency_matrix(G, weight = 'transition_probability').toarray()
+# C = np.random.random(np.shape(A))*A
+# row_sums = C.sum(axis=1)
+# C = C / row_sums[:, np.newaxis]
 
 def simulate_markov_chain(initial_distribution, transition_matrix, num_steps, num_paths):
     if len(initial_distribution) != transition_matrix.shape[0]:
@@ -33,4 +36,4 @@ def simulate_markov_chain(initial_distribution, transition_matrix, num_steps, nu
 
     return paths
 
-simulation = simulate_markov_chain(b, C, 10, 5)
+simulation = simulate_markov_chain(b, A, 10, 5)

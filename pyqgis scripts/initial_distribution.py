@@ -2,7 +2,7 @@ import numpy as np
 
 RADIUS_SOURCES_IMPACT = 100
 
-nodes_layer_path = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/delft_allnodes.geojson"
+nodes_layer_path = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/double_nodes_delft.geojson"
 sources_layer_path = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/producers_no_market_reprojected.geojson"
 
 # Add the sources layer as a variable (will not be edited)
@@ -14,11 +14,15 @@ new_layer = iface.addVectorLayer(nodes_layer_path, "NewLayer", "ogr")
 # Check if the layer is valid
 if not new_layer.isValid() or not sources_layer.isValid():
     print("Layer failed to load!")
-
 new_layer.startEditing()
-layer_provider = new_layer.dataProvider()
-layer_provider.addAttributes([QgsField('init_probability', QVariant.Double)])
-new_layer.commitChanges()
+
+### if there is no field called transition probabilities, then add it
+if not new_layer.attributeDisplayName(line_layer.attributeList()[-1]) == 'init_probability':    
+    layer_provider = new_layer.dataProvider()
+    layer_provider.addAttributes([QgsField('init_probability', QVariant.Double)])
+    new_layer.commitChanges()
+    print("Added attribute field for initial probability")
+
 attr_id = new_layer.attributeList()[-1]
 
 ### Create numpy array with columns: x_coordinate, y_coordinate, probability

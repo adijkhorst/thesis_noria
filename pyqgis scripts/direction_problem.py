@@ -27,6 +27,8 @@ line_layer.startEditing()
     
 # line_layer.commitChanges()
 line_layer.startEditing()
+print(line_layer.attributeList())
+angle_id = line_layer.attributeList()[-1]
 
 for feature in line_layer.getFeatures():
     existing_vertices = [vertex for vertex in feature.geometry().vertices()]
@@ -44,6 +46,8 @@ for feature in line_layer.getFeatures():
         new_feature = QgsFeature()
         new_feature.setGeometry(QgsGeometry.fromPolyline(new_vertices))
         new_feature.setAttributes(feature.attributes())
+        old_angle = new_feature[angle_id]
+        new_feature.setAttribute(angle_id, old_angle-180)
         
         # print("Old: ", [vertex for vertex in feature.geometry().vertices()])
         # print("New: ", [vertex for vertex in new_feature.geometry().vertices()])
@@ -53,17 +57,20 @@ for feature in line_layer.getFeatures():
         # layer_provider.addFeature(new_feature, QgsFeatureSink.FastInsert)
         line_layer.addFeature(new_feature, QgsFeatureSink.FastInsert)
         
+        
         ### part 2: add cross edges
         new_vertices.reverse() # reverse back so indices for extra edges are correct
-        for i in range(len(new_vertices)-3): #-3 because we don't need cross edges for the first and last node 
+        for i in range(len(new_vertices)-2): #-3 because we don't need cross edges for the first and last node 
             cross_vertices1 = [new_vertices[i+1], existing_vertices[i+2]]
-            cross_vertices2 = [existing_vertices[i+2], new_vertices[i+1]]
+            cross_vertices2 = [existing_vertices[i+1], new_vertices[i]]
             cross_edge1 = QgsFeature()
             cross_edge2 = QgsFeature()
             cross_edge1.setGeometry(QgsGeometry.fromPolyline(cross_vertices1))
             cross_edge2.setGeometry(QgsGeometry.fromPolyline(cross_vertices2))
             cross_edge1.setAttributes(feature.attributes())
             cross_edge2.setAttributes(feature.attributes())
+            old_angle = cross_edge2[angle_id]
+            cross_edge2.setAttribute(angle_id, old_angle-180)
             line_layer.addFeature(cross_edge1, QgsFeatureSink.FastInsert)
             line_layer.addFeature(cross_edge2, QgsFeatureSink.FastInsert)
     elif len(existing_vertices) == 2:
@@ -73,8 +80,10 @@ for feature in line_layer.getFeatures():
         new_feature = QgsFeature()
         new_feature.setGeometry(QgsGeometry.fromPolyline(new_vertices))
         new_feature.setAttributes(feature.attributes())
-        print("Old: ", [vertex for vertex in feature.geometry().vertices()])
-        print("New: ", [vertex for vertex in new_feature.geometry().vertices()])
+        old_angle = new_feature[angle_id]
+        new_feature.setAttribute(angle_id, old_angle-180)
+        # print("Old: ", [vertex for vertex in feature.geometry().vertices()])
+        # print("New: ", [vertex for vertex in new_feature.geometry().vertices()])
         line_layer.addFeature(new_feature, QgsFeatureSink.FastInsert)
 
 

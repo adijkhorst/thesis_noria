@@ -7,34 +7,37 @@ Created on Fri Nov 17 15:09:03 2023
 
 import wind_data
 import numpy as np
+import networkx as nx
 
-def get_transition_probabilities(edge_angle_deg):
-    ### make code robust for errors with radians and degrees?
+def get_transition_probabilities(G):
+    ### Calculate transition probabilities and put as attribute on edges
+    attrs = {}
     wind_directions = wind_data.get_wind_directions()
+    for node in G.nodes():
+        neighbors = [neighbor for neighbor in G.neighbors(node)]
+        num_neighbors = len(neighbors)
+        transition_probabilities = np.zeros(num_neighbors)
+        edge_angles = [G[node][neighbor]["weight"] for neighbor in neighbors]
     
-    forward = 0
-    backward = 0
+        threshold = 0.1 #still decide threshold!
     
-    threshold = np.cos(80/360*2*np.pi)
+        for direction in wind_directions:
+            # print(direction)
+            innerproducts = np.cos((edge_angles-direction)/180*np.pi)
+            # print(innerproducts)
+            index, value = np.argmax(innerproducts), np.max(innerproducts)
+            innerproducts[index] -= value
+            second_index, second_value = np.argmax(innerproducts), np.max(innerproducts)
+            transition_probabilities[index] += 1
+            if value-second_value < threshold:
+                transition_probabilities[second_index] += 1
     
-    for direction in wind_directions:
-        # print(direction)
-        if direction != 0: #check for windless days
-            innerproduct = np.cos((edge_angle_deg-direction)/180*np.pi)
-            # print(innerproduct)
-            if innerproduct > threshold:
-                forward += 1
-                # print('forward + 1')
-            elif innerproduct < -threshold:
-                backward += 1
-                # print('backward + 1')
+        # print(forward, backward)
+        transition_probabilities /= np.sum(transition_probabilities)
+        # print(transition_probabilities)
+        # break
+        # print(transition_probabilities/total)
+        for index, neighbor in enumerate(neighbors):
+            attrs[(node, neighbor)] = {"transition_probability": transition_probabilities[index]}
     
-    # print(forward, backward)
-    total = forward+backward
-    forward_probability = forward/total
-    backward_probability = backward/total
-    return forward_probability, backward_probability
-
-if __name__ == '__main__':
-    for i in range(18):
-        print(get_transition_probabilities(i*10))
+    nx.set_edge_attributes(G, attrs)
