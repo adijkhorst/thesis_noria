@@ -2,14 +2,21 @@ import numpy as np
 
 RADIUS_SOURCES_IMPACT = 100
 
-nodes_layer_path = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/double_nodes_delft.geojson"
 sources_layer_path = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/producers_no_market_reprojected.geojson"
+
+### first create point layer with nodes that will get init_distribution attribute
+line_layer_path = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/waterway_canal_delft_directed_exploded.geojson"
+nodes_layer_path = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/initial_probabilities.geojson"
+nodes_layer = processing.run("native:extractvertices", {'INPUT': line_layer_path,
+               'OUTPUT': 'TEMPORARY_OUTPUT'})["OUTPUT"]
+nodes_layer = processing.run("native:deleteduplicategeometries", {'INPUT': nodes_layer,
+                'OUTPUT': nodes_layer_path})
 
 # Add the sources layer as a variable (will not be edited)
 sources_layer = QgsVectorLayer(sources_layer_path, '', "ogr")
 
 # Create a new layer for modifications (load the new layer again from the new GeoJSON file)
-new_layer = iface.addVectorLayer(nodes_layer_path, "NewLayer", "ogr")
+new_layer = iface.addVectorLayer(nodes_layer_path, "initial_probabilities", "ogr")
 
 # Check if the layer is valid
 if not new_layer.isValid() or not sources_layer.isValid():
@@ -17,7 +24,7 @@ if not new_layer.isValid() or not sources_layer.isValid():
 new_layer.startEditing()
 
 ### if there is no field called transition probabilities, then add it
-if not new_layer.attributeDisplayName(line_layer.attributeList()[-1]) == 'init_probability':    
+if not new_layer.attributeDisplayName(new_layer.attributeList()[-1]) == 'init_probability':    
     layer_provider = new_layer.dataProvider()
     layer_provider.addAttributes([QgsField('init_probability', QVariant.Double)])
     new_layer.commitChanges()

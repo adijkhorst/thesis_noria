@@ -14,13 +14,12 @@ import geopandas as gpd
 # import wind_data
 import transition_probabilities_wind
 
-def create_network():
+def create_network(plot = 0):
     # Read shapefile
     gdf = gpd.read_file('C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/waterway_canal_delft_directed_doublenodes.geojson')
 
     # Create a new NetworkX graph
     G = nx.DiGraph()
-    plot = 1
 
     # Iterate through the GeoDataFrame
     for idx, row in gdf.iterrows():
@@ -66,4 +65,4 @@ def create_network():
     return G
 
 if __name__ == '__main__':
-    create_network()
+    G = create_network(plot = 1)

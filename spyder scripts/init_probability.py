@@ -9,7 +9,7 @@ import geopandas as gpd
 
 def get_initial_probabilities(G):
     # Read shapefile
-    gdf = gpd.read_file('C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/double_nodes_delft.geojson')
+    gdf = gpd.read_file('C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/initial_probabilities.geojson')
 
     plot = 0
 
@@ -29,4 +29,4 @@ def get_initial_probabilities(G):
 
     nx.set_node_attributes(G, attrs, 'init_probability')
 
-    return G
+    # return G
