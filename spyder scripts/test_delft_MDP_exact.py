@@ -1,61 +1,61 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Jan  8 15:43:15 2024
+Created on Tue Jan 30 10:50:31 2024
 
 @author: Anne-Fleur
 """
 
 from pulp import *
 import numpy as np
+import networkx as nx
 
-prob = LpProblem("MDP-FCLM", LpMaximize)
+
+import network_creation
+import transition_probabilities_wind
+import init_probability
+
+### TEST DELFT
+
+# import the networkx graph from network_creation.py, get transition probabilities and initial probabilities
+G = network_creation.create_network()
+transition_probabilities_wind.get_transition_probabilities(G)
+init_probability.get_initial_probabilities(G)
+init_probability.get_stuck_probabilities(G)
+
+b = np.array([G.nodes[node]['init_probability'] for node in G.nodes()])
+
+stuck = [G.nodes[node]['stuck_probability'] for node in G.nodes()]
+stuck_matrix = np.repeat([stuck], len(stuck), axis = 0).T
+
+A = nx.adjacency_matrix(G, nodelist = G.nodes(), weight = 'transition_probability').toarray()
+C = (1-stuck_matrix) * A
+
+attrs = {}
+for index, node in enumerate(G.nodes()):
+    attrs[node] = {'label': index+1, 'position' : node}
+nx.set_node_attributes(G, attrs)
 
 ### instance parameters
-n = 6
+n = len(G.nodes())
 K = 2
-# k = 1
 
+no_system = init_probability.no_catching_system()
 ### later proberen met sets K_i
 K_i = {}
-for i in range(1,7):
-    K_i[i] = {1,2} #try with two types of catching systems later
-    if i == 5:
-        K_i[i] = {}
+for node in G.nodes():
+    if node in no_system:
+        K_i[G.nodes[node]['label']] = {}
+    else:
+        K_i[G.nodes[node]['label']] = {1, 2}
 
-beta_1 = 0.8
-alpha = 0.1
-c_1 = 1
-B = 1.5
-
+np.random.seed(0)
 betas = np.random.uniform(0.1, 0.8, (n, K))
-# betas = 0.8 * np.ones((n,K))
-
-### TEST CASES
-
-#case 1: 6 nodes deterministic
-Q = np.zeros((7,7));
-indices = [[0, 0], [1, 0], [2, 1], [3, 4], [4, 5], [5, 2], [6, 5]]
-for i in indices:
-    Q[i[0], i[1]] = 1
-#uncomment next lines for case 6 nodes probabilistic
-# Q[2, 1] = 0.5
-# Q[2, 3] = 0.5
-# K_i[2] = {}
-# K_i[3] = {}
-
-b = np.array([0, 0, 0.6, 0, 0, 0.4]) #should this include 0 and n+1?
-
-# #case 2: 2 nodes recurring flow
-# n = 2
-# Q = np.zeros((3,3))
-# Q[0, 0] = 1; Q[2, 1] = 1
-# Q[1, 0] = 0.75; Q[1, 2] = 0.25
-
-# b = np.array([0.4, 0.6])
+c_1 = 1
+B = 7.5
 
 #%%
 
-C = Q[1:, 1:]
+prob = LpProblem("MDP-FCLM", LpMaximize)
 
 M1 = b.T @ np.linalg.inv(np.eye(n)-C)
 M2 = np.zeros((n,K))
@@ -88,16 +88,9 @@ for i in range(n):
 
 prob += sum(sum(c_1 * xs[i][k-1] for k in K_i[i+1]) for i in range(n)) <= B
 
-### test if a solution is optimal
-# prob += xs[1][0] == 1
-# prob += xs[0][0] == 0
-# prob += xs[2][0] == 0
-# prob += xs[3][0] == 0
-# prob += xs[5][0] == 0
 
 #obj func
 flow_caught = sum(betas[i,k-1]*v2[i][k-1] for i in range(n) for k in K_i[i+1]) #- sum(alpha*v for v in v1)
-# flow_caught = sum(beta_1*v for v_i in v2 for v in v_i) #- sum(alpha*v for v in v1)
 prob += flow_caught
 
 ### solve
@@ -105,7 +98,9 @@ status = prob.solve(GUROBI_CMD(options = [('LogToConsole', 1)]))
 print(LpStatus[status])
 
 for i in prob.variables():
-    print(i, i.varValue)
+    if i.varValue == 1:
+        print(i, i.varValue)
+    # print(i, i.varValue)
 
 print(value(prob.objective))
 print('flow caught: ', value(sum(betas[i,k-1]*v2[i][k-1] for i in range(n) for k in K_i[i+1])))

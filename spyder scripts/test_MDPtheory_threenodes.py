@@ -11,8 +11,8 @@ b = np.array([[0.8],[0.2]])
 # b = np.random.random((2,1))
 # b /= np.sum(b)
 
-C_x = np.array([[0, 0.7], [0.5, 0]])
-C = np.array([[0,0.7],[1, 0]])
+C_x = np.array([[0, 0.75], [0.5, 0]])
+C = np.array([[0,0.75],[1, 0]])
 c_n1 = np.array([[0],[0.5]])
 
 

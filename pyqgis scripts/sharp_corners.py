@@ -8,7 +8,7 @@ polygon_layer = QgsVectorLayer(polygon_layer_path, '', "ogr")
 corners_layer = QgsVectorLayer("Point?crs=EPSG:28992", "sharp_corners", "memory")
 layer_provider = corners_layer.dataProvider()
 corners_layer.startEditing()
-layer_provider.addAttributes([QgsField("bisector_angle", QVariant.Double), QgsField("azimuth_previous", QVariant.Double), QgsField("angle", QVariant.Double), QgsField("sharp", QVariant.Int)])
+layer_provider.addAttributes([QgsField("bisector_angle", QVariant.Double), QgsField("azimuth_previous", QVariant.Double), QgsField("angle", QVariant.Double), QgsField("sharp", QVariant.Int), QgsField("wind_range_min", QVariant.Double), QgsField("wind_range_max", QVariant.Double)])
 corners_layer.commitChanges()
 
 QgsProject.instance().addMapLayer(corners_layer)
@@ -22,7 +22,7 @@ for feature in polygon_layer.getFeatures():
             new_feature = QgsFeature()
             new_feature.setGeometry(QgsGeometry.fromPointXY(vertex))
             # new_feature.setAttributes([0, 0, 0])
-            bisector = feature.geometry().angleAtVertex(index)/np.pi*180 + 90
+            bisector = (feature.geometry().angleAtVertex(index)/np.pi*180 + 90) % 360
             azimuth_previous = (polygon[index-1].azimuth(vertex) - 180) % 360
             if bisector > azimuth_previous:
                 if bisector - azimuth_previous > 180:
@@ -32,8 +32,12 @@ for feature in polygon_layer.getFeatures():
             else:
                 angle = 2* (azimuth_previous - bisector)
             sharp = 0
+            wind_range_min = 0
+            wind_range_max = 0
             if angle < 110:
                 sharp = 1
+                wind_range_min = (bisector + 180 - angle/2) % 360
+                wind_range_max = (bisector + 180 + angle/2) % 360
             
             #filter out points that are on the edge of two polygons
             point_buffer = new_feature.geometry().buffer(1, -1)
@@ -41,7 +45,7 @@ for feature in polygon_layer.getFeatures():
             if len(close_polygons) > 1:
                 sharp = 0
             
-            new_feature.setAttributes([bisector, azimuth_previous, angle, sharp])#[:len(test_layer.attributeList())])
+            new_feature.setAttributes([bisector, azimuth_previous, angle, sharp, wind_range_min, wind_range_max])#[:len(test_layer.attributeList())])
             corners_layer.addFeature(new_feature, QgsFeatureSink.FastInsert)
         # print(vertex)
         # print('angle: ', feature.geometry().angleAtVertex(index))
