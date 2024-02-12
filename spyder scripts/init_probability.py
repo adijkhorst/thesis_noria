@@ -64,3 +64,6 @@ def no_catching_system():
         no_system += [point.coords[0]]
 
     return no_system
+
+import os
+print(os.path.realpath(__file__))

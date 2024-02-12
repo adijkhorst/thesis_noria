@@ -15,6 +15,7 @@ import transition_probabilities_wind
 import init_probability
 
 ### TEST DELFT
+np.random.seed(0)
 
 # import the networkx graph from network_creation.py, get transition probabilities and initial probabilities
 G = network_creation.create_network()
@@ -24,7 +25,11 @@ init_probability.get_stuck_probabilities(G)
 
 b = np.array([G.nodes[node]['init_probability'] for node in G.nodes()])
 
+n = len(G.nodes())
+K = 2
+
 stuck = [G.nodes[node]['stuck_probability'] for node in G.nodes()]
+# stuck = np.random.uniform(0.0, 0.6, n)
 stuck_matrix = np.repeat([stuck], len(stuck), axis = 0).T
 
 A = nx.adjacency_matrix(G, nodelist = G.nodes(), weight = 'transition_probability').toarray()
@@ -36,8 +41,6 @@ for index, node in enumerate(G.nodes()):
 nx.set_node_attributes(G, attrs)
 
 ### instance parameters
-n = len(G.nodes())
-K = 2
 
 no_system = init_probability.no_catching_system()
 ### later proberen met sets K_i
@@ -48,10 +51,10 @@ for node in G.nodes():
     else:
         K_i[G.nodes[node]['label']] = {1, 2}
 
-np.random.seed(0)
+
 betas = np.random.uniform(0.1, 0.8, (n, K))
 c_1 = 1
-B = 7.5
+B = 3.5
 
 #%%
 
@@ -105,3 +108,7 @@ for i in prob.variables():
 print(value(prob.objective))
 print('flow caught: ', value(sum(betas[i,k-1]*v2[i][k-1] for i in range(n) for k in K_i[i+1])))
 # print(prob.variables)
+
+
+#%%
+

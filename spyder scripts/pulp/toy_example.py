@@ -27,6 +27,7 @@ alpha = 0.1
 c_1 = 1
 B = 1.5
 
+np.random.seed(0)
 betas = np.random.uniform(0.1, 0.8, (n, K))
 # betas = 0.8 * np.ones((n,K))
 
