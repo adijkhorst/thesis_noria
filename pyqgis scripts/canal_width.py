@@ -25,6 +25,10 @@ polygon_layer = QgsVectorLayer(polygon_layer_path, '', "ogr")
 test_layer = QgsVectorLayer("Linestring?crs=EPSG:28992","TestLayer","memory")
 # QgsProject.instance().addMapLayer(test_layer)
 
+# Add schie layer to check max boat width
+schie_layer_path = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/schie_nodes.geojson"
+schie_layer = QgsVectorLayer(schie_layer_path, '', "ogr")
+
 # Create node layer to edit canal width
 new_layer = QgsVectorLayer(new_layer_path, 'catching_probabilities', "ogr")
 QgsProject.instance().addMapLayer(new_layer)
@@ -41,20 +45,31 @@ else:
     print('Line layer is valid.')
     
 ### Add new field called canal width if field does not exist yet
-if not new_layer.attributeDisplayName(new_layer.attributeList()[-1]) == 'canal_width': 
+name_list = [field.name() for field in new_layer.fields()]
+if not 'canal_width' in name_list: 
     new_layer.startEditing()
     layer_provider = new_layer.dataProvider()
     layer_provider.addAttributes([QgsField("canal_width", QVariant.Double)])
     new_layer.commitChanges()
     print("Added attribute field for canal width.")
-    
+if not 'catching_probability' in name_list: 
+    new_layer.startEditing()
+    layer_provider = new_layer.dataProvider()
+    layer_provider.addAttributes([QgsField("catching_probability", QVariant.Double)])
+    new_layer.commitChanges()
+    print("Added attribute field for catching probability.")
+
 test_layer.startEditing()
 layer_provider = test_layer.dataProvider()
 layer_provider.addAttributes(new_layer.fields())
 test_layer.commitChanges()
 
-print(new_layer.attributeList())
-width_id = new_layer.attributeList()[-1]
+
+name_list = [field.name() for field in new_layer.fields()]
+width_id = name_list.index("canal_width")
+catching_prob_id = name_list.index("catching_probability")
+
+index = QgsSpatialIndex(schie_layer.getFeatures())
 
 new_layer.startEditing()
 test_layer.startEditing()
@@ -75,7 +90,16 @@ for feature in new_layer.getFeatures():
         length = test_feature.geometry().length()
         test_layer.deleteFeature(test_feature.id())
         new_layer.changeAttributeValue(feature.id(), width_id, length)
-
+        
+        if len(index.intersects(feature.geometry().boundingBox()))>0:
+            catching_prob = (length - 21)/length
+        else:
+            catching_prob = (length - 4)/length
+        
+        if catching_prob > 0:
+            new_layer.changeAttributeValue(feature.id(), catching_prob_id, catching_prob)
+        else:
+            new_layer.changeAttributeValue(feature.id(), catching_prob_id, 0) #set to zero when boats seem larger than canal width
 
 test_layer.updateExtents()
 test_layer.commitChanges()

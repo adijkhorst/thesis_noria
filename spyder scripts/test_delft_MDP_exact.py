@@ -22,6 +22,8 @@ G = network_creation.create_network()
 transition_probabilities_wind.get_transition_probabilities(G)
 init_probability.get_initial_probabilities(G)
 init_probability.get_stuck_probabilities(G)
+init_probability.get_catching_probabilities(G)
+init_probability.get_impact_factor(G)
 
 b = np.array([G.nodes[node]['init_probability'] for node in G.nodes()])
 
@@ -34,6 +36,10 @@ stuck_matrix = np.repeat([stuck], len(stuck), axis = 0).T
 
 A = nx.adjacency_matrix(G, nodelist = G.nodes(), weight = 'transition_probability').toarray()
 C = (1-stuck_matrix) * A
+
+catching = [G.nodes[node]['catching_probability'] for node in G.nodes()]
+catching = np.repeat([catching], 2, axis = 0).T
+impact = [G.nodes[node]['impact_factor'] for node in G.nodes()]
 
 attrs = {}
 for index, node in enumerate(G.nodes()):
@@ -53,8 +59,13 @@ for node in G.nodes():
 
 
 betas = np.random.uniform(0.1, 0.8, (n, K))
-c_1 = 1
-B = 3.5
+betas = catching
+
+c = [1, 0.99]
+B = 7.5
+
+alpha = np.random.uniform(0.0001, 0.01, n)
+alpha = impact
 
 #%%
 
@@ -89,11 +100,11 @@ for i in range(n):
 
     prob += sum(xs[i][k-1] for k in K_i[i+1]) <= 1
 
-prob += sum(sum(c_1 * xs[i][k-1] for k in K_i[i+1]) for i in range(n)) <= B
+prob += sum(sum(c[k-1] * xs[i][k-1] for k in K_i[i+1]) for i in range(n)) <= B
 
 
 #obj func
-flow_caught = sum(betas[i,k-1]*v2[i][k-1] for i in range(n) for k in K_i[i+1]) #- sum(alpha*v for v in v1)
+flow_caught = sum(betas[i,k-1]*v2[i][k-1] for i in range(n) for k in K_i[i+1]) - sum(alpha[i]*v for i,v in enumerate(v1)) - sum(alpha[i]*sum((1-betas[i, k-1])*v2[i][k-1] for k in K_i[i+1]) for i in range(n))
 prob += flow_caught
 
 ### solve
@@ -112,3 +123,12 @@ print('flow caught: ', value(sum(betas[i,k-1]*v2[i][k-1] for i in range(n) for k
 
 #%%
 
+###looking at max/min values of v1, v2
+values_v1 = [var.varValue for var in v1]
+values_v2 = [[var.varValue for var in v] for v in v2]
+
+import matplotlib.pyplot as plt
+plt.figure()
+plt.plot(values_v1, label = 'v_1')
+plt.plot(M1, label = 'M1')
+plt.legend()

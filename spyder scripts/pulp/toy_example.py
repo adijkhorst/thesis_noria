@@ -23,13 +23,14 @@ for i in range(1,7):
         K_i[i] = {}
 
 beta_1 = 0.8
-alpha = 0.1
-c_1 = 1
+alpha = n*[0.1]
+# alpha = 0.1
+c = [1, 1.5]
 B = 1.5
 
 np.random.seed(0)
-betas = np.random.uniform(0.1, 0.8, (n, K))
-# betas = 0.8 * np.ones((n,K))
+# betas = np.random.uniform(0.1, 0.8, (n, K))
+betas = 0.8 * np.ones((n,K))
 
 ### TEST CASES
 
@@ -87,7 +88,7 @@ for i in range(n):
 
     prob += sum(xs[i][k-1] for k in K_i[i+1]) <= 1
 
-prob += sum(sum(c_1 * xs[i][k-1] for k in K_i[i+1]) for i in range(n)) <= B
+prob += sum(sum(c[k-1] * xs[i][k-1] for k in K_i[i+1]) for i in range(n)) <= B
 
 ### test if a solution is optimal
 # prob += xs[1][0] == 1
@@ -97,7 +98,7 @@ prob += sum(sum(c_1 * xs[i][k-1] for k in K_i[i+1]) for i in range(n)) <= B
 # prob += xs[5][0] == 0
 
 #obj func
-flow_caught = sum(betas[i,k-1]*v2[i][k-1] for i in range(n) for k in K_i[i+1]) #- sum(alpha*v for v in v1)
+flow_caught = sum(betas[i,k-1]*v2[i][k-1] for i in range(n) for k in K_i[i+1]) - sum(alpha[i]*v for i,v in enumerate(v1))
 # flow_caught = sum(beta_1*v for v_i in v2 for v in v_i) #- sum(alpha*v for v in v1)
 prob += flow_caught
 

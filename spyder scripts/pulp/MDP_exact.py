@@ -37,25 +37,41 @@ def solve_MDP(n, K, K_i, betas, alpha, C, b, c, B):
     
         prob += sum(xs[i][k-1] for k in K_i[i+1]) <= 1
     
-    prob += sum(sum(c_1 * xs[i][k-1] for k in K_i[i+1]) for i in range(n)) <= B
+    prob += sum(sum(c[k-1] * xs[i][k-1] for k in K_i[i+1]) for i in range(n)) <= B
 
     ### create objective function
-    flow_caught = sum(betas[i,k-1]*v2[i][k-1] for i in range(n) for k in K_i[i+1]) #- sum(alpha*v for v in v1)
+    flow_caught = sum(betas[i,k-1]*v2[i][k-1] for i in range(n) for k in K_i[i+1]) - sum(alpha[i]*v for i, v in enumerate(v1))
     prob += flow_caught
 
     ### solve
     status = prob.solve(GUROBI_CMD(options = [('LogToConsole', 1)]))
     print('Solution is: ', LpStatus[status])
 
+    solution_nodes = []
     print('Catching systems located at:')
     for i in prob.variables():
         if i.varValue == 1.0:
             print(i, i.varValue)
+            solution_nodes += [(int(str(i)[1:-1]), str(i)[-1])]
     
     print(value(prob.objective))
     print('flow caught: ', value(sum(betas[i,k-1]*v2[i][k-1] for i in range(n) for k in K_i[i+1])))
 
-    return prob
+    ### give nodes that are in the solution an attribute
+    mapping = {key: index+1 for index, key in enumerate(G.nodes.keys())}
+    inv_map = {v: k for k, v in mapping.items()}
+
+    solution_attrs = {}
+    for sol in solution_nodes:
+        solution_attrs[inv_map[sol[0]]] = {'catching_system_type': int(sol[1])}
+    nx.set_node_attributes(G, solution_attrs)
+
+    flow_attrs = {}
+    for index, node in enumerate(G.nodes()):
+        flow_attrs[node] = {'plastic_flow': M1[index]}
+    nx.set_node_attributes(G, flow_attrs)
+
+    return prob, G
 
 if __name__ == '__main__':
     ### necessary inputs to run the exact MDP model:
@@ -115,9 +131,11 @@ if __name__ == '__main__':
             K_i[G.nodes[node]['label']] = {1, 2}
 
     betas = np.random.uniform(0.1, 0.8, (n, K))
-    c_1 = 1
-    B = 10.5
-    alpha = 0
+    c = [1, 1]
+    B = 8.5
+    # alpha = 0.001*np.ones(n)
+    alpha = np.zeros(n)
+    alpha = np.random.uniform(0.001, 0.01, n)
 
     #%%
 
@@ -127,7 +145,7 @@ if __name__ == '__main__':
     # K_i = {}
     # for i in range(1,7):
     #     K_i[i] = {1,2} #try with two types of catching systems later
-    #     if i == 5:
+    #     if i == 5:s
     #         K_i[i] = {}
 
     # np.random.seed(0)
@@ -147,4 +165,12 @@ if __name__ == '__main__':
     # b = np.array([0, 0, 0.6, 0, 0, 0.4]) #should this include 0 and n+1?
 
     #%%
-    prob = solve_MDP(n, K, K_i, betas, alpha, C, b, c_1, B)
+    import time
+    start = time.time()
+    prob, G = solve_MDP(n, K, K_i, betas, alpha, C, b, c, B)
+
+    end = time.time()
+    print('runtime for ', B, ' catching systems', end-start)
+
+    #%%
+    nx.write_gml(G, 'test.gml')

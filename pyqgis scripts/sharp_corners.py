@@ -1,5 +1,8 @@
 import numpy as np
 
+sys.path.insert(1, "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/thesis_noria/spyder scripts")
+import wind_data
+
 polygon_layer_path = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/waterpolygon_delft_reprojected_exploded.geojson"
 corners_layer_path = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/sharp_corners_delft.geojson"
 
@@ -8,10 +11,14 @@ polygon_layer = QgsVectorLayer(polygon_layer_path, '', "ogr")
 corners_layer = QgsVectorLayer("Point?crs=EPSG:28992", "sharp_corners", "memory")
 layer_provider = corners_layer.dataProvider()
 corners_layer.startEditing()
-layer_provider.addAttributes([QgsField("bisector_angle", QVariant.Double), QgsField("azimuth_previous", QVariant.Double), QgsField("angle", QVariant.Double), QgsField("sharp", QVariant.Int), QgsField("wind_range_min", QVariant.Double), QgsField("wind_range_max", QVariant.Double)])
+layer_provider.addAttributes([QgsField("bisector_angle", QVariant.Double), QgsField("azimuth_previous", QVariant.Double), \
+                            QgsField("angle", QVariant.Double), QgsField("sharp", QVariant.Int), QgsField("wind_range_min", \
+                            QVariant.Double), QgsField("wind_range_max", QVariant.Double), QgsField("wind_prob", QVariant.Double)])
 corners_layer.commitChanges()
 
 QgsProject.instance().addMapLayer(corners_layer)
+
+wind_directions = wind_data.get_wind_directions()
 
 corners_layer.startEditing()
 for feature in polygon_layer.getFeatures():
@@ -45,10 +52,26 @@ for feature in polygon_layer.getFeatures():
             if len(close_polygons) > 1:
                 sharp = 0
             
-            new_feature.setAttributes([bisector, azimuth_previous, angle, sharp, wind_range_min, wind_range_max])#[:len(test_layer.attributeList())])
+            if sharp == 1:
+                # add probability of getting caught in each corner as attribute
+                days = len(wind_directions)*[False]
+                if wind_range_min < wind_range_max:
+                    booleans = (wind_directions > wind_range_min) & (wind_directions < wind_range_max)
+                else:
+                    booleans = (wind_directions > wind_range_min) | (wind_directions < wind_range_max)
+                days = np.any([days, booleans], axis = 0)
+                wind_prob = len(wind_directions[days])/len(wind_directions)
+            else:
+                wind_prob = 0
+            
+            new_feature.setAttributes([bisector, azimuth_previous, angle, sharp, wind_range_min, wind_range_max, wind_prob])#[:len(test_layer.attributeList())])
             corners_layer.addFeature(new_feature, QgsFeatureSink.FastInsert)
         # print(vertex)
         # print('angle: ', feature.geometry().angleAtVertex(index))
+    
+
+
+        break #because the first polygon is the outline, the second polygon are inner cut outs of polygons which will give wrong angles
 
 
 corners_layer.updateExtents()

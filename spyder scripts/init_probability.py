@@ -52,6 +52,50 @@ def get_stuck_probabilities(G):
 
     # return G
 
+def get_catching_probabilities(G):
+    # Read shapefile
+    gdf = gpd.read_file('C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/catching_probabilities.geojson')
+
+    attrs = {}
+    # Iterate through the GeoDataFrame
+    for idx, row in gdf.iterrows():
+        point = row['geometry']
+        stuck_prob = row['catching_probability']
+    
+        # Extract the coordinates of the vertex
+        coordinates = point.coords[0]
+
+        # Add attribute to node
+        attrs[coordinates] = stuck_prob
+
+    ### CHECK IF ALL NODES NOW HAVE THE ATTRIBUTE, OTHERWISE SET SOME TO ZERO?
+
+    nx.set_node_attributes(G, attrs, 'catching_probability')
+
+    # return G
+
+def get_impact_factor(G):
+    # Read shapefile
+    gdf = gpd.read_file('C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/impact_factors_delft.geojson')
+
+    attrs = {}
+    # Iterate through the GeoDataFrame
+    for idx, row in gdf.iterrows():
+        point = row['geometry']
+        stuck_prob = row['impact_factor']
+    
+        # Extract the coordinates of the vertex
+        coordinates = point.coords[0]
+
+        # Add attribute to node
+        attrs[coordinates] = stuck_prob
+
+    ### CHECK IF ALL NODES NOW HAVE THE ATTRIBUTE, OTHERWISE SET SOME TO ZERO?
+
+    nx.set_node_attributes(G, attrs, 'impact_factor')
+
+    # return G
+
 def no_catching_system():
     gdf = gpd.read_file('C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/corner_vertices_delft.geojson')
 
@@ -64,6 +108,3 @@ def no_catching_system():
         no_system += [point.coords[0]]
 
     return no_system
-
-import os
-print(os.path.realpath(__file__))
