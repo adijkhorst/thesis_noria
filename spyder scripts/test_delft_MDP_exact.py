@@ -61,6 +61,7 @@ for node in G.nodes():
 betas = np.random.uniform(0.1, 0.8, (n, K))
 betas = catching
 
+w = 0.001 #0.1% should be caught per unit cost
 c = [1, 0.99]
 B = 7.5
 

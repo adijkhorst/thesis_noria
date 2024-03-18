@@ -32,35 +32,52 @@ if not new_layer.attributeDisplayName(new_layer.attributeList()[-1]) == 'init_pr
 
 attr_id = new_layer.attributeList()[-1]
 
-### Create numpy array with columns: x_coordinate, y_coordinate, probability
-n_features = new_layer.featureCount()
-n_sources = sources_layer.featureCount()
+### 1st version
 
-attribute_table = np.zeros((n_features, 3))
+# ### Create numpy array with columns: x_coordinate, y_coordinate, probability
+# n_features = new_layer.featureCount()
+# n_sources = sources_layer.featureCount()
 
-for index, feature in enumerate(new_layer.getFeatures()):
-    attribute_table[index, 0] = feature.geometry().asPoint().x()
-    attribute_table[index, 1] = feature.geometry().asPoint().y()
+# attribute_table = np.zeros((n_features, 3))
 
-sources_locations = np.zeros((n_sources, 2))
-for index, feature in enumerate(sources_layer.getFeatures()):
-    sources_locations[index, 0] = feature.geometry().asPoint().x()
-    sources_locations[index, 1] = feature.geometry().asPoint().y()
+# for index, feature in enumerate(new_layer.getFeatures()):
+#     attribute_table[index, 0] = feature.geometry().asPoint().x()
+#     attribute_table[index, 1] = feature.geometry().asPoint().y()
 
-for i in range(n_features):
-    dists = np.sqrt(np.sum(np.square(sources_locations - np.repeat([attribute_table[i][:2]], n_sources, axis = 0)), axis = 1))
-    attribute_table[i, 2] = len(np.where(dists < RADIUS_SOURCES_IMPACT)[0])
+# sources_locations = np.zeros((n_sources, 2))
+# for index, feature in enumerate(sources_layer.getFeatures()):
+#     sources_locations[index, 0] = feature.geometry().asPoint().x()
+#     sources_locations[index, 1] = feature.geometry().asPoint().y()
 
-total = np.sum(attribute_table[:,2])
+# for i in range(n_features):
+#     dists = np.sqrt(np.sum(np.square(sources_locations - np.repeat([attribute_table[i][:2]], n_sources, axis = 0)), axis = 1))
+#     attribute_table[i, 2] = len(np.where(dists < RADIUS_SOURCES_IMPACT)[0])
 
+# total = np.sum(attribute_table[:,2])
+
+# new_layer.startEditing()
+# for index, feature in enumerate(new_layer.getFeatures()):
+#     f_id = feature.id()
+#     prob = attribute_table[index, 2]/total
+#     attribute_table[index, 2] = prob
+#     new_layer.changeAttributeValue(f_id, attr_id, float(prob))
+
+# #print(attribute_table)
+
+### 2nd version, without distance matrix but with buffer intersections
+total = 0
 new_layer.startEditing()
-for index, feature in enumerate(new_layer.getFeatures()):
-    f_id = feature.id()
-    prob = attribute_table[index, 2]/total
-    attribute_table[index, 2] = prob
-    new_layer.changeAttributeValue(f_id, attr_id, float(prob))
+for feature in new_layer.getFeatures():
+    geom_buffer = feature.geometry().buffer(RADIUS_SOURCES_IMPACT, 10)
+    close_sources = [feat for feat in sources_layer.getFeatures() if feat.geometry().intersects(geom_buffer)]
+    num_sources = len(close_sources)
+    total += num_sources
+    new_layer.changeAttributeValue(feature.id(), attr_id, num_sources)
 
-# print(attribute_table)
+for feature in new_layer.getFeatures():
+    prob = feature['init_probability']/total
+    new_layer.changeAttributeValue(feature.id(), attr_id, float(prob))
+
 
 new_layer.commitChanges()
 new_layer.endEditCommand()

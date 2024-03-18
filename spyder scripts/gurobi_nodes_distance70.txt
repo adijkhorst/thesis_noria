@@ -1,0 +1,22 @@
+
+Gurobi 10.0.1 (win64, gurobi_cl) logging started Mon Mar 18 13:36:09 2024
+
+Set parameter LogFile to value "gurobi.log"
+Restricted license - for non-production use only - expires 2024-10-28
+
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (win64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read LP format model from file MDP-FCLM-pulp.lp
+Reading time = 0.01 seconds
+OBJ: 2035 rows, 1972 columns, 7912 nonzeros
+
+CPU model: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+
+Unable to retrieve attribute 'X'
+
+
+Error 10010: Model too large for size-limited license; visit https://www.gurobi.com/free-trial for a full license
+

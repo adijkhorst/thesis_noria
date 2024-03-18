@@ -7,88 +7,88 @@ graph [
     stuck_probability 0.45
     position 84020.56320183257
     position 447938.98627412197
-    plastic_flow 0.003833923436651809
+    plastic_flow 0.0038603644579169563
   ]
   node [
     id 1
     label "(84058.45695312791,447855.9521426848)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.45
     position 84058.45695312791
     position 447855.9521426848
-    plastic_flow 0.002223030573493661
+    plastic_flow 0.0022402068594494407
   ]
   node [
     id 2
     label "(84096.35070442325,447772.9180112476)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.45
     position 84096.35070442325
     position 447772.9180112476
-    plastic_flow 0.0031816624518436506
+    plastic_flow 0.003204803176135263
   ]
   node [
     id 3
     label "(84134.24445571861,447689.8838798104)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.45
     position 84134.24445571861
     position 447689.8838798104
-    plastic_flow 0.0036496774763621685
+    plastic_flow 0.0036712299574597883
   ]
   node [
     id 4
     label "(84172.13820701395,447606.8497483732)"
-    init_probability 0.003993610223642172
+    init_probability 0.004025764895330112
     stuck_probability 0.45
     position 84172.13820701395
     position 447606.8497483732
-    plastic_flow 0.006801905437930184
+    plastic_flow 0.006832064681674357
   ]
   node [
     id 5
     label "(84210.03195830931,447523.815616936)"
-    init_probability 0.00718849840255591
+    init_probability 0.00644122383252818
     stuck_probability 0.45
     position 84210.03195830931
     position 447523.815616936
-    plastic_flow 0.01217016065642325
+    plastic_flow 0.011385744492220885
   ]
   node [
     id 6
     label "(84247.92570960465,447440.7814854988)"
-    init_probability 0.010383386581469648
+    init_probability 0.010466988727858293
     stuck_probability 0.45
     position 84247.92570960465
     position 447440.7814854988
-    plastic_flow 0.02547649768739072
+    plastic_flow 0.02533939506301669
   ]
   node [
     id 7
     label "(84284.82077299475,447356.6480609562)"
-    init_probability 0.010383386581469648
+    init_probability 0.010466988727858293
     stuck_probability 0.45
     position 84284.82077299475
     position 447356.6480609562
-    plastic_flow 0.02770305837089372
+    plastic_flow 0.02757444812193584
   ]
   node [
     id 8
     label "(84317.01956255075,447286.89704053523)"
-    init_probability 0.005591054313099041
+    init_probability 0.005636070853462158
     stuck_probability 0.45
     position 84317.01956255075
     position 447286.89704053523
-    plastic_flow 0.010435537853855332
+    plastic_flow 0.010458064089144277
   ]
   node [
     id 9
     label "(84349.21835210675,447217.14602011425)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.45
     position 84349.21835210675
     position 447217.14602011425
-    plastic_flow 0.005638587475901114
+    plastic_flow 0.00544292975126032
   ]
   node [
     id 10
@@ -97,7 +97,7 @@ graph [
     stuck_probability 0.45
     position 84381.41714166275
     position 447147.3949996933
-    plastic_flow 0.0018442709647639856
+    plastic_flow 0.0017920830038550663
   ]
   node [
     id 11
@@ -106,43 +106,43 @@ graph [
     stuck_probability 0.45
     position 84413.61593121875
     position 447077.64397927234
-    plastic_flow 0.002844994204787532
+    plastic_flow 0.00284771622838657
   ]
   node [
     id 12
     label "(84467.55858602872,446996.4034504901)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.45
     position 84467.55858602872
     position 446996.4034504901
-    plastic_flow 0.0031409063893119635
+    plastic_flow 0.003160911742299766
   ]
   node [
     id 13
     label "(84521.50124083871,446915.1629217078)"
-    init_probability 0.004792332268370607
+    init_probability 0.004830917874396135
     stuck_probability 0.5042465753424658
     position 84521.50124083871
     position 446915.1629217078
-    plastic_flow 0.01932473203740279
+    plastic_flow 0.019478337182198224
   ]
   node [
     id 14
     label "(83819.05971254449,447843.7721551214)"
-    init_probability 0.004792332268370607
+    init_probability 0.004830917874396135
     stuck_probability 0.6959264798377325
     position 83819.05971254449
     position 447843.7721551214
-    plastic_flow 0.007322756565660916
+    plastic_flow 0.007100067560194434
   ]
   node [
     id 15
     label "(83865.6632193881,447768.0220374764)"
-    init_probability 0.003194888178913738
+    init_probability 0.0024154589371980675
     stuck_probability 0.45
     position 83865.6632193881
     position 447768.0220374764
-    plastic_flow 0.005421544545125609
+    plastic_flow 0.004574401473616312
   ]
   node [
     id 16
@@ -151,7 +151,7 @@ graph [
     stuck_probability 0.45
     position 83912.2667262317
     position 447692.2719198315
-    plastic_flow 0.0022653322280503717
+    plastic_flow 0.0020314292425241917
   ]
   node [
     id 17
@@ -160,233 +160,233 @@ graph [
     stuck_probability 0.45
     position 83958.87023307531
     position 447616.52180218656
-    plastic_flow 0.0008073674677341961
+    plastic_flow 0.0007424872038651208
   ]
   node [
     id 18
     label "(84005.47373991892,447540.7716845416)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.45
     position 84005.47373991892
     position 447540.7716845416
-    plastic_flow 0.0031502518465472197
+    plastic_flow 0.003155373426040635
   ]
   node [
     id 19
     label "(84052.0772467625,447465.02156689664)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.45
     position 84052.0772467625
     position 447465.02156689664
-    plastic_flow 0.003473152464836323
+    plastic_flow 0.0034952651761380057
   ]
   node [
     id 20
     label "(84098.68075360611,447389.27144925174)"
-    init_probability 0.003194888178913738
+    init_probability 0.00322061191626409
     stuck_probability 0.45
     position 84098.68075360611
     position 447389.27144925174
-    plastic_flow 0.005408049855261792
+    plastic_flow 0.0054495514871984365
   ]
   node [
     id 21
     label "(84145.28426044971,447313.5213316068)"
-    init_probability 0.005591054313099041
+    init_probability 0.005636070853462158
     stuck_probability 0.45
     position 84145.28426044971
     position 447313.5213316068
-    plastic_flow 0.013558866392685155
+    plastic_flow 0.013647889832859481
   ]
   node [
     id 22
     label "(83839.37932028153,447037.0137525853)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.2226353555120678
     position 83839.37932028153
     position 447037.0137525853
-    plastic_flow 0.0071643328343179045
+    plastic_flow 0.007220961921179041
   ]
   node [
     id 23
     label "(83912.07021249438,447087.8195880473)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.0
     position 83912.07021249438
     position 447087.8195880473
-    plastic_flow 0.0063680210914711915
+    plastic_flow 0.006418473475784261
   ]
   node [
     id 24
     label "(83984.76110470721,447138.6254235093)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.0
     position 83984.76110470721
     position 447138.6254235093
-    plastic_flow 0.008546992932443908
+    plastic_flow 0.008614095328035105
   ]
   node [
     id 25
     label "(84057.45199692005,447189.4312589713)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.0
     position 84057.45199692005
     position 447189.4312589713
-    plastic_flow 0.009491975528657166
+    plastic_flow 0.009565233655978146
   ]
   node [
     id 26
     label "(84130.1428891329,447240.2370944333)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.5223287671232877
     position 84130.1428891329
     position 447240.2370944333
-    plastic_flow 0.014244475420223422
+    plastic_flow 0.014318919268206855
   ]
   node [
     id 27
     label "(84190.1326963859,447248.45518229686)"
-    init_probability 0.005591054313099041
+    init_probability 0.005636070853462158
     stuck_probability 0.45
     position 84190.1326963859
     position 447248.45518229686
-    plastic_flow 0.02219494484776642
+    plastic_flow 0.022081332511913316
   ]
   node [
     id 28
     label "(84233.02985072856,447164.203612616)"
-    init_probability 0.006389776357827476
+    init_probability 0.00644122383252818
     stuck_probability 0.45
     position 84233.02985072856
     position 447164.203612616
-    plastic_flow 0.010890417951957896
+    plastic_flow 0.010918827369666158
   ]
   node [
     id 29
     label "(84275.92700507122,447079.9520429351)"
-    init_probability 0.023961661341853034
+    init_probability 0.024154589371980676
     stuck_probability 0.45
     position 84275.92700507122
     position 447079.9520429351
     catching_system_type 2
-    plastic_flow 0.03442507021061633
+    plastic_flow 0.03445834228264299
   ]
   node [
     id 30
     label "(84318.82415941388,446995.7004732543)"
-    init_probability 0.022364217252396165
+    init_probability 0.02254428341384863
     stuck_probability 0.45
     position 84318.82415941388
     position 446995.7004732543
-    plastic_flow 0.042940838611860786
+    plastic_flow 0.04321776154769453
   ]
   node [
     id 31
     label "(84361.72131375656,446911.44890357344)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.45
     position 84361.72131375656
     position 446911.44890357344
-    plastic_flow 0.01954428793573241
+    plastic_flow 0.019682238273551627
   ]
   node [
     id 32
     label "(84404.61846809922,446827.1973338926)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.45
     position 84404.61846809922
     position 446827.1973338926
-    plastic_flow 0.014468272890121262
+    plastic_flow 0.014578695567604008
   ]
   node [
     id 33
     label "(84469.40329551992,446784.3867338047)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.19619065490711196
     position 84469.40329551992
     position 446784.3867338047
-    plastic_flow 0.02453661569187454
+    plastic_flow 0.02473189403511057
   ]
   node [
     id 34
     label "(84480.14028203877,447125.54021724465)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.45
     position 84480.14028203877
     position 447125.54021724465
-    plastic_flow 0.005803320950676115
+    plastic_flow 0.005834560758991893
   ]
   node [
     id 35
     label "(84493.92726830542,447055.4144520657)"
-    init_probability 0.003194888178913738
+    init_probability 0.00322061191626409
     stuck_probability 0.45
     position 84493.92726830542
     position 447055.4144520657
-    plastic_flow 0.00457853711493701
+    plastic_flow 0.004611709161265114
   ]
   node [
     id 36
     label "(84507.71425457207,446985.2886868867)"
-    init_probability 0.003194888178913738
+    init_probability 0.00322061191626409
     stuck_probability 0.45
     position 84507.71425457207
     position 446985.2886868867
-    plastic_flow 0.005863124625037779
+    plastic_flow 0.0059093559402300135
   ]
   node [
     id 37
     label "(84345.33752018539,447443.8741856869)"
-    init_probability 0.013578274760383386
+    init_probability 0.013687600644122383
     stuck_probability 0.6426760743103772
     position 84345.33752018539
     position 447443.8741856869
-    plastic_flow 0.02445161918790444
+    plastic_flow 0.024342988112388157
   ]
   node [
     id 38
     label "(84379.03821064874,447364.29069357633)"
-    init_probability 0.004792332268370607
+    init_probability 0.004025764895330112
     stuck_probability 0.45
     position 84379.03821064874
     position 447364.29069357633
-    plastic_flow 0.007317390547191423
+    plastic_flow 0.006539605111475336
   ]
   node [
     id 39
     label "(84412.73890111208,447284.7072014658)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.45
     position 84412.73890111208
     position 447284.7072014658
-    plastic_flow 0.004393118493673215
+    plastic_flow 0.0042132395065324485
   ]
   node [
     id 40
     label "(84446.43959157543,447205.1237093552)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.45
     position 84446.43959157543
     position 447205.1237093552
-    plastic_flow 0.003324374728022616
+    plastic_flow 0.0032957680064548134
   ]
   node [
     id 41
     label "(84327.91925510985,447481.44102088246)"
-    init_probability 0.015175718849840255
+    init_probability 0.015297906602254429
     stuck_probability 0.6894684931506849
     position 84327.91925510985
     position 447481.44102088246
-    plastic_flow 0.02727316560595252
+    plastic_flow 0.02736353140412335
   ]
   node [
     id 42
     label "(84311.24907871826,447520.28883036575)"
-    init_probability 0.015175718849840255
+    init_probability 0.015297906602254429
     stuck_probability 0.6194858754244672
     position 84311.24907871826
     position 447520.28883036575
-    plastic_flow 0.03394893802869324
+    plastic_flow 0.03403649469979392
   ]
   node [
     id 43
@@ -395,7 +395,7 @@ graph [
     stuck_probability 0.45
     position 84079.38451424497
     position 447969.0718700858
-    plastic_flow 0.002047655589647128
+    plastic_flow 0.0020557297321461727
   ]
   node [
     id 44
@@ -404,61 +404,61 @@ graph [
     stuck_probability 0.45
     position 84118.02860832386
     position 447894.2746967991
-    plastic_flow 0.00021703016275687
+    plastic_flow 0.00021788593775611776
   ]
   node [
     id 45
     label "(84156.67270240274,447819.47752351244)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.0
     position 84156.67270240274
     position 447819.47752351244
-    plastic_flow 0.001664191297824454
+    plastic_flow 0.0016772257857298153
   ]
   node [
     id 46
     label "(84195.31679648161,447744.68035022577)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.45
     position 84195.31679648161
     position 447744.68035022577
-    plastic_flow 0.005253506388013721
+    plastic_flow 0.00529535800859741
   ]
   node [
     id 47
     label "(84233.9608905605,447669.8831769391)"
-    init_probability 0.004792332268370607
+    init_probability 0.004830917874396135
     stuck_probability 0.564619628448114
     position 84233.9608905605
     position 447669.8831769391
-    plastic_flow 0.008022935062625622
+    plastic_flow 0.00808700689448367
   ]
   node [
     id 48
     label "(84272.60498463939,447595.0860036524)"
-    init_probability 0.00878594249201278
+    init_probability 0.008856682769726247
     stuck_probability 0.45
     position 84272.60498463939
     position 447595.0860036524
-    plastic_flow 0.012979205966860809
+    plastic_flow 0.013082273465057062
   ]
   node [
     id 49
     label "(84175.03566691471,447276.6990959282)"
-    init_probability 0.005591054313099041
+    init_probability 0.005636070853462158
     stuck_probability 0.5155479452054794
     position 84175.03566691471
     position 447276.6990959282
-    plastic_flow 0.017973284358316497
+    plastic_flow 0.018034189221273624
   ]
   node [
     id 50
     label "(84229.92821995473,447316.6735784422)"
-    init_probability 0.009584664536741214
+    init_probability 0.00966183574879227
     stuck_probability 0.5155479452054794
     position 84229.92821995473
     position 447316.6735784422
-    plastic_flow 0.013328979745535
+    plastic_flow 0.0134188390673446
   ]
   node [
     id 51
@@ -467,7 +467,7 @@ graph [
     stuck_probability 0.0
     position 84866.70250280497
     position 446077.39212065237
-    plastic_flow 0.007318132986915845
+    plastic_flow 0.007377048586025171
   ]
   node [
     id 52
@@ -476,25 +476,25 @@ graph [
     stuck_probability 0.1992591557170813
     position 84905.6945423921
     position 445990.1289507829
-    plastic_flow 0.002128232552317363
+    plastic_flow 0.002145366170425687
   ]
   node [
     id 53
     label "(84767.01845707944,446286.3391636351)"
-    init_probability 0.005591054313099041
+    init_probability 0.005636070853462158
     stuck_probability 0.1964008256708576
     position 84767.01845707944
     position 446286.3391636351
-    plastic_flow 0.029783936068448855
+    plastic_flow 0.030023709554264803
   ]
   node [
     id 54
     label "(84800.24647232128,446216.69014930754)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.0
     position 84800.24647232128
     position 446216.69014930754
-    plastic_flow 0.007870233490805869
+    plastic_flow 0.007933593131460736
   ]
   node [
     id 55
@@ -503,79 +503,79 @@ graph [
     stuck_probability 0.0
     position 84833.47448756313
     position 446147.0411349799
-    plastic_flow 0.006215039131216909
+    plastic_flow 0.006265074127104277
   ]
   node [
     id 56
     label "(84571.34956450139,446754.2823514135)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.0
     position 84571.34956450139
     position 446754.2823514135
-    plastic_flow 0.05798261562072401
+    plastic_flow 0.05844849843459862
   ]
   node [
     id 57
     label "(84603.96104659773,446676.2918201171)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.0
     position 84603.96104659773
     position 446676.2918201171
-    plastic_flow 0.020126260584969764
+    plastic_flow 0.020287985790598893
   ]
   node [
     id 58
     label "(84636.57252869407,446598.3012888207)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.0
     position 84636.57252869407
     position 446598.3012888207
-    plastic_flow 0.020508268096813595
+    plastic_flow 0.020673166125963406
   ]
   node [
     id 59
     label "(84669.18401079041,446520.3107575243)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.0
     position 84669.18401079041
     position 446520.3107575243
-    plastic_flow 0.01958993823817263
+    plastic_flow 0.019747515655427934
   ]
   node [
     id 60
     label "(84701.79549288675,446442.3202262279)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.0
     position 84701.79549288675
     position 446442.3202262279
-    plastic_flow 0.018292610133404642
+    plastic_flow 0.018439797493506813
   ]
   node [
     id 61
     label "(84734.4069749831,446364.3296949315)"
-    init_probability 0.004792332268370607
+    init_probability 0.004830917874396135
     stuck_probability 0.19041095890410964
     position 84734.4069749831
     position 446364.3296949315
-    plastic_flow 0.020099059143632476
+    plastic_flow 0.020260833053685638
   ]
   node [
     id 62
     label "(84555.59293496399,446860.0687957234)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.2517395383749297
     position 84555.59293496399
     position 446860.0687957234
-    plastic_flow 0.050470523271241165
+    plastic_flow 0.05087555781775007
   ]
   node [
     id 63
     label "(84563.47124973268,446807.17557356844)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.0
     position 84563.47124973268
     position 446807.17557356844
-    plastic_flow 0.008658235796661974
+    plastic_flow 0.008727782775410493
   ]
   node [
     id 64
@@ -584,7 +584,7 @@ graph [
     stuck_probability 0.0
     position 84935.46094662073
     position 446105.53507511714
-    plastic_flow 0.0028003059898912665
+    plastic_flow 0.002822850224244325
   ]
   node [
     id 65
@@ -593,16 +593,16 @@ graph [
     stuck_probability 0.5027330748988122
     position 85004.21939043651
     position 446133.6780295819
-    plastic_flow 0.0024424612404105837
+    plastic_flow 0.002462124598201071
   ]
   node [
     id 66
     label "(84837.05605273142,446316.442890801)"
-    init_probability 0.003194888178913738
+    init_probability 0.00322061191626409
     stuck_probability 0.20849315068493146
     position 84837.05605273142
     position 446316.442890801
-    plastic_flow 0.01620074310705578
+    plastic_flow 0.01633117071849708
   ]
   node [
     id 67
@@ -611,188 +611,188 @@ graph [
     stuck_probability 0.5057963059312794
     position 84803.25221843908
     position 446409.1852546067
-    plastic_flow 0.008094344355248381
+    plastic_flow 0.00815950963769636
   ]
   node [
     id 68
     label "(84440.92191911938,448232.1755898297)"
-    init_probability 0.006389776357827476
+    init_probability 0.00644122383252818
     stuck_probability 0.3684368549446425
     position 84440.92191911938
     position 448232.1755898297
-    plastic_flow 0.06533386134704872
+    plastic_flow 0.06398878433482805
   ]
   node [
     id 69
     label "(84511.71855341281,448279.6820707427)"
-    init_probability 0.004792332268370607
+    init_probability 0.004830917874396135
     stuck_probability 0.45
     position 84511.71855341281
     position 448279.6820707427
-    plastic_flow 0.02198502349793425
+    plastic_flow 0.021669650325551546
   ]
   node [
     id 70
     label "(84582.51518770622,448327.18855165574)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.45
     position 84582.51518770622
     position 448327.18855165574
-    plastic_flow 0.012748292719128428
+    plastic_flow 0.012669242522422509
   ]
   node [
     id 71
     label "(84653.31182199962,448374.6950325687)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.45
     position 84653.31182199962
     position 448374.6950325687
-    plastic_flow 0.00749211785189457
+    plastic_flow 0.007485395199060985
   ]
   node [
     id 72
     label "(84724.10845629306,448422.20151348173)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.45
     position 84724.10845629306
     position 448422.20151348173
-    plastic_flow 0.004322646637909913
+    plastic_flow 0.004332711757070699
   ]
   node [
     id 73
     label "(84794.90509058649,448469.7079943947)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.45
     position 84794.90509058649
     position 448469.7079943947
-    plastic_flow 0.00284691490294395
+    plastic_flow 0.002860714584558757
   ]
   node [
     id 74
     label "(84865.70172487991,448517.21447530773)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.7959063247695517
     position 84865.70172487991
     position 448517.21447530773
-    plastic_flow 0.003050685894379967
+    plastic_flow 0.0030719106972161075
   ]
   node [
     id 75
     label "(84383.90029153871,447565.5720723079)"
-    init_probability 0.01597444089456869
+    init_probability 0.01610305958132045
     stuck_probability 0.5321232876712328
     position 84383.90029153871
     position 447565.5720723079
     catching_system_type 2
-    plastic_flow 0.021262140295119566
+    plastic_flow 0.021404396326194206
   ]
   node [
     id 76
     label "(84456.55150435917,447610.8553142501)"
-    init_probability 0.009584664536741214
+    init_probability 0.00966183574879227
     stuck_probability 0.45
     position 84456.55150435917
     position 447610.8553142501
-    plastic_flow 0.02263933639276827
+    plastic_flow 0.022565955231787286
   ]
   node [
     id 77
     label "(84529.20271717962,447656.1385561923)"
-    init_probability 0.006389776357827476
+    init_probability 0.00644122383252818
     stuck_probability 0.45
     position 84529.20271717962
     position 447656.1385561923
-    plastic_flow 0.029771944970974015
+    plastic_flow 0.029909481624876083
   ]
   node [
     id 78
     label "(84583.58909031027,447217.413558581)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.45
     position 84583.58909031027
     position 447217.413558581
-    plastic_flow 0.009221124621576642
+    plastic_flow 0.009295363104053506
   ]
   node [
     id 79
     label "(84657.18217296252,447267.2583092147)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.45
     position 84657.18217296252
     position 447267.2583092147
-    plastic_flow 0.004481450915359106
+    plastic_flow 0.0045175321670741266
   ]
   node [
     id 80
     label "(84730.77525561476,447317.10305984836)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.6840239776512917
     position 84730.77525561476
     position 447317.10305984836
-    plastic_flow 0.0033593034286564126
+    plastic_flow 0.00338635049171803
   ]
   node [
     id 81
     label "(84804.36833826703,447366.94781048206)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.4680821917808219
     position 84804.36833826703
     position 447366.94781048206
-    plastic_flow 0.0026422729890579967
+    plastic_flow 0.00266354717861976
   ]
   node [
     id 82
     label "(84877.96142091927,447416.7925611157)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.45
     position 84877.96142091927
     position 447416.7925611157
-    plastic_flow 0.0035206653147278957
+    plastic_flow 0.003549011570643969
   ]
   node [
     id 83
     label "(84951.55450357152,447466.6373117494)"
-    init_probability 0.005591054313099041
+    init_probability 0.005636070853462158
     stuck_probability 0.45
     position 84951.55450357152
     position 447466.6373117494
-    plastic_flow 0.01902264431894269
+    plastic_flow 0.019175761681355586
   ]
   node [
     id 84
     label "(84858.74249238099,447286.0073504862)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.7480995820176728
     position 84858.74249238099
     position 447286.0073504862
-    plastic_flow 0.0024865500898647547
+    plastic_flow 0.00250657020321918
   ]
   node [
     id 85
     label "(84944.6888504516,447337.0972005586)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.615
     position 84944.6888504516
     position 447337.0972005586
-    plastic_flow 0.0014250850516993598
+    plastic_flow 0.0014365590609589807
   ]
   node [
     id 86
     label "(85030.63520852219,447388.1870506309)"
-    init_probability 0.004792332268370607
+    init_probability 0.004830917874396135
     stuck_probability 0.45
     position 85030.63520852219
     position 447388.1870506309
-    plastic_flow 0.00613184065056407
+    plastic_flow 0.006181210717323464
   ]
   node [
     id 87
     label "(85116.5815665928,447439.2769007033)"
-    init_probability 0.004792332268370607
+    init_probability 0.004830917874396135
     stuck_probability 0.0
     position 85116.5815665928
     position 447439.2769007033
-    plastic_flow 0.03472044686391232
+    plastic_flow 0.034999925766662235
   ]
   node [
     id 88
@@ -801,52 +801,52 @@ graph [
     stuck_probability 0.5155479452054794
     position 84176.90788042464
     position 448046.58894317434
-    plastic_flow 0.005263855288104395
+    plastic_flow 0.005089816344396703
   ]
   node [
     id 89
     label "(84227.84202624239,447979.61512886354)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.45
     position 84227.84202624239
     position 447979.61512886354
-    plastic_flow 0.0028698461399456385
+    plastic_flow 0.002873477652260636
   ]
   node [
     id 90
     label "(84278.77617206013,447912.6413145528)"
-    init_probability 0.003194888178913738
+    init_probability 0.00322061191626409
     stuck_probability 0.45
     position 84278.77617206013
     position 447912.6413145528
-    plastic_flow 0.005718462696706746
+    plastic_flow 0.00575877768481091
   ]
   node [
     id 91
     label "(84329.71031787788,447845.667500242)"
-    init_probability 0.005591054313099041
+    init_probability 0.005636070853462158
     stuck_probability 0.45
     position 84329.71031787788
     position 447845.667500242
-    plastic_flow 0.00952786775903957
+    plastic_flow 0.009602879745106901
   ]
   node [
     id 92
     label "(84380.64446369561,447778.69368593127)"
-    init_probability 0.004792332268370607
+    init_probability 0.004830917874396135
     stuck_probability 0.45
     position 84380.64446369561
     position 447778.69368593127
-    plastic_flow 0.010262512380054347
+    plastic_flow 0.010344578113044425
   ]
   node [
     id 93
     label "(84431.57860951337,447711.7198716205)"
-    init_probability 0.006389776357827476
+    init_probability 0.00644122383252818
     stuck_probability 0.45
     position 84431.57860951337
     position 447711.7198716205
-    plastic_flow 0.016884718893378038
+    plastic_flow 0.017016595132405533
   ]
   node [
     id 94
@@ -855,7 +855,7 @@ graph [
     stuck_probability 0.3442724136437779
     position 83521.19517758623
     position 448447.10401404893
-    plastic_flow 0.0003398589295804937
+    plastic_flow 0.00033674583756475096
   ]
   node [
     id 95
@@ -864,7 +864,7 @@ graph [
     stuck_probability 0.0
     position 83588.5808590575
     position 448484.41331375425
-    plastic_flow 0.0002228548755954264
+    plastic_flow 0.00022081353528183856
   ]
   node [
     id 96
@@ -873,7 +873,7 @@ graph [
     stuck_probability 0.2997710639894915
     position 83655.9665405288
     position 448521.7226134596
-    plastic_flow 0.000514319846765147
+    plastic_flow 0.0005096087008479898
   ]
   node [
     id 97
@@ -882,124 +882,124 @@ graph [
     stuck_probability 0.10684931506849316
     position 83723.35222200007
     position 448559.03191316494
-    plastic_flow 0.007268014173152894
+    plastic_flow 0.0072014395007714005
   ]
   node [
     id 98
     label "(84512.49811524196,446822.22776476404)"
-    init_probability 0.003993610223642172
+    init_probability 0.004025764895330112
     stuck_probability 0.1698630136986301
     position 84512.49811524196
     position 446822.22776476404
-    plastic_flow 0.011444431042117427
+    plastic_flow 0.011535884190965042
   ]
   node [
     id 99
     label "(84520.37643001066,446769.3345426091)"
-    init_probability 0.003194888178913738
+    init_probability 0.00322061191626409
     stuck_probability 0.0
     position 84520.37643001066
     position 446769.3345426091
-    plastic_flow 0.00889257468715952
+    plastic_flow 0.008963644318808452
   ]
   node [
     id 100
     label "(84532.90683394989,447345.12062818604)"
-    init_probability 0.003993610223642172
+    init_probability 0.004025764895330112
     stuck_probability 0.45
     position 84532.90683394989
     position 447345.12062818604
-    plastic_flow 0.013403634676557566
+    plastic_flow 0.013511553472115445
   ]
   node [
     id 101
     label "(84602.22088014183,447394.96285325545)"
-    init_probability 0.006389776357827476
+    init_probability 0.00644122383252818
     stuck_probability 0.45
     position 84602.22088014183
     position 447394.96285325545
-    plastic_flow 0.010695850582188849
+    plastic_flow 0.010781968230696107
   ]
   node [
     id 102
     label "(84671.53492633377,447444.8050783249)"
-    init_probability 0.009584664536741214
+    init_probability 0.00966183574879227
     stuck_probability 0.45
     position 84671.53492633377
     position 447444.8050783249
-    plastic_flow 0.017742083596328475
+    plastic_flow 0.01788493350633973
   ]
   node [
     id 103
     label "(84740.8489725257,447494.64730339433)"
-    init_probability 0.007987220447284345
+    init_probability 0.008051529790660225
     stuck_probability 0.45
     position 84740.8489725257
     position 447494.64730339433
-    plastic_flow 0.019124908147145993
+    plastic_flow 0.01927888860456832
   ]
   node [
     id 104
     label "(84810.16301871763,447544.4895284638)"
-    init_probability 0.003194888178913738
+    init_probability 0.00322061191626409
     stuck_probability 0.4801369863013698
     position 84810.16301871763
     position 447544.4895284638
-    plastic_flow 0.027093304937672938
+    plastic_flow 0.02731095888367821
   ]
   node [
     id 105
     label "(84558.24796213009,447281.26709338353)"
-    init_probability 0.004792332268370607
+    init_probability 0.004830917874396135
     stuck_probability 0.45
     position 84558.24796213009
     position 447281.26709338353
-    plastic_flow 0.007858257116115904
+    plastic_flow 0.007921527885891703
   ]
   node [
     id 106
     label "(84569.0068573162,446959.8390315643)"
-    init_probability 0.003194888178913738
+    init_probability 0.00322061191626409
     stuck_probability 0.5042465753424658
     position 84569.0068573162
     position 446959.8390315643
-    plastic_flow 0.0065291000425326245
+    plastic_flow 0.00658132619632521
   ]
   node [
     id 107
     label "(84616.51247379369,447004.5151414208)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.45
     position 84616.51247379369
     position 447004.5151414208
-    plastic_flow 0.007976225318479243
+    plastic_flow 0.008040320583687189
   ]
   node [
     id 108
     label "(84594.56355147141,447146.4474195276)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.45
     position 84594.56355147141
     position 447146.4474195276
-    plastic_flow 0.002304761053353959
+    plastic_flow 0.0023233169784209547
   ]
   node [
     id 109
     label "(84605.53801263255,447075.4812804742)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.45
     position 84605.53801263255
     position 447075.4812804742
-    plastic_flow 0.0037639161332964073
+    plastic_flow 0.0037942177486951496
   ]
   node [
     id 110
     label "(83940.13869607751,448096.08260200126)"
-    init_probability 0.003993610223642172
+    init_probability 0.004025764895330112
     stuck_probability 0.0
     position 83940.13869607751
     position 448096.08260200126
-    plastic_flow 0.010554788923753743
+    plastic_flow 0.010638880233351163
   ]
   node [
     id 111
@@ -1008,44 +1008,44 @@ graph [
     stuck_probability 0.45
     position 83980.35094895505
     position 448017.53443806164
-    plastic_flow 0.005804101149852842
+    plastic_flow 0.00585034314201894
   ]
   node [
     id 112
     label "(84262.2099651384,448415.20463770564)"
-    init_probability 0.006389776357827476
+    init_probability 0.00644122383252818
     stuck_probability 0.0
     position 84262.2099651384
     position 448415.20463770564
-    plastic_flow 0.1124353075330153
+    plastic_flow 0.11011965230359354
   ]
   node [
     id 113
     label "(84321.7806164654,448354.19495508034)"
-    init_probability 0.003194888178913738
+    init_probability 0.0024154589371980675
     stuck_probability 0.0
     position 84321.7806164654
     position 448354.19495508034
-    plastic_flow 0.06487646077801931
+    catching_system_type 2
+    plastic_flow 0.06282667207999021
   ]
   node [
     id 114
     label "(84381.3512677924,448293.185272455)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.0
     position 84381.3512677924
     position 448293.185272455
-    catching_system_type 2
-    plastic_flow 0.0488608279096224
+    plastic_flow 0.04751245226972347
   ]
   node [
     id 115
     label "(83981.78569166228,448425.78871901997)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.0
     position 83981.78569166228
     position 448425.78871901997
-    plastic_flow 0.03719710218480442
+    plastic_flow 0.03671152641298384
   ]
   node [
     id 116
@@ -1054,16 +1054,16 @@ graph [
     stuck_probability 0.0
     position 84075.26044948766
     position 448422.2606919152
-    plastic_flow 0.02210950206392711
+    plastic_flow 0.021820881770982743
   ]
   node [
     id 117
     label "(84168.73520731303,448418.73266481044)"
-    init_probability 0.003194888178913738
+    init_probability 0.00322061191626409
     stuck_probability 0.0
     position 84168.73520731303
     position 448418.73266481044
-    plastic_flow 0.03871936428696867
+    plastic_flow 0.03820360815284677
   ]
   node [
     id 118
@@ -1072,16 +1072,16 @@ graph [
     stuck_probability 0.0
     position 83787.71561250369
     position 448446.9060586821
-    plastic_flow 0.0168842381909266
+    plastic_flow 0.01672957935301126
   ]
   node [
     id 119
     label "(83884.75065208299,448436.34738885105)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.0
     position 83884.75065208299
     position 448436.34738885105
-    plastic_flow 0.006989609381401522
+    plastic_flow 0.0069393320751701525
   ]
   node [
     id 120
@@ -1090,7 +1090,7 @@ graph [
     stuck_probability 0.10684931506849316
     position 83755.53391725189
     position 448502.96898592357
-    plastic_flow 0.002032843127853592
+    plastic_flow 0.002014222379184756
   ]
   node [
     id 121
@@ -1099,7 +1099,7 @@ graph [
     stuck_probability 0.31102005870841487
     position 83629.98298913673
     position 448927.5571545557
-    plastic_flow 0.002263500960251504
+    plastic_flow 0.00224276739654705
   ]
   node [
     id 122
@@ -1108,7 +1108,7 @@ graph [
     stuck_probability 0.0
     position 83653.32529735257
     position 448835.425844208
-    plastic_flow 0.0015595067587075289
+    plastic_flow 0.0015452217492036688
   ]
   node [
     id 123
@@ -1117,7 +1117,7 @@ graph [
     stuck_probability 0.0
     position 83676.6676055684
     position 448743.29453386035
-    plastic_flow 0.0018634403254163554
+    plastic_flow 0.0018463712985526883
   ]
   node [
     id 124
@@ -1126,34 +1126,34 @@ graph [
     stuck_probability 0.0
     position 83700.00991378423
     position 448651.16322351265
-    plastic_flow 0.002113655401265016
+    plastic_flow 0.002094294415923742
   ]
   node [
     id 125
     label "(83851.828937352,448110.6712185308)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.11232876712328765
     position 83851.828937352
     position 448110.6712185308
-    plastic_flow 0.008703858635634748
+    plastic_flow 0.008772117694845517
   ]
   node [
     id 126
     label "(83863.01886515412,448172.08407506754)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.3
     position 83863.01886515412
     position 448172.08407506754
-    plastic_flow 0.006638336128534491
+    plastic_flow 0.006690897685665214
   ]
   node [
     id 127
     label "(83874.20879295625,448233.4969316043)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.40164383561643835
     position 83874.20879295625
     position 448233.4969316043
-    plastic_flow 0.009028541457530993
+    plastic_flow 0.009085430675848893
   ]
   node [
     id 128
@@ -1162,7 +1162,7 @@ graph [
     stuck_probability 0.0
     position 83816.54667265454
     position 448375.7696829895
-    plastic_flow 0.004372584762265607
+    plastic_flow 0.004332532088856764
   ]
   node [
     id 129
@@ -1171,7 +1171,7 @@ graph [
     stuck_probability 0.3
     position 83845.3777328054
     position 448304.6333072969
-    plastic_flow 0.0029043692231132756
+    plastic_flow 0.0028876078891604006
   ]
   node [
     id 130
@@ -1180,52 +1180,52 @@ graph [
     stuck_probability 0.45
     position 84128.1461973348
     position 448007.83040663006
-    plastic_flow 0.0005953665275627651
+    plastic_flow 0.000597714126547188
   ]
   node [
     id 131
     label "(84242.91139009832,448092.9856048382)"
-    init_probability 0.003194888178913738
+    init_probability 0.00322061191626409
     stuck_probability 0.45
     position 84242.91139009832
     position 448092.9856048382
-    plastic_flow 0.004531574222566192
+    plastic_flow 0.004513103084796816
   ]
   node [
     id 132
     label "(84308.914899772,448139.382266502)"
-    init_probability 0.003194888178913738
+    init_probability 0.00322061191626409
     stuck_probability 0.45
     position 84308.914899772
     position 448139.382266502
-    plastic_flow 0.006836181430028108
+    plastic_flow 0.006559759370080491
   ]
   node [
     id 133
     label "(84374.9184094457,448185.77892816585)"
-    init_probability 0.003993610223642172
+    init_probability 0.004025764895330112
     stuck_probability 0.615
     position 84374.9184094457
     position 448185.77892816585
-    plastic_flow 0.008776120200711784
+    plastic_flow 0.008671992642931437
   ]
   node [
     id 134
     label "(85405.46410533079,447336.78732488444)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.615
     position 85405.46410533079
     position 447336.78732488444
-    plastic_flow 0.003239164830158055
+    plastic_flow 0.003265245035459946
   ]
   node [
     id 135
     label "(85489.34679621819,447306.47637533676)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.615
     position 85489.34679621819
     position 447306.47637533676
-    plastic_flow 0.0014124966780939543
+    plastic_flow 0.0014238694320938918
   ]
   node [
     id 136
@@ -1234,205 +1234,206 @@ graph [
     stuck_probability 0.8505102689185102
     position 85573.2294871056
     position 447276.1654257891
-    plastic_flow 0.0004976646430804651
+    plastic_flow 0.0005016716036360003
   ]
   node [
     id 137
     label "(85387.74279994475,447480.44298445433)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.45
     position 85387.74279994475
     position 447480.44298445433
-    plastic_flow 0.003322697130061301
+    plastic_flow 0.0033494495029269015
   ]
   node [
     id 138
     label "(85396.60345263776,447408.6151546694)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.45
     position 85396.60345263776
     position 447408.6151546694
-    plastic_flow 0.002443857463640906
+    plastic_flow 0.0024635341472986853
   ]
   node [
     id 139
     label "(85357.39847756326,447501.4505922569)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.45
     position 85357.39847756326
     position 447501.4505922569
-    plastic_flow 0.006837017106549251
+    plastic_flow 0.006892062139760202
   ]
   node [
     id 140
     label "(85190.3623728203,447405.42220240383)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.47184931506849315
     position 85190.3623728203
     position 447405.42220240383
-    plastic_flow 0.01639589466737413
+    plastic_flow 0.01652787915106863
   ]
   node [
     id 141
     label "(85273.88042519178,447453.43639733037)"
-    init_probability 0.003194888178913738
+    init_probability 0.00322061191626409
     stuck_probability 0.45
     position 85273.88042519178
     position 447453.43639733037
-    plastic_flow 0.008398817534390072
+    plastic_flow 0.008466432119608085
   ]
   node [
     id 142
     label "(84480.3906633465,447683.9292139064)"
-    init_probability 0.003993610223642172
+    init_probability 0.004025764895330112
     stuck_probability 0.45
     position 84480.3906633465
     position 447683.9292139064
-    plastic_flow 0.00662841170677163
+    plastic_flow 0.006681145205526418
   ]
   node [
     id 143
     label "(84880.85876114457,447505.5634201066)"
-    init_probability 0.007987220447284345
+    init_probability 0.008051529790660225
     stuck_probability 0.45
     position 84880.85876114457
     position 447505.5634201066
-    plastic_flow 0.014639322140217138
+    plastic_flow 0.014757071113273701
   ]
   node [
     id 144
     label "(85034.34135832777,447446.74748032645)"
-    init_probability 0.00718849840255591
+    init_probability 0.007246376811594203
     stuck_probability 0.45
     position 85034.34135832777
     position 447446.74748032645
-    plastic_flow 0.015221942540276019
+    plastic_flow 0.015344484445269516
   ]
   node [
     id 145
     label "(84599.44279256412,447628.22629926016)"
-    init_probability 0.003993610223642172
+    init_probability 0.004025764895330112
     stuck_probability 0.45
     position 84599.44279256412
     position 447628.22629926016
-    plastic_flow 0.007596015565130031
+    plastic_flow 0.00764481217194012
   ]
   node [
     id 146
     label "(84669.68286794862,447600.31404232804)"
-    init_probability 0.009584664536741214
+    init_probability 0.00966183574879227
     stuck_probability 0.45
     position 84669.68286794862
     position 447600.31404232804
-    plastic_flow 0.015448640325147301
+    plastic_flow 0.015568928798176954
   ]
   node [
     id 147
     label "(84739.92294333313,447572.4017853959)"
-    init_probability 0.005591054313099041
+    init_probability 0.005636070853462158
     stuck_probability 0.45
     position 84739.92294333313
     position 447572.4017853959
-    plastic_flow 0.015102292455075389
+    plastic_flow 0.015222534254813787
   ]
   node [
     id 148
     label "(84499.61415401715,447762.4726152002)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.45
     position 84499.61415401715
     position 447762.4726152002
-    plastic_flow 0.005657272887894712
+    plastic_flow 0.0057020362063754625
   ]
   node [
     id 149
     label "(84567.64969852094,447813.2253587799)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.45
     position 84567.64969852094
     position 447813.2253587799
-    plastic_flow 0.005054373605047372
+    plastic_flow 0.005093108720537392
   ]
   node [
     id 150
     label "(84635.68524302474,447863.97810235963)"
-    init_probability 0.003194888178913738
+    init_probability 0.00322061191626409
     stuck_probability 0.45
     position 84635.68524302474
     position 447863.97810235963
-    plastic_flow 0.006634279858068649
+    plastic_flow 0.006679660548512633
   ]
   node [
     id 151
     label "(84703.72078752852,447914.7308459393)"
-    init_probability 0.003993610223642172
+    init_probability 0.004025764895330112
     stuck_probability 0.0
     position 84703.72078752852
     position 447914.7308459393
-    plastic_flow 0.031151599900726794
+    plastic_flow 0.03096143310388097
   ]
   node [
     id 152
     label "(84608.65197076747,447716.63268606825)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.45
     position 84608.65197076747
     position 447716.63268606825
-    plastic_flow 0.008024462710065888
+    plastic_flow 0.008067015303902171
   ]
   node [
     id 153
     label "(84688.10122435533,447777.1268159442)"
-    init_probability 0.004792332268370607
+    init_probability 0.004830917874396135
     stuck_probability 0.45
     position 84688.10122435533
     position 447777.1268159442
-    plastic_flow 0.009230602318901045
+    plastic_flow 0.009296458955403524
   ]
   node [
     id 154
     label "(84767.55047794318,447837.6209458202)"
-    init_probability 0.006389776357827476
+    init_probability 0.00644122383252818
     stuck_probability 0.45
     position 84767.55047794318
     position 447837.6209458202
-    plastic_flow 0.024987200153331453
+    plastic_flow 0.025131128992311094
   ]
   node [
     id 155
     label "(84632.09877865962,446916.36468857387)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.0
     position 84632.09877865962
     position 446916.36468857387
-    plastic_flow 0.016887424100630037
+    plastic_flow 0.017022969609550256
   ]
   node [
     id 156
     label "(84708.60462235525,446972.66058142437)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.0
     position 84708.60462235525
     position 446972.66058142437
-    plastic_flow 0.02041404665386129
+    plastic_flow 0.02057800737791846
   ]
   node [
     id 157
     label "(84785.11046605089,447028.95647427486)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.0
     position 84785.11046605089
     position 447028.95647427486
-    plastic_flow 0.025116675256927616
+    plastic_flow 0.025318532345677196
   ]
   node [
     id 158
     label "(84861.61630974652,447085.25236712536)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.16164383561643836
     position 84861.61630974652
     position 447085.25236712536
-    plastic_flow 0.026744795675732444
+    catching_system_type 1
+    plastic_flow 0.02695981475771557
   ]
   node [
     id 159
@@ -1441,106 +1442,107 @@ graph [
     stuck_probability 0.0
     position 84938.12215344215
     position 447141.54825997585
-    plastic_flow 0.021339885119585324
+    plastic_flow 0.02151147192579203
   ]
   node [
     id 160
     label "(85014.62799713778,447197.8441528263)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.0
     position 85014.62799713778
     position 447197.8441528263
-    plastic_flow 0.02160498631727678
+    plastic_flow 0.02177872856066837
   ]
   node [
     id 161
     label "(85091.13384083343,447254.1400456768)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.0
     position 85091.13384083343
     position 447254.1400456768
-    plastic_flow 0.026389715336831925
+    plastic_flow 0.026601990164775952
   ]
   node [
     id 162
     label "(85103.85770371312,447346.7084731901)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.5331037779357966
     position 85103.85770371312
     position 447346.7084731901
-    plastic_flow 0.018849411637589072
+    plastic_flow 0.019001051827217303
   ]
   node [
     id 163
     label "(84942.67767870548,447637.7508487708)"
-    init_probability 0.005591054313099041
+    init_probability 0.005636070853462158
     stuck_probability 0.45
     position 84942.67767870548
     position 447637.7508487708
-    plastic_flow 0.020116166571243016
+    plastic_flow 0.020277071477835466
   ]
   node [
     id 164
     label "(85000.64564133459,447571.5928660816)"
-    init_probability 0.00878594249201278
+    init_probability 0.008856682769726247
     stuck_probability 0.45
     position 85000.64564133459
     position 447571.5928660816
-    plastic_flow 0.011978508231428951
+    plastic_flow 0.01207478515849715
   ]
   node [
     id 165
     label "(85058.61360396369,447505.4348833925)"
-    init_probability 0.00718849840255591
+    init_probability 0.007246376811594203
     stuck_probability 0.45
     position 85058.61360396369
     position 447505.4348833925
-    plastic_flow 0.015389650026019682
+    plastic_flow 0.015513508079400867
   ]
   node [
     id 166
     label "(84825.92621153062,447770.99758013705)"
-    init_probability 0.00718849840255591
+    init_probability 0.007246376811594203
     stuck_probability 0.5080136986301369
     position 84825.92621153062
     position 447770.99758013705
-    plastic_flow 0.012538811107143293
+    plastic_flow 0.012627507866818065
   ]
   node [
     id 167
     label "(84884.30194511804,447704.3742144539)"
-    init_probability 0.004792332268370607
+    init_probability 0.004830917874396135
     stuck_probability 0.45
     position 84884.30194511804
     position 447704.3742144539
-    plastic_flow 0.010976933329699148
+    plastic_flow 0.011062042756964149
   ]
   node [
     id 168
     label "(84735.63563273585,447876.17589587974)"
-    init_probability 0.003993610223642172
+    init_probability 0.004025764895330112
     stuck_probability 0.45
     position 84735.63563273585
     position 447876.17589587974
-    plastic_flow 0.01593896056151485
+    plastic_flow 0.01589819413065289
   ]
   node [
     id 169
     label "(84493.48169280122,448168.6866410516)"
-    init_probability 0.006389776357827476
+    init_probability 0.00644122383252818
     stuck_probability 0.0
     position 84493.48169280122
     position 448168.6866410516
-    plastic_flow 0.01410043787896511
+    plastic_flow 0.013993140204561516
   ]
   node [
     id 170
     label "(84546.04146648305,448105.19769227353)"
-    init_probability 0.003194888178913738
+    init_probability 0.00322061191626409
     stuck_probability 0.1814824544942767
     position 84546.04146648305
     position 448105.19769227353
-    plastic_flow 0.02157884170324611
+    catching_system_type 2
+    plastic_flow 0.02126296154854313
   ]
   node [
     id 171
@@ -1549,16 +1551,16 @@ graph [
     stuck_probability 0.0
     position 84598.60124016488
     position 448041.70874349546
-    plastic_flow 0.016359094192063828
+    plastic_flow 0.015742780228620468
   ]
   node [
     id 172
     label "(84651.1610138467,447978.2197947174)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.0
     position 84651.1610138467
     position 447978.2197947174
-    plastic_flow 0.016182510503270204
+    plastic_flow 0.015765092769062933
   ]
   node [
     id 173
@@ -1567,25 +1569,25 @@ graph [
     stuck_probability 0.45
     position 85023.00050355494
     position 447691.9875063147
-    plastic_flow 0.004486105306248597
+    plastic_flow 0.004521988701462562
   ]
   node [
     id 174
     label "(85103.32332840441,447746.2241638586)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.45
     position 85103.32332840441
     position 447746.2241638586
-    plastic_flow 0.0026487263478012293
+    plastic_flow 0.0026699653347114715
   ]
   node [
     id 175
     label "(85183.64615325388,447800.4608214026)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.45
     position 85183.64615325388
     position 447800.4608214026
-    plastic_flow 0.003137088958741225
+    plastic_flow 0.0031623151065632046
   ]
   node [
     id 176
@@ -1594,7 +1596,7 @@ graph [
     stuck_probability 0.45
     position 85263.96897810332
     position 447854.69747894653
-    plastic_flow 0.001746201420087364
+    plastic_flow 0.001760249130351201
   ]
   node [
     id 177
@@ -1603,7 +1605,7 @@ graph [
     stuck_probability 0.4861643835616438
     position 85344.29180295278
     position 447908.9341364905
-    plastic_flow 0.0006405269380041531
+    plastic_flow 0.0006456798010918574
   ]
   node [
     id 178
@@ -1612,107 +1614,106 @@ graph [
     stuck_probability 0.7745661056769829
     position 85424.61462780224
     position 447963.17079403443
-    plastic_flow 0.00021948307828694526
+    plastic_flow 0.00022124875929952612
   ]
   node [
     id 179
     label "(85404.66559511905,447530.33605298545)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.45
     position 85404.66559511905
     position 447530.33605298545
-    plastic_flow 0.0026407255113786946
+    plastic_flow 0.002661986471795833
   ]
   node [
     id 180
     label "(85451.93271267484,447559.221513714)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.7302247249118254
     position 85451.93271267484
     position 447559.221513714
-    plastic_flow 0.0021571276642054615
+    plastic_flow 0.002174495500033622
   ]
   node [
     id 181
     label "(84375.29281279277,447457.7820001117)"
-    init_probability 0.012779552715654952
+    init_probability 0.01288244766505636
     stuck_probability 0.5949589041095891
     position 84375.29281279277
     position 447457.7820001117
-    plastic_flow 0.020695265086316545
+    plastic_flow 0.02081795076424826
   ]
   node [
     id 182
     label "(84443.20282273792,447500.6725327086)"
-    init_probability 0.012779552715654952
+    init_probability 0.01288244766505636
     stuck_probability 0.6560181844238169
     position 84443.20282273792
     position 447500.6725327086
-    catching_system_type 1
-    plastic_flow 0.017817812880273495
+    plastic_flow 0.017950575645395775
   ]
   node [
     id 183
     label "(84511.11283268305,447543.5630653055)"
-    init_probability 0.009584664536741214
+    init_probability 0.00966183574879227
     stuck_probability 0.7591286263141062
     position 84511.11283268305
     position 447543.5630653055
-    plastic_flow 0.016699309777379295
+    plastic_flow 0.016831394227841814
   ]
   node [
     id 184
     label "(83877.89393221811,448081.29947058466)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.11232876712328765
     position 83877.89393221811
     position 448081.29947058466
-    plastic_flow 0.009832126794887108
+    plastic_flow 0.009910160830120269
   ]
   node [
     id 185
     label "(84207.30273122156,447522.5700971636)"
-    init_probability 0.00718849840255591
+    init_probability 0.007246376811594203
     stuck_probability 0.45
     position 84207.30273122156
     position 447522.5700971636
-    plastic_flow 0.011585143985596678
+    plastic_flow 0.011619361699382668
   ]
   node [
     id 186
     label "(84169.4089799262,447605.6042286008)"
-    init_probability 0.005591054313099041
+    init_probability 0.005636070853462158
     stuck_probability 0.45
     position 84169.4089799262
     position 447605.6042286008
-    plastic_flow 0.012537225670449171
+    plastic_flow 0.01236288038543737
   ]
   node [
     id 187
     label "(84131.51522863086,447688.638360038)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.45
     position 84131.51522863086
     position 447688.638360038
-    plastic_flow 0.007252303945198175
+    plastic_flow 0.0072230050853507935
   ]
   node [
     id 188
     label "(84093.6214773355,447771.6724914752)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.45
     position 84093.6214773355
     position 447771.6724914752
-    plastic_flow 0.004785238657027045
+    plastic_flow 0.004795835445333619
   ]
   node [
     id 189
     label "(84055.72772604016,447854.7066229124)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.45
     position 84055.72772604016
     position 447854.7066229124
-    plastic_flow 0.0039270063124304515
+    plastic_flow 0.003949733200612187
   ]
   node [
     id 190
@@ -1721,61 +1722,61 @@ graph [
     stuck_probability 0.45
     position 84378.69335282674
     position 447146.13763165777
-    plastic_flow 0.0008200065575064822
+    plastic_flow 0.0008207911205109143
   ]
   node [
     id 191
     label "(84346.49456327074,447215.8886520787)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.45
     position 84346.49456327074
     position 447215.8886520787
-    plastic_flow 0.0015837323861116973
+    plastic_flow 0.0015750176764238561
   ]
   node [
     id 192
     label "(84314.29577371474,447285.6396724997)"
-    init_probability 0.006389776357827476
+    init_probability 0.005636070853462158
     stuck_probability 0.45
     position 84314.29577371474
     position 447285.6396724997
-    plastic_flow 0.008517781317170537
+    plastic_flow 0.007703858934833388
   ]
   node [
     id 193
     label "(84465.05934846913,446994.74398924597)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.45
     position 84465.05934846913
     position 446994.74398924597
-    plastic_flow 0.004374465173265843
+    plastic_flow 0.004409482743367666
   ]
   node [
     id 194
     label "(84096.12559875027,447387.69944935903)"
-    init_probability 0.003194888178913738
+    init_probability 0.00322061191626409
     stuck_probability 0.45
     position 84096.12559875027
     position 447387.69944935903
-    plastic_flow 0.0064738853907125955
+    plastic_flow 0.006521138037904101
   ]
   node [
     id 195
     label "(84049.52209190666,447463.44956700393)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.45
     position 84049.52209190666
     position 447463.44956700393
-    plastic_flow 0.0050455936394820985
+    plastic_flow 0.0050842120891605455
   ]
   node [
     id 196
     label "(84002.91858506307,447539.1996846489)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.45
     position 84002.91858506307
     position 447539.1996846489
-    plastic_flow 0.0040695927704839496
+    plastic_flow 0.004100078883111901
   ]
   node [
     id 197
@@ -1784,7 +1785,7 @@ graph [
     stuck_probability 0.45
     position 83956.31507821947
     position 447614.94980229385
-    plastic_flow 0.00209520616398769
+    plastic_flow 0.0021055395520279342
   ]
   node [
     id 198
@@ -1793,161 +1794,161 @@ graph [
     stuck_probability 0.45
     position 83909.71157137585
     position 447690.6999199388
-    plastic_flow 0.0008423297850851198
+    plastic_flow 0.0008265002268986128
   ]
   node [
     id 199
     label "(83863.10806453225,447766.4500375837)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.45
     position 83863.10806453225
     position 447766.4500375837
-    plastic_flow 0.0032980127736756287
+    plastic_flow 0.0032448329415154897
   ]
   node [
     id 200
     label "(84059.170617476,447186.97232762113)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.0
     position 84059.170617476
     position 447186.97232762113
-    plastic_flow 0.002838260987155531
+    plastic_flow 0.0028553508697876104
   ]
   node [
     id 201
     label "(83986.47972526317,447136.16649215913)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.0
     position 83986.47972526317
     position 447136.16649215913
-    plastic_flow 0.005495955003133272
+    plastic_flow 0.0055368042269767865
   ]
   node [
     id 202
     label "(83913.78883305033,447085.3606566971)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.0
     position 83913.78883305033
     position 447085.3606566971
-    plastic_flow 0.006148416496376884
+    plastic_flow 0.00619597185716579
   ]
   node [
     id 203
     label "(84359.04789428279,446910.08771720954)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.45
     position 84359.04789428279
     position 446910.08771720954
-    plastic_flow 0.004768001206350007
+    plastic_flow 0.00480472590387767
   ]
   node [
     id 204
     label "(84316.15073994012,446994.3392868904)"
-    init_probability 0.022364217252396165
+    init_probability 0.02254428341384863
     stuck_probability 0.45
     position 84316.15073994012
     position 446994.3392868904
-    plastic_flow 0.02943940114323762
+    plastic_flow 0.02967029995105243
   ]
   node [
     id 205
     label "(84273.25358559746,447078.5908565712)"
-    init_probability 0.023961661341853034
+    init_probability 0.024154589371980676
     stuck_probability 0.45
     position 84273.25358559746
     position 447078.5908565712
     catching_system_type 2
-    plastic_flow 0.045025227316153195
+    plastic_flow 0.0453659379018059
   ]
   node [
     id 206
     label "(84230.3564312548,447162.8424262521)"
-    init_probability 0.006389776357827476
+    init_probability 0.005636070853462158
     stuck_probability 0.45
     position 84230.3564312548
     position 447162.8424262521
-    plastic_flow 0.029510818638086106
+    plastic_flow 0.02886594682106318
   ]
   node [
     id 207
     label "(84504.77060566352,446984.7099545624)"
-    init_probability 0.003194888178913738
+    init_probability 0.00322061191626409
     stuck_probability 0.45
     position 84504.77060566352
     position 446984.7099545624
-    plastic_flow 0.004773081794360009
+    plastic_flow 0.004811350008826354
   ]
   node [
     id 208
     label "(84490.98361939687,447054.8357197414)"
-    init_probability 0.003194888178913738
+    init_probability 0.00322061191626409
     stuck_probability 0.45
     position 84490.98361939687
     position 447054.8357197414
-    plastic_flow 0.006478002915513565
+    plastic_flow 0.006529809415845266
   ]
   node [
     id 209
     label "(84443.67707302116,447203.95388405316)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.45
     position 84443.67707302116
     position 447203.95388405316
-    plastic_flow 0.0034056216763054593
+    plastic_flow 0.0034282171305765625
   ]
   node [
     id 210
     label "(84409.97638255781,447283.53737616376)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.45
     position 84409.97638255781
     position 447283.53737616376
-    plastic_flow 0.002908481731784971
+    plastic_flow 0.002913028217952194
   ]
   node [
     id 211
     label "(84376.27569209447,447363.1208682743)"
-    init_probability 0.005591054313099041
+    init_probability 0.005636070853462158
     stuck_probability 0.45
     position 84376.27569209447
     position 447363.1208682743
-    plastic_flow 0.007880003798535295
+    plastic_flow 0.00787005605360594
   ]
   node [
     id 212
     label "(84269.93969075815,447593.708974776)"
-    init_probability 0.007987220447284345
+    init_probability 0.008051529790660225
     stuck_probability 0.45
     position 84269.93969075815
     position 447593.708974776
-    plastic_flow 0.011768929512235288
+    plastic_flow 0.011842992146171207
   ]
   node [
     id 213
     label "(84231.29559667927,447668.50614806265)"
-    init_probability 0.004792332268370607
+    init_probability 0.004830917874396135
     stuck_probability 0.564619628448114
     position 84231.29559667927
     position 447668.50614806265
-    plastic_flow 0.011785696366786861
+    plastic_flow 0.011874335663032694
   ]
   node [
     id 214
     label "(84192.65150260038,447743.3033213493)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.45
     position 84192.65150260038
     position 447743.3033213493
-    plastic_flow 0.006827191971009252
+    plastic_flow 0.006880644981233202
   ]
   node [
     id 215
     label "(84154.0074085215,447818.100494636)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.0
     position 84154.0074085215
     position 447818.100494636
-    plastic_flow 0.004212503347936054
+    plastic_flow 0.004245865603385327
   ]
   node [
     id 216
@@ -1956,16 +1957,16 @@ graph [
     stuck_probability 0.45
     position 84115.36331444263
     position 447892.89766792266
-    plastic_flow 0.0030193543919320906
+    plastic_flow 0.003043192317715799
   ]
   node [
     id 217
     label "(84231.69425534869,447314.2484765913)"
-    init_probability 0.00878594249201278
+    init_probability 0.008856682769726247
     stuck_probability 0.5155479452054794
     position 84231.69425534869
     position 447314.2484765913
-    plastic_flow 0.011989552575416127
+    plastic_flow 0.012045420232032162
   ]
   node [
     id 218
@@ -1974,43 +1975,44 @@ graph [
     stuck_probability 0.0
     position 84830.76683956936
     position 446145.7493755821
-    plastic_flow 0.0023895944447072156
+    plastic_flow 0.002408832191355159
   ]
   node [
     id 219
     label "(84797.53882432751,446215.3983899097)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.0
     position 84797.53882432751
     position 446215.3983899097
-    plastic_flow 0.005361785304688198
+    plastic_flow 0.005404951784309662
   ]
   node [
     id 220
     label "(84731.639200741,446363.1723593083)"
-    init_probability 0.004792332268370607
+    init_probability 0.004830917874396135
     stuck_probability 0.0
     position 84731.639200741
     position 446363.1723593083
-    plastic_flow 0.012649567208456646
+    plastic_flow 0.012751406932612484
   ]
   node [
     id 221
     label "(84699.02771864466,446441.1628906047)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.0
     position 84699.02771864466
     position 446441.1628906047
-    plastic_flow 0.017273019959115572
+    plastic_flow 0.017412064246607017
   ]
   node [
     id 222
     label "(84666.41623654832,446519.15342190105)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.0
     position 84666.41623654832
     position 446519.15342190105
-    plastic_flow 0.02105762526198679
+    catching_system_type 1
+    plastic_flow 0.021227099539890364
   ]
   node [
     id 223
@@ -2019,26 +2021,25 @@ graph [
     stuck_probability 0.0
     position 84633.80475445198
     position 446597.14395319746
-    plastic_flow 0.023153675411483214
+    plastic_flow 0.023339970680877516
   ]
   node [
     id 224
     label "(84601.19327235564,446675.1344844939)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.0
     position 84601.19327235564
     position 446675.1344844939
-    plastic_flow 0.025669449359581042
+    plastic_flow 0.025875927109545026
   ]
   node [
     id 225
     label "(84560.50398411034,446806.73360668455)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.0
     position 84560.50398411034
     position 446806.73360668455
-    catching_system_type 2
-    plastic_flow 0.028166217521173757
+    plastic_flow 0.02839256935257523
   ]
   node [
     id 226
@@ -2047,161 +2048,161 @@ graph [
     stuck_probability 0.0
     position 84936.59734670962
     position 446102.7586394817
-    plastic_flow 0.0012145551906978034
+    plastic_flow 0.0012243331281634438
   ]
   node [
     id 227
     label "(84796.57670424158,448467.21686858736)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.45
     position 84796.57670424158
     position 448467.21686858736
-    plastic_flow 0.0014213477408861292
+    plastic_flow 0.0014321105232405868
   ]
   node [
     id 228
     label "(84725.78006994816,448419.7103876744)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.45
     position 84725.78006994816
     position 448419.7103876744
-    plastic_flow 0.0016930246939118798
+    plastic_flow 0.0017046020492715998
   ]
   node [
     id 229
     label "(84654.98343565472,448372.20390676137)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.45
     position 84654.98343565472
     position 448372.20390676137
-    plastic_flow 0.00285787046374334
+    plastic_flow 0.002875266946127574
   ]
   node [
     id 230
     label "(84584.18680136131,448324.6974258484)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.45
     position 84584.18680136131
     position 448324.6974258484
-    plastic_flow 0.004564735114604676
+    plastic_flow 0.004586264339047099
   ]
   node [
     id 231
     label "(84513.3901670679,448277.19094493537)"
-    init_probability 0.004792332268370607
+    init_probability 0.004830917874396135
     stuck_probability 0.45
     position 84513.3901670679
     position 448277.19094493537
-    plastic_flow 0.008419823814486114
+    plastic_flow 0.008446357407275479
   ]
   node [
     id 232
     label "(84458.1383811144,447608.3093719562)"
-    init_probability 0.00878594249201278
+    init_probability 0.008856682769726247
     stuck_probability 0.45
     position 84458.1383811144
     position 447608.3093719562
-    plastic_flow 0.012470220682170815
+    plastic_flow 0.012557981120804664
   ]
   node [
     id 233
     label "(84385.48716829394,447563.02613001404)"
-    init_probability 0.016773162939297124
+    init_probability 0.01610305958132045
     stuck_probability 0.5321232876712328
     position 84385.48716829394
     position 447563.02613001404
     catching_system_type 1
-    plastic_flow 0.024243183174846666
+    plastic_flow 0.023576139197391655
   ]
   node [
     id 234
     label "(84879.64376574135,447414.30866983393)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.45
     position 84879.64376574135
     position 447414.30866983393
-    plastic_flow 0.004120117098758279
+    plastic_flow 0.004153284505976788
   ]
   node [
     id 235
     label "(84806.05068308911,447364.4639192003)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.4680821917808219
     position 84806.05068308911
     position 447364.4639192003
-    plastic_flow 0.0031983699284730198
+    plastic_flow 0.0032241203741859193
   ]
   node [
     id 236
     label "(84732.45760043684,447314.6191685666)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.6840239776512917
     position 84732.45760043684
     position 447314.6191685666
-    plastic_flow 0.001982242798741373
+    plastic_flow 0.0019982025867656674
   ]
   node [
     id 237
     label "(84658.8645177846,447264.77441793296)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.45
     position 84658.8645177846
     position 447264.77441793296
-    plastic_flow 0.0030391377647090738
+    plastic_flow 0.0030636073805751234
   ]
   node [
     id 238
     label "(85032.16813787172,447385.608266497)"
-    init_probability 0.004792332268370607
+    init_probability 0.004830917874396135
     stuck_probability 0.45
     position 85032.16813787172
     position 447385.608266497
-    plastic_flow 0.010114444561379063
+    plastic_flow 0.010195869999212973
   ]
   node [
     id 239
     label "(84946.22177980113,447334.51841642463)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.615
     position 84946.22177980113
     position 447334.51841642463
-    plastic_flow 0.00436352373427816
+    plastic_flow 0.004398654154662993
   ]
   node [
     id 240
     label "(84378.25656203563,447776.8776667512)"
-    init_probability 0.004792332268370607
+    init_probability 0.004830917874396135
     stuck_probability 0.45
     position 84378.25656203563
     position 447776.8776667512
-    plastic_flow 0.008183019422889659
+    plastic_flow 0.008248087617845476
   ]
   node [
     id 241
     label "(84327.3224162179,447843.85148106195)"
-    init_probability 0.005591054313099041
+    init_probability 0.005636070853462158
     stuck_probability 0.45
     position 84327.3224162179
     position 447843.85148106195
-    plastic_flow 0.01076352671646154
+    plastic_flow 0.01084980236445185
   ]
   node [
     id 242
     label "(84276.38827040014,447910.82529537275)"
-    init_probability 0.003194888178913738
+    init_probability 0.00322061191626409
     stuck_probability 0.45
     position 84276.38827040014
     position 447910.82529537275
-    plastic_flow 0.008884975028755612
+    plastic_flow 0.008955926837873116
   ]
   node [
     id 243
     label "(84225.45412458241,447977.7991096835)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.45
     position 84225.45412458241
     position 447977.7991096835
-    plastic_flow 0.006491243437249071
+    plastic_flow 0.006541737533029538
   ]
   node [
     id 244
@@ -2210,7 +2211,7 @@ graph [
     stuck_probability 0.14520547945205475
     position 83657.41968230651
     position 448519.098041309
-    plastic_flow 0.0014349480902495948
+    plastic_flow 0.0014218040323657102
   ]
   node [
     id 245
@@ -2219,88 +2220,88 @@ graph [
     stuck_probability 0.0
     position 83590.03400083522
     position 448481.7887416036
-    plastic_flow 0.0006313239007502143
+    plastic_flow 0.0006255410031309023
   ]
   node [
     id 246
     label "(84514.4775682969,446819.97348758427)"
-    init_probability 0.003993610223642172
+    init_probability 0.004025764895330112
     stuck_probability 0.1698630136986301
     position 84514.4775682969
     position 446819.97348758427
-    plastic_flow 0.011508093818614177
+    plastic_flow 0.01160055350118502
   ]
   node [
     id 247
     label "(84519.52680965864,446766.45736599696)"
-    init_probability 0.003194888178913738
+    init_probability 0.00322061191626409
     stuck_probability 0.0
     position 84519.52680965864
     position 446766.45736599696
-    plastic_flow 0.01607991387240796
+    plastic_flow 0.01620916712395267
   ]
   node [
     id 248
     label "(84742.60040784684,447492.21163627505)"
-    init_probability 0.00718849840255591
+    init_probability 0.007246376811594203
     stuck_probability 0.45
     position 84742.60040784684
     position 447492.21163627505
-    plastic_flow 0.010039399128098533
+    plastic_flow 0.010120180235571413
   ]
   node [
     id 249
     label "(84673.28636165491,447442.36941120564)"
-    init_probability 0.00878594249201278
+    init_probability 0.008856682769726247
     stuck_probability 0.45
     position 84673.28636165491
     position 447442.36941120564
-    plastic_flow 0.014864398113590055
+    plastic_flow 0.014984067643776414
   ]
   node [
     id 250
     label "(84603.97231546298,447392.52718613617)"
-    init_probability 0.006389776357827476
+    init_probability 0.00644122383252818
     stuck_probability 0.45
     position 84603.97231546298
     position 447392.52718613617
-    plastic_flow 0.013185653598421023
+    plastic_flow 0.01329181565118397
   ]
   node [
     id 251
     label "(84555.45952628739,447280.1604653741)"
-    init_probability 0.004792332268370607
+    init_probability 0.004830917874396135
     stuck_probability 0.45
     position 84555.45952628739
     position 447280.1604653741
-    plastic_flow 0.006272627020438432
+    plastic_flow 0.006323130352394568
   ]
   node [
     id 252
     label "(84571.06209602603,446957.6536268316)"
-    init_probability 0.003194888178913738
+    init_probability 0.00322061191626409
     stuck_probability 0.5042465753424658
     position 84571.06209602603
     position 446957.6536268316
-    plastic_flow 0.004831036962191532
+    plastic_flow 0.004869908446251207
   ]
   node [
     id 253
     label "(84602.57325376995,447075.0227994095)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.45
     position 84602.57325376995
     position 447075.0227994095
-    plastic_flow 0.0051469412760710926
+    plastic_flow 0.0051883387282389065
   ]
   node [
     id 254
     label "(84591.59879260881,447145.9889384629)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.45
     position 84591.59879260881
     position 447145.9889384629
-    plastic_flow 0.003654504463837434
+    plastic_flow 0.0036839137634676615
   ]
   node [
     id 255
@@ -2309,34 +2310,34 @@ graph [
     stuck_probability 0.45
     position 83977.68054670391
     position 448016.16734193586
-    plastic_flow 0.0006363724578994946
+    plastic_flow 0.0006407612616849372
   ]
   node [
     id 256
     label "(84379.2047840131,448291.08941764483)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.0
     position 84379.2047840131
     position 448291.08941764483
-    plastic_flow 0.009308105610594503
+    plastic_flow 0.009162222330165382
   ]
   node [
     id 257
     label "(84319.6341326861,448352.0991002702)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.0
     position 84319.6341326861
     position 448352.0991002702
-    plastic_flow 0.032262855716692754
+    plastic_flow 0.03151492511318012
   ]
   node [
     id 258
     label "(84168.62205857776,448415.7347993425)"
-    init_probability 0.003194888178913738
+    init_probability 0.00322061191626409
     stuck_probability 0.0
     position 84168.62205857776
     position 448415.7347993425
-    plastic_flow 0.05394862311282344
+    plastic_flow 0.05292905107706547
   ]
   node [
     id 259
@@ -2345,16 +2346,16 @@ graph [
     stuck_probability 0.0
     position 84075.14730075239
     position 448419.26282644726
-    plastic_flow 0.036498388899150844
+    plastic_flow 0.035893681640425806
   ]
   node [
     id 260
     label "(83884.42612877121,448433.36499306577)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.0
     position 83884.42612877121
     position 448433.36499306577
-    plastic_flow 0.01588632216560574
+    plastic_flow 0.015695797621067126
   ]
   node [
     id 261
@@ -2363,7 +2364,7 @@ graph [
     stuck_probability 0.10684931506849316
     position 83752.93210630848
     position 448501.4754733475
-    plastic_flow 0.006320766091987907
+    plastic_flow 0.006262868168050369
   ]
   node [
     id 262
@@ -2372,7 +2373,7 @@ graph [
     stuck_probability 0.0
     position 83697.10179932864
     position 448650.4264261775
-    plastic_flow 0.003023640618740218
+    plastic_flow 0.0029959442110563195
   ]
   node [
     id 263
@@ -2381,7 +2382,7 @@ graph [
     stuck_probability 0.0
     position 83673.7594911128
     position 448742.5577365252
-    plastic_flow 0.0028176496028089943
+    plastic_flow 0.002791840063267125
   ]
   node [
     id 264
@@ -2390,16 +2391,16 @@ graph [
     stuck_probability 0.0
     position 83650.41718289697
     position 448834.68904687284
-    plastic_flow 0.002567434526960331
+    plastic_flow 0.002543916945896071
   ]
   node [
     id 265
     label "(83865.9702720652,448171.54630444245)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.3
     position 83865.9702720652
     position 448171.54630444245
-    plastic_flow 0.004723878121804342
+    plastic_flow 0.004757837935659084
   ]
   node [
     id 266
@@ -2408,7 +2409,7 @@ graph [
     stuck_probability 0.3
     position 83842.59740599537
     position 448303.5064608879
-    plastic_flow 0.0030745714488871778
+    plastic_flow 0.0030939444525126788
   ]
   node [
     id 267
@@ -2417,7 +2418,7 @@ graph [
     stuck_probability 0.0
     position 83813.76634584452
     position 448374.6428365805
-    plastic_flow 0.0023869888462896955
+    plastic_flow 0.002388031510320123
   ]
   node [
     id 268
@@ -2426,160 +2427,160 @@ graph [
     stuck_probability 0.45
     position 84130.01290757507
     position 448005.4819192703
-    plastic_flow 0.0007397194610503867
+    plastic_flow 0.0007152621029744217
   ]
   node [
     id 269
     label "(84376.6436397008,448183.32462977996)"
-    init_probability 0.003993610223642172
+    init_probability 0.00322061191626409
     stuck_probability 0.615
     position 84376.6436397008
     position 448183.32462977996
-    plastic_flow 0.012642054902756009
+    plastic_flow 0.011691004603814994
   ]
   node [
     id 270
     label "(84310.6401300271,448136.9279681161)"
-    init_probability 0.003993610223642172
+    init_probability 0.004025764895330112
     stuck_probability 0.45
     position 84310.6401300271
     position 448136.9279681161
-    plastic_flow 0.007091312956199275
+    plastic_flow 0.0069708576452762174
   ]
   node [
     id 271
     label "(84244.63662035341,448090.5313064523)"
-    init_probability 0.003194888178913738
+    init_probability 0.0024154589371980675
     stuck_probability 0.45
     position 84244.63662035341
     position 448090.5313064523
-    plastic_flow 0.006072500114269183
+    plastic_flow 0.005211070548042933
   ]
   node [
     id 272
     label "(85488.32726839936,447303.6549283628)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.615
     position 85488.32726839936
     position 447303.6549283628
-    plastic_flow 0.0008731177983912984
+    plastic_flow 0.0008801477321847878
   ]
   node [
     id 273
     label "(85393.62602176426,447408.24785997364)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.45
     position 85393.62602176426
     position 447408.24785997364
-    plastic_flow 0.003029469960430636
+    plastic_flow 0.0030538618228222784
   ]
   node [
     id 274
     label "(85275.37563529804,447450.83556155354)"
-    init_probability 0.003194888178913738
+    init_probability 0.00322061191626409
     stuck_probability 0.45
     position 85275.37563529804
     position 447450.83556155354
-    plastic_flow 0.004340175308437216
+    plastic_flow 0.004375119787391434
   ]
   node [
     id 275
     label "(84478.90635299339,447681.32214222045)"
-    init_probability 0.003993610223642172
+    init_probability 0.004025764895330112
     stuck_probability 0.45
     position 84478.90635299339
     position 447681.32214222045
-    plastic_flow 0.006654477805422974
+    plastic_flow 0.0066989248155534115
   ]
   node [
     id 276
     label "(84879.41176500767,447502.93545469973)"
-    init_probability 0.00718849840255591
+    init_probability 0.007246376811594203
     stuck_probability 0.45
     position 84879.41176500767
     position 447502.93545469973
-    plastic_flow 0.010136042655529138
+    plastic_flow 0.01021764648328648
   ]
   node [
     id 277
     label "(84738.81506228632,447569.6138471638)"
-    init_probability 0.005591054313099041
+    init_probability 0.005636070853462158
     stuck_probability 0.45
     position 84738.81506228632
     position 447569.6138471638
-    plastic_flow 0.010172859050578263
+    plastic_flow 0.010254683499139813
   ]
   node [
     id 278
     label "(84668.5749869018,447597.5261040959)"
-    init_probability 0.009584664536741214
+    init_probability 0.00966183574879227
     stuck_probability 0.45
     position 84668.5749869018
     position 447597.5261040959
-    plastic_flow 0.015790616915361533
+    plastic_flow 0.015917402608021953
   ]
   node [
     id 279
     label "(84598.3349115173,447625.43836102803)"
-    init_probability 0.003993610223642172
+    init_probability 0.004025764895330112
     stuck_probability 0.45
     position 84598.3349115173
     position 447625.43836102803
-    plastic_flow 0.011663963563945674
+    plastic_flow 0.011756783767387874
   ]
   node [
     id 280
     label "(84637.4790410537,447861.5734633781)"
-    init_probability 0.003194888178913738
+    init_probability 0.00322061191626409
     stuck_probability 0.45
     position 84637.4790410537
     position 447861.5734633781
-    plastic_flow 0.009909268107391195
+    plastic_flow 0.009894003512589313
   ]
   node [
     id 281
     label "(84569.4434965499,447810.8207197984)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.45
     position 84569.4434965499
     position 447810.8207197984
-    plastic_flow 0.0050841813640669095
+    plastic_flow 0.00510339053583936
   ]
   node [
     id 282
     label "(84501.40795204611,447760.0679762187)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.45
     position 84501.40795204611
     position 447760.0679762187
-    plastic_flow 0.004532979688043249
+    plastic_flow 0.004564484895956738
   ]
   node [
     id 283
     label "(84689.91861953611,447774.7399613703)"
-    init_probability 0.004792332268370607
+    init_probability 0.004830917874396135
     stuck_probability 0.45
     position 84689.91861953611
     position 447774.7399613703
-    plastic_flow 0.007799697579445869
+    plastic_flow 0.007855605918508896
   ]
   node [
     id 284
     label "(84610.46936594826,447714.24583149434)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.45
     position 84610.46936594826
     position 447714.24583149434
-    plastic_flow 0.005285107453272146
+    plastic_flow 0.005324335753664264
   ]
   node [
     id 285
     label "(85016.4060210988,447195.4278269389)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.0
     position 85016.4060210988
     position 447195.4278269389
-    plastic_flow 0.010735191878156589
+    plastic_flow 0.01082155025382274
   ]
   node [
     id 286
@@ -2588,106 +2589,106 @@ graph [
     stuck_probability 0.0
     position 84939.90017740316
     position 447139.1319340885
-    plastic_flow 0.012392824190376045
+    plastic_flow 0.012492495293742006
   ]
   node [
     id 287
     label "(84863.39433370753,447082.836041238)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.16164383561643836
     position 84863.39433370753
     position 447082.836041238
-    plastic_flow 0.01452388912686988
+    plastic_flow 0.014640697596063717
   ]
   node [
     id 288
     label "(84786.8884900119,447026.5401483875)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.0
     position 84786.8884900119
     position 447026.5401483875
-    plastic_flow 0.015654137314863845
+    plastic_flow 0.015780032984711412
   ]
   node [
     id 289
     label "(84710.38264631627,446970.244255537)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.0
     position 84710.38264631627
     position 446970.244255537
-    plastic_flow 0.01642218303024432
+    plastic_flow 0.016554209509871107
   ]
   node [
     id 290
     label "(84633.87680262064,446913.9483626865)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.0
     position 84633.87680262064
     position 446913.9483626865
-    plastic_flow 0.014914442606091736
+    plastic_flow 0.01503429645837646
   ]
   node [
     id 291
     label "(85106.82975884259,447346.29995353654)"
-    init_probability 0.0023961661341853034
+    init_probability 0.0024154589371980675
     stuck_probability 0.5331037779357966
     position 85106.82975884259
     position 447346.29995353654
-    plastic_flow 0.006957976671049696
+    plastic_flow 0.007013989329898215
   ]
   node [
     id 292
     label "(85056.35722196948,447503.4578299546)"
-    init_probability 0.00718849840255591
+    init_probability 0.007246376811594203
     stuck_probability 0.45
     position 85056.35722196948
     position 447503.4578299546
-    plastic_flow 0.016987943259523866
+    plastic_flow 0.017124701358876004
   ]
   node [
     id 293
     label "(84998.38925934037,447569.6158126438)"
-    init_probability 0.00878594249201278
+    init_probability 0.008856682769726247
     stuck_probability 0.45
     position 84998.38925934037
     position 447569.6158126438
-    plastic_flow 0.017623498971937816
+    plastic_flow 0.01776537517223358
   ]
   node [
     id 294
     label "(84882.04556312383,447702.39716101607)"
-    init_probability 0.004792332268370607
+    init_probability 0.004830917874396135
     stuck_probability 0.45
     position 84882.04556312383
     position 447702.39716101607
-    plastic_flow 0.008177552836889486
+    plastic_flow 0.008243216096972174
   ]
   node [
     id 295
     label "(84823.6698295364,447769.0205266992)"
-    init_probability 0.00718849840255591
+    init_probability 0.007246376811594203
     stuck_probability 0.5080136986301369
     position 84823.6698295364
     position 447769.0205266992
-    plastic_flow 0.012416770060929987
+    plastic_flow 0.012515802305224467
   ]
   node [
     id 296
     label "(84733.3246647164,447874.2629330434)"
-    init_probability 0.003993610223642172
+    init_probability 0.004025764895330112
     stuck_probability 0.45
     position 84733.3246647164
     position 447874.2629330434
-    plastic_flow 0.009378892292311824
+    plastic_flow 0.009442066741764586
   ]
   node [
     id 297
     label "(84648.85013833143,447976.30672013626)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.0
     position 84648.85013833143
     position 447976.30672013626
-    plastic_flow 0.01329059167910509
+    plastic_flow 0.013220765251298991
   ]
   node [
     id 298
@@ -2696,25 +2697,25 @@ graph [
     stuck_probability 0.0
     position 84596.29036464961
     position 448039.79566891433
-    plastic_flow 0.015026926482147008
+    plastic_flow 0.014778503966046595
   ]
   node [
     id 299
     label "(84543.73059096778,448103.2846176924)"
-    init_probability 0.003194888178913738
+    init_probability 0.0024154589371980675
     stuck_probability 0.1814824544942767
     position 84543.73059096778
     position 448103.2846176924
-    plastic_flow 0.01919712039458281
+    plastic_flow 0.01797680334186822
   ]
   node [
     id 300
     label "(84491.17081728595,448166.7735664705)"
-    init_probability 0.006389776357827476
+    init_probability 0.00644122383252818
     stuck_probability 0.0
     position 84491.17081728595
     position 448166.7735664705
-    plastic_flow 0.023406522577712967
+    plastic_flow 0.02281687964822886
   ]
   node [
     id 301
@@ -2723,7 +2724,7 @@ graph [
     stuck_probability 0.4861643835616438
     position 85345.97062022732
     position 447906.4478596438
-    plastic_flow 4.947892507622969E-05
+    plastic_flow 4.987696942302801E-05
   ]
   node [
     id 302
@@ -2732,25 +2733,25 @@ graph [
     stuck_probability 0.45
     position 85265.64779537787
     position 447852.2112020998
-    plastic_flow 0.00013506650971504321
+    plastic_flow 0.00013615308264586213
   ]
   node [
     id 303
     label "(85185.32497052843,447797.9745445559)"
-    init_probability 0.001597444089456869
+    init_probability 0.001610305958132045
     stuck_probability 0.45
     position 85185.32497052843
     position 447797.9745445559
-    plastic_flow 0.0019916145128440403
+    plastic_flow 0.002007647374188573
   ]
   node [
     id 304
     label "(85105.00214567895,447743.7378870119)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.45
     position 85105.00214567895
     position 447743.7378870119
-    plastic_flow 0.0018733075340129665
+    plastic_flow 0.0018883832131282997
   ]
   node [
     id 305
@@ -2759,26 +2760,25 @@ graph [
     stuck_probability 0.45
     position 85024.67932082948
     position 447689.501229468
-    plastic_flow 0.0009474737657134504
+    plastic_flow 0.000955082552880714
   ]
   node [
     id 306
     label "(85406.22994514741,447527.7762074845)"
-    init_probability 0.0007987220447284345
+    init_probability 0.0008051529790660225
     stuck_probability 0.45
     position 85406.22994514741
     position 447527.7762074845
-    plastic_flow 0.0013806617537397742
+    plastic_flow 0.0013917781007655907
   ]
   node [
     id 307
     label "(84444.80480171209,447498.1360659995)"
-    init_probability 0.011980830670926517
+    init_probability 0.012077294685990338
     stuck_probability 0.6560181844238169
     position 84444.80480171209
     position 447498.1360659995
-    catching_system_type 2
-    plastic_flow 0.016003216356610145
+    plastic_flow 0.01613149573469942
   ]
   edge [
     source 0

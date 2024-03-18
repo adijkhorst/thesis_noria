@@ -19,7 +19,7 @@ def get_transition_probabilities(G):
         transition_probabilities = np.zeros(num_neighbors)
         edge_angles = [G[node][neighbor]["weight"] for neighbor in neighbors]
     
-        threshold = 0.1 #still decide threshold!
+        threshold = 0.1 # np.cos(5/180*np.pi) #if less than 5 degrees difference
     
         for direction in wind_directions:
             # print(direction)

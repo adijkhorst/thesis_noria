@@ -22,8 +22,6 @@ wind_directions = wind_data.get_wind_directions()
 
 corners_layer.startEditing()
 for feature in polygon_layer.getFeatures():
-    # print(feature.geometry().asPolygon()[0])
-    # break
     for polygon in feature.geometry().asPolygon():
         for index, vertex in enumerate(polygon):
             new_feature = QgsFeature()
@@ -69,8 +67,6 @@ for feature in polygon_layer.getFeatures():
         # print(vertex)
         # print('angle: ', feature.geometry().angleAtVertex(index))
     
-
-
         break #because the first polygon is the outline, the second polygon are inner cut outs of polygons which will give wrong angles
 
 

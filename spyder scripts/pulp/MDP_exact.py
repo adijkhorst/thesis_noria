@@ -6,9 +6,10 @@ Created on Thu Feb  1 14:39:46 2024
 """
 
 from pulp import *
+import networkx as nx
 import numpy as np
 
-def solve_MDP(n, K, K_i, betas, alpha, C, b, c, B):
+def solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w):
     #(number_nodes, number_catching_systems, possible_catching_systems, catching_probabilities, impact_factor, transition_matrix, initial_distribution, costs, budget):
     prob = LpProblem("MDP-FCLM", LpMaximize)
 
@@ -40,11 +41,13 @@ def solve_MDP(n, K, K_i, betas, alpha, C, b, c, B):
     prob += sum(sum(c[k-1] * xs[i][k-1] for k in K_i[i+1]) for i in range(n)) <= B
 
     ### create objective function
-    flow_caught = sum(betas[i,k-1]*v2[i][k-1] for i in range(n) for k in K_i[i+1]) - sum(alpha[i]*v for i, v in enumerate(v1))
+    flow_caught = sum(betas[i,k-1]*v2[i][k-1] for i in range(n) for k in K_i[i+1]) - w *sum(sum(c[k-1] * xs[i][k-1] for k in K_i[i+1]) for i in range(n))  - sum(alpha[i]*v for i, v in enumerate(v1)) - sum(alpha[i]*sum((1-betas[i, k-1])*v2[i][k-1] for k in K_i[i+1]) for i in range(n))
     prob += flow_caught
 
     ### solve
-    status = prob.solve(GUROBI_CMD(options = [('LogToConsole', 1)]))
+    # status = prob.solve(GUROBI_CMD(keepFiles=True, options = [('LogToConsole', 1)]))
+    status = prob.solve()
+
     print('Solution is: ', LpStatus[status])
 
     solution_nodes = []
@@ -71,12 +74,10 @@ def solve_MDP(n, K, K_i, betas, alpha, C, b, c, B):
         flow_attrs[node] = {'plastic_flow': M1[index]}
     nx.set_node_attributes(G, flow_attrs)
 
-    return prob, G
+    return prob, G, solution_nodes
 
 if __name__ == '__main__':
     ### necessary inputs to run the exact MDP model:
-
-    import networkx as nx
 
     sys.path.insert(1, "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/thesis_noria/spyder scripts")
 
@@ -133,9 +134,11 @@ if __name__ == '__main__':
     betas = np.random.uniform(0.1, 0.8, (n, K))
     c = [1, 1]
     B = 8.5
+    w = 0.001
     # alpha = 0.001*np.ones(n)
     alpha = np.zeros(n)
     alpha = np.random.uniform(0.001, 0.01, n)
+    alpha = np.ones(n)*0.1
 
     #%%
 
@@ -167,7 +170,7 @@ if __name__ == '__main__':
     #%%
     import time
     start = time.time()
-    prob, G = solve_MDP(n, K, K_i, betas, alpha, C, b, c, B)
+    prob, G, solution = solve_MDP(n, K, K_i, betas, alpha, C, b, c, B, w)
 
     end = time.time()
     print('runtime for ', B, ' catching systems', end-start)
