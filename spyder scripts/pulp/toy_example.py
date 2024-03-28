@@ -23,7 +23,10 @@ for i in range(1,7):
         K_i[i] = {}
 
 beta_1 = 0.8
-alpha = n*[0.1]
+alpha = n*[0]
+# alpha = [0.1, 0.0001, 0.0001, 0.0001, 0.1, 0.0001]
+# alpha = n*[0.5]
+# alpha = [0.001, 0.001, 0.001, 0.35, 0.35, 0.001]
 # alpha = 0.1
 c = [1, 1.5]
 B = 1.5
@@ -67,6 +70,7 @@ for i in range(n):
         diagB[i,i] = 1 - betas[i,k]
         M2[i,k] = (b.T @ np.linalg.inv(np.eye(n)- diagB @ C))[i]
 
+alpha = n * [np.min((betas*M2)[(betas*M2) > 0])]
 
 ### create variables x_ik, v_i1, v_ik2
 # xs = [[LpVariable("x{}{}".format(i+1, j+1), cat="Binary") for j in range(k)] for i in range(n)]
@@ -98,7 +102,7 @@ prob += sum(sum(c[k-1] * xs[i][k-1] for k in K_i[i+1]) for i in range(n)) <= B
 # prob += xs[5][0] == 0
 
 #obj func
-flow_caught = sum(betas[i,k-1]*v2[i][k-1] for i in range(n) for k in K_i[i+1]) - sum(alpha[i]*v for i,v in enumerate(v1))
+flow_caught = sum(betas[i,k-1]*v2[i][k-1] for i in range(n) for k in K_i[i+1]) - sum(alpha[i]*v for i,v in enumerate(v1)) - sum(alpha[i]*sum((1-betas[i, k-1])*v2[i][k-1] for k in K_i[i+1]) for i in range(n))
 # flow_caught = sum(beta_1*v for v_i in v2 for v in v_i) #- sum(alpha*v for v in v1)
 prob += flow_caught
 

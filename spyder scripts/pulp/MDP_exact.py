@@ -45,8 +45,8 @@ def solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w):
     prob += flow_caught
 
     ### solve
-    # status = prob.solve(GUROBI_CMD(keepFiles=True, options = [('LogToConsole', 1)]))
-    status = prob.solve()
+    status = prob.solve(GUROBI_CMD(keepFiles=True, options = [('LogToConsole', 1)]))
+    # status = prob.solve()
 
     print('Solution is: ', LpStatus[status])
 
@@ -55,10 +55,11 @@ def solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w):
     for i in prob.variables():
         if i.varValue == 1.0:
             print(i, i.varValue)
-            solution_nodes += [(int(str(i)[1:-1]), str(i)[-1])]
+            solution_nodes += [[int(str(i)[1:-1]), int(str(i)[-1])]]
     
     print(value(prob.objective))
-    print('flow caught: ', value(sum(betas[i,k-1]*v2[i][k-1] for i in range(n) for k in K_i[i+1])))
+    flow_caught = value(sum(betas[i,k-1]*v2[i][k-1] for i in range(n) for k in K_i[i+1]))
+    print('flow caught: ', flow_caught)
 
     ### give nodes that are in the solution an attribute
     mapping = {key: index+1 for index, key in enumerate(G.nodes.keys())}
@@ -74,7 +75,7 @@ def solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w):
         flow_attrs[node] = {'plastic_flow': M1[index]}
     nx.set_node_attributes(G, flow_attrs)
 
-    return prob, G, solution_nodes
+    return prob, G, solution_nodes, flow_caught
 
 if __name__ == '__main__':
     ### necessary inputs to run the exact MDP model:
@@ -88,9 +89,11 @@ if __name__ == '__main__':
     ### TEST DELFT
     np.random.seed(1)
 
+    year = 2022
+
     # import the networkx graph from network_creation.py, get transition probabilities and initial probabilities
     G = network_creation.create_network()
-    transition_probabilities_wind.get_transition_probabilities(G)
+    transition_probabilities_wind.get_transition_probabilities(G, year)
     init_probability.get_initial_probabilities(G)
     init_probability.get_stuck_probabilities(G)
 

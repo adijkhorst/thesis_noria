@@ -6,7 +6,7 @@ from math import *
 import numpy as np
 import shutil
 
-MAX_DIST_NODES = 50
+MAX_DIST_NODES = 150
 
 
 original_layer_path = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/waterway_canal_delft_exploded_fewnodes.geojson"
@@ -106,11 +106,16 @@ def make_directed(line_layer):
             old_angle = new_feature[angle_id]
             new_feature.setAttribute(angle_id, old_angle-180)
             line_layer.addFeature(new_feature, QgsFeatureSink.FastInsert)
+    
     line_layer.updateExtents()
 
     line_layer.commitChanges()
     line_layer.endEditCommand()
+    
     iface.mapCanvas().refresh()
     
 add_nodes(line_layer)
 make_directed(line_layer)
+
+processing.run("native:explodelines", {'INPUT': line_layer,
+    'OUTPUT': new_layer_path[:-8]+'_exploded_d'+str(MAX_DIST_NODES)+'.geojson'})

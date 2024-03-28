@@ -7,14 +7,14 @@ Created on Fri Nov 17 13:37:32 2023
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def get_wind_directions():
+def get_wind_directions(year):
     ### adjust later such that year and file are inputs to the function!!!
     weather_data_path = 'C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/6. Model/etmgeg_344.txt'
     
     df = pd.read_csv(weather_data_path, skiprows=50)
     
-    min_date = 20220101
-    max_date = 20221231
+    min_date = int(str(year)+'0101')
+    max_date = int(str(year)+'1231')
     
     df = df.loc[df['YYYYMMDD'] >= min_date]
     df = df.loc[df['YYYYMMDD'] <= max_date]
@@ -27,5 +27,7 @@ def get_wind_directions():
     return (wind_directions + 180) % 360 #convert to direction where wind is blowing for later calculations
 
 if __name__ == '__main__':
-    wind_directions = get_wind_directions()
-    hist = plt.hist(wind_directions, bins = 20)
+    for year in [2020, 2021, 2022, 2023]:
+        wind_directions = get_wind_directions(year)
+        plt.figure()
+        hist = plt.hist(wind_directions, bins = 20)

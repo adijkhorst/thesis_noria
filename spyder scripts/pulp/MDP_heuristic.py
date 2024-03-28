@@ -7,17 +7,21 @@ Created on Tue Jan  9 10:37:57 2024
 import numpy as np
 
 
-def objective_value(b, betas, C, x):
+def objective_value(n, b, betas, C, x, w, costs, alpha):
     transition_matrix = np.diag(np.ones(n) - np.sum(betas*x, axis = 1)) @ np.copy(C)
+
+    binverse = b.T @ np.linalg.inv(np.eye(n)-transition_matrix)
+
     c_n1 = np.sum(betas*x, axis = 1)
 
-    return b.T @ np.linalg.inv(np.eye(n)-transition_matrix) @ c_n1
+    alphaterm = alpha * (1 - np.sum(betas*x, axis = 1))
+    return binverse @ c_n1 - w * costs - binverse @ alphaterm
 
 
 ### greedy heuristic algorithm
 
 
-def MDP_heuristic(n, K, K_i, betas, alpha, C, b, c, B):
+def MDP_heuristic(n, K, K_i, betas, alpha, C, b, c, B, w):
     costs = 0
     x = np.zeros((n,K))
     N_not_Ak = set(np.arange(1,n+1))
@@ -29,10 +33,10 @@ def MDP_heuristic(n, K, K_i, betas, alpha, C, b, c, B):
         objectives = np.zeros((n,K))
         for i in N_not_Ak: #i in the set is the actual i, not index
             for k in K_i[i]:
-                if costs + c[k-1] < B:
+                if costs + c[k-1] <= B:
                     x_plus1 = np.copy(x)
                     x_plus1[i-1, 0] = 1
-                    objectives[i-1, k-1] = objective_value(b, betas, C, x_plus1)
+                    objectives[i-1, k-1] = objective_value(n, b, betas, C, x_plus1, w, costs, alpha)
     
         #check if objective can still improve and check if any objective values were calculated, otherwise there is no i,k left within the budget
         if not np.any(objectives > 0) or np.max(objectives) < objective:
@@ -46,7 +50,7 @@ def MDP_heuristic(n, K, K_i, betas, alpha, C, b, c, B):
             costs += c[index_k]
     print("First stage of heuristic:")
     print(Ak)
-    print(x)
+    print(np.argwhere(x>0.8))
     print(objective)
     
     ### cleaning step!
@@ -54,7 +58,7 @@ def MDP_heuristic(n, K, K_i, betas, alpha, C, b, c, B):
         x_min1 = np.copy(x)
         index_k = np.argmax(x_min1[i-1])
         x_min1[i-1, index_k] = 0
-        new_objective = objective_value(b, betas, C, x_min1)
+        new_objective = objective_value(n, b, betas, C, x_min1, w, costs, alpha)
         if new_objective > objective:
             x = np.copy(x_min1)
             N_not_Ak.add(i)
@@ -63,10 +67,12 @@ def MDP_heuristic(n, K, K_i, betas, alpha, C, b, c, B):
             costs -= c[index_k]
     print("After clean up step:")
     print(Ak)
-    print(x)
+    print(np.argwhere(x>0.8))
     print(objective)
 
-    return x, objective
+    solution = [(i[0]+1, str(i[1]+1)) for i in np.argwhere(x>0.8)]
+
+    return x, objective, solution
 
 
 if __name__ == '__main__':

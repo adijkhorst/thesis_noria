@@ -7,11 +7,10 @@ import networkx as nx
 import geopandas as gpd
 
 import sys
-sys.path.insert(1, "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/thesis_noria/pyqgis scripts")
-import display_probabilities
 sys.path.insert(1, "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/thesis_noria/spyder scripts")
 import wind_data
 
+layers_folder = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/"
 
 RADIUS_SOURCES_IMPACT = 100
 
@@ -96,7 +95,10 @@ def create_network(final_network_layer_path):
             G.add_edge(node_from, node_to, weight = angle)
     
     # G.remove_edges_from(nx.selfloop_edges(G))
-    positions = {n: [n[0], n[1]] for n in list(G.nodes)}
+    attrs = {}
+    for index, node in enumerate(G.nodes()):
+        attrs[node] = {'label': index+1, 'position' : node}
+    nx.set_node_attributes(G, attrs)
     
     return G
     
@@ -109,17 +111,17 @@ def get_transition_probabilities(G):
         neighbors = [neighbor for neighbor in G.neighbors(node)]
         num_neighbors = len(neighbors)
         transition_probabilities = np.zeros(num_neighbors)
-        edge_angles = [G[node][neighbor]["weight"] for neighbor in neighbors]
+        edge_angles = [G[node][neighbor]["weight"] % 360 for neighbor in neighbors]
     
-        threshold = 0.1 # np.cos(5/180*np.pi) #if less than 5 degrees difference
+        threshold = 10 #if less than 5 degrees from bisector angle
     
         for direction in wind_directions:
-            innerproducts = np.cos((edge_angles-direction)/180*np.pi)
-            index, value = np.argmax(innerproducts), np.max(innerproducts)
-            innerproducts[index] -= value
-            second_index, second_value = np.argmax(innerproducts), np.max(innerproducts)
+            difference = np.min([360-np.abs(edge_angles - direction), np.abs(edge_angles - direction)], axis = 0)
+            index, value = np.argmin(difference), np.min(difference)
+            difference[index] += 360
+            second_index, second_value = np.argmin(difference), np.min(difference)
             transition_probabilities[index] += 1
-            if value-second_value < threshold:
+            if second_value - value < threshold:
                 transition_probabilities[second_index] += 1
     
         transition_probabilities /= np.sum(transition_probabilities)
@@ -155,19 +157,28 @@ def display_probabilities_map(G, line_layer):
     line_layer.commitChanges()
     line_layer.endEditCommand()
     iface.mapCanvas().refresh()
-    
 
-def catching_probabilities(nodes_layer, polygon_layer, max_boat_width, MAX_CANAL_WIDTH):
+# def nodes_indices(G, nodes_layer):
+#     for feature in nodes_layer.getFeatures():
+        
+
+def catching_probabilities(nodes_layer, polygon_layer, max_boat_width_layer, MAX_CANAL_WIDTH):
     # Create empty test layer to show the clipped line segments
     test_layer = QgsVectorLayer("Linestring?crs=EPSG:28992","TestLayer","memory")
 
     # Add schie layer to check max boat width
-    schie_layer_path = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/schie_nodes.geojson"
-    schie_layer = QgsVectorLayer(schie_layer_path, '', "ogr")
+    # schie_layer_path = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/schie_nodes.geojson"
+    # schie_layer = QgsVectorLayer(schie_layer_path, '', "ogr")
 
 
     ### Add new field called canal width if field does not exist yet
     name_list = [field.name() for field in nodes_layer.fields()]
+    if not 'max_boat_width' in name_list: 
+        nodes_layer.startEditing()
+        layer_provider = nodes_layer.dataProvider()
+        layer_provider.addAttributes([QgsField("max_boat_width", QVariant.Double)])
+        nodes_layer.commitChanges()
+        print("Added attribute field for max boat width.")
     if not 'canal_width' in name_list: 
         nodes_layer.startEditing()
         layer_provider = nodes_layer.dataProvider()
@@ -188,15 +199,26 @@ def catching_probabilities(nodes_layer, polygon_layer, max_boat_width, MAX_CANAL
 
 
     name_list = [field.name() for field in nodes_layer.fields()]
-    width_id = name_list.index("canal_width")
+    boat_width_id = name_list.index("max_boat_width")
+    canal_width_id = name_list.index("canal_width")
     catching_prob_id = name_list.index("catching_probability")
 
-    index = QgsSpatialIndex(schie_layer.getFeatures())
+    # index = QgsSpatialIndex(schie_layer.getFeatures())
 
     nodes_layer.startEditing()
     test_layer.startEditing()
     for feature in nodes_layer.getFeatures():
         point = feature.geometry().asPoint()
+        
+        #get max boat width from layer
+        max_boat_width = 0
+        for feat in max_boat_width_layer.getFeatures():
+            if feat.geometry().contains(point):
+                max_boat_width = feat['max_boat_width']
+        nodes_layer.changeAttributeValue(feature.id(), boat_width_id, max_boat_width)
+        
+        
+        #calculate length using line segment clipped
         angle = feature['angle'] + 90
         unit_vector = [np.sin(angle/180*np.pi), np.cos(angle/180*np.pi)]
         new_vertices = [QgsPoint(point.x()+MAX_CANAL_WIDTH/2 * unit_vector[0], point.y()+MAX_CANAL_WIDTH/2 * unit_vector[1]), QgsPoint(point.x()-MAX_CANAL_WIDTH/2 * unit_vector[0], point.y()-MAX_CANAL_WIDTH/2 * unit_vector[1])]
@@ -212,19 +234,19 @@ def catching_probabilities(nodes_layer, polygon_layer, max_boat_width, MAX_CANAL
         for test_feature in test_layer.getFeatures(): # there should be only 1 feature!
             length = test_feature.geometry().length()
             test_layer.deleteFeature(test_feature.id())
-            nodes_layer.changeAttributeValue(feature.id(), width_id, length)
+            nodes_layer.changeAttributeValue(feature.id(), canal_width_id, length)
         # HIER NOG FIXEN DAT INTERSECTION MET WATER POLYGON WORDT GENOMEN!
             # if len(index.intersects(feature.geometry().boundingBox()))>0:
             #     catching_prob = (length - 21)/length
             # else:
             #     catching_prob = (length - 4)/length
-            catching_prob = (length - 4)/length
+            catching_prob = (length - max_boat_width)/length
             if catching_prob > 0:
                 nodes_layer.changeAttributeValue(feature.id(), catching_prob_id, catching_prob)
             else:
                 nodes_layer.changeAttributeValue(feature.id(), catching_prob_id, 0) #set to zero when boats seem larger than canal width
         if length == 0: #if there was no feature in test_layer then length is still 0
-            nodes_layer.changeAttributeValue(feature.id(), width_id, 0)
+            nodes_layer.changeAttributeValue(feature.id(), canal_width_id, 0)
             nodes_layer.changeAttributeValue(feature.id(), catching_prob_id, 0)
 
     test_layer.updateExtents()
@@ -300,33 +322,64 @@ def stuck_probabilities(nodes_layer, G, shore_layer_path, RADIUS_SHORE_IMPACT, w
     nodes_layer.commitChanges()
     nodes_layer.endEditCommand()
     iface.mapCanvas().refresh()
-    
 
-final_network_layer_path = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/delft_final_network.geojson"
+def sensitive_area(nodes_layer, impact_factor_layer_path):
+    impact_factor_layer = QgsVectorLayer(impact_factor_layer_path, '', "ogr")
+    
+    name_list = [field.name() for field in nodes_layer.fields()]
+    if not 'impact_factor' in name_list: 
+        nodes_layer.startEditing()
+        layer_provider = nodes_layer.dataProvider()
+        layer_provider.addAttributes([QgsField("impact_factor", QVariant.Double)])
+        nodes_layer.commitChanges()
+        print("Added attribute field for impact factor.")
+    
+    name_list = [field.name() for field in nodes_layer.fields()]
+    impact_factor_id = name_list.index("impact_factor")
+    
+    nodes_layer.startEditing()
+
+    for feature in nodes_layer.getFeatures():
+        impact_factor = 0
+        for feat in impact_factor_layer.getFeatures():
+            if feat.geometry().contains(feature.geometry().asPoint()):
+                impact_factor = feat['impact_factor']
+        nodes_layer.changeAttributeValue(feature.id(), impact_factor_id, float(impact_factor))
+
+    nodes_layer.commitChanges()
+    nodes_layer.endEditCommand()
+
+MAX_DIST_NODES = 60
+
+final_network_layer_path = layers_folder +"delft_final_network_exploded_d"+str(MAX_DIST_NODES)+".geojson"
 final_network_layer = iface.addVectorLayer(final_network_layer_path, "final_network", "ogr")
 
-nodes_attributes_layer_path = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/final_network_nodes_attributes.geojson"
+nodes_attributes_layer_path = layers_folder + "final_network_nodes_attributes_d"+str(MAX_DIST_NODES)+".geojson"
 nodes_attributes_layer = create_nodes_layer(final_network_layer_path, nodes_attributes_layer_path)
 
 RADIUS_SOURCES_IMPACT = 100
-sources_layer_path = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/producers_no_market_reprojected.geojson"
+sources_layer_path = layers_folder + "producers_no_market_reprojected.geojson"
 initial_probabilities(nodes_attributes_layer, sources_layer_path, RADIUS_SOURCES_IMPACT)
 
 G = create_network(final_network_layer_path)
 G = get_transition_probabilities(G)
 
-polygon_layer_path = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Static model/Static Model Delft/Static model/waterpolygon_delft.geojson"
+polygon_layer_path = layers_folder + "waterpolygon_delft_reprojected_exploded.geojson"
 polygon_layer = QgsVectorLayer(polygon_layer_path, '', "ogr")
 
-max_boat_width = 0 #    REPLACE WITH POLYGON LAYER LATER!
+max_boat_width_path = layers_folder + "max_boat_width_delft.geojson"
+max_boat_width_layer = QgsVectorLayer(max_boat_width_path, '', "ogr")
 MAX_CANAL_WIDTH = 100
 
-catching_probabilities(nodes_attributes_layer, polygon_layer, max_boat_width, MAX_CANAL_WIDTH)
+catching_probabilities(nodes_attributes_layer, polygon_layer, max_boat_width_layer, MAX_CANAL_WIDTH)
 
-shore_layer_path = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/shore_types_delft_reprojected.geojson"
-water_vegetation_path = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/water_vegetation_delft.geojson"
-corners_layer_path = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/sharp_corners_delft.geojson"
+shore_layer_path = layers_folder + "shore_types_delft_reprojected.geojson"
+water_vegetation_path = layers_folder + "water_vegetation_delft.geojson"
+corners_layer_path = layers_folder + "sharp_corners_delft.geojson"
 
 RADIUS_SHORE_IMPACT = 50
 stuck_probabilities(nodes_attributes_layer, G, shore_layer_path, RADIUS_SHORE_IMPACT, water_vegetation_path, corners_layer_path)
 display_probabilities_map(G, final_network_layer)
+
+impact_factor_layer_path = layers_folder + "impact_factor_citycenter.geojson"
+sensitive_area(nodes_attributes_layer, impact_factor_layer_path)
