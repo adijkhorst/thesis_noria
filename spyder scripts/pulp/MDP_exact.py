@@ -9,7 +9,7 @@ from pulp import *
 import networkx as nx
 import numpy as np
 
-def solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w):
+def solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w, show_solution = False):
     #(number_nodes, number_catching_systems, possible_catching_systems, catching_probabilities, impact_factor, transition_matrix, initial_distribution, costs, budget):
     prob = LpProblem("MDP-FCLM", LpMaximize)
 
@@ -22,27 +22,39 @@ def solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w):
             diagB[i,i] = 1 - betas[i,k]
             M2[i,k] = (b.T @ np.linalg.inv(np.eye(n)- diagB @ C))[i]
 
-    ## create variables for existing K_i
-    xs = [[LpVariable("x{}{}".format(i+1, j), cat="Binary") for j in K_i[i+1]] for i in range(n)] #look at indices +1!
+
+
+    ## create variables for all locations
+    xs = [[LpVariable("x{}{}".format(i+1, j+1), cat="Binary") for j in range(K)] for i in range(n)] #look at indices +1!
     v1 = [LpVariable("v{}1".format(i+1), 0) for i in range(n)]
-    v2 = [[LpVariable("v{}{}2".format(i+1, j), 0) for j in K_i[i+1]] for i in range(n)] #look at indices +1!
+    v2 = [[LpVariable("v{}{}2".format(i+1, j+1), 0) for j in range(K)] for i in range(n)] #look at indices +1!
 
     ### create constraints
     for i in range(n):
-        prob += v1[i] + sum(v2[i]) - sum(C[j,i] * v1[j] for j in range(n)) - sum(sum((1-betas[j,k-1])*C[j,i]*v2[j][k-1] for k in K_i[j+1]) for j in range(n)) == b[i]
+        prob += v1[i] + sum(v2[i]) - sum(C[j,i] * v1[j] for j in range(n)) \
+            - sum(sum((1-betas[j,k])*C[j,i]*v2[j][k] for k in range(K)) for j in range(n)) == b[i]
     
-        prob += v1[i] <= (1-sum(xs[i][k-1] for k in K_i[i+1])) * M1[i]
+        prob += v1[i] <= (1-sum(xs[i][k] for k in range(K))) * M1[i]
     
-        for k in K_i[i+1]:
-            prob += v2[i][k-1] <= M2[i]*xs[i][k-1]
-    
-        prob += sum(xs[i][k-1] for k in K_i[i+1]) <= 1
-    
-    prob += sum(sum(c[k-1] * xs[i][k-1] for k in K_i[i+1]) for i in range(n)) <= B
+        for k in range(K):
+            prob += v2[i][k] <= M2[i]*xs[i][k]
+
+        prob += sum(xs[i][k-1] for k in range(K)) <= 1
+
+        # some catching systems equal to zero
+        setK = set(range(1, 1+K))
+
+        for k in setK - set(K_i[i+1]):
+            prob += xs[i][k-1] == 0
+
+    prob += sum(sum(c[k] * xs[i][k] for k in range(K)) for i in range(n)) <= B
 
     ### create objective function
-    flow_caught = sum(betas[i,k-1]*v2[i][k-1] for i in range(n) for k in K_i[i+1]) - w *sum(sum(c[k-1] * xs[i][k-1] for k in K_i[i+1]) for i in range(n))  - sum(alpha[i]*v for i, v in enumerate(v1)) - sum(alpha[i]*sum((1-betas[i, k-1])*v2[i][k-1] for k in K_i[i+1]) for i in range(n))
-    prob += flow_caught
+    obj_function = sum(betas[i,k]*v2[i][k] for i in range(n) for k in range(K)) \
+                - w *sum(sum(c[k] * xs[i][k] for k in range(K)) for i in range(n))  \
+                - sum(alpha[i]*v for i, v in enumerate(v1)) \
+                - sum(alpha[i]*sum((1-betas[i, k])*v2[i][k] for k in range(K)) for i in range(n))
+    prob += obj_function
 
     ### solve
     status = prob.solve(GUROBI_CMD(keepFiles=True, options = [('LogToConsole', 1)]))
@@ -74,8 +86,11 @@ def solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w):
     for index, node in enumerate(G.nodes()):
         flow_attrs[node] = {'plastic_flow': M1[index]}
     nx.set_node_attributes(G, flow_attrs)
-
-    return prob, G, solution_nodes, flow_caught
+    if show_solution == False:
+        return prob, G, solution_nodes, flow_caught
+    else:
+        x = [[value(xik) for xik in xi] for xi in xs]
+        return prob, G, solution_nodes, flow_caught, x
 
 if __name__ == '__main__':
     ### necessary inputs to run the exact MDP model:
@@ -173,7 +188,7 @@ if __name__ == '__main__':
     #%%
     import time
     start = time.time()
-    prob, G, solution = solve_MDP(n, K, K_i, betas, alpha, C, b, c, B, w)
+    prob, G, solution, flow_caught = solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w)
 
     end = time.time()
     print('runtime for ', B, ' catching systems', end-start)

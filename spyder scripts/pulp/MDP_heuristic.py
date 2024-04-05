@@ -6,6 +6,12 @@ Created on Tue Jan  9 10:37:57 2024
 """
 import numpy as np
 
+def flow_caught(x, n, betas, alpha, C, b):
+    transition_matrix = np.diag(np.ones(n) - np.sum(betas*x, axis = 1)) @ np.copy(C)
+    c_n1 = np.sum(betas*x, axis = 1)
+
+    return b.T @ np.linalg.inv(np.eye(n)-transition_matrix) @ c_n1
+
 
 def objective_value(n, b, betas, C, x, w, costs, alpha):
     transition_matrix = np.diag(np.ones(n) - np.sum(betas*x, axis = 1)) @ np.copy(C)

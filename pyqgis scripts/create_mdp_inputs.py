@@ -106,7 +106,7 @@ def create_network(final_network_layer_path):
 def get_transition_probabilities(G):
     ### Calculate transition probabilities and put as attribute on edges
     attrs = {}
-    wind_directions = wind_data.get_wind_directions()
+    wind_directions = wind_data.get_wind_directions(2022)
     for node in G.nodes():
         neighbors = [neighbor for neighbor in G.neighbors(node)]
         num_neighbors = len(neighbors)
@@ -349,7 +349,7 @@ def sensitive_area(nodes_layer, impact_factor_layer_path):
     nodes_layer.commitChanges()
     nodes_layer.endEditCommand()
 
-MAX_DIST_NODES = 60
+MAX_DIST_NODES = 150
 
 final_network_layer_path = layers_folder +"delft_final_network_exploded_d"+str(MAX_DIST_NODES)+".geojson"
 final_network_layer = iface.addVectorLayer(final_network_layer_path, "final_network", "ogr")

@@ -7,7 +7,7 @@ graph [
     stuck_probability 0.45
     position 84020.56320183257
     position 447938.98627412197
-    plastic_flow 0.0038603644579169563
+    plastic_flow 0.003918428875973358
   ]
   node [
     id 1
@@ -16,7 +16,7 @@ graph [
     stuck_probability 0.45
     position 84058.45695312791
     position 447855.9521426848
-    plastic_flow 0.0022402068594494407
+    plastic_flow 0.002233021099853943
   ]
   node [
     id 2
@@ -25,7 +25,7 @@ graph [
     stuck_probability 0.45
     position 84096.35070442325
     position 447772.9180112476
-    plastic_flow 0.003204803176135263
+    plastic_flow 0.0031775029955065474
   ]
   node [
     id 3
@@ -34,7 +34,7 @@ graph [
     stuck_probability 0.45
     position 84134.24445571861
     position 447689.8838798104
-    plastic_flow 0.0036712299574597883
+    plastic_flow 0.0036338565811036196
   ]
   node [
     id 4
@@ -43,7 +43,7 @@ graph [
     stuck_probability 0.45
     position 84172.13820701395
     position 447606.8497483732
-    plastic_flow 0.006832064681674357
+    plastic_flow 0.0067836952523271
   ]
   node [
     id 5
@@ -52,7 +52,7 @@ graph [
     stuck_probability 0.45
     position 84210.03195830931
     position 447523.815616936
-    plastic_flow 0.011385744492220885
+    plastic_flow 0.011264728877634737
   ]
   node [
     id 6
@@ -61,7 +61,7 @@ graph [
     stuck_probability 0.45
     position 84247.92570960465
     position 447440.7814854988
-    plastic_flow 0.02533939506301669
+    plastic_flow 0.024963930895049648
   ]
   node [
     id 7
@@ -70,7 +70,7 @@ graph [
     stuck_probability 0.45
     position 84284.82077299475
     position 447356.6480609562
-    plastic_flow 0.02757444812193584
+    plastic_flow 0.027555455117934297
   ]
   node [
     id 8
@@ -79,7 +79,7 @@ graph [
     stuck_probability 0.45
     position 84317.01956255075
     position 447286.89704053523
-    plastic_flow 0.010458064089144277
+    plastic_flow 0.010546143659553265
   ]
   node [
     id 9
@@ -88,7 +88,7 @@ graph [
     stuck_probability 0.45
     position 84349.21835210675
     position 447217.14602011425
-    plastic_flow 0.00544292975126032
+    plastic_flow 0.005363790439133674
   ]
   node [
     id 10
@@ -97,7 +97,7 @@ graph [
     stuck_probability 0.45
     position 84381.41714166275
     position 447147.3949996933
-    plastic_flow 0.0017920830038550663
+    plastic_flow 0.001728809445875658
   ]
   node [
     id 11
@@ -106,7 +106,7 @@ graph [
     stuck_probability 0.45
     position 84413.61593121875
     position 447077.64397927234
-    plastic_flow 0.00284771622838657
+    plastic_flow 0.002711642543038212
   ]
   node [
     id 12
@@ -115,7 +115,7 @@ graph [
     stuck_probability 0.45
     position 84467.55858602872
     position 446996.4034504901
-    plastic_flow 0.003160911742299766
+    plastic_flow 0.0031157371827669447
   ]
   node [
     id 13
@@ -124,7 +124,7 @@ graph [
     stuck_probability 0.5042465753424658
     position 84521.50124083871
     position 446915.1629217078
-    plastic_flow 0.019478337182198224
+    plastic_flow 0.01903246149628716
   ]
   node [
     id 14
@@ -133,7 +133,7 @@ graph [
     stuck_probability 0.6959264798377325
     position 83819.05971254449
     position 447843.7721551214
-    plastic_flow 0.007100067560194434
+    plastic_flow 0.007094715685610363
   ]
   node [
     id 15
@@ -142,7 +142,7 @@ graph [
     stuck_probability 0.45
     position 83865.6632193881
     position 447768.0220374764
-    plastic_flow 0.004574401473616312
+    plastic_flow 0.0045727741102720675
   ]
   node [
     id 16
@@ -151,7 +151,7 @@ graph [
     stuck_probability 0.45
     position 83912.2667262317
     position 447692.2719198315
-    plastic_flow 0.0020314292425241917
+    plastic_flow 0.0020352413014281747
   ]
   node [
     id 17
@@ -160,7 +160,7 @@ graph [
     stuck_probability 0.45
     position 83958.87023307531
     position 447616.52180218656
-    plastic_flow 0.0007424872038651208
+    plastic_flow 0.000744585184718759
   ]
   node [
     id 18
@@ -169,7 +169,7 @@ graph [
     stuck_probability 0.45
     position 84005.47373991892
     position 447540.7716845416
-    plastic_flow 0.003155373426040635
+    plastic_flow 0.003156600371743713
   ]
   node [
     id 19
@@ -178,7 +178,7 @@ graph [
     stuck_probability 0.45
     position 84052.0772467625
     position 447465.02156689664
-    plastic_flow 0.0034952651761380057
+    plastic_flow 0.003499906311254476
   ]
   node [
     id 20
@@ -187,7 +187,7 @@ graph [
     stuck_probability 0.45
     position 84098.68075360611
     position 447389.27144925174
-    plastic_flow 0.0054495514871984365
+    plastic_flow 0.005459386596820364
   ]
   node [
     id 21
@@ -196,7 +196,7 @@ graph [
     stuck_probability 0.45
     position 84145.28426044971
     position 447313.5213316068
-    plastic_flow 0.013647889832859481
+    plastic_flow 0.013681790757786976
   ]
   node [
     id 22
@@ -205,7 +205,7 @@ graph [
     stuck_probability 0.2226353555120678
     position 83839.37932028153
     position 447037.0137525853
-    plastic_flow 0.007220961921179041
+    plastic_flow 0.007498051082449436
   ]
   node [
     id 23
@@ -214,7 +214,7 @@ graph [
     stuck_probability 0.0
     position 83912.07021249438
     position 447087.8195880473
-    plastic_flow 0.006418473475784261
+    plastic_flow 0.006633872793126682
   ]
   node [
     id 24
@@ -223,7 +223,7 @@ graph [
     stuck_probability 0.0
     position 83984.76110470721
     position 447138.6254235093
-    plastic_flow 0.008614095328035105
+    plastic_flow 0.008792083493032463
   ]
   node [
     id 25
@@ -232,7 +232,7 @@ graph [
     stuck_probability 0.0
     position 84057.45199692005
     position 447189.4312589713
-    plastic_flow 0.009565233655978146
+    plastic_flow 0.00965307665867689
   ]
   node [
     id 26
@@ -241,7 +241,7 @@ graph [
     stuck_probability 0.5223287671232877
     position 84130.1428891329
     position 447240.2370944333
-    plastic_flow 0.014318919268206855
+    plastic_flow 0.01432324086926896
   ]
   node [
     id 27
@@ -250,7 +250,7 @@ graph [
     stuck_probability 0.45
     position 84190.1326963859
     position 447248.45518229686
-    plastic_flow 0.022081332511913316
+    plastic_flow 0.0226415441542893
   ]
   node [
     id 28
@@ -259,7 +259,7 @@ graph [
     stuck_probability 0.45
     position 84233.02985072856
     position 447164.203612616
-    plastic_flow 0.010918827369666158
+    plastic_flow 0.010958126343912845
   ]
   node [
     id 29
@@ -269,7 +269,7 @@ graph [
     position 84275.92700507122
     position 447079.9520429351
     catching_system_type 2
-    plastic_flow 0.03445834228264299
+    plastic_flow 0.034344568199113995
   ]
   node [
     id 30
@@ -278,7 +278,7 @@ graph [
     stuck_probability 0.45
     position 84318.82415941388
     position 446995.7004732543
-    plastic_flow 0.04321776154769453
+    plastic_flow 0.042703657404651006
   ]
   node [
     id 31
@@ -287,7 +287,7 @@ graph [
     stuck_probability 0.45
     position 84361.72131375656
     position 446911.44890357344
-    plastic_flow 0.019682238273551627
+    plastic_flow 0.019013327657706355
   ]
   node [
     id 32
@@ -296,7 +296,7 @@ graph [
     stuck_probability 0.45
     position 84404.61846809922
     position 446827.1973338926
-    plastic_flow 0.014578695567604008
+    plastic_flow 0.013899021112585818
   ]
   node [
     id 33
@@ -305,7 +305,7 @@ graph [
     stuck_probability 0.19619065490711196
     position 84469.40329551992
     position 446784.3867338047
-    plastic_flow 0.02473189403511057
+    plastic_flow 0.023774697374993842
   ]
   node [
     id 34
@@ -314,7 +314,7 @@ graph [
     stuck_probability 0.45
     position 84480.14028203877
     position 447125.54021724465
-    plastic_flow 0.005834560758991893
+    plastic_flow 0.006025976006595946
   ]
   node [
     id 35
@@ -323,7 +323,7 @@ graph [
     stuck_probability 0.45
     position 84493.92726830542
     position 447055.4144520657
-    plastic_flow 0.004611709161265114
+    plastic_flow 0.004683051785227779
   ]
   node [
     id 36
@@ -332,7 +332,7 @@ graph [
     stuck_probability 0.45
     position 84507.71425457207
     position 446985.2886868867
-    plastic_flow 0.0059093559402300135
+    plastic_flow 0.005879459998877043
   ]
   node [
     id 37
@@ -341,7 +341,7 @@ graph [
     stuck_probability 0.6426760743103772
     position 84345.33752018539
     position 447443.8741856869
-    plastic_flow 0.024342988112388157
+    plastic_flow 0.02403839323249507
   ]
   node [
     id 38
@@ -350,7 +350,7 @@ graph [
     stuck_probability 0.45
     position 84379.03821064874
     position 447364.29069357633
-    plastic_flow 0.006539605111475336
+    plastic_flow 0.006461266718509534
   ]
   node [
     id 39
@@ -359,7 +359,7 @@ graph [
     stuck_probability 0.45
     position 84412.73890111208
     position 447284.7072014658
-    plastic_flow 0.0042132395065324485
+    plastic_flow 0.004376075389816445
   ]
   node [
     id 40
@@ -368,7 +368,7 @@ graph [
     stuck_probability 0.45
     position 84446.43959157543
     position 447205.1237093552
-    plastic_flow 0.0032957680064548134
+    plastic_flow 0.0034234535151686624
   ]
   node [
     id 41
@@ -377,7 +377,7 @@ graph [
     stuck_probability 0.6894684931506849
     position 84327.91925510985
     position 447481.44102088246
-    plastic_flow 0.02736353140412335
+    plastic_flow 0.027125311907357896
   ]
   node [
     id 42
@@ -386,7 +386,7 @@ graph [
     stuck_probability 0.6194858754244672
     position 84311.24907871826
     position 447520.28883036575
-    plastic_flow 0.03403649469979392
+    plastic_flow 0.0335674801666797
   ]
   node [
     id 43
@@ -395,7 +395,7 @@ graph [
     stuck_probability 0.45
     position 84079.38451424497
     position 447969.0718700858
-    plastic_flow 0.0020557297321461727
+    plastic_flow 0.0022122765280741413
   ]
   node [
     id 44
@@ -404,7 +404,7 @@ graph [
     stuck_probability 0.45
     position 84118.02860832386
     position 447894.2746967991
-    plastic_flow 0.00021788593775611776
+    plastic_flow 0.00023580466869007322
   ]
   node [
     id 45
@@ -413,7 +413,7 @@ graph [
     stuck_probability 0.0
     position 84156.67270240274
     position 447819.47752351244
-    plastic_flow 0.0016772257857298153
+    plastic_flow 0.001712535989707141
   ]
   node [
     id 46
@@ -422,7 +422,7 @@ graph [
     stuck_probability 0.45
     position 84195.31679648161
     position 447744.68035022577
-    plastic_flow 0.00529535800859741
+    plastic_flow 0.005273437954418429
   ]
   node [
     id 47
@@ -431,7 +431,7 @@ graph [
     stuck_probability 0.564619628448114
     position 84233.9608905605
     position 447669.8831769391
-    plastic_flow 0.00808700689448367
+    plastic_flow 0.007979661158364805
   ]
   node [
     id 48
@@ -440,7 +440,7 @@ graph [
     stuck_probability 0.45
     position 84272.60498463939
     position 447595.0860036524
-    plastic_flow 0.013082273465057062
+    plastic_flow 0.012903588602562905
   ]
   node [
     id 49
@@ -449,7 +449,7 @@ graph [
     stuck_probability 0.5155479452054794
     position 84175.03566691471
     position 447276.6990959282
-    plastic_flow 0.018034189221273624
+    plastic_flow 0.01823580355307433
   ]
   node [
     id 50
@@ -458,7 +458,7 @@ graph [
     stuck_probability 0.5155479452054794
     position 84229.92821995473
     position 447316.6735784422
-    plastic_flow 0.0134188390673446
+    plastic_flow 0.01339776441884136
   ]
   node [
     id 51
@@ -467,7 +467,7 @@ graph [
     stuck_probability 0.0
     position 84866.70250280497
     position 446077.39212065237
-    plastic_flow 0.007377048586025171
+    plastic_flow 0.007249483215541155
   ]
   node [
     id 52
@@ -476,7 +476,7 @@ graph [
     stuck_probability 0.1992591557170813
     position 84905.6945423921
     position 445990.1289507829
-    plastic_flow 0.002145366170425687
+    plastic_flow 0.002050358889243964
   ]
   node [
     id 53
@@ -485,7 +485,7 @@ graph [
     stuck_probability 0.1964008256708576
     position 84767.01845707944
     position 446286.3391636351
-    plastic_flow 0.030023709554264803
+    plastic_flow 0.03280978294810795
   ]
   node [
     id 54
@@ -494,7 +494,7 @@ graph [
     stuck_probability 0.0
     position 84800.24647232128
     position 446216.69014930754
-    plastic_flow 0.007933593131460736
+    plastic_flow 0.008414556147471192
   ]
   node [
     id 55
@@ -503,7 +503,7 @@ graph [
     stuck_probability 0.0
     position 84833.47448756313
     position 446147.0411349799
-    plastic_flow 0.006265074127104277
+    plastic_flow 0.006415701901345047
   ]
   node [
     id 56
@@ -512,7 +512,7 @@ graph [
     stuck_probability 0.0
     position 84571.34956450139
     position 446754.2823514135
-    plastic_flow 0.05844849843459862
+    plastic_flow 0.05618636574584783
   ]
   node [
     id 57
@@ -521,7 +521,7 @@ graph [
     stuck_probability 0.0
     position 84603.96104659773
     position 446676.2918201171
-    plastic_flow 0.020287985790598893
+    plastic_flow 0.019722170591989663
   ]
   node [
     id 58
@@ -530,7 +530,7 @@ graph [
     stuck_probability 0.0
     position 84636.57252869407
     position 446598.3012888207
-    plastic_flow 0.020673166125963406
+    plastic_flow 0.02115089490278576
   ]
   node [
     id 59
@@ -539,7 +539,7 @@ graph [
     stuck_probability 0.0
     position 84669.18401079041
     position 446520.3107575243
-    plastic_flow 0.019747515655427934
+    plastic_flow 0.020999291357604335
   ]
   node [
     id 60
@@ -548,7 +548,7 @@ graph [
     stuck_probability 0.0
     position 84701.79549288675
     position 446442.3202262279
-    plastic_flow 0.018439797493506813
+    plastic_flow 0.020200489919907173
   ]
   node [
     id 61
@@ -557,7 +557,7 @@ graph [
     stuck_probability 0.19041095890410964
     position 84734.4069749831
     position 446364.3296949315
-    plastic_flow 0.020260833053685638
+    plastic_flow 0.022214877414002528
   ]
   node [
     id 62
@@ -566,7 +566,7 @@ graph [
     stuck_probability 0.2517395383749297
     position 84555.59293496399
     position 446860.0687957234
-    plastic_flow 0.05087555781775007
+    plastic_flow 0.04934780868422692
   ]
   node [
     id 63
@@ -575,7 +575,7 @@ graph [
     stuck_probability 0.0
     position 84563.47124973268
     position 446807.17557356844
-    plastic_flow 0.008727782775410493
+    plastic_flow 0.008538702482454825
   ]
   node [
     id 64
@@ -584,7 +584,7 @@ graph [
     stuck_probability 0.0
     position 84935.46094662073
     position 446105.53507511714
-    plastic_flow 0.002822850224244325
+    plastic_flow 0.00281924347271045
   ]
   node [
     id 65
@@ -593,7 +593,7 @@ graph [
     stuck_probability 0.5027330748988122
     position 85004.21939043651
     position 446133.6780295819
-    plastic_flow 0.002462124598201071
+    plastic_flow 0.0024834517248094974
   ]
   node [
     id 66
@@ -602,7 +602,7 @@ graph [
     stuck_probability 0.20849315068493146
     position 84837.05605273142
     position 446316.442890801
-    plastic_flow 0.01633117071849708
+    plastic_flow 0.017472704556486487
   ]
   node [
     id 67
@@ -611,7 +611,7 @@ graph [
     stuck_probability 0.5057963059312794
     position 84803.25221843908
     position 446409.1852546067
-    plastic_flow 0.00815950963769636
+    plastic_flow 0.008578891864021655
   ]
   node [
     id 68
@@ -620,7 +620,7 @@ graph [
     stuck_probability 0.3684368549446425
     position 84440.92191911938
     position 448232.1755898297
-    plastic_flow 0.06398878433482805
+    plastic_flow 0.06376767650167911
   ]
   node [
     id 69
@@ -629,7 +629,7 @@ graph [
     stuck_probability 0.45
     position 84511.71855341281
     position 448279.6820707427
-    plastic_flow 0.021669650325551546
+    plastic_flow 0.02177760954550115
   ]
   node [
     id 70
@@ -638,7 +638,7 @@ graph [
     stuck_probability 0.45
     position 84582.51518770622
     position 448327.18855165574
-    plastic_flow 0.012669242522422509
+    plastic_flow 0.012604628172183333
   ]
   node [
     id 71
@@ -647,7 +647,7 @@ graph [
     stuck_probability 0.45
     position 84653.31182199962
     position 448374.6950325687
-    plastic_flow 0.007485395199060985
+    plastic_flow 0.007402944983505066
   ]
   node [
     id 72
@@ -656,7 +656,7 @@ graph [
     stuck_probability 0.45
     position 84724.10845629306
     position 448422.20151348173
-    plastic_flow 0.004332711757070699
+    plastic_flow 0.0042670614996576615
   ]
   node [
     id 73
@@ -665,7 +665,7 @@ graph [
     stuck_probability 0.45
     position 84794.90509058649
     position 448469.7079943947
-    plastic_flow 0.002860714584558757
+    plastic_flow 0.002816377881000791
   ]
   node [
     id 74
@@ -674,7 +674,7 @@ graph [
     stuck_probability 0.7959063247695517
     position 84865.70172487991
     position 448517.21447530773
-    plastic_flow 0.0030719106972161075
+    plastic_flow 0.0030372727273590312
   ]
   node [
     id 75
@@ -684,7 +684,7 @@ graph [
     position 84383.90029153871
     position 447565.5720723079
     catching_system_type 2
-    plastic_flow 0.021404396326194206
+    plastic_flow 0.02123157259254035
   ]
   node [
     id 76
@@ -693,7 +693,7 @@ graph [
     stuck_probability 0.45
     position 84456.55150435917
     position 447610.8553142501
-    plastic_flow 0.022565955231787286
+    plastic_flow 0.022495957876207798
   ]
   node [
     id 77
@@ -702,7 +702,7 @@ graph [
     stuck_probability 0.45
     position 84529.20271717962
     position 447656.1385561923
-    plastic_flow 0.029909481624876083
+    plastic_flow 0.02972001260003248
   ]
   node [
     id 78
@@ -711,7 +711,7 @@ graph [
     stuck_probability 0.45
     position 84583.58909031027
     position 447217.413558581
-    plastic_flow 0.009295363104053506
+    plastic_flow 0.009376419758288863
   ]
   node [
     id 79
@@ -720,7 +720,7 @@ graph [
     stuck_probability 0.45
     position 84657.18217296252
     position 447267.2583092147
-    plastic_flow 0.0045175321670741266
+    plastic_flow 0.004511708391887835
   ]
   node [
     id 80
@@ -729,7 +729,7 @@ graph [
     stuck_probability 0.6840239776512917
     position 84730.77525561476
     position 447317.10305984836
-    plastic_flow 0.00338635049171803
+    plastic_flow 0.0033556069220790925
   ]
   node [
     id 81
@@ -738,7 +738,7 @@ graph [
     stuck_probability 0.4680821917808219
     position 84804.36833826703
     position 447366.94781048206
-    plastic_flow 0.00266354717861976
+    plastic_flow 0.0026489575511880327
   ]
   node [
     id 82
@@ -747,7 +747,7 @@ graph [
     stuck_probability 0.45
     position 84877.96142091927
     position 447416.7925611157
-    plastic_flow 0.003549011570643969
+    plastic_flow 0.0035245672478270615
   ]
   node [
     id 83
@@ -756,7 +756,7 @@ graph [
     stuck_probability 0.45
     position 84951.55450357152
     position 447466.6373117494
-    plastic_flow 0.019175761681355586
+    plastic_flow 0.018820863756913983
   ]
   node [
     id 84
@@ -765,7 +765,7 @@ graph [
     stuck_probability 0.7480995820176728
     position 84858.74249238099
     position 447286.0073504862
-    plastic_flow 0.00250657020321918
+    plastic_flow 0.0024412890867111753
   ]
   node [
     id 85
@@ -774,7 +774,7 @@ graph [
     stuck_probability 0.615
     position 84944.6888504516
     position 447337.0972005586
-    plastic_flow 0.0014365590609589807
+    plastic_flow 0.0014201147204242622
   ]
   node [
     id 86
@@ -783,7 +783,7 @@ graph [
     stuck_probability 0.45
     position 85030.63520852219
     position 447388.1870506309
-    plastic_flow 0.006181210717323464
+    plastic_flow 0.006142401451473401
   ]
   node [
     id 87
@@ -792,7 +792,7 @@ graph [
     stuck_probability 0.0
     position 85116.5815665928
     position 447439.2769007033
-    plastic_flow 0.034999925766662235
+    plastic_flow 0.03430344415137581
   ]
   node [
     id 88
@@ -801,7 +801,7 @@ graph [
     stuck_probability 0.5155479452054794
     position 84176.90788042464
     position 448046.58894317434
-    plastic_flow 0.005089816344396703
+    plastic_flow 0.0052713417723798265
   ]
   node [
     id 89
@@ -810,7 +810,7 @@ graph [
     stuck_probability 0.45
     position 84227.84202624239
     position 447979.61512886354
-    plastic_flow 0.002873477652260636
+    plastic_flow 0.0028963106271048525
   ]
   node [
     id 90
@@ -819,7 +819,7 @@ graph [
     stuck_probability 0.45
     position 84278.77617206013
     position 447912.6413145528
-    plastic_flow 0.00575877768481091
+    plastic_flow 0.005752105011785623
   ]
   node [
     id 91
@@ -828,7 +828,7 @@ graph [
     stuck_probability 0.45
     position 84329.71031787788
     position 447845.667500242
-    plastic_flow 0.009602879745106901
+    plastic_flow 0.009570835356125025
   ]
   node [
     id 92
@@ -837,7 +837,7 @@ graph [
     stuck_probability 0.45
     position 84380.64446369561
     position 447778.69368593127
-    plastic_flow 0.010344578113044425
+    plastic_flow 0.01027186156817868
   ]
   node [
     id 93
@@ -846,7 +846,7 @@ graph [
     stuck_probability 0.45
     position 84431.57860951337
     position 447711.7198716205
-    plastic_flow 0.017016595132405533
+    plastic_flow 0.017061797437673047
   ]
   node [
     id 94
@@ -855,7 +855,7 @@ graph [
     stuck_probability 0.3442724136437779
     position 83521.19517758623
     position 448447.10401404893
-    plastic_flow 0.00033674583756475096
+    plastic_flow 0.00029761890503600164
   ]
   node [
     id 95
@@ -864,7 +864,7 @@ graph [
     stuck_probability 0.0
     position 83588.5808590575
     position 448484.41331375425
-    plastic_flow 0.00022081353528183856
+    plastic_flow 0.000195156926253239
   ]
   node [
     id 96
@@ -873,7 +873,7 @@ graph [
     stuck_probability 0.2997710639894915
     position 83655.9665405288
     position 448521.7226134596
-    plastic_flow 0.0005096087008479898
+    plastic_flow 0.00047208515971227836
   ]
   node [
     id 97
@@ -882,7 +882,7 @@ graph [
     stuck_probability 0.10684931506849316
     position 83723.35222200007
     position 448559.03191316494
-    plastic_flow 0.0072014395007714005
+    plastic_flow 0.0070439633549769735
   ]
   node [
     id 98
@@ -891,7 +891,7 @@ graph [
     stuck_probability 0.1698630136986301
     position 84512.49811524196
     position 446822.22776476404
-    plastic_flow 0.011535884190965042
+    plastic_flow 0.01136104074601158
   ]
   node [
     id 99
@@ -900,7 +900,7 @@ graph [
     stuck_probability 0.0
     position 84520.37643001066
     position 446769.3345426091
-    plastic_flow 0.008963644318808452
+    plastic_flow 0.008673810410520705
   ]
   node [
     id 100
@@ -909,7 +909,7 @@ graph [
     stuck_probability 0.45
     position 84532.90683394989
     position 447345.12062818604
-    plastic_flow 0.013511553472115445
+    plastic_flow 0.01350798879453707
   ]
   node [
     id 101
@@ -918,7 +918,7 @@ graph [
     stuck_probability 0.45
     position 84602.22088014183
     position 447394.96285325545
-    plastic_flow 0.010781968230696107
+    plastic_flow 0.01097374527154394
   ]
   node [
     id 102
@@ -927,7 +927,7 @@ graph [
     stuck_probability 0.45
     position 84671.53492633377
     position 447444.8050783249
-    plastic_flow 0.01788493350633973
+    plastic_flow 0.01788987681696114
   ]
   node [
     id 103
@@ -936,7 +936,7 @@ graph [
     stuck_probability 0.45
     position 84740.8489725257
     position 447494.64730339433
-    plastic_flow 0.01927888860456832
+    plastic_flow 0.019153913205570184
   ]
   node [
     id 104
@@ -945,7 +945,7 @@ graph [
     stuck_probability 0.4801369863013698
     position 84810.16301871763
     position 447544.4895284638
-    plastic_flow 0.02731095888367821
+    plastic_flow 0.02721153300301987
   ]
   node [
     id 105
@@ -954,7 +954,7 @@ graph [
     stuck_probability 0.45
     position 84558.24796213009
     position 447281.26709338353
-    plastic_flow 0.007921527885891703
+    plastic_flow 0.007727790272375768
   ]
   node [
     id 106
@@ -963,7 +963,7 @@ graph [
     stuck_probability 0.5042465753424658
     position 84569.0068573162
     position 446959.8390315643
-    plastic_flow 0.00658132619632521
+    plastic_flow 0.006622802288781043
   ]
   node [
     id 107
@@ -972,7 +972,7 @@ graph [
     stuck_probability 0.45
     position 84616.51247379369
     position 447004.5151414208
-    plastic_flow 0.008040320583687189
+    plastic_flow 0.00813978991252105
   ]
   node [
     id 108
@@ -981,7 +981,7 @@ graph [
     stuck_probability 0.45
     position 84594.56355147141
     position 447146.4474195276
-    plastic_flow 0.0023233169784209547
+    plastic_flow 0.0023612645374553594
   ]
   node [
     id 109
@@ -990,7 +990,7 @@ graph [
     stuck_probability 0.45
     position 84605.53801263255
     position 447075.4812804742
-    plastic_flow 0.0037942177486951496
+    plastic_flow 0.0038444515363208736
   ]
   node [
     id 110
@@ -999,7 +999,7 @@ graph [
     stuck_probability 0.0
     position 83940.13869607751
     position 448096.08260200126
-    plastic_flow 0.010638880233351163
+    plastic_flow 0.011048545995670027
   ]
   node [
     id 111
@@ -1008,7 +1008,7 @@ graph [
     stuck_probability 0.45
     position 83980.35094895505
     position 448017.53443806164
-    plastic_flow 0.00585034314201894
+    plastic_flow 0.006021315555480839
   ]
   node [
     id 112
@@ -1017,7 +1017,7 @@ graph [
     stuck_probability 0.0
     position 84262.2099651384
     position 448415.20463770564
-    plastic_flow 0.11011965230359354
+    plastic_flow 0.10465043589191692
   ]
   node [
     id 113
@@ -1027,7 +1027,7 @@ graph [
     position 84321.7806164654
     position 448354.19495508034
     catching_system_type 2
-    plastic_flow 0.06282667207999021
+    plastic_flow 0.05944860137700883
   ]
   node [
     id 114
@@ -1036,7 +1036,7 @@ graph [
     stuck_probability 0.0
     position 84381.3512677924
     position 448293.185272455
-    plastic_flow 0.04751245226972347
+    plastic_flow 0.045973292850071214
   ]
   node [
     id 115
@@ -1045,7 +1045,7 @@ graph [
     stuck_probability 0.0
     position 83981.78569166228
     position 448425.78871901997
-    plastic_flow 0.03671152641298384
+    plastic_flow 0.03940316458800687
   ]
   node [
     id 116
@@ -1054,7 +1054,7 @@ graph [
     stuck_probability 0.0
     position 84075.26044948766
     position 448422.2606919152
-    plastic_flow 0.021820881770982743
+    plastic_flow 0.023439831242096382
   ]
   node [
     id 117
@@ -1063,7 +1063,7 @@ graph [
     stuck_probability 0.0
     position 84168.73520731303
     position 448418.73266481044
-    plastic_flow 0.03820360815284677
+    plastic_flow 0.03872428228366343
   ]
   node [
     id 118
@@ -1072,7 +1072,7 @@ graph [
     stuck_probability 0.0
     position 83787.71561250369
     position 448446.9060586821
-    plastic_flow 0.01672957935301126
+    plastic_flow 0.016756683568019737
   ]
   node [
     id 119
@@ -1081,7 +1081,7 @@ graph [
     stuck_probability 0.0
     position 83884.75065208299
     position 448436.34738885105
-    plastic_flow 0.0069393320751701525
+    plastic_flow 0.006898492458345929
   ]
   node [
     id 120
@@ -1090,7 +1090,7 @@ graph [
     stuck_probability 0.10684931506849316
     position 83755.53391725189
     position 448502.96898592357
-    plastic_flow 0.002014222379184756
+    plastic_flow 0.002043472450847889
   ]
   node [
     id 121
@@ -1099,7 +1099,7 @@ graph [
     stuck_probability 0.31102005870841487
     position 83629.98298913673
     position 448927.5571545557
-    plastic_flow 0.00224276739654705
+    plastic_flow 0.002440434353986701
   ]
   node [
     id 122
@@ -1108,7 +1108,7 @@ graph [
     stuck_probability 0.0
     position 83653.32529735257
     position 448835.425844208
-    plastic_flow 0.0015452217492036688
+    plastic_flow 0.001681410317935725
   ]
   node [
     id 123
@@ -1117,7 +1117,7 @@ graph [
     stuck_probability 0.0
     position 83676.6676055684
     position 448743.29453386035
-    plastic_flow 0.0018463712985526883
+    plastic_flow 0.0018746972991988751
   ]
   node [
     id 124
@@ -1126,7 +1126,7 @@ graph [
     stuck_probability 0.0
     position 83700.00991378423
     position 448651.16322351265
-    plastic_flow 0.002094294415923742
+    plastic_flow 0.0020231768438964764
   ]
   node [
     id 125
@@ -1135,7 +1135,7 @@ graph [
     stuck_probability 0.11232876712328765
     position 83851.828937352
     position 448110.6712185308
-    plastic_flow 0.008772117694845517
+    plastic_flow 0.008750340973837534
   ]
   node [
     id 126
@@ -1144,7 +1144,7 @@ graph [
     stuck_probability 0.3
     position 83863.01886515412
     position 448172.08407506754
-    plastic_flow 0.006690897685665214
+    plastic_flow 0.006759612116046883
   ]
   node [
     id 127
@@ -1153,7 +1153,7 @@ graph [
     stuck_probability 0.40164383561643835
     position 83874.20879295625
     position 448233.4969316043
-    plastic_flow 0.009085430675848893
+    plastic_flow 0.009212440824251274
   ]
   node [
     id 128
@@ -1162,7 +1162,7 @@ graph [
     stuck_probability 0.0
     position 83816.54667265454
     position 448375.7696829895
-    plastic_flow 0.004332532088856764
+    plastic_flow 0.004273800606994933
   ]
   node [
     id 129
@@ -1171,7 +1171,7 @@ graph [
     stuck_probability 0.3
     position 83845.3777328054
     position 448304.6333072969
-    plastic_flow 0.0028876078891604006
+    plastic_flow 0.0030117529675247924
   ]
   node [
     id 130
@@ -1180,7 +1180,7 @@ graph [
     stuck_probability 0.45
     position 84128.1461973348
     position 448007.83040663006
-    plastic_flow 0.000597714126547188
+    plastic_flow 0.0006445327610862
   ]
   node [
     id 131
@@ -1189,7 +1189,7 @@ graph [
     stuck_probability 0.45
     position 84242.91139009832
     position 448092.9856048382
-    plastic_flow 0.004513103084796816
+    plastic_flow 0.004559199053031627
   ]
   node [
     id 132
@@ -1198,7 +1198,7 @@ graph [
     stuck_probability 0.45
     position 84308.914899772
     position 448139.382266502
-    plastic_flow 0.006559759370080491
+    plastic_flow 0.006544323086812233
   ]
   node [
     id 133
@@ -1207,7 +1207,7 @@ graph [
     stuck_probability 0.615
     position 84374.9184094457
     position 448185.77892816585
-    plastic_flow 0.008671992642931437
+    plastic_flow 0.008605016902856597
   ]
   node [
     id 134
@@ -1216,7 +1216,7 @@ graph [
     stuck_probability 0.615
     position 85405.46410533079
     position 447336.78732488444
-    plastic_flow 0.003265245035459946
+    plastic_flow 0.0033404846045183203
   ]
   node [
     id 135
@@ -1225,7 +1225,7 @@ graph [
     stuck_probability 0.615
     position 85489.34679621819
     position 447306.47637533676
-    plastic_flow 0.0014238694320938918
+    plastic_flow 0.0014272449804162322
   ]
   node [
     id 136
@@ -1234,7 +1234,7 @@ graph [
     stuck_probability 0.8505102689185102
     position 85573.2294871056
     position 447276.1654257891
-    plastic_flow 0.0005016716036360003
+    plastic_flow 0.0004895803190223618
   ]
   node [
     id 137
@@ -1243,7 +1243,7 @@ graph [
     stuck_probability 0.45
     position 85387.74279994475
     position 447480.44298445433
-    plastic_flow 0.0033494495029269015
+    plastic_flow 0.0033283296325772533
   ]
   node [
     id 138
@@ -1252,7 +1252,7 @@ graph [
     stuck_probability 0.45
     position 85396.60345263776
     position 447408.6151546694
-    plastic_flow 0.0024635341472986853
+    plastic_flow 0.0024769355852474135
   ]
   node [
     id 139
@@ -1261,7 +1261,7 @@ graph [
     stuck_probability 0.45
     position 85357.39847756326
     position 447501.4505922569
-    plastic_flow 0.006892062139760202
+    plastic_flow 0.007053436476042739
   ]
   node [
     id 140
@@ -1270,7 +1270,7 @@ graph [
     stuck_probability 0.47184931506849315
     position 85190.3623728203
     position 447405.42220240383
-    plastic_flow 0.01652787915106863
+    plastic_flow 0.016996535476169902
   ]
   node [
     id 141
@@ -1279,7 +1279,7 @@ graph [
     stuck_probability 0.45
     position 85273.88042519178
     position 447453.43639733037
-    plastic_flow 0.008466432119608085
+    plastic_flow 0.008681652443146642
   ]
   node [
     id 142
@@ -1288,7 +1288,7 @@ graph [
     stuck_probability 0.45
     position 84480.3906633465
     position 447683.9292139064
-    plastic_flow 0.006681145205526418
+    plastic_flow 0.006706904492678734
   ]
   node [
     id 143
@@ -1297,7 +1297,7 @@ graph [
     stuck_probability 0.45
     position 84880.85876114457
     position 447505.5634201066
-    plastic_flow 0.014757071113273701
+    plastic_flow 0.01484031744109526
   ]
   node [
     id 144
@@ -1306,7 +1306,7 @@ graph [
     stuck_probability 0.45
     position 85034.34135832777
     position 447446.74748032645
-    plastic_flow 0.015344484445269516
+    plastic_flow 0.014709449586643308
   ]
   node [
     id 145
@@ -1315,7 +1315,7 @@ graph [
     stuck_probability 0.45
     position 84599.44279256412
     position 447628.22629926016
-    plastic_flow 0.00764481217194012
+    plastic_flow 0.007680523201550327
   ]
   node [
     id 146
@@ -1324,7 +1324,7 @@ graph [
     stuck_probability 0.45
     position 84669.68286794862
     position 447600.31404232804
-    plastic_flow 0.015568928798176954
+    plastic_flow 0.01555924005044082
   ]
   node [
     id 147
@@ -1333,7 +1333,7 @@ graph [
     stuck_probability 0.45
     position 84739.92294333313
     position 447572.4017853959
-    plastic_flow 0.015222534254813787
+    plastic_flow 0.015154397020530574
   ]
   node [
     id 148
@@ -1342,7 +1342,7 @@ graph [
     stuck_probability 0.45
     position 84499.61415401715
     position 447762.4726152002
-    plastic_flow 0.0057020362063754625
+    plastic_flow 0.005905563068229461
   ]
   node [
     id 149
@@ -1351,7 +1351,7 @@ graph [
     stuck_probability 0.45
     position 84567.64969852094
     position 447813.2253587799
-    plastic_flow 0.005093108720537392
+    plastic_flow 0.005165535063573516
   ]
   node [
     id 150
@@ -1360,7 +1360,7 @@ graph [
     stuck_probability 0.45
     position 84635.68524302474
     position 447863.97810235963
-    plastic_flow 0.006679660548512633
+    plastic_flow 0.006700707613584945
   ]
   node [
     id 151
@@ -1369,7 +1369,7 @@ graph [
     stuck_probability 0.0
     position 84703.72078752852
     position 447914.7308459393
-    plastic_flow 0.03096143310388097
+    plastic_flow 0.030393161134810345
   ]
   node [
     id 152
@@ -1378,7 +1378,7 @@ graph [
     stuck_probability 0.45
     position 84608.65197076747
     position 447716.63268606825
-    plastic_flow 0.008067015303902171
+    plastic_flow 0.00787560591165241
   ]
   node [
     id 153
@@ -1387,7 +1387,7 @@ graph [
     stuck_probability 0.45
     position 84688.10122435533
     position 447777.1268159442
-    plastic_flow 0.009296458955403524
+    plastic_flow 0.009264584712123736
   ]
   node [
     id 154
@@ -1396,7 +1396,7 @@ graph [
     stuck_probability 0.45
     position 84767.55047794318
     position 447837.6209458202
-    plastic_flow 0.025131128992311094
+    plastic_flow 0.02529215734671393
   ]
   node [
     id 155
@@ -1405,7 +1405,7 @@ graph [
     stuck_probability 0.0
     position 84632.09877865962
     position 446916.36468857387
-    plastic_flow 0.017022969609550256
+    plastic_flow 0.016669920346322167
   ]
   node [
     id 156
@@ -1414,7 +1414,7 @@ graph [
     stuck_probability 0.0
     position 84708.60462235525
     position 446972.66058142437
-    plastic_flow 0.02057800737791846
+    plastic_flow 0.020240758341692304
   ]
   node [
     id 157
@@ -1423,7 +1423,7 @@ graph [
     stuck_probability 0.0
     position 84785.11046605089
     position 447028.95647427486
-    plastic_flow 0.025318532345677196
+    plastic_flow 0.02500143647000693
   ]
   node [
     id 158
@@ -1433,7 +1433,7 @@ graph [
     position 84861.61630974652
     position 447085.25236712536
     catching_system_type 1
-    plastic_flow 0.02695981475771557
+    plastic_flow 0.02667101057651177
   ]
   node [
     id 159
@@ -1442,7 +1442,7 @@ graph [
     stuck_probability 0.0
     position 84938.12215344215
     position 447141.54825997585
-    plastic_flow 0.02151147192579203
+    plastic_flow 0.021274549764612224
   ]
   node [
     id 160
@@ -1451,7 +1451,7 @@ graph [
     stuck_probability 0.0
     position 85014.62799713778
     position 447197.8441528263
-    plastic_flow 0.02177872856066837
+    plastic_flow 0.02151392748293158
   ]
   node [
     id 161
@@ -1460,7 +1460,7 @@ graph [
     stuck_probability 0.0
     position 85091.13384083343
     position 447254.1400456768
-    plastic_flow 0.026601990164775952
+    plastic_flow 0.026278268437770265
   ]
   node [
     id 162
@@ -1469,7 +1469,7 @@ graph [
     stuck_probability 0.5331037779357966
     position 85103.85770371312
     position 447346.7084731901
-    plastic_flow 0.019001051827217303
+    plastic_flow 0.018891516132308002
   ]
   node [
     id 163
@@ -1478,7 +1478,7 @@ graph [
     stuck_probability 0.45
     position 84942.67767870548
     position 447637.7508487708
-    plastic_flow 0.020277071477835466
+    plastic_flow 0.02045287072031374
   ]
   node [
     id 164
@@ -1487,7 +1487,7 @@ graph [
     stuck_probability 0.45
     position 85000.64564133459
     position 447571.5928660816
-    plastic_flow 0.01207478515849715
+    plastic_flow 0.012015291129735284
   ]
   node [
     id 165
@@ -1496,7 +1496,7 @@ graph [
     stuck_probability 0.45
     position 85058.61360396369
     position 447505.4348833925
-    plastic_flow 0.015513508079400867
+    plastic_flow 0.01539078465501626
   ]
   node [
     id 166
@@ -1505,7 +1505,7 @@ graph [
     stuck_probability 0.5080136986301369
     position 84825.92621153062
     position 447770.99758013705
-    plastic_flow 0.012627507866818065
+    plastic_flow 0.012761472233030438
   ]
   node [
     id 167
@@ -1514,7 +1514,7 @@ graph [
     stuck_probability 0.45
     position 84884.30194511804
     position 447704.3742144539
-    plastic_flow 0.011062042756964149
+    plastic_flow 0.010987057133474313
   ]
   node [
     id 168
@@ -1523,7 +1523,7 @@ graph [
     stuck_probability 0.45
     position 84735.63563273585
     position 447876.17589587974
-    plastic_flow 0.01589819413065289
+    plastic_flow 0.015798305790585766
   ]
   node [
     id 169
@@ -1532,7 +1532,7 @@ graph [
     stuck_probability 0.0
     position 84493.48169280122
     position 448168.6866410516
-    plastic_flow 0.013993140204561516
+    plastic_flow 0.013818019030538597
   ]
   node [
     id 170
@@ -1542,7 +1542,7 @@ graph [
     position 84546.04146648305
     position 448105.19769227353
     catching_system_type 2
-    plastic_flow 0.02126296154854313
+    plastic_flow 0.020969486344028003
   ]
   node [
     id 171
@@ -1551,7 +1551,7 @@ graph [
     stuck_probability 0.0
     position 84598.60124016488
     position 448041.70874349546
-    plastic_flow 0.015742780228620468
+    plastic_flow 0.015385454388673909
   ]
   node [
     id 172
@@ -1560,7 +1560,7 @@ graph [
     stuck_probability 0.0
     position 84651.1610138467
     position 447978.2197947174
-    plastic_flow 0.015765092769062933
+    plastic_flow 0.015282248728147662
   ]
   node [
     id 173
@@ -1569,7 +1569,7 @@ graph [
     stuck_probability 0.45
     position 85023.00050355494
     position 447691.9875063147
-    plastic_flow 0.004521988701462562
+    plastic_flow 0.004571669994749931
   ]
   node [
     id 174
@@ -1578,7 +1578,7 @@ graph [
     stuck_probability 0.45
     position 85103.32332840441
     position 447746.2241638586
-    plastic_flow 0.0026699653347114715
+    plastic_flow 0.002670982206535611
   ]
   node [
     id 175
@@ -1587,7 +1587,7 @@ graph [
     stuck_probability 0.45
     position 85183.64615325388
     position 447800.4608214026
-    plastic_flow 0.0031623151065632046
+    plastic_flow 0.0031496105363698376
   ]
   node [
     id 176
@@ -1596,7 +1596,7 @@ graph [
     stuck_probability 0.45
     position 85263.96897810332
     position 447854.69747894653
-    plastic_flow 0.001760249130351201
+    plastic_flow 0.0017342505286728205
   ]
   node [
     id 177
@@ -1605,7 +1605,7 @@ graph [
     stuck_probability 0.4861643835616438
     position 85344.29180295278
     position 447908.9341364905
-    plastic_flow 0.0006456798010918574
+    plastic_flow 0.0006283155128245154
   ]
   node [
     id 178
@@ -1614,7 +1614,7 @@ graph [
     stuck_probability 0.7745661056769829
     position 85424.61462780224
     position 447963.17079403443
-    plastic_flow 0.00022124875929952612
+    plastic_flow 0.00021232819022615917
   ]
   node [
     id 179
@@ -1623,7 +1623,7 @@ graph [
     stuck_probability 0.45
     position 85404.66559511905
     position 447530.33605298545
-    plastic_flow 0.002661986471795833
+    plastic_flow 0.0026961119539247176
   ]
   node [
     id 180
@@ -1632,7 +1632,7 @@ graph [
     stuck_probability 0.7302247249118254
     position 85451.93271267484
     position 447559.221513714
-    plastic_flow 0.002174495500033622
+    plastic_flow 0.0021821395332013833
   ]
   node [
     id 181
@@ -1641,7 +1641,7 @@ graph [
     stuck_probability 0.5949589041095891
     position 84375.29281279277
     position 447457.7820001117
-    plastic_flow 0.02081795076424826
+    plastic_flow 0.02080783928450485
   ]
   node [
     id 182
@@ -1650,7 +1650,7 @@ graph [
     stuck_probability 0.6560181844238169
     position 84443.20282273792
     position 447500.6725327086
-    plastic_flow 0.017950575645395775
+    plastic_flow 0.018051639414892885
   ]
   node [
     id 183
@@ -1659,7 +1659,7 @@ graph [
     stuck_probability 0.7591286263141062
     position 84511.11283268305
     position 447543.5630653055
-    plastic_flow 0.016831394227841814
+    plastic_flow 0.016868452015880796
   ]
   node [
     id 184
@@ -1668,7 +1668,7 @@ graph [
     stuck_probability 0.11232876712328765
     position 83877.89393221811
     position 448081.29947058466
-    plastic_flow 0.009910160830120269
+    plastic_flow 0.010060809179810394
   ]
   node [
     id 185
@@ -1677,7 +1677,7 @@ graph [
     stuck_probability 0.45
     position 84207.30273122156
     position 447522.5700971636
-    plastic_flow 0.011619361699382668
+    plastic_flow 0.011719081096957268
   ]
   node [
     id 186
@@ -1686,7 +1686,7 @@ graph [
     stuck_probability 0.45
     position 84169.4089799262
     position 447605.6042286008
-    plastic_flow 0.01236288038543737
+    plastic_flow 0.012540053772753057
   ]
   node [
     id 187
@@ -1695,7 +1695,7 @@ graph [
     stuck_probability 0.45
     position 84131.51522863086
     position 447688.638360038
-    plastic_flow 0.0072230050853507935
+    plastic_flow 0.0074148628768195834
   ]
   node [
     id 188
@@ -1704,7 +1704,7 @@ graph [
     stuck_probability 0.45
     position 84093.6214773355
     position 447771.6724914752
-    plastic_flow 0.004795835445333619
+    plastic_flow 0.004929171302992821
   ]
   node [
     id 189
@@ -1713,7 +1713,7 @@ graph [
     stuck_probability 0.45
     position 84055.72772604016
     position 447854.7066229124
-    plastic_flow 0.003949733200612187
+    plastic_flow 0.004045426199335124
   ]
   node [
     id 190
@@ -1722,7 +1722,7 @@ graph [
     stuck_probability 0.45
     position 84378.69335282674
     position 447146.13763165777
-    plastic_flow 0.0008207911205109143
+    plastic_flow 0.0007911251531021381
   ]
   node [
     id 191
@@ -1731,7 +1731,7 @@ graph [
     stuck_probability 0.45
     position 84346.49456327074
     position 447215.8886520787
-    plastic_flow 0.0015750176764238561
+    plastic_flow 0.0015621025643743527
   ]
   node [
     id 192
@@ -1740,7 +1740,7 @@ graph [
     stuck_probability 0.45
     position 84314.29577371474
     position 447285.6396724997
-    plastic_flow 0.007703858934833388
+    plastic_flow 0.0077165025595159155
   ]
   node [
     id 193
@@ -1749,7 +1749,7 @@ graph [
     stuck_probability 0.45
     position 84465.05934846913
     position 446994.74398924597
-    plastic_flow 0.004409482743367666
+    plastic_flow 0.00416191666175677
   ]
   node [
     id 194
@@ -1758,7 +1758,7 @@ graph [
     stuck_probability 0.45
     position 84096.12559875027
     position 447387.69944935903
-    plastic_flow 0.006521138037904101
+    plastic_flow 0.006583629866727531
   ]
   node [
     id 195
@@ -1767,7 +1767,7 @@ graph [
     stuck_probability 0.45
     position 84049.52209190666
     position 447463.44956700393
-    plastic_flow 0.0050842120891605455
+    plastic_flow 0.005098207435169713
   ]
   node [
     id 196
@@ -1776,7 +1776,7 @@ graph [
     stuck_probability 0.45
     position 84002.91858506307
     position 447539.1996846489
-    plastic_flow 0.004100078883111901
+    plastic_flow 0.004100493838109077
   ]
   node [
     id 197
@@ -1785,7 +1785,7 @@ graph [
     stuck_probability 0.45
     position 83956.31507821947
     position 447614.94980229385
-    plastic_flow 0.0021055395520279342
+    plastic_flow 0.002101801462296605
   ]
   node [
     id 198
@@ -1794,7 +1794,7 @@ graph [
     stuck_probability 0.45
     position 83909.71157137585
     position 447690.6999199388
-    plastic_flow 0.0008265002268986128
+    plastic_flow 0.0008243712213128044
   ]
   node [
     id 199
@@ -1803,7 +1803,7 @@ graph [
     stuck_probability 0.45
     position 83863.10806453225
     position 447766.4500375837
-    plastic_flow 0.0032448329415154897
+    plastic_flow 0.0032436606399868493
   ]
   node [
     id 200
@@ -1812,7 +1812,7 @@ graph [
     stuck_probability 0.0
     position 84059.170617476
     position 447186.97232762113
-    plastic_flow 0.0028553508697876104
+    plastic_flow 0.0028985395844195027
   ]
   node [
     id 201
@@ -1821,7 +1821,7 @@ graph [
     stuck_probability 0.0
     position 83986.47972526317
     position 447136.16649215913
-    plastic_flow 0.0055368042269767865
+    plastic_flow 0.005686337073603513
   ]
   node [
     id 202
@@ -1830,7 +1830,7 @@ graph [
     stuck_probability 0.0
     position 83913.78883305033
     position 447085.3606566971
-    plastic_flow 0.00619597185716579
+    plastic_flow 0.006435649866091122
   ]
   node [
     id 203
@@ -1839,7 +1839,7 @@ graph [
     stuck_probability 0.45
     position 84359.04789428279
     position 446910.08771720954
-    plastic_flow 0.00480472590387767
+    plastic_flow 0.00468443200601162
   ]
   node [
     id 204
@@ -1848,7 +1848,7 @@ graph [
     stuck_probability 0.45
     position 84316.15073994012
     position 446994.3392868904
-    plastic_flow 0.02967029995105243
+    plastic_flow 0.02961118565627705
   ]
   node [
     id 205
@@ -1858,7 +1858,7 @@ graph [
     position 84273.25358559746
     position 447078.5908565712
     catching_system_type 2
-    plastic_flow 0.0453659379018059
+    plastic_flow 0.04571957837685078
   ]
   node [
     id 206
@@ -1867,7 +1867,7 @@ graph [
     stuck_probability 0.45
     position 84230.3564312548
     position 447162.8424262521
-    plastic_flow 0.02886594682106318
+    plastic_flow 0.029511977479440413
   ]
   node [
     id 207
@@ -1876,7 +1876,7 @@ graph [
     stuck_probability 0.45
     position 84504.77060566352
     position 446984.7099545624
-    plastic_flow 0.004811350008826354
+    plastic_flow 0.00464953187272121
   ]
   node [
     id 208
@@ -1885,7 +1885,7 @@ graph [
     stuck_probability 0.45
     position 84490.98361939687
     position 447054.8357197414
-    plastic_flow 0.006529809415845266
+    plastic_flow 0.006510583540924163
   ]
   node [
     id 209
@@ -1894,7 +1894,7 @@ graph [
     stuck_probability 0.45
     position 84443.67707302116
     position 447203.95388405316
-    plastic_flow 0.0034282171305765625
+    plastic_flow 0.0034621528927961257
   ]
   node [
     id 210
@@ -1903,7 +1903,7 @@ graph [
     stuck_probability 0.45
     position 84409.97638255781
     position 447283.53737616376
-    plastic_flow 0.002913028217952194
+    plastic_flow 0.0028690648226873433
   ]
   node [
     id 211
@@ -1912,7 +1912,7 @@ graph [
     stuck_probability 0.45
     position 84376.27569209447
     position 447363.1208682743
-    plastic_flow 0.00787005605360594
+    plastic_flow 0.007807750413302625
   ]
   node [
     id 212
@@ -1921,7 +1921,7 @@ graph [
     stuck_probability 0.45
     position 84269.93969075815
     position 447593.708974776
-    plastic_flow 0.011842992146171207
+    plastic_flow 0.011922105648184678
   ]
   node [
     id 213
@@ -1930,7 +1930,7 @@ graph [
     stuck_probability 0.564619628448114
     position 84231.29559667927
     position 447668.50614806265
-    plastic_flow 0.011874335663032694
+    plastic_flow 0.012193778840155826
   ]
   node [
     id 214
@@ -1939,7 +1939,7 @@ graph [
     stuck_probability 0.45
     position 84192.65150260038
     position 447743.3033213493
-    plastic_flow 0.006880644981233202
+    plastic_flow 0.007151672906397004
   ]
   node [
     id 215
@@ -1948,7 +1948,7 @@ graph [
     stuck_probability 0.0
     position 84154.0074085215
     position 447818.100494636
-    plastic_flow 0.004245865603385327
+    plastic_flow 0.0044902206685458424
   ]
   node [
     id 216
@@ -1957,7 +1957,7 @@ graph [
     stuck_probability 0.45
     position 84115.36331444263
     position 447892.89766792266
-    plastic_flow 0.003043192317715799
+    plastic_flow 0.003344777641032619
   ]
   node [
     id 217
@@ -1966,7 +1966,7 @@ graph [
     stuck_probability 0.5155479452054794
     position 84231.69425534869
     position 447314.2484765913
-    plastic_flow 0.012045420232032162
+    plastic_flow 0.012104289980054216
   ]
   node [
     id 218
@@ -1975,7 +1975,7 @@ graph [
     stuck_probability 0.0
     position 84830.76683956936
     position 446145.7493755821
-    plastic_flow 0.002408832191355159
+    plastic_flow 0.002379880853586743
   ]
   node [
     id 219
@@ -1984,7 +1984,7 @@ graph [
     stuck_probability 0.0
     position 84797.53882432751
     position 446215.3983899097
-    plastic_flow 0.005404951784309662
+    plastic_flow 0.005563788777247066
   ]
   node [
     id 220
@@ -1993,7 +1993,7 @@ graph [
     stuck_probability 0.0
     position 84731.639200741
     position 446363.1723593083
-    plastic_flow 0.012751406932612484
+    plastic_flow 0.013575056603002077
   ]
   node [
     id 221
@@ -2002,7 +2002,7 @@ graph [
     stuck_probability 0.0
     position 84699.02771864466
     position 446441.1628906047
-    plastic_flow 0.017412064246607017
+    plastic_flow 0.018004935282956595
   ]
   node [
     id 222
@@ -2012,7 +2012,7 @@ graph [
     position 84666.41623654832
     position 446519.15342190105
     catching_system_type 1
-    plastic_flow 0.021227099539890364
+    plastic_flow 0.021626618642323393
   ]
   node [
     id 223
@@ -2021,7 +2021,7 @@ graph [
     stuck_probability 0.0
     position 84633.80475445198
     position 446597.14395319746
-    plastic_flow 0.023339970680877516
+    plastic_flow 0.02323057305908657
   ]
   node [
     id 224
@@ -2030,7 +2030,7 @@ graph [
     stuck_probability 0.0
     position 84601.19327235564
     position 446675.1344844939
-    plastic_flow 0.025875927109545026
+    plastic_flow 0.02499248256240004
   ]
   node [
     id 225
@@ -2039,7 +2039,7 @@ graph [
     stuck_probability 0.0
     position 84560.50398411034
     position 446806.73360668455
-    plastic_flow 0.02839256935257523
+    plastic_flow 0.027402862799044966
   ]
   node [
     id 226
@@ -2048,7 +2048,7 @@ graph [
     stuck_probability 0.0
     position 84936.59734670962
     position 446102.7586394817
-    plastic_flow 0.0012243331281634438
+    plastic_flow 0.0012349384028332603
   ]
   node [
     id 227
@@ -2057,7 +2057,7 @@ graph [
     stuck_probability 0.45
     position 84796.57670424158
     position 448467.21686858736
-    plastic_flow 0.0014321105232405868
+    plastic_flow 0.0014250411326699344
   ]
   node [
     id 228
@@ -2066,7 +2066,7 @@ graph [
     stuck_probability 0.45
     position 84725.78006994816
     position 448419.7103876744
-    plastic_flow 0.0017046020492715998
+    plastic_flow 0.0017109666673579354
   ]
   node [
     id 229
@@ -2075,7 +2075,7 @@ graph [
     stuck_probability 0.45
     position 84654.98343565472
     position 448372.20390676137
-    plastic_flow 0.002875266946127574
+    plastic_flow 0.0028869965480558557
   ]
   node [
     id 230
@@ -2084,7 +2084,7 @@ graph [
     stuck_probability 0.45
     position 84584.18680136131
     position 448324.6974258484
-    plastic_flow 0.004586264339047099
+    plastic_flow 0.004613018258964935
   ]
   node [
     id 231
@@ -2093,7 +2093,7 @@ graph [
     stuck_probability 0.45
     position 84513.3901670679
     position 448277.19094493537
-    plastic_flow 0.008446357407275479
+    plastic_flow 0.00850798438615466
   ]
   node [
     id 232
@@ -2102,7 +2102,7 @@ graph [
     stuck_probability 0.45
     position 84458.1383811144
     position 447608.3093719562
-    plastic_flow 0.012557981120804664
+    plastic_flow 0.012551603255135692
   ]
   node [
     id 233
@@ -2112,7 +2112,7 @@ graph [
     position 84385.48716829394
     position 447563.02613001404
     catching_system_type 1
-    plastic_flow 0.023576139197391655
+    plastic_flow 0.023579564376753497
   ]
   node [
     id 234
@@ -2121,7 +2121,7 @@ graph [
     stuck_probability 0.45
     position 84879.64376574135
     position 447414.30866983393
-    plastic_flow 0.004153284505976788
+    plastic_flow 0.004094659974044691
   ]
   node [
     id 235
@@ -2130,7 +2130,7 @@ graph [
     stuck_probability 0.4680821917808219
     position 84806.05068308911
     position 447364.4639192003
-    plastic_flow 0.0032241203741859193
+    plastic_flow 0.0032399740028101706
   ]
   node [
     id 236
@@ -2139,7 +2139,7 @@ graph [
     stuck_probability 0.6840239776512917
     position 84732.45760043684
     position 447314.6191685666
-    plastic_flow 0.0019982025867656674
+    plastic_flow 0.0020233192543264887
   ]
   node [
     id 237
@@ -2148,7 +2148,7 @@ graph [
     stuck_probability 0.45
     position 84658.8645177846
     position 447264.77441793296
-    plastic_flow 0.0030636073805751234
+    plastic_flow 0.0030764190418700616
   ]
   node [
     id 238
@@ -2157,7 +2157,7 @@ graph [
     stuck_probability 0.45
     position 85032.16813787172
     position 447385.608266497
-    plastic_flow 0.010195869999212973
+    plastic_flow 0.009512529359075218
   ]
   node [
     id 239
@@ -2166,7 +2166,7 @@ graph [
     stuck_probability 0.615
     position 84946.22177980113
     position 447334.51841642463
-    plastic_flow 0.004398654154662993
+    plastic_flow 0.004144733865696248
   ]
   node [
     id 240
@@ -2175,7 +2175,7 @@ graph [
     stuck_probability 0.45
     position 84378.25656203563
     position 447776.8776667512
-    plastic_flow 0.008248087617845476
+    plastic_flow 0.008043662736736297
   ]
   node [
     id 241
@@ -2184,7 +2184,7 @@ graph [
     stuck_probability 0.45
     position 84327.3224162179
     position 447843.85148106195
-    plastic_flow 0.01084980236445185
+    plastic_flow 0.010823191356234723
   ]
   node [
     id 242
@@ -2193,7 +2193,7 @@ graph [
     stuck_probability 0.45
     position 84276.38827040014
     position 447910.82529537275
-    plastic_flow 0.008955926837873116
+    plastic_flow 0.008996382914279408
   ]
   node [
     id 243
@@ -2202,7 +2202,7 @@ graph [
     stuck_probability 0.45
     position 84225.45412458241
     position 447977.7991096835
-    plastic_flow 0.006541737533029538
+    plastic_flow 0.006592362793870961
   ]
   node [
     id 244
@@ -2211,7 +2211,7 @@ graph [
     stuck_probability 0.14520547945205475
     position 83657.41968230651
     position 448519.098041309
-    plastic_flow 0.0014218040323657102
+    plastic_flow 0.001351588077726163
   ]
   node [
     id 245
@@ -2220,7 +2220,7 @@ graph [
     stuck_probability 0.0
     position 83590.03400083522
     position 448481.7887416036
-    plastic_flow 0.0006255410031309023
+    plastic_flow 0.0005745471384950409
   ]
   node [
     id 246
@@ -2229,7 +2229,7 @@ graph [
     stuck_probability 0.1698630136986301
     position 84514.4775682969
     position 446819.97348758427
-    plastic_flow 0.01160055350118502
+    plastic_flow 0.011355101866167745
   ]
   node [
     id 247
@@ -2238,7 +2238,7 @@ graph [
     stuck_probability 0.0
     position 84519.52680965864
     position 446766.45736599696
-    plastic_flow 0.01620916712395267
+    plastic_flow 0.015502556187341377
   ]
   node [
     id 248
@@ -2247,7 +2247,7 @@ graph [
     stuck_probability 0.45
     position 84742.60040784684
     position 447492.21163627505
-    plastic_flow 0.010120180235571413
+    plastic_flow 0.010232021642152018
   ]
   node [
     id 249
@@ -2256,7 +2256,7 @@ graph [
     stuck_probability 0.45
     position 84673.28636165491
     position 447442.36941120564
-    plastic_flow 0.014984067643776414
+    plastic_flow 0.015142007723266812
   ]
   node [
     id 250
@@ -2265,7 +2265,7 @@ graph [
     stuck_probability 0.45
     position 84603.97231546298
     position 447392.52718613617
-    plastic_flow 0.01329181565118397
+    plastic_flow 0.013506376914743603
   ]
   node [
     id 251
@@ -2274,7 +2274,7 @@ graph [
     stuck_probability 0.45
     position 84555.45952628739
     position 447280.1604653741
-    plastic_flow 0.006323130352394568
+    plastic_flow 0.006335587728375909
   ]
   node [
     id 252
@@ -2283,7 +2283,7 @@ graph [
     stuck_probability 0.5042465753424658
     position 84571.06209602603
     position 446957.6536268316
-    plastic_flow 0.004869908446251207
+    plastic_flow 0.004951673904326902
   ]
   node [
     id 253
@@ -2292,7 +2292,7 @@ graph [
     stuck_probability 0.45
     position 84602.57325376995
     position 447075.0227994095
-    plastic_flow 0.0051883387282389065
+    plastic_flow 0.005161281401021834
   ]
   node [
     id 254
@@ -2301,7 +2301,7 @@ graph [
     stuck_probability 0.45
     position 84591.59879260881
     position 447145.9889384629
-    plastic_flow 0.0036839137634676615
+    plastic_flow 0.0035992393519338893
   ]
   node [
     id 255
@@ -2310,7 +2310,7 @@ graph [
     stuck_probability 0.45
     position 83977.68054670391
     position 448016.16734193586
-    plastic_flow 0.0006407612616849372
+    plastic_flow 0.0006714493702044802
   ]
   node [
     id 256
@@ -2319,7 +2319,7 @@ graph [
     stuck_probability 0.0
     position 84379.2047840131
     position 448291.08941764483
-    plastic_flow 0.009162222330165382
+    plastic_flow 0.008987101156142461
   ]
   node [
     id 257
@@ -2328,7 +2328,7 @@ graph [
     stuck_probability 0.0
     position 84319.6341326861
     position 448352.0991002702
-    plastic_flow 0.03151492511318012
+    plastic_flow 0.03016909073635573
   ]
   node [
     id 258
@@ -2337,7 +2337,7 @@ graph [
     stuck_probability 0.0
     position 84168.62205857776
     position 448415.7347993425
-    plastic_flow 0.05292905107706547
+    plastic_flow 0.05083790536837024
   ]
   node [
     id 259
@@ -2346,7 +2346,7 @@ graph [
     stuck_probability 0.0
     position 84075.14730075239
     position 448419.26282644726
-    plastic_flow 0.035893681640425806
+    plastic_flow 0.03660768081407033
   ]
   node [
     id 260
@@ -2355,7 +2355,7 @@ graph [
     stuck_probability 0.0
     position 83884.42612877121
     position 448433.36499306577
-    plastic_flow 0.015695797621067126
+    plastic_flow 0.01676848632497649
   ]
   node [
     id 261
@@ -2364,7 +2364,7 @@ graph [
     stuck_probability 0.10684931506849316
     position 83752.93210630848
     position 448501.4754733475
-    plastic_flow 0.006262868168050369
+    plastic_flow 0.006389543481744902
   ]
   node [
     id 262
@@ -2373,7 +2373,7 @@ graph [
     stuck_probability 0.0
     position 83697.10179932864
     position 448650.4264261775
-    plastic_flow 0.0029959442110563195
+    plastic_flow 0.002896260166556064
   ]
   node [
     id 263
@@ -2382,7 +2382,7 @@ graph [
     stuck_probability 0.0
     position 83673.7594911128
     position 448742.5577365252
-    plastic_flow 0.002791840063267125
+    plastic_flow 0.0027822008799474516
   ]
   node [
     id 264
@@ -2391,7 +2391,7 @@ graph [
     stuck_probability 0.0
     position 83650.41718289697
     position 448834.68904687284
-    plastic_flow 0.002543916945896071
+    plastic_flow 0.0026337213352498516
   ]
   node [
     id 265
@@ -2400,7 +2400,7 @@ graph [
     stuck_probability 0.3
     position 83865.9702720652
     position 448171.54630444245
-    plastic_flow 0.004757837935659084
+    plastic_flow 0.004791944161176156
   ]
   node [
     id 266
@@ -2409,7 +2409,7 @@ graph [
     stuck_probability 0.3
     position 83842.59740599537
     position 448303.5064608879
-    plastic_flow 0.0030939444525126788
+    plastic_flow 0.003135835532231442
   ]
   node [
     id 267
@@ -2418,7 +2418,7 @@ graph [
     stuck_probability 0.0
     position 83813.76634584452
     position 448374.6428365805
-    plastic_flow 0.002388031510320123
+    plastic_flow 0.002345249700164074
   ]
   node [
     id 268
@@ -2427,7 +2427,7 @@ graph [
     stuck_probability 0.45
     position 84130.01290757507
     position 448005.4819192703
-    plastic_flow 0.0007152621029744217
+    plastic_flow 0.0007342735264792787
   ]
   node [
     id 269
@@ -2436,7 +2436,7 @@ graph [
     stuck_probability 0.615
     position 84376.6436397008
     position 448183.32462977996
-    plastic_flow 0.011691004603814994
+    plastic_flow 0.01179364417341133
   ]
   node [
     id 270
@@ -2445,7 +2445,7 @@ graph [
     stuck_probability 0.45
     position 84310.6401300271
     position 448136.9279681161
-    plastic_flow 0.0069708576452762174
+    plastic_flow 0.007079897762026895
   ]
   node [
     id 271
@@ -2454,7 +2454,7 @@ graph [
     stuck_probability 0.45
     position 84244.63662035341
     position 448090.5313064523
-    plastic_flow 0.005211070548042933
+    plastic_flow 0.005329528396533102
   ]
   node [
     id 272
@@ -2463,7 +2463,7 @@ graph [
     stuck_probability 0.615
     position 85488.32726839936
     position 447303.6549283628
-    plastic_flow 0.0008801477321847878
+    plastic_flow 0.0008783402092994657
   ]
   node [
     id 273
@@ -2472,7 +2472,7 @@ graph [
     stuck_probability 0.45
     position 85393.62602176426
     position 447408.24785997364
-    plastic_flow 0.0030538618228222784
+    plastic_flow 0.0030794535085874103
   ]
   node [
     id 274
@@ -2481,7 +2481,7 @@ graph [
     stuck_probability 0.45
     position 85275.37563529804
     position 447450.83556155354
-    plastic_flow 0.004375119787391434
+    plastic_flow 0.0044097716839587315
   ]
   node [
     id 275
@@ -2490,7 +2490,7 @@ graph [
     stuck_probability 0.45
     position 84478.90635299339
     position 447681.32214222045
-    plastic_flow 0.0066989248155534115
+    plastic_flow 0.006756793080197964
   ]
   node [
     id 276
@@ -2499,7 +2499,7 @@ graph [
     stuck_probability 0.45
     position 84879.41176500767
     position 447502.93545469973
-    plastic_flow 0.01021764648328648
+    plastic_flow 0.010118911142493199
   ]
   node [
     id 277
@@ -2508,7 +2508,7 @@ graph [
     stuck_probability 0.45
     position 84738.81506228632
     position 447569.6138471638
-    plastic_flow 0.010254683499139813
+    plastic_flow 0.010007907926778959
   ]
   node [
     id 278
@@ -2517,7 +2517,7 @@ graph [
     stuck_probability 0.45
     position 84668.5749869018
     position 447597.5261040959
-    plastic_flow 0.015917402608021953
+    plastic_flow 0.015884142165995173
   ]
   node [
     id 279
@@ -2526,7 +2526,7 @@ graph [
     stuck_probability 0.45
     position 84598.3349115173
     position 447625.43836102803
-    plastic_flow 0.011756783767387874
+    plastic_flow 0.011801298947301496
   ]
   node [
     id 280
@@ -2535,7 +2535,7 @@ graph [
     stuck_probability 0.45
     position 84637.4790410537
     position 447861.5734633781
-    plastic_flow 0.009894003512589313
+    plastic_flow 0.009837857125362039
   ]
   node [
     id 281
@@ -2544,7 +2544,7 @@ graph [
     stuck_probability 0.45
     position 84569.4434965499
     position 447810.8207197984
-    plastic_flow 0.00510339053583936
+    plastic_flow 0.005099593095515703
   ]
   node [
     id 282
@@ -2553,7 +2553,7 @@ graph [
     stuck_probability 0.45
     position 84501.40795204611
     position 447760.0679762187
-    plastic_flow 0.004564484895956738
+    plastic_flow 0.0045811837273762816
   ]
   node [
     id 283
@@ -2562,7 +2562,7 @@ graph [
     stuck_probability 0.45
     position 84689.91861953611
     position 447774.7399613703
-    plastic_flow 0.007855605918508896
+    plastic_flow 0.007851925557475858
   ]
   node [
     id 284
@@ -2571,7 +2571,7 @@ graph [
     stuck_probability 0.45
     position 84610.46936594826
     position 447714.24583149434
-    plastic_flow 0.005324335753664264
+    plastic_flow 0.005236838345068318
   ]
   node [
     id 285
@@ -2580,7 +2580,7 @@ graph [
     stuck_probability 0.0
     position 85016.4060210988
     position 447195.4278269389
-    plastic_flow 0.01082155025382274
+    plastic_flow 0.010607364221726357
   ]
   node [
     id 286
@@ -2589,7 +2589,7 @@ graph [
     stuck_probability 0.0
     position 84939.90017740316
     position 447139.1319340885
-    plastic_flow 0.012492495293742006
+    plastic_flow 0.01232165951633704
   ]
   node [
     id 287
@@ -2598,7 +2598,7 @@ graph [
     stuck_probability 0.16164383561643836
     position 84863.39433370753
     position 447082.836041238
-    plastic_flow 0.014640697596063717
+    plastic_flow 0.014497740735215764
   ]
   node [
     id 288
@@ -2607,7 +2607,7 @@ graph [
     stuck_probability 0.0
     position 84786.8884900119
     position 447026.5401483875
-    plastic_flow 0.015780032984711412
+    plastic_flow 0.015654985614746444
   ]
   node [
     id 289
@@ -2616,7 +2616,7 @@ graph [
     stuck_probability 0.0
     position 84710.38264631627
     position 446970.244255537
-    plastic_flow 0.016554209509871107
+    plastic_flow 0.01640087044543967
   ]
   node [
     id 290
@@ -2625,7 +2625,7 @@ graph [
     stuck_probability 0.0
     position 84633.87680262064
     position 446913.9483626865
-    plastic_flow 0.01503429645837646
+    plastic_flow 0.014860804233389136
   ]
   node [
     id 291
@@ -2634,7 +2634,7 @@ graph [
     stuck_probability 0.5331037779357966
     position 85106.82975884259
     position 447346.29995353654
-    plastic_flow 0.007013989329898215
+    plastic_flow 0.0066714693778154146
   ]
   node [
     id 292
@@ -2643,7 +2643,7 @@ graph [
     stuck_probability 0.45
     position 85056.35722196948
     position 447503.4578299546
-    plastic_flow 0.017124701358876004
+    plastic_flow 0.017545922077888184
   ]
   node [
     id 293
@@ -2652,7 +2652,7 @@ graph [
     stuck_probability 0.45
     position 84998.38925934037
     position 447569.6158126438
-    plastic_flow 0.01776537517223358
+    plastic_flow 0.018049465096671227
   ]
   node [
     id 294
@@ -2661,7 +2661,7 @@ graph [
     stuck_probability 0.45
     position 84882.04556312383
     position 447702.39716101607
-    plastic_flow 0.008243216096972174
+    plastic_flow 0.008349718415809719
   ]
   node [
     id 295
@@ -2670,7 +2670,7 @@ graph [
     stuck_probability 0.5080136986301369
     position 84823.6698295364
     position 447769.0205266992
-    plastic_flow 0.012515802305224467
+    plastic_flow 0.012643357449976467
   ]
   node [
     id 296
@@ -2679,7 +2679,7 @@ graph [
     stuck_probability 0.45
     position 84733.3246647164
     position 447874.2629330434
-    plastic_flow 0.009442066741764586
+    plastic_flow 0.009400348331506828
   ]
   node [
     id 297
@@ -2688,7 +2688,7 @@ graph [
     stuck_probability 0.0
     position 84648.85013833143
     position 447976.30672013626
-    plastic_flow 0.013220765251298991
+    plastic_flow 0.012808528009522764
   ]
   node [
     id 298
@@ -2697,7 +2697,7 @@ graph [
     stuck_probability 0.0
     position 84596.29036464961
     position 448039.79566891433
-    plastic_flow 0.014778503966046595
+    plastic_flow 0.014468867415131748
   ]
   node [
     id 299
@@ -2706,7 +2706,7 @@ graph [
     stuck_probability 0.1814824544942767
     position 84543.73059096778
     position 448103.2846176924
-    plastic_flow 0.01797680334186822
+    plastic_flow 0.017792684991922086
   ]
   node [
     id 300
@@ -2715,7 +2715,7 @@ graph [
     stuck_probability 0.0
     position 84491.17081728595
     position 448166.7735664705
-    plastic_flow 0.02281687964822886
+    plastic_flow 0.022783286784228446
   ]
   node [
     id 301
@@ -2724,7 +2724,7 @@ graph [
     stuck_probability 0.4861643835616438
     position 85345.97062022732
     position 447906.4478596438
-    plastic_flow 4.987696942302801E-05
+    plastic_flow 4.786597079724143E-05
   ]
   node [
     id 302
@@ -2733,7 +2733,7 @@ graph [
     stuck_probability 0.45
     position 85265.64779537787
     position 447852.2112020998
-    plastic_flow 0.00013615308264586213
+    plastic_flow 0.0001351179392348286
   ]
   node [
     id 303
@@ -2742,7 +2742,7 @@ graph [
     stuck_probability 0.45
     position 85185.32497052843
     position 447797.9745445559
-    plastic_flow 0.002007647374188573
+    plastic_flow 0.0020101431026567362
   ]
   node [
     id 304
@@ -2751,7 +2751,7 @@ graph [
     stuck_probability 0.45
     position 85105.00214567895
     position 447743.7378870119
-    plastic_flow 0.0018883832131282997
+    plastic_flow 0.001908766951857818
   ]
   node [
     id 305
@@ -2760,7 +2760,7 @@ graph [
     stuck_probability 0.45
     position 85024.67932082948
     position 447689.501229468
-    plastic_flow 0.000955082552880714
+    plastic_flow 0.0009795574588785942
   ]
   node [
     id 306
@@ -2769,7 +2769,7 @@ graph [
     stuck_probability 0.45
     position 85406.22994514741
     position 447527.7762074845
-    plastic_flow 0.0013917781007655907
+    plastic_flow 0.001393840271916207
   ]
   node [
     id 307
@@ -2778,205 +2778,205 @@ graph [
     stuck_probability 0.6560181844238169
     position 84444.80480171209
     position 447498.1360659995
-    plastic_flow 0.01613149573469942
+    plastic_flow 0.016140421895010127
   ]
   edge [
     source 0
     target 1
     weight 155.46977219568143
-    transition_probability 0.2966751918158568
+    transition_probability 0.2889447236180904
   ]
   edge [
     source 0
     target 43
     weight 62.911418205767106
-    transition_probability 0.40153452685422
+    transition_probability 0.39949748743718594
   ]
   edge [
     source 0
     target 255
     weight -27.10989938369019
-    transition_probability 0.30179028132992325
+    transition_probability 0.31155778894472363
   ]
   edge [
     source 1
     target 2
     weight 155.46977219568143
-    transition_probability 0.46835443037974683
+    transition_probability 0.45384615384615384
   ]
   edge [
     source 1
     target 0
     weight -24.53022780431857
-    transition_probability 0.5316455696202531
+    transition_probability 0.5461538461538461
   ]
   edge [
     source 2
     target 3
     weight 155.46977219568143
-    transition_probability 0.46835443037974683
+    transition_probability 0.45384615384615384
   ]
   edge [
     source 2
     target 189
     weight -24.53022780431857
-    transition_probability 0.5316455696202531
+    transition_probability 0.5461538461538461
   ]
   edge [
     source 3
     target 4
     weight 155.46977219568143
-    transition_probability 0.46835443037974683
+    transition_probability 0.45384615384615384
   ]
   edge [
     source 3
     target 188
     weight -24.53022780431857
-    transition_probability 0.5316455696202531
+    transition_probability 0.5461538461538461
   ]
   edge [
     source 4
     target 5
     weight 155.46977219568143
-    transition_probability 0.46835443037974683
+    transition_probability 0.45384615384615384
   ]
   edge [
     source 4
     target 187
     weight -24.53022780431857
-    transition_probability 0.5316455696202531
+    transition_probability 0.5461538461538461
   ]
   edge [
     source 5
     target 6
     weight 155.46977219568143
-    transition_probability 0.46835443037974683
+    transition_probability 0.45384615384615384
   ]
   edge [
     source 5
     target 186
     weight -24.53022780431857
-    transition_probability 0.5316455696202531
+    transition_probability 0.5461538461538461
   ]
   edge [
     source 6
     target 7
     weight 156.32108870757847
-    transition_probability 0.29846938775510207
+    transition_probability 0.2904040404040404
   ]
   edge [
     source 6
     target 41
     weight 63.05644309022221
-    transition_probability 0.3877551020408163
+    transition_probability 0.3838383838383838
   ]
   edge [
     source 6
     target 185
     weight -24.53022780431857
-    transition_probability 0.3137755102040816
+    transition_probability 0.32575757575757575
   ]
   edge [
     source 7
     target 8
     weight 155.22078909588055
-    transition_probability 0.31794871794871793
+    transition_probability 0.3239795918367347
   ]
   edge [
     source 7
     target 6
     weight -23.67891129242153
-    transition_probability 0.4717948717948718
+    transition_probability 0.461734693877551
   ]
   edge [
     source 7
     target 217
     weight -126.06328402476618
-    transition_probability 0.21025641025641026
+    transition_probability 0.21428571428571427
   ]
   edge [
     source 8
     target 9
     weight 155.22078909588055
-    transition_probability 0.4642857142857143
+    transition_probability 0.45384615384615384
   ]
   edge [
     source 8
     target 7
     weight -24.779210904119452
-    transition_probability 0.5357142857142857
+    transition_probability 0.5461538461538461
   ]
   edge [
     source 9
     target 10
     weight 155.22078909588055
-    transition_probability 0.4642857142857143
+    transition_probability 0.45384615384615384
   ]
   edge [
     source 9
     target 192
     weight -24.779210904119452
-    transition_probability 0.5357142857142857
+    transition_probability 0.5461538461538461
   ]
   edge [
     source 10
     target 11
     weight 155.22078909588055
-    transition_probability 0.4642857142857143
+    transition_probability 0.45384615384615384
   ]
   edge [
     source 10
     target 191
     weight -24.779210904119452
-    transition_probability 0.5357142857142857
+    transition_probability 0.5461538461538461
   ]
   edge [
     source 11
     target 12
     weight 146.4163565448721
-    transition_probability 0.4759493670886076
+    transition_probability 0.46954314720812185
   ]
   edge [
     source 11
     target 190
     weight -24.779210904119452
-    transition_probability 0.5240506329113924
+    transition_probability 0.5304568527918782
   ]
   edge [
     source 12
     target 13
     weight 146.4163565448721
-    transition_probability 0.4763092269326683
+    transition_probability 0.4796954314720812
   ]
   edge [
     source 12
     target 11
     weight -33.58364345512791
-    transition_probability 0.5236907730673317
+    transition_probability 0.5203045685279187
   ]
   edge [
     source 13
     target 62
     weight 148.25119231929403
-    transition_probability 0.28074245939675174
+    transition_probability 0.30288461538461536
   ]
   edge [
     source 13
     target 106
     weight 46.758134805205344
-    transition_probability 0.3480278422273782
+    transition_probability 0.3605769230769231
   ]
   edge [
     source 13
     target 193
     weight -33.58364345512791
-    transition_probability 0.20649651972157773
+    transition_probability 0.18509615384615385
   ]
   edge [
     source 13
     target 207
     weight -11.122702643910259
-    transition_probability 0.16473317865429235
+    transition_probability 0.15144230769230768
   ]
   edge [
     source 14
@@ -2988,91 +2988,91 @@ graph [
     source 15
     target 16
     weight 148.39905429382048
-    transition_probability 0.4723618090452261
+    transition_probability 0.47341772151898737
   ]
   edge [
     source 15
     target 14
     weight -31.600945706179516
-    transition_probability 0.5276381909547738
+    transition_probability 0.5265822784810127
   ]
   edge [
     source 16
     target 17
     weight 148.39905429382048
-    transition_probability 0.4723618090452261
+    transition_probability 0.47341772151898737
   ]
   edge [
     source 16
     target 199
     weight -31.600945706179516
-    transition_probability 0.5276381909547738
+    transition_probability 0.5265822784810127
   ]
   edge [
     source 17
     target 18
     weight 148.39905429382048
-    transition_probability 0.4723618090452261
+    transition_probability 0.47341772151898737
   ]
   edge [
     source 17
     target 198
     weight -31.600945706179516
-    transition_probability 0.5276381909547738
+    transition_probability 0.5265822784810127
   ]
   edge [
     source 18
     target 19
     weight 148.39905429382048
-    transition_probability 0.4723618090452261
+    transition_probability 0.47341772151898737
   ]
   edge [
     source 18
     target 197
     weight -31.600945706179516
-    transition_probability 0.5276381909547738
+    transition_probability 0.5265822784810127
   ]
   edge [
     source 19
     target 20
     weight 148.39905429382048
-    transition_probability 0.4723618090452261
+    transition_probability 0.47341772151898737
   ]
   edge [
     source 19
     target 196
     weight -31.600945706179516
-    transition_probability 0.5276381909547738
+    transition_probability 0.5265822784810127
   ]
   edge [
     source 20
     target 21
     weight 148.39905429382048
-    transition_probability 0.4723618090452261
+    transition_probability 0.47341772151898737
   ]
   edge [
     source 20
     target 195
     weight -31.600945706179516
-    transition_probability 0.5276381909547738
+    transition_probability 0.5265822784810127
   ]
   edge [
     source 21
     target 49
     weight 141.06269251209187
-    transition_probability 0.32160804020100503
+    transition_probability 0.3234567901234568
   ]
   edge [
     source 21
     target 194
     weight -31.600945706179516
-    transition_probability 0.4396984924623116
+    transition_probability 0.4469135802469136
   ]
   edge [
     source 21
     target 26
     weight -168.3262896871335
-    transition_probability 0.23869346733668342
+    transition_probability 0.22962962962962963
   ]
   edge [
     source 22
@@ -3084,403 +3084,403 @@ graph [
     source 23
     target 24
     weight 55.049150985728154
-    transition_probability 0.6190476190476191
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 23
     target 22
     weight -124.95084901427185
-    transition_probability 0.38095238095238093
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 24
     target 25
     weight 55.049150985728154
-    transition_probability 0.6190476190476191
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 24
     target 202
     weight -124.95084901427185
-    transition_probability 0.38095238095238093
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 25
     target 26
     weight 55.049150985728154
-    transition_probability 0.6190476190476191
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 25
     target 201
     weight -124.95084901427185
-    transition_probability 0.38095238095238093
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 26
     target 27
     weight 82.19952519607052
-    transition_probability 0.34760705289672544
+    transition_probability 0.34577114427860695
   ]
   edge [
     source 26
     target 21
     weight 11.673710312866483
-    transition_probability 0.3526448362720403
+    transition_probability 0.3482587064676617
   ]
   edge [
     source 26
     target 200
     weight -124.95084901427185
-    transition_probability 0.29974811083123426
+    transition_probability 0.30597014925373134
   ]
   edge [
     source 27
     target 28
     weight 153.01682800016363
-    transition_probability 0.3686868686868687
+    transition_probability 0.36272040302267
   ]
   edge [
     source 27
     target 26
     weight -97.80047480392948
-    transition_probability 0.1994949494949495
+    transition_probability 0.20151133501259447
   ]
   edge [
     source 27
     target 49
     weight -28.12554136677244
-    transition_probability 0.4318181818181818
+    transition_probability 0.4357682619647355
   ]
   edge [
     source 28
     target 29
     weight 153.01682800016363
-    transition_probability 0.4708860759493671
+    transition_probability 0.4578005115089514
   ]
   edge [
     source 28
     target 27
     weight -26.983171999836372
-    transition_probability 0.529113924050633
+    transition_probability 0.5421994884910486
   ]
   edge [
     source 29
     target 30
     weight 153.01682800016363
-    transition_probability 0.4708860759493671
+    transition_probability 0.4578005115089514
   ]
   edge [
     source 29
     target 206
     weight -26.983171999836372
-    transition_probability 0.529113924050633
+    transition_probability 0.5421994884910486
   ]
   edge [
     source 30
     target 31
     weight 153.01682800016363
-    transition_probability 0.4708860759493671
+    transition_probability 0.4578005115089514
   ]
   edge [
     source 30
     target 205
     weight -26.983171999836372
-    transition_probability 0.529113924050633
+    transition_probability 0.5421994884910486
   ]
   edge [
     source 31
     target 32
     weight 153.01682800016363
-    transition_probability 0.4708860759493671
+    transition_probability 0.4578005115089514
   ]
   edge [
     source 31
     target 204
     weight -26.983171999836372
-    transition_probability 0.529113924050633
+    transition_probability 0.5421994884910486
   ]
   edge [
     source 32
     target 33
     weight 123.45721192400126
-    transition_probability 0.5011933174224343
+    transition_probability 0.4925373134328358
   ]
   edge [
     source 32
     target 203
     weight -26.983171999836372
-    transition_probability 0.4988066825775656
+    transition_probability 0.5074626865671642
   ]
   edge [
     source 33
     target 98
     weight 48.714030104931055
-    transition_probability 0.37777777777777777
+    transition_probability 0.3838383838383838
   ]
   edge [
     source 33
     target 99
     weight 106.45168921264305
-    transition_probability 0.28888888888888886
+    transition_probability 0.28535353535353536
   ]
   edge [
     source 33
     target 32
     weight -56.54278807599874
-    transition_probability 0.3333333333333333
+    transition_probability 0.33080808080808083
   ]
   edge [
     source 34
     target 35
     weight 168.87729735608974
-    transition_probability 0.43349753694581283
+    transition_probability 0.4412532637075718
   ]
   edge [
     source 34
     target 209
     weight -22.950876045060113
-    transition_probability 0.5665024630541872
+    transition_probability 0.5587467362924282
   ]
   edge [
     source 35
     target 36
     weight 168.87729735608974
-    transition_probability 0.4387755102040816
+    transition_probability 0.4318766066838046
   ]
   edge [
     source 35
     target 34
     weight -11.122702643910259
-    transition_probability 0.5612244897959183
+    transition_probability 0.5681233933161953
   ]
   edge [
     source 36
     target 13
     weight 168.87729735608974
-    transition_probability 0.4387755102040816
+    transition_probability 0.4318766066838046
   ]
   edge [
     source 36
     target 208
     weight -11.122702643910259
-    transition_probability 0.5612244897959183
+    transition_probability 0.5681233933161953
   ]
   edge [
     source 37
     target 38
     weight 157.0491239549399
-    transition_probability 0.289002557544757
+    transition_probability 0.28354430379746837
   ]
   edge [
     source 37
     target 181
     weight 65.09523119193835
-    transition_probability 0.3887468030690537
+    transition_probability 0.3924050632911392
   ]
   edge [
     source 37
     target 41
     weight -24.875301537707372
-    transition_probability 0.32225063938618925
+    transition_probability 0.3240506329113924
   ]
   edge [
     source 38
     target 39
     weight 157.0491239549399
-    transition_probability 0.4300254452926209
+    transition_probability 0.455012853470437
   ]
   edge [
     source 38
     target 37
     weight -22.950876045060113
-    transition_probability 0.5699745547073791
+    transition_probability 0.5449871465295629
   ]
   edge [
     source 39
     target 40
     weight 157.0491239549399
-    transition_probability 0.4300254452926209
+    transition_probability 0.455012853470437
   ]
   edge [
     source 39
     target 211
     weight -22.950876045060113
-    transition_probability 0.5699745547073791
+    transition_probability 0.5449871465295629
   ]
   edge [
     source 40
     target 34
     weight 157.0491239549399
-    transition_probability 0.4300254452926209
+    transition_probability 0.455012853470437
   ]
   edge [
     source 40
     target 210
     weight -22.950876045060113
-    transition_probability 0.5699745547073791
+    transition_probability 0.5449871465295629
   ]
   edge [
     source 41
     target 37
     weight 155.12469846229263
-    transition_probability 0.3264781491002571
+    transition_probability 0.33418367346938777
   ]
   edge [
     source 41
     target 42
     weight -23.224895226984387
-    transition_probability 0.46272493573264784
+    transition_probability 0.45663265306122447
   ]
   edge [
     source 41
     target 6
     weight -116.94355690977778
-    transition_probability 0.21079691516709512
+    transition_probability 0.20918367346938777
   ]
   edge [
     source 42
     target 41
     weight 156.7751047730156
-    transition_probability 0.2979274611398964
+    transition_probability 0.29545454545454547
   ]
   edge [
     source 42
     target 75
     weight 58.06485990652895
-    transition_probability 0.40932642487046633
+    transition_probability 0.4015151515151515
   ]
   edge [
     source 42
     target 212
     weight -27.323218891816623
-    transition_probability 0.2927461139896373
+    transition_probability 0.30303030303030304
   ]
   edge [
     source 43
     target 44
     weight 152.67678110818338
-    transition_probability 0.19270833333333334
+    transition_probability 0.1937984496124031
   ]
   edge [
     source 43
     target 130
     weight 51.52034181435663
-    transition_probability 0.5286458333333334
+    transition_probability 0.5297157622739018
   ]
   edge [
     source 43
     target 0
     weight -117.0885817942329
-    transition_probability 0.2786458333333333
+    transition_probability 0.27648578811369506
   ]
   edge [
     source 44
     target 45
     weight 152.67678110818338
-    transition_probability 0.48621553884711777
+    transition_probability 0.4607594936708861
   ]
   edge [
     source 44
     target 43
     weight -27.323218891816623
-    transition_probability 0.5137844611528822
+    transition_probability 0.5392405063291139
   ]
   edge [
     source 45
     target 46
     weight 152.67678110818338
-    transition_probability 0.48621553884711777
+    transition_probability 0.4607594936708861
   ]
   edge [
     source 45
     target 216
     weight -27.323218891816623
-    transition_probability 0.5137844611528822
+    transition_probability 0.5392405063291139
   ]
   edge [
     source 46
     target 47
     weight 152.67678110818338
-    transition_probability 0.48621553884711777
+    transition_probability 0.4607594936708861
   ]
   edge [
     source 46
     target 215
     weight -27.323218891816623
-    transition_probability 0.5137844611528822
+    transition_probability 0.5392405063291139
   ]
   edge [
     source 47
     target 48
     weight 152.67678110818338
-    transition_probability 0.48621553884711777
+    transition_probability 0.4607594936708861
   ]
   edge [
     source 47
     target 214
     weight -27.323218891816623
-    transition_probability 0.5137844611528822
+    transition_probability 0.5392405063291139
   ]
   edge [
     source 48
     target 42
     weight 152.67678110818338
-    transition_probability 0.48621553884711777
+    transition_probability 0.4607594936708861
   ]
   edge [
     source 48
     target 213
     weight -27.323218891816623
-    transition_probability 0.5137844611528822
+    transition_probability 0.5392405063291139
   ]
   edge [
     source 49
     target 27
     weight 151.87445863322756
-    transition_probability 0.28498727735368956
+    transition_probability 0.291044776119403
   ]
   edge [
     source 49
     target 50
     weight 53.936715975233824
-    transition_probability 0.4300254452926209
+    transition_probability 0.4228855721393035
   ]
   edge [
     source 49
     target 21
     weight -38.93730748790813
-    transition_probability 0.28498727735368956
+    transition_probability 0.2860696517412935
   ]
   edge [
     source 50
     target 7
     weight 53.936715975233824
-    transition_probability 0.6157894736842106
+    transition_probability 0.6164021164021164
   ]
   edge [
     source 50
     target 49
     weight -126.06328402476618
-    transition_probability 0.38421052631578945
+    transition_probability 0.3835978835978836
   ]
   edge [
     source 51
     target 52
     weight 155.92334547343256
-    transition_probability 0.29081632653061223
+    transition_probability 0.2828282828282828
   ]
   edge [
     source 51
     target 64
     weight 67.74062647751316
-    transition_probability 0.3826530612244898
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 51
     target 218
     weight -25.50478449981324
-    transition_probability 0.32653061224489793
+    transition_probability 0.3282828282828283
   ]
   edge [
     source 52
@@ -3492,169 +3492,169 @@ graph [
     source 53
     target 54
     weight 154.49521550018676
-    transition_probability 0.29545454545454547
+    transition_probability 0.28860759493670884
   ]
   edge [
     source 53
     target 66
     weight 66.74088378091385
-    transition_probability 0.37626262626262624
+    transition_probability 0.379746835443038
   ]
   edge [
     source 53
     target 220
     weight -22.692081549189453
-    transition_probability 0.3282828282828283
+    transition_probability 0.33164556962025316
   ]
   edge [
     source 54
     target 55
     weight 154.49521550018676
-    transition_probability 0.4696969696969697
+    transition_probability 0.45897435897435895
   ]
   edge [
     source 54
     target 53
     weight -25.50478449981324
-    transition_probability 0.5303030303030303
+    transition_probability 0.541025641025641
   ]
   edge [
     source 55
     target 51
     weight 154.49521550018676
-    transition_probability 0.4696969696969697
+    transition_probability 0.45897435897435895
   ]
   edge [
     source 55
     target 219
     weight -25.50478449981324
-    transition_probability 0.5303030303030303
+    transition_probability 0.541025641025641
   ]
   edge [
     source 56
     target 57
     weight 157.30791845081055
-    transition_probability 0.3333333333333333
+    transition_probability 0.33668341708542715
   ]
   edge [
     source 56
     target 225
     weight -8.47178134907557
-    transition_probability 0.4444444444444444
+    transition_probability 0.44472361809045224
   ]
   edge [
     source 56
     target 247
     weight -73.54831078735695
-    transition_probability 0.2222222222222222
+    transition_probability 0.2185929648241206
   ]
   edge [
     source 57
     target 58
     weight 157.30791845081055
-    transition_probability 0.43037974683544306
+    transition_probability 0.455012853470437
   ]
   edge [
     source 57
     target 56
     weight -22.692081549189453
-    transition_probability 0.569620253164557
+    transition_probability 0.5449871465295629
   ]
   edge [
     source 58
     target 59
     weight 157.30791845081055
-    transition_probability 0.43037974683544306
+    transition_probability 0.455012853470437
   ]
   edge [
     source 58
     target 224
     weight -22.692081549189453
-    transition_probability 0.569620253164557
+    transition_probability 0.5449871465295629
   ]
   edge [
     source 59
     target 60
     weight 157.30791845081055
-    transition_probability 0.43037974683544306
+    transition_probability 0.455012853470437
   ]
   edge [
     source 59
     target 223
     weight -22.692081549189453
-    transition_probability 0.569620253164557
+    transition_probability 0.5449871465295629
   ]
   edge [
     source 60
     target 61
     weight 157.30791845081055
-    transition_probability 0.43037974683544306
+    transition_probability 0.455012853470437
   ]
   edge [
     source 60
     target 222
     weight -22.692081549189453
-    transition_probability 0.569620253164557
+    transition_probability 0.5449871465295629
   ]
   edge [
     source 61
     target 53
     weight 157.30791845081055
-    transition_probability 0.43037974683544306
+    transition_probability 0.455012853470437
   ]
   edge [
     source 61
     target 221
     weight -22.692081549189453
-    transition_probability 0.569620253164557
+    transition_probability 0.5449871465295629
   ]
   edge [
     source 62
     target 63
     weight 171.52821865092443
-    transition_probability 0.16581632653061223
+    transition_probability 0.1658291457286432
   ]
   edge [
     source 62
     target 155
     weight 53.65295964240263
-    transition_probability 0.4260204081632653
+    transition_probability 0.4296482412060301
   ]
   edge [
     source 62
     target 246
     weight -131.28596989506894
-    transition_probability 0.1989795918367347
+    transition_probability 0.1984924623115578
   ]
   edge [
     source 62
     target 13
     weight -31.748807680705966
-    transition_probability 0.20918367346938777
+    transition_probability 0.20603015075376885
   ]
   edge [
     source 63
     target 56
     weight 171.52821865092443
-    transition_probability 0.41878172588832485
+    transition_probability 0.4358974358974359
   ]
   edge [
     source 63
     target 62
     weight -8.47178134907557
-    transition_probability 0.5812182741116751
+    transition_probability 0.5641025641025641
   ]
   edge [
     source 64
     target 65
     weight 67.74062647751316
-    transition_probability 0.608355091383812
+    transition_probability 0.612565445026178
   ]
   edge [
     source 64
     target 51
     weight -112.25937352248684
-    transition_probability 0.391644908616188
+    transition_probability 0.387434554973822
   ]
   edge [
     source 65
@@ -3666,13 +3666,13 @@ graph [
     source 66
     target 53
     weight -113.25911621908615
-    transition_probability 0.368763557483731
+    transition_probability 0.37967914438502676
   ]
   edge [
     source 66
     target 67
     weight -20.02638511372254
-    transition_probability 0.631236442516269
+    transition_probability 0.6203208556149733
   ]
   edge [
     source 67
@@ -3684,85 +3684,85 @@ graph [
     source 68
     target 69
     weight 56.13730653087547
-    transition_probability 0.4166666666666667
+    transition_probability 0.4207920792079208
   ]
   edge [
     source 68
     target 169
     weight 140.3801029245006
-    transition_probability 0.18686868686868688
+    transition_probability 0.18316831683168316
   ]
   edge [
     source 68
     target 256
     weight -44.316252466151894
-    transition_probability 0.18686868686868688
+    transition_probability 0.18316831683168316
   ]
   edge [
     source 68
     target 269
     weight -125.10500734059477
-    transition_probability 0.20959595959595959
+    transition_probability 0.21287128712871287
   ]
   edge [
     source 69
     target 70
     weight 56.13730653087547
-    transition_probability 0.6190476190476191
+    transition_probability 0.6117021276595744
   ]
   edge [
     source 69
     target 68
     weight -123.86269346912454
-    transition_probability 0.38095238095238093
+    transition_probability 0.3882978723404255
   ]
   edge [
     source 70
     target 71
     weight 56.13730653087547
-    transition_probability 0.6190476190476191
+    transition_probability 0.6117021276595744
   ]
   edge [
     source 70
     target 231
     weight -123.86269346912454
-    transition_probability 0.38095238095238093
+    transition_probability 0.3882978723404255
   ]
   edge [
     source 71
     target 72
     weight 56.13730653087547
-    transition_probability 0.6190476190476191
+    transition_probability 0.6117021276595744
   ]
   edge [
     source 71
     target 230
     weight -123.86269346912454
-    transition_probability 0.38095238095238093
+    transition_probability 0.3882978723404255
   ]
   edge [
     source 72
     target 73
     weight 56.13730653087547
-    transition_probability 0.6190476190476191
+    transition_probability 0.6117021276595744
   ]
   edge [
     source 72
     target 229
     weight -123.86269346912454
-    transition_probability 0.38095238095238093
+    transition_probability 0.3882978723404255
   ]
   edge [
     source 73
     target 74
     weight 56.13730653087547
-    transition_probability 0.6190476190476191
+    transition_probability 0.6117021276595744
   ]
   edge [
     source 73
     target 228
     weight -123.86269346912454
-    transition_probability 0.38095238095238093
+    transition_probability 0.3882978723404255
   ]
   edge [
     source 74
@@ -3774,133 +3774,133 @@ graph [
     source 75
     target 76
     weight 58.06485990652895
-    transition_probability 0.6131578947368421
+    transition_probability 0.6121372031662269
   ]
   edge [
     source 75
     target 42
     weight -121.93514009347105
-    transition_probability 0.3868421052631579
+    transition_probability 0.38786279683377306
   ]
   edge [
     source 76
     target 77
     weight 58.06485990652895
-    transition_probability 0.6131578947368421
+    transition_probability 0.6121372031662269
   ]
   edge [
     source 76
     target 233
     weight -121.93514009347105
-    transition_probability 0.3868421052631579
+    transition_probability 0.38786279683377306
   ]
   edge [
     source 77
     target 145
     weight 111.6720634396977
-    transition_probability 0.22
+    transition_probability 0.22358722358722358
   ]
   edge [
     source 77
     target 152
     weight 52.71368441613263
-    transition_probability 0.3925
+    transition_probability 0.3832923832923833
   ]
   edge [
     source 77
     target 232
     weight -121.93514009347105
-    transition_probability 0.225
+    transition_probability 0.22604422604422605
   ]
   edge [
     source 77
     target 275
     weight -60.345407217949486
-    transition_probability 0.1625
+    transition_probability 0.16707616707616707
   ]
   edge [
     source 78
     target 79
     weight 55.89013165168866
-    transition_probability 0.41116751269035534
+    transition_probability 0.40648379052369077
   ]
   edge [
     source 78
     target 108
     weight 171.2092076896081
-    transition_probability 0.2969543147208122
+    transition_probability 0.30174563591022446
   ]
   edge [
     source 78
     target 251
     weight -21.646314179199294
-    transition_probability 0.2918781725888325
+    transition_probability 0.29177057356608477
   ]
   edge [
     source 79
     target 80
     weight 55.89013165168866
-    transition_probability 0.6190476190476191
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 79
     target 78
     weight -124.10986834831134
-    transition_probability 0.38095238095238093
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 80
     target 81
     weight 55.89013165168866
-    transition_probability 0.6190476190476191
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 80
     target 237
     weight -124.10986834831134
-    transition_probability 0.38095238095238093
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 81
     target 82
     weight 55.89013165168866
-    transition_probability 0.6190476190476191
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 81
     target 236
     weight -124.10986834831134
-    transition_probability 0.38095238095238093
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 82
     target 83
     weight 55.89013165168866
-    transition_probability 0.6190476190476191
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 82
     target 235
     weight -124.10986834831134
-    transition_probability 0.38095238095238093
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 83
     target 144
     weight 103.50946580297507
-    transition_probability 0.47715736040609136
+    transition_probability 0.4825
   ]
   edge [
     source 83
     target 234
     weight -124.10986834831134
-    transition_probability 0.24111675126903553
+    transition_probability 0.24
   ]
   edge [
     source 83
     target 276
     weight -61.16217732308972
-    transition_probability 0.2817258883248731
+    transition_probability 0.2775
   ]
   edge [
     source 84
@@ -3912,61 +3912,61 @@ graph [
     source 85
     target 86
     weight 59.271107513548785
-    transition_probability 0.6010498687664042
+    transition_probability 0.6121372031662269
   ]
   edge [
     source 85
     target 84
     weight -120.72889248645122
-    transition_probability 0.3989501312335958
+    transition_probability 0.38786279683377306
   ]
   edge [
     source 86
     target 87
     weight 59.271107513548785
-    transition_probability 0.6010498687664042
+    transition_probability 0.6121372031662269
   ]
   edge [
     source 86
     target 239
     weight -120.72889248645122
-    transition_probability 0.3989501312335958
+    transition_probability 0.38786279683377306
   ]
   edge [
     source 87
     target 140
     weight 114.64826452965043
-    transition_probability 0.34549878345498786
+    transition_probability 0.36724565756823824
   ]
   edge [
     source 87
     target 238
     weight -120.72889248645122
-    transition_probability 0.15328467153284672
+    transition_probability 0.13647642679900746
   ]
   edge [
     source 87
     target 291
     weight -172.17353314282917
-    transition_probability 0.13138686131386862
+    transition_probability 0.12406947890818859
   ]
   edge [
     source 87
     target 292
     weight -41.225008553168635
-    transition_probability 0.2822384428223844
+    transition_probability 0.3002481389578164
   ]
   edge [
     source 87
     target 144
     weight -84.80958082377575
-    transition_probability 0.08759124087591241
+    transition_probability 0.07196029776674938
   ]
   edge [
     source 88
     target 89
     weight 142.74670768675398
-    transition_probability 0.18575063613231552
+    transition_probability 0.18829516539440203
   ]
   edge [
     source 88
@@ -3978,73 +3978,73 @@ graph [
     source 88
     target 268
     weight -128.47965818564336
-    transition_probability 0.2900763358778626
+    transition_probability 0.2875318066157761
   ]
   edge [
     source 89
     target 90
     weight 142.74670768675398
-    transition_probability 0.49014778325123154
+    transition_probability 0.48507462686567165
   ]
   edge [
     source 89
     target 88
     weight -37.25329231324602
-    transition_probability 0.5098522167487685
+    transition_probability 0.5149253731343284
   ]
   edge [
     source 90
     target 91
     weight 142.74670768675398
-    transition_probability 0.49014778325123154
+    transition_probability 0.48507462686567165
   ]
   edge [
     source 90
     target 243
     weight -37.25329231324602
-    transition_probability 0.5098522167487685
+    transition_probability 0.5149253731343284
   ]
   edge [
     source 91
     target 92
     weight 142.74670768675398
-    transition_probability 0.49014778325123154
+    transition_probability 0.48507462686567165
   ]
   edge [
     source 91
     target 242
     weight -37.25329231324602
-    transition_probability 0.5098522167487685
+    transition_probability 0.5149253731343284
   ]
   edge [
     source 92
     target 93
     weight 142.74670768675398
-    transition_probability 0.49014778325123154
+    transition_probability 0.48507462686567165
   ]
   edge [
     source 92
     target 241
     weight -37.25329231324602
-    transition_probability 0.5098522167487685
+    transition_probability 0.5149253731343284
   ]
   edge [
     source 93
     target 142
     weight 119.65459278205051
-    transition_probability 0.2837209302325581
+    transition_probability 0.2857142857142857
   ]
   edge [
     source 93
     target 148
     weight 53.27802046816781
-    transition_probability 0.3511627906976744
+    transition_probability 0.37192118226600984
   ]
   edge [
     source 93
     target 240
     weight -37.25329231324602
-    transition_probability 0.36511627906976746
+    transition_probability 0.34236453201970446
   ]
   edge [
     source 94
@@ -4056,331 +4056,331 @@ graph [
     source 95
     target 96
     weight 61.02810151056626
-    transition_probability 0.6021220159151194
+    transition_probability 0.6133333333333333
   ]
   edge [
     source 95
     target 94
     weight -118.97189848943374
-    transition_probability 0.3978779840848806
+    transition_probability 0.38666666666666666
   ]
   edge [
     source 96
     target 97
     weight 61.02810151056626
-    transition_probability 0.6021220159151194
+    transition_probability 0.6133333333333333
   ]
   edge [
     source 96
     target 245
     weight -118.97189848943374
-    transition_probability 0.3978779840848806
+    transition_probability 0.38666666666666666
   ]
   edge [
     source 97
     target 120
     weight 150.14296534131196
-    transition_probability 0.3131578947368421
+    transition_probability 0.3248081841432225
   ]
   edge [
     source 97
     target 244
     weight -118.97189848943374
-    transition_probability 0.22105263157894736
+    transition_probability 0.21483375959079284
   ]
   edge [
     source 97
     target 262
     weight -14.217242123322677
-    transition_probability 0.46578947368421053
+    transition_probability 0.46035805626598464
   ]
   edge [
     source 98
     target 62
     weight 48.714030104931055
-    transition_probability 0.6190476190476191
+    transition_probability 0.6206896551724138
   ]
   edge [
     source 98
     target 33
     weight -131.28596989506894
-    transition_probability 0.38095238095238093
+    transition_probability 0.3793103448275862
   ]
   edge [
     source 99
     target 56
     weight 106.45168921264305
-    transition_probability 0.5637755102040817
+    transition_probability 0.5681233933161953
   ]
   edge [
     source 99
     target 33
     weight -73.54831078735695
-    transition_probability 0.4362244897959184
+    transition_probability 0.4318766066838046
   ]
   edge [
     source 100
     target 101
     weight 54.280908444510914
-    transition_probability 0.5841121495327103
+    transition_probability 0.610079575596817
   ]
   edge [
     source 100
     target 105
     weight 158.3536858208007
-    transition_probability 0.4158878504672897
+    transition_probability 0.38992042440318303
   ]
   edge [
     source 101
     target 102
     weight 54.280908444510914
-    transition_probability 0.6210526315789474
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 101
     target 100
     weight -125.71909155548909
-    transition_probability 0.37894736842105264
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 102
     target 103
     weight 54.280908444510914
-    transition_probability 0.6210526315789474
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 102
     target 250
     weight -125.71909155548909
-    transition_probability 0.37894736842105264
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 103
     target 104
     weight 54.280908444510914
-    transition_probability 0.6210526315789474
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 103
     target 249
     weight -125.71909155548909
-    transition_probability 0.37894736842105264
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 104
     target 143
     weight 118.83782267691028
-    transition_probability 0.472289156626506
+    transition_probability 0.4798994974874372
   ]
   edge [
     source 104
     target 248
     weight -125.71909155548909
-    transition_probability 0.20240963855421687
+    transition_probability 0.21105527638190955
   ]
   edge [
     source 104
     target 277
     weight -68.3279365603023
-    transition_probability 0.3253012048192771
+    transition_probability 0.30904522613065327
   ]
   edge [
     source 105
     target 78
     weight 158.3536858208007
-    transition_probability 0.4296675191815857
+    transition_probability 0.45103092783505155
   ]
   edge [
     source 105
     target 100
     weight -21.646314179199294
-    transition_probability 0.5703324808184144
+    transition_probability 0.5489690721649485
   ]
   edge [
     source 106
     target 107
     weight 46.758134805205344
-    transition_probability 0.6276595744680851
+    transition_probability 0.6213333333333333
   ]
   edge [
     source 106
     target 13
     weight -133.24186519479466
-    transition_probability 0.3723404255319149
+    transition_probability 0.37866666666666665
   ]
   edge [
     source 107
     target 252
     weight -133.24186519479466
-    transition_probability 0.372960372960373
+    transition_probability 0.38666666666666666
   ]
   edge [
     source 107
     target 253
     weight -8.790792310391907
-    transition_probability 0.627039627039627
+    transition_probability 0.6133333333333333
   ]
   edge [
     source 108
     target 109
     weight 171.2092076896081
-    transition_probability 0.4173027989821883
+    transition_probability 0.4358974358974359
   ]
   edge [
     source 108
     target 78
     weight -8.790792310391907
-    transition_probability 0.5826972010178118
+    transition_probability 0.5641025641025641
   ]
   edge [
     source 109
     target 107
     weight 171.2092076896081
-    transition_probability 0.4173027989821883
+    transition_probability 0.4358974358974359
   ]
   edge [
     source 109
     target 254
     weight -8.790792310391907
-    transition_probability 0.5826972010178118
+    transition_probability 0.5641025641025641
   ]
   edge [
     source 110
     target 111
     weight 152.8901006163098
-    transition_probability 0.5499021526418787
+    transition_probability 0.5449871465295629
   ]
   edge [
     source 110
     target 184
     weight -103.36021844475401
-    transition_probability 0.4500978473581213
+    transition_probability 0.455012853470437
   ]
   edge [
     source 111
     target 0
     weight 152.8901006163098
-    transition_probability 0.4860759493670886
+    transition_probability 0.4607594936708861
   ]
   edge [
     source 111
     target 110
     weight -27.10989938369019
-    transition_probability 0.5139240506329114
+    transition_probability 0.5392405063291139
   ]
   edge [
     source 112
     target 113
     weight 135.6837475338481
-    transition_probability 0.5485961123110151
+    transition_probability 0.5449871465295629
   ]
   edge [
     source 112
     target 258
     weight -87.8385056708992
-    transition_probability 0.4514038876889849
+    transition_probability 0.455012853470437
   ]
   edge [
     source 113
     target 114
     weight 135.6837475338481
-    transition_probability 0.48655256723716384
+    transition_probability 0.49502487562189057
   ]
   edge [
     source 113
     target 112
     weight -44.316252466151894
-    transition_probability 0.5134474327628362
+    transition_probability 0.5049751243781094
   ]
   edge [
     source 114
     target 68
     weight 135.6837475338481
-    transition_probability 0.48655256723716384
+    transition_probability 0.49502487562189057
   ]
   edge [
     source 114
     target 257
     weight -44.316252466151894
-    transition_probability 0.5134474327628362
+    transition_probability 0.5049751243781094
   ]
   edge [
     source 115
     target 116
     weight 92.1614943291008
-    transition_probability 0.5943877551020408
+    transition_probability 0.5948717948717949
   ]
   edge [
     source 115
     target 260
     weight -83.78990944998027
-    transition_probability 0.40561224489795916
+    transition_probability 0.40512820512820513
   ]
   edge [
     source 116
     target 117
     weight 92.1614943291008
-    transition_probability 0.6061381074168798
+    transition_probability 0.5912596401028277
   ]
   edge [
     source 116
     target 115
     weight -87.8385056708992
-    transition_probability 0.3938618925831202
+    transition_probability 0.4087403598971722
   ]
   edge [
     source 117
     target 112
     weight 92.1614943291008
-    transition_probability 0.6061381074168798
+    transition_probability 0.5912596401028277
   ]
   edge [
     source 117
     target 259
     weight -87.8385056708992
-    transition_probability 0.3938618925831202
+    transition_probability 0.4087403598971722
   ]
   edge [
     source 118
     target 119
     weight 96.21009055001973
-    transition_probability 0.36666666666666664
+    transition_probability 0.36363636363636365
   ]
   edge [
     source 118
     target 128
     weight 157.93764227655706
-    transition_probability 0.258974358974359
+    transition_probability 0.255050505050505
   ]
   edge [
     source 118
     target 261
     weight -29.857034658688036
-    transition_probability 0.37435897435897436
+    transition_probability 0.3813131313131313
   ]
   edge [
     source 119
     target 115
     weight 96.21009055001973
-    transition_probability 0.5820512820512821
+    transition_probability 0.5938303341902313
   ]
   edge [
     source 119
     target 118
     weight -83.78990944998027
-    transition_probability 0.41794871794871796
+    transition_probability 0.40616966580976865
   ]
   edge [
     source 120
     target 118
     weight 150.14296534131196
-    transition_probability 0.4648241206030151
+    transition_probability 0.46954314720812185
   ]
   edge [
     source 120
     target 97
     weight -29.857034658688036
-    transition_probability 0.535175879396985
+    transition_probability 0.5304568527918782
   ]
   edge [
     source 121
@@ -4392,169 +4392,169 @@ graph [
     source 122
     target 123
     weight 165.78275787667732
-    transition_probability 0.45153061224489793
+    transition_probability 0.43444730077120824
   ]
   edge [
     source 122
     target 121
     weight -14.217242123322677
-    transition_probability 0.548469387755102
+    transition_probability 0.5655526992287918
   ]
   edge [
     source 123
     target 124
     weight 165.78275787667732
-    transition_probability 0.45153061224489793
+    transition_probability 0.43444730077120824
   ]
   edge [
     source 123
     target 264
     weight -14.217242123322677
-    transition_probability 0.548469387755102
+    transition_probability 0.5655526992287918
   ]
   edge [
     source 124
     target 97
     weight 165.78275787667732
-    transition_probability 0.45153061224489793
+    transition_probability 0.43444730077120824
   ]
   edge [
     source 124
     target 263
     weight -14.217242123322677
-    transition_probability 0.548469387755102
+    transition_probability 0.5655526992287918
   ]
   edge [
     source 125
     target 126
     weight 10.326477879461509
-    transition_probability 0.5490654205607477
+    transition_probability 0.5592783505154639
   ]
   edge [
     source 125
     target 184
     weight 138.41359827476072
-    transition_probability 0.45093457943925236
+    transition_probability 0.44072164948453607
   ]
   edge [
     source 126
     target 127
     weight 10.326477879461509
-    transition_probability 0.6077922077922078
+    transition_probability 0.5984251968503937
   ]
   edge [
     source 126
     target 125
     weight -169.67352212053848
-    transition_probability 0.3922077922077922
+    transition_probability 0.4015748031496063
   ]
   edge [
     source 127
     target 265
     weight -169.67352212053848
-    transition_probability 0.4308755760368664
+    transition_probability 0.43112244897959184
   ]
   edge [
     source 127
     target 266
     weight -22.062357723442943
-    transition_probability 0.5691244239631337
+    transition_probability 0.5688775510204082
   ]
   edge [
     source 128
     target 129
     weight 157.93764227655706
-    transition_probability 0.4296675191815857
+    transition_probability 0.455012853470437
   ]
   edge [
     source 128
     target 118
     weight -22.062357723442943
-    transition_probability 0.5703324808184144
+    transition_probability 0.5449871465295629
   ]
   edge [
     source 129
     target 127
     weight 157.93764227655706
-    transition_probability 0.4296675191815857
+    transition_probability 0.455012853470437
   ]
   edge [
     source 129
     target 267
     weight -22.062357723442943
-    transition_probability 0.5703324808184144
+    transition_probability 0.5449871465295629
   ]
   edge [
     source 130
     target 88
     weight 51.52034181435663
-    transition_probability 0.6099476439790575
+    transition_probability 0.618421052631579
   ]
   edge [
     source 130
     target 43
     weight -128.47965818564336
-    transition_probability 0.3900523560209424
+    transition_probability 0.3815789473684211
   ]
   edge [
     source 131
     target 132
     weight 54.89499265940524
-    transition_probability 0.6243386243386243
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 131
     target 88
     weight -125.10500734059477
-    transition_probability 0.37566137566137564
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 132
     target 133
     weight 54.89499265940524
-    transition_probability 0.6243386243386243
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 132
     target 271
     weight -125.10500734059477
-    transition_probability 0.37566137566137564
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 133
     target 68
     weight 54.89499265940524
-    transition_probability 0.6243386243386243
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 133
     target 270
     weight -125.10500734059477
-    transition_probability 0.37566137566137564
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 134
     target 135
     weight 109.86728508728542
-    transition_probability 0.49217002237136465
+    transition_probability 0.48370927318295737
   ]
   edge [
     source 134
     target 273
     weight -7.032455982930742
-    transition_probability 0.5078299776286354
+    transition_probability 0.5162907268170426
   ]
   edge [
     source 135
     target 136
     weight 109.86728508728542
-    transition_probability 0.5655526992287918
+    transition_probability 0.5515463917525774
   ]
   edge [
     source 135
     target 134
     weight -70.13271491271458
-    transition_probability 0.43444730077120824
+    transition_probability 0.4484536082474227
   ]
   edge [
     source 136
@@ -4566,517 +4566,517 @@ graph [
     source 137
     target 138
     weight 172.96754401706926
-    transition_probability 0.4631578947368421
+    transition_probability 0.47341772151898737
   ]
   edge [
     source 137
     target 139
     weight -55.30484646876745
-    transition_probability 0.5368421052631579
+    transition_probability 0.5265822784810127
   ]
   edge [
     source 138
     target 134
     weight 172.96754401706926
-    transition_probability 0.41836734693877553
+    transition_probability 0.4358974358974359
   ]
   edge [
     source 138
     target 137
     weight -7.032455982930742
-    transition_probability 0.5816326530612245
+    transition_probability 0.5641025641025641
   ]
   edge [
     source 139
     target 137
     weight 124.69515353123255
-    transition_probability 0.20558375634517767
+    transition_probability 0.20603015075376885
   ]
   edge [
     source 139
     target 179
     weight 58.57043438515507
-    transition_probability 0.48984771573604063
+    transition_probability 0.48743718592964824
   ]
   edge [
     source 139
     target 274
     weight -119.89442382625319
-    transition_probability 0.30456852791878175
+    transition_probability 0.3065326633165829
   ]
   edge [
     source 140
     target 141
     weight 60.10557617374682
-    transition_probability 0.6009501187648456
+    transition_probability 0.608355091383812
   ]
   edge [
     source 140
     target 87
     weight -65.35173547034957
-    transition_probability 0.3990498812351544
+    transition_probability 0.391644908616188
   ]
   edge [
     source 141
     target 139
     weight 60.10557617374682
-    transition_probability 0.6
+    transition_probability 0.6127320954907162
   ]
   edge [
     source 141
     target 140
     weight -119.89442382625319
-    transition_probability 0.4
+    transition_probability 0.38726790450928383
   ]
   edge [
     source 142
     target 77
     weight 119.65459278205051
-    transition_probability 0.5380710659898477
+    transition_probability 0.5244215938303342
   ]
   edge [
     source 142
     target 93
     weight -60.345407217949486
-    transition_probability 0.4619289340101523
+    transition_probability 0.4755784061696658
   ]
   edge [
     source 143
     target 83
     weight 118.83782267691028
-    transition_probability 0.5419847328244275
+    transition_probability 0.5267175572519084
   ]
   edge [
     source 143
     target 104
     weight -61.16217732308972
-    transition_probability 0.4580152671755725
+    transition_probability 0.4732824427480916
   ]
   edge [
     source 144
     target 87
     weight 95.19041917622425
-    transition_probability 0.5885416666666666
+    transition_probability 0.5805626598465473
   ]
   edge [
     source 144
     target 83
     weight -76.49053419702493
-    transition_probability 0.4114583333333333
+    transition_probability 0.4194373401534527
   ]
   edge [
     source 145
     target 146
     weight 111.6720634396977
-    transition_probability 0.5535714285714286
+    transition_probability 0.5503875968992248
   ]
   edge [
     source 145
     target 77
     weight -68.3279365603023
-    transition_probability 0.44642857142857145
+    transition_probability 0.4496124031007752
   ]
   edge [
     source 146
     target 147
     weight 111.6720634396977
-    transition_probability 0.5535714285714286
+    transition_probability 0.5503875968992248
   ]
   edge [
     source 146
     target 279
     weight -68.3279365603023
-    transition_probability 0.44642857142857145
+    transition_probability 0.4496124031007752
   ]
   edge [
     source 147
     target 104
     weight 111.6720634396977
-    transition_probability 0.5535714285714286
+    transition_probability 0.5503875968992248
   ]
   edge [
     source 147
     target 278
     weight -68.3279365603023
-    transition_probability 0.44642857142857145
+    transition_probability 0.4496124031007752
   ]
   edge [
     source 148
     target 149
     weight 53.27802046816781
-    transition_probability 0.6167979002624672
+    transition_probability 0.6164021164021164
   ]
   edge [
     source 148
     target 93
     weight -126.72197953183219
-    transition_probability 0.38320209973753283
+    transition_probability 0.3835978835978836
   ]
   edge [
     source 149
     target 150
     weight 53.27802046816781
-    transition_probability 0.6167979002624672
+    transition_probability 0.6164021164021164
   ]
   edge [
     source 149
     target 282
     weight -126.72197953183219
-    transition_probability 0.38320209973753283
+    transition_probability 0.3835978835978836
   ]
   edge [
     source 150
     target 151
     weight 53.27802046816781
-    transition_probability 0.6167979002624672
+    transition_probability 0.6164021164021164
   ]
   edge [
     source 150
     target 281
     weight -126.72197953183219
-    transition_probability 0.38320209973753283
+    transition_probability 0.3835978835978836
   ]
   edge [
     source 151
     target 168
     weight 140.38287346662457
-    transition_probability 0.38345864661654133
+    transition_probability 0.38734177215189874
   ]
   edge [
     source 151
     target 280
     weight -126.72197953183219
-    transition_probability 0.21553884711779447
+    transition_probability 0.21772151898734177
   ]
   edge [
     source 151
     target 297
     weight -39.61989707549941
-    transition_probability 0.40100250626566414
+    transition_probability 0.3949367088607595
   ]
   edge [
     source 152
     target 153
     weight 52.71368441613263
-    transition_probability 0.6062992125984252
+    transition_probability 0.6147757255936676
   ]
   edge [
     source 152
     target 77
     weight -127.28631558386738
-    transition_probability 0.3937007874015748
+    transition_probability 0.38522427440633245
   ]
   edge [
     source 153
     target 154
     weight 52.71368441613263
-    transition_probability 0.6062992125984252
+    transition_probability 0.6147757255936676
   ]
   edge [
     source 153
     target 284
     weight -127.28631558386738
-    transition_probability 0.3937007874015748
+    transition_probability 0.38522427440633245
   ]
   edge [
     source 154
     target 166
     weight 138.77499144683662
-    transition_probability 0.3893129770992366
+    transition_probability 0.39646464646464646
   ]
   edge [
     source 154
     target 283
     weight -127.28631558386738
-    transition_probability 0.21882951653944022
+    transition_probability 0.21717171717171718
   ]
   edge [
     source 154
     target 296
     weight -39.617126533375426
-    transition_probability 0.39185750636132316
+    transition_probability 0.38636363636363635
   ]
   edge [
     source 155
     target 156
     weight 53.65295964240263
-    transition_probability 0.6167979002624672
+    transition_probability 0.6164021164021164
   ]
   edge [
     source 155
     target 62
     weight -126.34704035759736
-    transition_probability 0.38320209973753283
+    transition_probability 0.3835978835978836
   ]
   edge [
     source 156
     target 157
     weight 53.65295964240263
-    transition_probability 0.6167979002624672
+    transition_probability 0.6164021164021164
   ]
   edge [
     source 156
     target 290
     weight -126.34704035759736
-    transition_probability 0.38320209973753283
+    transition_probability 0.3835978835978836
   ]
   edge [
     source 157
     target 158
     weight 53.65295964240263
-    transition_probability 0.6167979002624672
+    transition_probability 0.6164021164021164
   ]
   edge [
     source 157
     target 289
     weight -126.34704035759736
-    transition_probability 0.38320209973753283
+    transition_probability 0.3835978835978836
   ]
   edge [
     source 158
     target 159
     weight 53.65295964240263
-    transition_probability 0.6167979002624672
+    transition_probability 0.6164021164021164
   ]
   edge [
     source 158
     target 288
     weight -126.34704035759736
-    transition_probability 0.38320209973753283
+    transition_probability 0.3835978835978836
   ]
   edge [
     source 159
     target 160
     weight 53.65295964240263
-    transition_probability 0.6167979002624672
+    transition_probability 0.6164021164021164
   ]
   edge [
     source 159
     target 287
     weight -126.34704035759736
-    transition_probability 0.38320209973753283
+    transition_probability 0.3835978835978836
   ]
   edge [
     source 160
     target 161
     weight 53.65295964240263
-    transition_probability 0.6167979002624672
+    transition_probability 0.6164021164021164
   ]
   edge [
     source 160
     target 286
     weight -126.34704035759736
-    transition_probability 0.38320209973753283
+    transition_probability 0.3835978835978836
   ]
   edge [
     source 161
     target 162
     weight 7.826466857170842
-    transition_probability 0.6234718826405868
+    transition_probability 0.626984126984127
   ]
   edge [
     source 161
     target 285
     weight -126.34704035759736
-    transition_probability 0.3765281173594132
+    transition_probability 0.373015873015873
   ]
   edge [
     source 162
     target 87
     weight 7.826466857170842
-    transition_probability 0.597911227154047
+    transition_probability 0.5921052631578947
   ]
   edge [
     source 162
     target 161
     weight -172.17353314282917
-    transition_probability 0.402088772845953
+    transition_probability 0.40789473684210525
   ]
   edge [
     source 163
     target 164
     weight 138.77499144683136
-    transition_probability 0.2885572139303483
+    transition_probability 0.28078817733990147
   ]
   edge [
     source 163
     target 173
     weight 55.97146232176145
-    transition_probability 0.4054726368159204
+    transition_probability 0.4064039408866995
   ]
   edge [
     source 163
     target 294
     weight -41.22500855316338
-    transition_probability 0.30597014925373134
+    transition_probability 0.312807881773399
   ]
   edge [
     source 164
     target 165
     weight 138.77499144683136
-    transition_probability 0.5037220843672456
+    transition_probability 0.4925373134328358
   ]
   edge [
     source 164
     target 163
     weight -41.225008553168635
-    transition_probability 0.49627791563275436
+    transition_probability 0.5074626865671642
   ]
   edge [
     source 165
     target 87
     weight 138.77499144683136
-    transition_probability 0.5037220843672456
+    transition_probability 0.4925373134328358
   ]
   edge [
     source 165
     target 293
     weight -41.225008553168635
-    transition_probability 0.49627791563275436
+    transition_probability 0.5074626865671642
   ]
   edge [
     source 166
     target 167
     weight 138.77499144683662
-    transition_probability 0.5037220843672456
+    transition_probability 0.4925373134328358
   ]
   edge [
     source 166
     target 154
     weight -41.22500855316338
-    transition_probability 0.49627791563275436
+    transition_probability 0.5074626865671642
   ]
   edge [
     source 167
     target 163
     weight 138.77499144683662
-    transition_probability 0.5037220843672456
+    transition_probability 0.4925373134328358
   ]
   edge [
     source 167
     target 295
     weight -41.22500855316338
-    transition_probability 0.49627791563275436
+    transition_probability 0.5074626865671642
   ]
   edge [
     source 168
     target 154
     weight 140.38287346662457
-    transition_probability 0.49014778325123154
+    transition_probability 0.4849246231155779
   ]
   edge [
     source 168
     target 151
     weight -39.617126533375426
-    transition_probability 0.5098522167487685
+    transition_probability 0.5150753768844221
   ]
   edge [
     source 169
     target 170
     weight 140.3801029245006
-    transition_probability 0.49014778325123154
+    transition_probability 0.4849246231155779
   ]
   edge [
     source 169
     target 68
     weight -39.61989707549941
-    transition_probability 0.5098522167487685
+    transition_probability 0.5150753768844221
   ]
   edge [
     source 170
     target 171
     weight 140.3801029245006
-    transition_probability 0.49014778325123154
+    transition_probability 0.4849246231155779
   ]
   edge [
     source 170
     target 300
     weight -39.61989707549941
-    transition_probability 0.5098522167487685
+    transition_probability 0.5150753768844221
   ]
   edge [
     source 171
     target 172
     weight 140.3801029245006
-    transition_probability 0.49014778325123154
+    transition_probability 0.4849246231155779
   ]
   edge [
     source 171
     target 299
     weight -39.61989707549941
-    transition_probability 0.5098522167487685
+    transition_probability 0.5150753768844221
   ]
   edge [
     source 172
     target 151
     weight 140.3801029245006
-    transition_probability 0.49014778325123154
+    transition_probability 0.4849246231155779
   ]
   edge [
     source 172
     target 298
     weight -39.61989707549941
-    transition_probability 0.5098522167487685
+    transition_probability 0.5150753768844221
   ]
   edge [
     source 173
     target 174
     weight 55.97146232176145
-    transition_probability 0.6190476190476191
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 173
     target 163
     weight -124.02853767823855
-    transition_probability 0.38095238095238093
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 174
     target 175
     weight 55.97146232176145
-    transition_probability 0.6190476190476191
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 174
     target 305
     weight -124.02853767823855
-    transition_probability 0.38095238095238093
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 175
     target 176
     weight 55.97146232176145
-    transition_probability 0.6190476190476191
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 175
     target 304
     weight -124.02853767823855
-    transition_probability 0.38095238095238093
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 176
     target 177
     weight 55.97146232176145
-    transition_probability 0.6190476190476191
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 176
     target 303
     weight -124.02853767823855
-    transition_probability 0.38095238095238093
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 177
     target 178
     weight 55.97146232176145
-    transition_probability 0.6190476190476191
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 177
     target 302
     weight -124.02853767823855
-    transition_probability 0.38095238095238093
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 178
@@ -5088,13 +5088,13 @@ graph [
     source 179
     target 180
     weight 58.57043438515507
-    transition_probability 0.6141732283464567
+    transition_probability 0.6121372031662269
   ]
   edge [
     source 179
     target 139
     weight -121.42956561484493
-    transition_probability 0.3858267716535433
+    transition_probability 0.38786279683377306
   ]
   edge [
     source 180
@@ -5106,25 +5106,25 @@ graph [
     source 181
     target 182
     weight 57.72435568543439
-    transition_probability 0.6010498687664042
+    transition_probability 0.6133333333333333
   ]
   edge [
     source 181
     target 37
     weight -114.90476880806165
-    transition_probability 0.3989501312335958
+    transition_probability 0.38666666666666666
   ]
   edge [
     source 182
     target 183
     weight 57.72435568543439
-    transition_probability 0.6115485564304461
+    transition_probability 0.6127320954907162
   ]
   edge [
     source 182
     target 181
     weight -122.27564431456561
-    transition_probability 0.3884514435695538
+    transition_probability 0.38726790450928383
   ]
   edge [
     source 183
@@ -5136,1488 +5136,1488 @@ graph [
     source 184
     target 110
     weight 76.63978155524599
-    transition_probability 0.5431818181818182
+    transition_probability 0.5641025641025641
   ]
   edge [
     source 184
     target 125
     weight -41.586401725239284
-    transition_probability 0.45681818181818185
+    transition_probability 0.4358974358974359
   ]
   edge [
     source 185
     target 186
     weight -24.53022780431857
-    transition_probability 0.5316455696202531
+    transition_probability 0.5461538461538461
   ]
   edge [
     source 185
     target 6
     weight 155.46977219568143
-    transition_probability 0.46835443037974683
+    transition_probability 0.45384615384615384
   ]
   edge [
     source 186
     target 187
     weight -24.53022780431857
-    transition_probability 0.5316455696202531
+    transition_probability 0.5461538461538461
   ]
   edge [
     source 186
     target 5
     weight 155.46977219568143
-    transition_probability 0.46835443037974683
+    transition_probability 0.45384615384615384
   ]
   edge [
     source 187
     target 188
     weight -24.53022780431857
-    transition_probability 0.5316455696202531
+    transition_probability 0.5461538461538461
   ]
   edge [
     source 187
     target 4
     weight 155.46977219568143
-    transition_probability 0.46835443037974683
+    transition_probability 0.45384615384615384
   ]
   edge [
     source 188
     target 189
     weight -24.53022780431857
-    transition_probability 0.5316455696202531
+    transition_probability 0.5461538461538461
   ]
   edge [
     source 188
     target 3
     weight 155.46977219568143
-    transition_probability 0.46835443037974683
+    transition_probability 0.45384615384615384
   ]
   edge [
     source 189
     target 0
     weight -24.53022780431857
-    transition_probability 0.5316455696202531
+    transition_probability 0.5461538461538461
   ]
   edge [
     source 189
     target 2
     weight 155.46977219568143
-    transition_probability 0.46835443037974683
+    transition_probability 0.45384615384615384
   ]
   edge [
     source 190
     target 191
     weight -24.779210904119452
-    transition_probability 0.5357142857142857
+    transition_probability 0.5461538461538461
   ]
   edge [
     source 190
     target 11
     weight 155.22078909588055
-    transition_probability 0.4642857142857143
+    transition_probability 0.45384615384615384
   ]
   edge [
     source 191
     target 192
     weight -24.779210904119452
-    transition_probability 0.5357142857142857
+    transition_probability 0.5461538461538461
   ]
   edge [
     source 191
     target 10
     weight 155.22078909588055
-    transition_probability 0.4642857142857143
+    transition_probability 0.45384615384615384
   ]
   edge [
     source 192
     target 7
     weight -24.779210904119452
-    transition_probability 0.5357142857142857
+    transition_probability 0.5461538461538461
   ]
   edge [
     source 192
     target 9
     weight 155.22078909588055
-    transition_probability 0.4642857142857143
+    transition_probability 0.45384615384615384
   ]
   edge [
     source 193
     target 11
     weight -33.58364345512791
-    transition_probability 0.5236907730673317
+    transition_probability 0.5203045685279187
   ]
   edge [
     source 193
     target 13
     weight 146.4163565448721
-    transition_probability 0.4763092269326683
+    transition_probability 0.4796954314720812
   ]
   edge [
     source 194
     target 195
     weight -31.600945706179516
-    transition_probability 0.5276381909547738
+    transition_probability 0.5265822784810127
   ]
   edge [
     source 194
     target 21
     weight 148.39905429382048
-    transition_probability 0.4723618090452261
+    transition_probability 0.47341772151898737
   ]
   edge [
     source 195
     target 196
     weight -31.600945706179516
-    transition_probability 0.5276381909547738
+    transition_probability 0.5265822784810127
   ]
   edge [
     source 195
     target 20
     weight 148.39905429382048
-    transition_probability 0.4723618090452261
+    transition_probability 0.47341772151898737
   ]
   edge [
     source 196
     target 197
     weight -31.600945706179516
-    transition_probability 0.5276381909547738
+    transition_probability 0.5265822784810127
   ]
   edge [
     source 196
     target 19
     weight 148.39905429382048
-    transition_probability 0.4723618090452261
+    transition_probability 0.47341772151898737
   ]
   edge [
     source 197
     target 198
     weight -31.600945706179516
-    transition_probability 0.5276381909547738
+    transition_probability 0.5265822784810127
   ]
   edge [
     source 197
     target 18
     weight 148.39905429382048
-    transition_probability 0.4723618090452261
+    transition_probability 0.47341772151898737
   ]
   edge [
     source 198
     target 199
     weight -31.600945706179516
-    transition_probability 0.5276381909547738
+    transition_probability 0.5265822784810127
   ]
   edge [
     source 198
     target 17
     weight 148.39905429382048
-    transition_probability 0.4723618090452261
+    transition_probability 0.47341772151898737
   ]
   edge [
     source 199
     target 14
     weight -31.600945706179516
-    transition_probability 0.5276381909547738
+    transition_probability 0.5265822784810127
   ]
   edge [
     source 199
     target 16
     weight 148.39905429382048
-    transition_probability 0.4723618090452261
+    transition_probability 0.47341772151898737
   ]
   edge [
     source 200
     target 201
     weight -124.95084901427185
-    transition_probability 0.38095238095238093
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 200
     target 26
     weight 55.049150985728154
-    transition_probability 0.6190476190476191
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 201
     target 202
     weight -124.95084901427185
-    transition_probability 0.38095238095238093
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 201
     target 25
     weight 55.049150985728154
-    transition_probability 0.6190476190476191
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 202
     target 22
     weight -124.95084901427185
-    transition_probability 0.38095238095238093
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 202
     target 24
     weight 55.049150985728154
-    transition_probability 0.6190476190476191
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 203
     target 204
     weight -26.983171999836372
-    transition_probability 0.529113924050633
+    transition_probability 0.5421994884910486
   ]
   edge [
     source 203
     target 32
     weight 153.01682800016363
-    transition_probability 0.4708860759493671
+    transition_probability 0.4578005115089514
   ]
   edge [
     source 204
     target 205
     weight -26.983171999836372
-    transition_probability 0.529113924050633
+    transition_probability 0.5421994884910486
   ]
   edge [
     source 204
     target 31
     weight 153.01682800016363
-    transition_probability 0.4708860759493671
+    transition_probability 0.4578005115089514
   ]
   edge [
     source 205
     target 206
     weight -26.983171999836372
-    transition_probability 0.529113924050633
+    transition_probability 0.5421994884910486
   ]
   edge [
     source 205
     target 30
     weight 153.01682800016363
-    transition_probability 0.4708860759493671
+    transition_probability 0.4578005115089514
   ]
   edge [
     source 206
     target 27
     weight -26.983171999836372
-    transition_probability 0.529113924050633
+    transition_probability 0.5421994884910486
   ]
   edge [
     source 206
     target 29
     weight 153.01682800016363
-    transition_probability 0.4708860759493671
+    transition_probability 0.4578005115089514
   ]
   edge [
     source 207
     target 208
     weight -11.122702643910259
-    transition_probability 0.5612244897959183
+    transition_probability 0.5681233933161953
   ]
   edge [
     source 207
     target 13
     weight 168.87729735608974
-    transition_probability 0.4387755102040816
+    transition_probability 0.4318766066838046
   ]
   edge [
     source 208
     target 34
     weight -11.122702643910259
-    transition_probability 0.5612244897959183
+    transition_probability 0.5681233933161953
   ]
   edge [
     source 208
     target 36
     weight 168.87729735608974
-    transition_probability 0.4387755102040816
+    transition_probability 0.4318766066838046
   ]
   edge [
     source 209
     target 210
     weight -22.950876045060113
-    transition_probability 0.5699745547073791
+    transition_probability 0.5449871465295629
   ]
   edge [
     source 209
     target 34
     weight 157.0491239549399
-    transition_probability 0.4300254452926209
+    transition_probability 0.455012853470437
   ]
   edge [
     source 210
     target 211
     weight -22.950876045060113
-    transition_probability 0.5699745547073791
+    transition_probability 0.5449871465295629
   ]
   edge [
     source 210
     target 40
     weight 157.0491239549399
-    transition_probability 0.4300254452926209
+    transition_probability 0.455012853470437
   ]
   edge [
     source 211
     target 37
     weight -22.950876045060113
-    transition_probability 0.5699745547073791
+    transition_probability 0.5449871465295629
   ]
   edge [
     source 211
     target 39
     weight 157.0491239549399
-    transition_probability 0.4300254452926209
+    transition_probability 0.455012853470437
   ]
   edge [
     source 212
     target 213
     weight -27.323218891816623
-    transition_probability 0.5137844611528822
+    transition_probability 0.5392405063291139
   ]
   edge [
     source 212
     target 42
     weight 152.67678110818338
-    transition_probability 0.48621553884711777
+    transition_probability 0.4607594936708861
   ]
   edge [
     source 213
     target 214
     weight -27.323218891816623
-    transition_probability 0.5137844611528822
+    transition_probability 0.5392405063291139
   ]
   edge [
     source 213
     target 48
     weight 152.67678110818338
-    transition_probability 0.48621553884711777
+    transition_probability 0.4607594936708861
   ]
   edge [
     source 214
     target 215
     weight -27.323218891816623
-    transition_probability 0.5137844611528822
+    transition_probability 0.5392405063291139
   ]
   edge [
     source 214
     target 47
     weight 152.67678110818338
-    transition_probability 0.48621553884711777
+    transition_probability 0.4607594936708861
   ]
   edge [
     source 215
     target 216
     weight -27.323218891816623
-    transition_probability 0.5137844611528822
+    transition_probability 0.5392405063291139
   ]
   edge [
     source 215
     target 46
     weight 152.67678110818338
-    transition_probability 0.48621553884711777
+    transition_probability 0.4607594936708861
   ]
   edge [
     source 216
     target 43
     weight -27.323218891816623
-    transition_probability 0.5137844611528822
+    transition_probability 0.5392405063291139
   ]
   edge [
     source 216
     target 45
     weight 152.67678110818338
-    transition_probability 0.48621553884711777
+    transition_probability 0.4607594936708861
   ]
   edge [
     source 217
     target 49
     weight -126.06328402476618
-    transition_probability 0.38421052631578945
+    transition_probability 0.3835978835978836
   ]
   edge [
     source 217
     target 7
     weight 53.936715975233824
-    transition_probability 0.6157894736842106
+    transition_probability 0.6164021164021164
   ]
   edge [
     source 218
     target 219
     weight -25.50478449981324
-    transition_probability 0.5303030303030303
+    transition_probability 0.541025641025641
   ]
   edge [
     source 218
     target 51
     weight 154.49521550018676
-    transition_probability 0.4696969696969697
+    transition_probability 0.45897435897435895
   ]
   edge [
     source 219
     target 53
     weight -25.50478449981324
-    transition_probability 0.5303030303030303
+    transition_probability 0.541025641025641
   ]
   edge [
     source 219
     target 55
     weight 154.49521550018676
-    transition_probability 0.4696969696969697
+    transition_probability 0.45897435897435895
   ]
   edge [
     source 220
     target 221
     weight -22.692081549189453
-    transition_probability 0.569620253164557
+    transition_probability 0.5449871465295629
   ]
   edge [
     source 220
     target 53
     weight 157.30791845081055
-    transition_probability 0.43037974683544306
+    transition_probability 0.455012853470437
   ]
   edge [
     source 221
     target 222
     weight -22.692081549189453
-    transition_probability 0.569620253164557
+    transition_probability 0.5449871465295629
   ]
   edge [
     source 221
     target 61
     weight 157.30791845081055
-    transition_probability 0.43037974683544306
+    transition_probability 0.455012853470437
   ]
   edge [
     source 222
     target 223
     weight -22.692081549189453
-    transition_probability 0.569620253164557
+    transition_probability 0.5449871465295629
   ]
   edge [
     source 222
     target 60
     weight 157.30791845081055
-    transition_probability 0.43037974683544306
+    transition_probability 0.455012853470437
   ]
   edge [
     source 223
     target 224
     weight -22.692081549189453
-    transition_probability 0.569620253164557
+    transition_probability 0.5449871465295629
   ]
   edge [
     source 223
     target 59
     weight 157.30791845081055
-    transition_probability 0.43037974683544306
+    transition_probability 0.455012853470437
   ]
   edge [
     source 224
     target 56
     weight -22.692081549189453
-    transition_probability 0.569620253164557
+    transition_probability 0.5449871465295629
   ]
   edge [
     source 224
     target 58
     weight 157.30791845081055
-    transition_probability 0.43037974683544306
+    transition_probability 0.455012853470437
   ]
   edge [
     source 225
     target 62
     weight -8.47178134907557
-    transition_probability 0.5812182741116751
+    transition_probability 0.5641025641025641
   ]
   edge [
     source 225
     target 56
     weight 171.52821865092443
-    transition_probability 0.41878172588832485
+    transition_probability 0.4358974358974359
   ]
   edge [
     source 226
     target 51
     weight -112.25937352248684
-    transition_probability 0.391644908616188
+    transition_probability 0.387434554973822
   ]
   edge [
     source 226
     target 65
     weight 67.74062647751316
-    transition_probability 0.608355091383812
+    transition_probability 0.612565445026178
   ]
   edge [
     source 227
     target 228
     weight -123.86269346912454
-    transition_probability 0.38095238095238093
+    transition_probability 0.3882978723404255
   ]
   edge [
     source 227
     target 74
     weight 56.13730653087547
-    transition_probability 0.6190476190476191
+    transition_probability 0.6117021276595744
   ]
   edge [
     source 228
     target 229
     weight -123.86269346912454
-    transition_probability 0.38095238095238093
+    transition_probability 0.3882978723404255
   ]
   edge [
     source 228
     target 73
     weight 56.13730653087547
-    transition_probability 0.6190476190476191
+    transition_probability 0.6117021276595744
   ]
   edge [
     source 229
     target 230
     weight -123.86269346912454
-    transition_probability 0.38095238095238093
+    transition_probability 0.3882978723404255
   ]
   edge [
     source 229
     target 72
     weight 56.13730653087547
-    transition_probability 0.6190476190476191
+    transition_probability 0.6117021276595744
   ]
   edge [
     source 230
     target 231
     weight -123.86269346912454
-    transition_probability 0.38095238095238093
+    transition_probability 0.3882978723404255
   ]
   edge [
     source 230
     target 71
     weight 56.13730653087547
-    transition_probability 0.6190476190476191
+    transition_probability 0.6117021276595744
   ]
   edge [
     source 231
     target 68
     weight -123.86269346912454
-    transition_probability 0.38095238095238093
+    transition_probability 0.3882978723404255
   ]
   edge [
     source 231
     target 70
     weight 56.13730653087547
-    transition_probability 0.6190476190476191
+    transition_probability 0.6117021276595744
   ]
   edge [
     source 232
     target 233
     weight -121.93514009347105
-    transition_probability 0.3868421052631579
+    transition_probability 0.38786279683377306
   ]
   edge [
     source 232
     target 77
     weight 58.06485990652895
-    transition_probability 0.6131578947368421
+    transition_probability 0.6121372031662269
   ]
   edge [
     source 233
     target 42
     weight -121.93514009347105
-    transition_probability 0.3868421052631579
+    transition_probability 0.38786279683377306
   ]
   edge [
     source 233
     target 76
     weight 58.06485990652895
-    transition_probability 0.6131578947368421
+    transition_probability 0.6121372031662269
   ]
   edge [
     source 234
     target 235
     weight -124.10986834831134
-    transition_probability 0.38095238095238093
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 234
     target 83
     weight 55.89013165168866
-    transition_probability 0.6190476190476191
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 235
     target 236
     weight -124.10986834831134
-    transition_probability 0.38095238095238093
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 235
     target 82
     weight 55.89013165168866
-    transition_probability 0.6190476190476191
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 236
     target 237
     weight -124.10986834831134
-    transition_probability 0.38095238095238093
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 236
     target 81
     weight 55.89013165168866
-    transition_probability 0.6190476190476191
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 237
     target 78
     weight -124.10986834831134
-    transition_probability 0.38095238095238093
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 237
     target 80
     weight 55.89013165168866
-    transition_probability 0.6190476190476191
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 238
     target 239
     weight -120.72889248645122
-    transition_probability 0.3989501312335958
+    transition_probability 0.38786279683377306
   ]
   edge [
     source 238
     target 87
     weight 59.271107513548785
-    transition_probability 0.6010498687664042
+    transition_probability 0.6121372031662269
   ]
   edge [
     source 239
     target 84
     weight -120.72889248645122
-    transition_probability 0.3989501312335958
+    transition_probability 0.38786279683377306
   ]
   edge [
     source 239
     target 86
     weight 59.271107513548785
-    transition_probability 0.6010498687664042
+    transition_probability 0.6121372031662269
   ]
   edge [
     source 240
     target 241
     weight -37.25329231324602
-    transition_probability 0.5098522167487685
+    transition_probability 0.5149253731343284
   ]
   edge [
     source 240
     target 93
     weight 142.74670768675398
-    transition_probability 0.49014778325123154
+    transition_probability 0.48507462686567165
   ]
   edge [
     source 241
     target 242
     weight -37.25329231324602
-    transition_probability 0.5098522167487685
+    transition_probability 0.5149253731343284
   ]
   edge [
     source 241
     target 92
     weight 142.74670768675398
-    transition_probability 0.49014778325123154
+    transition_probability 0.48507462686567165
   ]
   edge [
     source 242
     target 243
     weight -37.25329231324602
-    transition_probability 0.5098522167487685
+    transition_probability 0.5149253731343284
   ]
   edge [
     source 242
     target 91
     weight 142.74670768675398
-    transition_probability 0.49014778325123154
+    transition_probability 0.48507462686567165
   ]
   edge [
     source 243
     target 88
     weight -37.25329231324602
-    transition_probability 0.5098522167487685
+    transition_probability 0.5149253731343284
   ]
   edge [
     source 243
     target 90
     weight 142.74670768675398
-    transition_probability 0.49014778325123154
+    transition_probability 0.48507462686567165
   ]
   edge [
     source 244
     target 245
     weight -118.97189848943374
-    transition_probability 0.3978779840848806
+    transition_probability 0.38666666666666666
   ]
   edge [
     source 244
     target 97
     weight 61.02810151056626
-    transition_probability 0.6021220159151194
+    transition_probability 0.6133333333333333
   ]
   edge [
     source 245
     target 94
     weight -118.97189848943374
-    transition_probability 0.3978779840848806
+    transition_probability 0.38666666666666666
   ]
   edge [
     source 245
     target 96
     weight 61.02810151056626
-    transition_probability 0.6021220159151194
+    transition_probability 0.6133333333333333
   ]
   edge [
     source 246
     target 33
     weight -131.28596989506894
-    transition_probability 0.38095238095238093
+    transition_probability 0.3793103448275862
   ]
   edge [
     source 246
     target 62
     weight 48.714030104931055
-    transition_probability 0.6190476190476191
+    transition_probability 0.6206896551724138
   ]
   edge [
     source 247
     target 33
     weight -73.54831078735695
-    transition_probability 0.4362244897959184
+    transition_probability 0.4318766066838046
   ]
   edge [
     source 247
     target 56
     weight 106.45168921264305
-    transition_probability 0.5637755102040817
+    transition_probability 0.5681233933161953
   ]
   edge [
     source 248
     target 249
     weight -125.71909155548909
-    transition_probability 0.37894736842105264
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 248
     target 104
     weight 54.280908444510914
-    transition_probability 0.6210526315789474
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 249
     target 250
     weight -125.71909155548909
-    transition_probability 0.37894736842105264
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 249
     target 103
     weight 54.280908444510914
-    transition_probability 0.6210526315789474
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 250
     target 100
     weight -125.71909155548909
-    transition_probability 0.37894736842105264
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 250
     target 102
     weight 54.280908444510914
-    transition_probability 0.6210526315789474
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 251
     target 100
     weight -21.646314179199294
-    transition_probability 0.5703324808184144
+    transition_probability 0.5489690721649485
   ]
   edge [
     source 251
     target 78
     weight 158.3536858208007
-    transition_probability 0.4296675191815857
+    transition_probability 0.45103092783505155
   ]
   edge [
     source 252
     target 13
     weight -133.24186519479466
-    transition_probability 0.3723404255319149
+    transition_probability 0.37866666666666665
   ]
   edge [
     source 252
     target 107
     weight 46.758134805205344
-    transition_probability 0.6276595744680851
+    transition_probability 0.6213333333333333
   ]
   edge [
     source 253
     target 254
     weight -8.790792310391907
-    transition_probability 0.5826972010178118
+    transition_probability 0.5641025641025641
   ]
   edge [
     source 253
     target 107
     weight 171.2092076896081
-    transition_probability 0.4173027989821883
+    transition_probability 0.4358974358974359
   ]
   edge [
     source 254
     target 78
     weight -8.790792310391907
-    transition_probability 0.5826972010178118
+    transition_probability 0.5641025641025641
   ]
   edge [
     source 254
     target 109
     weight 171.2092076896081
-    transition_probability 0.4173027989821883
+    transition_probability 0.4358974358974359
   ]
   edge [
     source 255
     target 110
     weight -27.10989938369019
-    transition_probability 0.5139240506329114
+    transition_probability 0.5392405063291139
   ]
   edge [
     source 255
     target 0
     weight 152.8901006163098
-    transition_probability 0.4860759493670886
+    transition_probability 0.4607594936708861
   ]
   edge [
     source 256
     target 257
     weight -44.316252466151894
-    transition_probability 0.5134474327628362
+    transition_probability 0.5049751243781094
   ]
   edge [
     source 256
     target 68
     weight 135.6837475338481
-    transition_probability 0.48655256723716384
+    transition_probability 0.49502487562189057
   ]
   edge [
     source 257
     target 112
     weight -44.316252466151894
-    transition_probability 0.5134474327628362
+    transition_probability 0.5049751243781094
   ]
   edge [
     source 257
     target 114
     weight 135.6837475338481
-    transition_probability 0.48655256723716384
+    transition_probability 0.49502487562189057
   ]
   edge [
     source 258
     target 259
     weight -87.8385056708992
-    transition_probability 0.3938618925831202
+    transition_probability 0.4087403598971722
   ]
   edge [
     source 258
     target 112
     weight 92.1614943291008
-    transition_probability 0.6061381074168798
+    transition_probability 0.5912596401028277
   ]
   edge [
     source 259
     target 115
     weight -87.8385056708992
-    transition_probability 0.3938618925831202
+    transition_probability 0.4087403598971722
   ]
   edge [
     source 259
     target 117
     weight 92.1614943291008
-    transition_probability 0.6061381074168798
+    transition_probability 0.5912596401028277
   ]
   edge [
     source 260
     target 118
     weight -83.78990944998027
-    transition_probability 0.41794871794871796
+    transition_probability 0.40616966580976865
   ]
   edge [
     source 260
     target 115
     weight 96.21009055001973
-    transition_probability 0.5820512820512821
+    transition_probability 0.5938303341902313
   ]
   edge [
     source 261
     target 97
     weight -29.857034658688036
-    transition_probability 0.535175879396985
+    transition_probability 0.5304568527918782
   ]
   edge [
     source 261
     target 118
     weight 150.14296534131196
-    transition_probability 0.4648241206030151
+    transition_probability 0.46954314720812185
   ]
   edge [
     source 262
     target 263
     weight -14.217242123322677
-    transition_probability 0.548469387755102
+    transition_probability 0.5655526992287918
   ]
   edge [
     source 262
     target 97
     weight 165.78275787667732
-    transition_probability 0.45153061224489793
+    transition_probability 0.43444730077120824
   ]
   edge [
     source 263
     target 264
     weight -14.217242123322677
-    transition_probability 0.548469387755102
+    transition_probability 0.5655526992287918
   ]
   edge [
     source 263
     target 124
     weight 165.78275787667732
-    transition_probability 0.45153061224489793
+    transition_probability 0.43444730077120824
   ]
   edge [
     source 264
     target 121
     weight -14.217242123322677
-    transition_probability 0.548469387755102
+    transition_probability 0.5655526992287918
   ]
   edge [
     source 264
     target 123
     weight 165.78275787667732
-    transition_probability 0.45153061224489793
+    transition_probability 0.43444730077120824
   ]
   edge [
     source 265
     target 125
     weight -169.67352212053848
-    transition_probability 0.3922077922077922
+    transition_probability 0.4015748031496063
   ]
   edge [
     source 265
     target 127
     weight 10.326477879461509
-    transition_probability 0.6077922077922078
+    transition_probability 0.5984251968503937
   ]
   edge [
     source 266
     target 267
     weight -22.062357723442943
-    transition_probability 0.5703324808184144
+    transition_probability 0.5449871465295629
   ]
   edge [
     source 266
     target 127
     weight 157.93764227655706
-    transition_probability 0.4296675191815857
+    transition_probability 0.455012853470437
   ]
   edge [
     source 267
     target 118
     weight -22.062357723442943
-    transition_probability 0.5703324808184144
+    transition_probability 0.5449871465295629
   ]
   edge [
     source 267
     target 129
     weight 157.93764227655706
-    transition_probability 0.4296675191815857
+    transition_probability 0.455012853470437
   ]
   edge [
     source 268
     target 43
     weight -128.47965818564336
-    transition_probability 0.3900523560209424
+    transition_probability 0.3815789473684211
   ]
   edge [
     source 268
     target 88
     weight 51.52034181435663
-    transition_probability 0.6099476439790575
+    transition_probability 0.618421052631579
   ]
   edge [
     source 269
     target 270
     weight -125.10500734059477
-    transition_probability 0.37566137566137564
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 269
     target 68
     weight 54.89499265940524
-    transition_probability 0.6243386243386243
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 270
     target 271
     weight -125.10500734059477
-    transition_probability 0.37566137566137564
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 270
     target 133
     weight 54.89499265940524
-    transition_probability 0.6243386243386243
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 271
     target 88
     weight -125.10500734059477
-    transition_probability 0.37566137566137564
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 271
     target 132
     weight 54.89499265940524
-    transition_probability 0.6243386243386243
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 272
     target 134
     weight -70.13271491271458
-    transition_probability 0.43444730077120824
+    transition_probability 0.4484536082474227
   ]
   edge [
     source 272
     target 136
     weight 109.86728508728542
-    transition_probability 0.5655526992287918
+    transition_probability 0.5515463917525774
   ]
   edge [
     source 273
     target 137
     weight -7.032455982930742
-    transition_probability 0.5816326530612245
+    transition_probability 0.5641025641025641
   ]
   edge [
     source 273
     target 134
     weight 172.96754401706926
-    transition_probability 0.41836734693877553
+    transition_probability 0.4358974358974359
   ]
   edge [
     source 274
     target 140
     weight -119.89442382625319
-    transition_probability 0.4
+    transition_probability 0.38726790450928383
   ]
   edge [
     source 274
     target 139
     weight 60.10557617374682
-    transition_probability 0.6
+    transition_probability 0.6127320954907162
   ]
   edge [
     source 275
     target 93
     weight -60.345407217949486
-    transition_probability 0.4619289340101523
+    transition_probability 0.4755784061696658
   ]
   edge [
     source 275
     target 77
     weight 119.65459278205051
-    transition_probability 0.5380710659898477
+    transition_probability 0.5244215938303342
   ]
   edge [
     source 276
     target 104
     weight -61.16217732308972
-    transition_probability 0.4580152671755725
+    transition_probability 0.4732824427480916
   ]
   edge [
     source 276
     target 83
     weight 118.83782267691028
-    transition_probability 0.5419847328244275
+    transition_probability 0.5267175572519084
   ]
   edge [
     source 277
     target 278
     weight -68.3279365603023
-    transition_probability 0.44642857142857145
+    transition_probability 0.4496124031007752
   ]
   edge [
     source 277
     target 104
     weight 111.6720634396977
-    transition_probability 0.5535714285714286
+    transition_probability 0.5503875968992248
   ]
   edge [
     source 278
     target 279
     weight -68.3279365603023
-    transition_probability 0.44642857142857145
+    transition_probability 0.4496124031007752
   ]
   edge [
     source 278
     target 147
     weight 111.6720634396977
-    transition_probability 0.5535714285714286
+    transition_probability 0.5503875968992248
   ]
   edge [
     source 279
     target 77
     weight -68.3279365603023
-    transition_probability 0.44642857142857145
+    transition_probability 0.4496124031007752
   ]
   edge [
     source 279
     target 146
     weight 111.6720634396977
-    transition_probability 0.5535714285714286
+    transition_probability 0.5503875968992248
   ]
   edge [
     source 280
     target 281
     weight -126.72197953183219
-    transition_probability 0.38320209973753283
+    transition_probability 0.3835978835978836
   ]
   edge [
     source 280
     target 151
     weight 53.27802046816781
-    transition_probability 0.6167979002624672
+    transition_probability 0.6164021164021164
   ]
   edge [
     source 281
     target 282
     weight -126.72197953183219
-    transition_probability 0.38320209973753283
+    transition_probability 0.3835978835978836
   ]
   edge [
     source 281
     target 150
     weight 53.27802046816781
-    transition_probability 0.6167979002624672
+    transition_probability 0.6164021164021164
   ]
   edge [
     source 282
     target 93
     weight -126.72197953183219
-    transition_probability 0.38320209973753283
+    transition_probability 0.3835978835978836
   ]
   edge [
     source 282
     target 149
     weight 53.27802046816781
-    transition_probability 0.6167979002624672
+    transition_probability 0.6164021164021164
   ]
   edge [
     source 283
     target 284
     weight -127.28631558386738
-    transition_probability 0.3937007874015748
+    transition_probability 0.38522427440633245
   ]
   edge [
     source 283
     target 154
     weight 52.71368441613263
-    transition_probability 0.6062992125984252
+    transition_probability 0.6147757255936676
   ]
   edge [
     source 284
     target 77
     weight -127.28631558386738
-    transition_probability 0.3937007874015748
+    transition_probability 0.38522427440633245
   ]
   edge [
     source 284
     target 153
     weight 52.71368441613263
-    transition_probability 0.6062992125984252
+    transition_probability 0.6147757255936676
   ]
   edge [
     source 285
     target 286
     weight -126.34704035759736
-    transition_probability 0.38320209973753283
+    transition_probability 0.3835978835978836
   ]
   edge [
     source 285
     target 161
     weight 53.65295964240263
-    transition_probability 0.6167979002624672
+    transition_probability 0.6164021164021164
   ]
   edge [
     source 286
     target 287
     weight -126.34704035759736
-    transition_probability 0.38320209973753283
+    transition_probability 0.3835978835978836
   ]
   edge [
     source 286
     target 160
     weight 53.65295964240263
-    transition_probability 0.6167979002624672
+    transition_probability 0.6164021164021164
   ]
   edge [
     source 287
     target 288
     weight -126.34704035759736
-    transition_probability 0.38320209973753283
+    transition_probability 0.3835978835978836
   ]
   edge [
     source 287
     target 159
     weight 53.65295964240263
-    transition_probability 0.6167979002624672
+    transition_probability 0.6164021164021164
   ]
   edge [
     source 288
     target 289
     weight -126.34704035759736
-    transition_probability 0.38320209973753283
+    transition_probability 0.3835978835978836
   ]
   edge [
     source 288
     target 158
     weight 53.65295964240263
-    transition_probability 0.6167979002624672
+    transition_probability 0.6164021164021164
   ]
   edge [
     source 289
     target 290
     weight -126.34704035759736
-    transition_probability 0.38320209973753283
+    transition_probability 0.3835978835978836
   ]
   edge [
     source 289
     target 157
     weight 53.65295964240263
-    transition_probability 0.6167979002624672
+    transition_probability 0.6164021164021164
   ]
   edge [
     source 290
     target 62
     weight -126.34704035759736
-    transition_probability 0.38320209973753283
+    transition_probability 0.3835978835978836
   ]
   edge [
     source 290
     target 156
     weight 53.65295964240263
-    transition_probability 0.6167979002624672
+    transition_probability 0.6164021164021164
   ]
   edge [
     source 291
     target 161
     weight -172.17353314282917
-    transition_probability 0.402088772845953
+    transition_probability 0.40789473684210525
   ]
   edge [
     source 291
     target 87
     weight 7.826466857170842
-    transition_probability 0.597911227154047
+    transition_probability 0.5921052631578947
   ]
   edge [
     source 292
     target 293
     weight -41.225008553168635
-    transition_probability 0.49627791563275436
+    transition_probability 0.5074626865671642
   ]
   edge [
     source 292
     target 87
     weight 138.77499144683136
-    transition_probability 0.5037220843672456
+    transition_probability 0.4925373134328358
   ]
   edge [
     source 293
     target 163
     weight -41.225008553168635
-    transition_probability 0.49627791563275436
+    transition_probability 0.5074626865671642
   ]
   edge [
     source 293
     target 165
     weight 138.77499144683136
-    transition_probability 0.5037220843672456
+    transition_probability 0.4925373134328358
   ]
   edge [
     source 294
     target 295
     weight -41.22500855316338
-    transition_probability 0.49627791563275436
+    transition_probability 0.5074626865671642
   ]
   edge [
     source 294
     target 163
     weight 138.77499144683662
-    transition_probability 0.5037220843672456
+    transition_probability 0.4925373134328358
   ]
   edge [
     source 295
     target 154
     weight -41.22500855316338
-    transition_probability 0.49627791563275436
+    transition_probability 0.5074626865671642
   ]
   edge [
     source 295
     target 167
     weight 138.77499144683662
-    transition_probability 0.5037220843672456
+    transition_probability 0.4925373134328358
   ]
   edge [
     source 296
     target 151
     weight -39.617126533375426
-    transition_probability 0.5098522167487685
+    transition_probability 0.5150753768844221
   ]
   edge [
     source 296
     target 154
     weight 140.38287346662457
-    transition_probability 0.49014778325123154
+    transition_probability 0.4849246231155779
   ]
   edge [
     source 297
     target 298
     weight -39.61989707549941
-    transition_probability 0.5098522167487685
+    transition_probability 0.5150753768844221
   ]
   edge [
     source 297
     target 151
     weight 140.3801029245006
-    transition_probability 0.49014778325123154
+    transition_probability 0.4849246231155779
   ]
   edge [
     source 298
     target 299
     weight -39.61989707549941
-    transition_probability 0.5098522167487685
+    transition_probability 0.5150753768844221
   ]
   edge [
     source 298
     target 172
     weight 140.3801029245006
-    transition_probability 0.49014778325123154
+    transition_probability 0.4849246231155779
   ]
   edge [
     source 299
     target 300
     weight -39.61989707549941
-    transition_probability 0.5098522167487685
+    transition_probability 0.5150753768844221
   ]
   edge [
     source 299
     target 171
     weight 140.3801029245006
-    transition_probability 0.49014778325123154
+    transition_probability 0.4849246231155779
   ]
   edge [
     source 300
     target 68
     weight -39.61989707549941
-    transition_probability 0.5098522167487685
+    transition_probability 0.5150753768844221
   ]
   edge [
     source 300
     target 170
     weight 140.3801029245006
-    transition_probability 0.49014778325123154
+    transition_probability 0.4849246231155779
   ]
   edge [
     source 301
     target 302
     weight -124.02853767823855
-    transition_probability 0.38095238095238093
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 301
     target 178
     weight 55.97146232176145
-    transition_probability 0.6190476190476191
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 302
     target 303
     weight -124.02853767823855
-    transition_probability 0.38095238095238093
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 302
     target 177
     weight 55.97146232176145
-    transition_probability 0.6190476190476191
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 303
     target 304
     weight -124.02853767823855
-    transition_probability 0.38095238095238093
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 303
     target 176
     weight 55.97146232176145
-    transition_probability 0.6190476190476191
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 304
     target 305
     weight -124.02853767823855
-    transition_probability 0.38095238095238093
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 304
     target 175
     weight 55.97146232176145
-    transition_probability 0.6190476190476191
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 305
     target 163
     weight -124.02853767823855
-    transition_probability 0.38095238095238093
+    transition_probability 0.3888888888888889
   ]
   edge [
     source 305
     target 174
     weight 55.97146232176145
-    transition_probability 0.6190476190476191
+    transition_probability 0.6111111111111112
   ]
   edge [
     source 306
     target 139
     weight -121.42956561484493
-    transition_probability 0.3858267716535433
+    transition_probability 0.38786279683377306
   ]
   edge [
     source 306
     target 180
     weight 58.57043438515507
-    transition_probability 0.6141732283464567
+    transition_probability 0.6121372031662269
   ]
   edge [
     source 307
     target 181
     weight -122.27564431456561
-    transition_probability 0.3884514435695538
+    transition_probability 0.38726790450928383
   ]
   edge [
     source 307
     target 183
     weight 57.72435568543439
-    transition_probability 0.6115485564304461
+    transition_probability 0.6127320954907162
   ]
 ]

@@ -57,10 +57,10 @@ def create_network(plot = 0):
     
     # nx.set_node_attributes(G, positions, "coordinates")
     # G = nx.convert_node_labels_to_integers(G, first_label=1)
-    
-    
-    
-    transition_probabilities_wind.get_transition_probabilities(G)
+
+    year = 2022
+
+    transition_probabilities_wind.get_transition_probabilities(G, year)
 
     return G
 
