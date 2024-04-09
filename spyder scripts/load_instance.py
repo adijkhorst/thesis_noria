@@ -163,7 +163,7 @@ def MIP_input(year, max_dist_nodes, random_wind = False):
 
     w = 0.0001 #0.1% should be caught per unit cost
     c = [1, 0.2]
-    B = 5
+    B = 1
 
     alpha = [G.nodes[node]['impact_factor'] for node in G.nodes()]
 
@@ -194,27 +194,36 @@ import MDP_fix_solution
 
 #%%
 
-def write_outputs(G, n, K, K_i, betas, alpha, C, b, c, B, w, filename):
+def write_outputs(G, n, K, K_i, betas, alpha, C, b, c, B, w, filename, show_impact_flow = False):
+    totalstart = time.time()
+    test_flow_fixed = []
+
     with open('308nodes_fixed_solutions.txt') as f:
         fixed_solutions = f.readlines()
     fixed_solutions = [eval(line.strip()) for line in fixed_solutions]
 
     label_to_position = {value: key for key, value in nx.get_node_attributes(G, 'label').items()}
     
-    output = [['budget', 'runtime', 'objective_value', 'flow_caught_optimal', 'flow_caught_fixed_solution', ['solution']]]
+    output1 = [['budget', 'runtime', 'objective_value', 'flow_caught_optimal', 'flow_caught_fixed_solution', 'flow_impact_area', ['solution']]]
     # for B in range(1,5):
     j = 0
     for B in np.arange(0.2, 4.2, 0.2):
         start = time.time()
-        prob, G, solution, flow_caught = MDP_exact.solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w)
+        prob, G, solution, flow_caught, flow_impact_area = MDP_exact.solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w, False, show_impact_flow)
         end = time.time()
 
         x_fixed = fixed_solutions[j]
-        _, _, _, flow_caught_fixed_solution = MDP_fix_solution.fixed_solution_caught_flow(G, n, K, K_i, betas, alpha, C, b, c, B, w, x_fixed)
+        # _, _, _, flow_caught_fixed_solution = MDP_fix_solution.fixed_solution_caught_flow(G, n, K, K_i, betas, alpha, C, b, c, B, w, x_fixed)
+        flow_caught_fixed_solution = 0
+        flow_caught_fixed_solution1 = MDP_heuristic.flow_caught(x_fixed, n, betas, alpha, C, b)
+        test_flow_fixed += [flow_caught_fixed_solution1]
         j+= 1
 
-        output += [[B, end-start, value(prob.objective), flow_caught, flow_caught_fixed_solution, [[system[0], system[1], label_to_position[system[0]]] for system in solution]]]
 
+        output1 += [[B, end-start, value(prob.objective), flow_caught, flow_caught_fixed_solution, flow_impact_area, [[system[0], system[1], label_to_position[system[0]]] for system in solution]]]
+
+    totalend = time.time()
+    print(totalend-totalstart)
     with open(filename, 'w+') as f:
     # with open('without_gurobi'+str(n)+'nodes.txt', 'w+') as f:
         # write elements of list

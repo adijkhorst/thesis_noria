@@ -21,7 +21,7 @@ test_layer.startEditing()
 for feature in nodes_layer.getFeatures():
     
     #then check if shore types close to node are reasons to get stuck (houseboats or vegetation)
-    geom_buffer = feature.geometry().buffer(RADIUS_SHORE_IMPACT/2, 9)
+    geom_buffer = feature.geometry().buffer(RADIUS_SHORE_IMPACT, 10)
     close_shore_features = [feat for feat in shore_layer.getFeatures() if feat.geometry().intersects(geom_buffer)]
 
     new_feature = QgsFeature()

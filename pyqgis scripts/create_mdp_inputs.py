@@ -235,11 +235,6 @@ def catching_probabilities(nodes_layer, polygon_layer, max_boat_width_layer, MAX
             length = test_feature.geometry().length()
             test_layer.deleteFeature(test_feature.id())
             nodes_layer.changeAttributeValue(feature.id(), canal_width_id, length)
-        # HIER NOG FIXEN DAT INTERSECTION MET WATER POLYGON WORDT GENOMEN!
-            # if len(index.intersects(feature.geometry().boundingBox()))>0:
-            #     catching_prob = (length - 21)/length
-            # else:
-            #     catching_prob = (length - 4)/length
             catching_prob = (length - max_boat_width)/length
             if catching_prob > 0:
                 nodes_layer.changeAttributeValue(feature.id(), catching_prob_id, catching_prob)
@@ -259,8 +254,8 @@ def catching_probabilities(nodes_layer, polygon_layer, max_boat_width_layer, MAX
     
     
 
-def stuck_probabilities(nodes_layer, G, shore_layer_path, RADIUS_SHORE_IMPACT, water_vegetation_path, corners_layer_path):
-    RADIUS_SHORE_IMPACT = 50 #adjust later such that this is MAX_DIST_NODES/2
+def stuck_probabilities(nodes_layer, G, shore_layer_path, MAX_DIST_NODES, water_vegetation_path, corners_layer_path):
+    RADIUS_SHORE_IMPACT = MAX_DIST_NODES/2
     
     shore_layer = QgsVectorLayer(shore_layer_path, '', "ogr")
     water_vegetation_layer = QgsVectorLayer(water_vegetation_path, '', "ogr")
@@ -299,7 +294,7 @@ def stuck_probabilities(nodes_layer, G, shore_layer_path, RADIUS_SHORE_IMPACT, w
         
         
         #check close sharp corners
-        geom_buffer = feature.geometry().buffer(RADIUS_SHORE_IMPACT, -1)
+        geom_buffer = feature.geometry().buffer(RADIUS_SHORE_IMPACT, 10)
         close_sharp_corners = np.array([feat['wind_prob'] for feat in corners_layer.getFeatures() if (feat.geometry().intersects(geom_buffer) and feat['sharp']==1)])
         sharp_corners_prob = 1-np.prod(1-0.5*close_sharp_corners)
         
@@ -323,24 +318,28 @@ def stuck_probabilities(nodes_layer, G, shore_layer_path, RADIUS_SHORE_IMPACT, w
     nodes_layer.endEditCommand()
     iface.mapCanvas().refresh()
 
-def sensitive_area(nodes_layer, impact_factor_layer_path):
+def sensitive_area(nodes_layer, impact_factor_layer_path, G):
     impact_factor_layer = QgsVectorLayer(impact_factor_layer_path, '', "ogr")
     
     name_list = [field.name() for field in nodes_layer.fields()]
     if not 'impact_factor' in name_list: 
         nodes_layer.startEditing()
         layer_provider = nodes_layer.dataProvider()
-        layer_provider.addAttributes([QgsField("impact_factor", QVariant.Double)])
+        layer_provider.addAttributes([QgsField("impact_factor", QVariant.Double), QgsField("node_index", QVariant.Int)])
         nodes_layer.commitChanges()
-        print("Added attribute field for impact factor.")
+        print("Added attribute field for impact factor and node index.")
     
     name_list = [field.name() for field in nodes_layer.fields()]
     impact_factor_id = name_list.index("impact_factor")
+    node_index_id = name_list.index("node_index")
     
     nodes_layer.startEditing()
 
     for feature in nodes_layer.getFeatures():
         impact_factor = 0
+        position = (feature.geometry().asPoint().x(), feature.geometry().asPoint().y())
+        node_index = G.nodes[position]['label']
+        nodes_layer.changeAttributeValue(feature.id(), node_index_id, int(node_index))
         for feat in impact_factor_layer.getFeatures():
             if feat.geometry().contains(feature.geometry().asPoint()):
                 impact_factor = feat['impact_factor']
@@ -349,12 +348,12 @@ def sensitive_area(nodes_layer, impact_factor_layer_path):
     nodes_layer.commitChanges()
     nodes_layer.endEditCommand()
 
-MAX_DIST_NODES = 150
+MAX_DIST_NODES = 100
 
 final_network_layer_path = layers_folder +"delft_final_network_exploded_d"+str(MAX_DIST_NODES)+".geojson"
 final_network_layer = iface.addVectorLayer(final_network_layer_path, "final_network", "ogr")
 
-nodes_attributes_layer_path = layers_folder + "final_network_nodes_attributes_d"+str(MAX_DIST_NODES)+".geojson"
+nodes_attributes_layer_path = layers_folder + "final_network_nodes_attributes_d"+str(MAX_DIST_NODES)+"node_indices.geojson"
 nodes_attributes_layer = create_nodes_layer(final_network_layer_path, nodes_attributes_layer_path)
 
 RADIUS_SOURCES_IMPACT = 100
@@ -377,9 +376,8 @@ shore_layer_path = layers_folder + "shore_types_delft_reprojected.geojson"
 water_vegetation_path = layers_folder + "water_vegetation_delft.geojson"
 corners_layer_path = layers_folder + "sharp_corners_delft.geojson"
 
-RADIUS_SHORE_IMPACT = 50
-stuck_probabilities(nodes_attributes_layer, G, shore_layer_path, RADIUS_SHORE_IMPACT, water_vegetation_path, corners_layer_path)
+stuck_probabilities(nodes_attributes_layer, G, shore_layer_path, MAX_DIST_NODES, water_vegetation_path, corners_layer_path)
 display_probabilities_map(G, final_network_layer)
 
 impact_factor_layer_path = layers_folder + "impact_factor_citycenter.geojson"
-sensitive_area(nodes_attributes_layer, impact_factor_layer_path)
+sensitive_area(nodes_attributes_layer, impact_factor_layer_path, G)

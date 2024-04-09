@@ -9,7 +9,7 @@ from pulp import *
 import networkx as nx
 import numpy as np
 
-def solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w, show_solution = False):
+def solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w, show_solution = False, show_impact_flow = False):
     #(number_nodes, number_catching_systems, possible_catching_systems, catching_probabilities, impact_factor, transition_matrix, initial_distribution, costs, budget):
     prob = LpProblem("MDP-FCLM", LpMaximize)
 
@@ -86,11 +86,20 @@ def solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w, show_solution = False):
     for index, node in enumerate(G.nodes()):
         flow_attrs[node] = {'plastic_flow': M1[index]}
     nx.set_node_attributes(G, flow_attrs)
-    if show_solution == False:
-        return prob, G, solution_nodes, flow_caught
-    else:
+    if show_solution == True:
         x = [[value(xik) for xik in xi] for xi in xs]
         return prob, G, solution_nodes, flow_caught, x
+    elif show_impact_flow == True:
+        impact_area = n*[False]
+        impact_area_flow = 0
+        for index, node in enumerate(G.nodes()):
+            if G.nodes[node]['impact_factor'] > 0.0:
+                impact_area_flow = impact_area_flow + value(v1[index]) + sum((1-betas[index][k])*value(v2[index][k]) for k in range(K))
+                impact_area[index] = True
+        return prob, G, solution_nodes, flow_caught, impact_area_flow
+    else:
+        return prob, G, solution_nodes, flow_caught, 0
+
 
 if __name__ == '__main__':
     ### necessary inputs to run the exact MDP model:
@@ -188,10 +197,19 @@ if __name__ == '__main__':
     #%%
     import time
     start = time.time()
-    prob, G, solution, flow_caught = solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w)
+    prob, G, solution, flow_caught, impact_area_flow = solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w)
 
     end = time.time()
     print('runtime for ', B, ' catching systems', end-start)
 
     #%%
     nx.write_gml(G, 'test.gml')
+
+    #%% testing caught flow per catching system to check if value of w works correctly
+    test = []
+    for i in range(n):
+        for k in range(K):
+            if value(xs[i][k]) > 0:
+                test += [betas[i][k]*value(v2[i][k])]
+                print(betas[i][k]*value(v2[i][k]), betas[i][k]*M2[i][k])
+    test.sort()

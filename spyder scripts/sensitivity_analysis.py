@@ -10,6 +10,7 @@ from scipy.spatial import distance
 from scipy.optimize import linear_sum_assignment
 import matplotlib.pyplot as plt
 import networkx as nx
+import copy
 
 ### LOAD INPUT
 import load_instance
@@ -21,11 +22,7 @@ G, n, K, K_i, betas, alpha, C, b, c, B, w = load_instance.MIP_input(year, MAX_DI
 
 #%%
 
-filenames = ['wind_year2020_308nodes.txt', 'wind_year2021_308nodes.txt', '308nodes.txt', 'wind_year2023_308nodes.txt', 'transition_prob_uniform_308nodes.txt']
-labels = ['2020', '2021', '2022', '2023', 'turbulent wind']
-fixed_index = 2
-
-def compare_runs(filenames, labels, fixed_index):
+def compare_runs(filenames, labels, fixed_index, sensitive_areas = False):
     runs = []
     for filename in filenames:
         with open(filename) as f:
@@ -37,6 +34,9 @@ def compare_runs(filenames, labels, fixed_index):
     max_distances = np.zeros((len(runs)-1, len(runs[1])-1))
     flow_differences = np.zeros((len(runs)-1, len(runs[1])-1))
     flow_differences_new_situation = np.zeros((len(runs)-1, len(runs[1])-1))
+
+    flow_total = np.zeros((len(runs)-1, len(runs[1])-1))
+    flow_sensitive_area = np.zeros((len(runs)-1, len(runs[1])-1))
 
     list_index = 0
     for i, run in enumerate(runs):
@@ -57,9 +57,11 @@ def compare_runs(filenames, labels, fixed_index):
                 max_distances[list_index, j] = max_distance
                 flow_differences[list_index,j] = budget[4]-runs[fixed_index][j+1][3] #4th entry of each run with different budget is the flow_caught with same fixed solution from base case
                 flow_differences_new_situation[list_index,j] = budget[4]-budget[3]
+                flow_sensitive_area[list_index, j] = budget[5]
+                flow_total[list_index, j] = budget[4]
             list_index += 1
     
-    budgets = [row[0] for row in runs[0][1:]]
+    budgets = [row[0] for row in runs[1][1:]]
     plot_labels = labels[:fixed_index] + labels[fixed_index+1:]
 
     fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize = (18, 5))
@@ -68,7 +70,7 @@ def compare_runs(filenames, labels, fixed_index):
     ax1.grid()
     ax1.set_xlabel('budget')
     ax1.set_ylabel('maximum distance between solutions')
-    ax1.legend()
+
     # ax1a = ax1.twinx()
 
     ax2.set_xlabel('budget')
@@ -93,8 +95,16 @@ def compare_runs(filenames, labels, fixed_index):
     for i in range(len(plot_labels)):
         ax1.plot(budgets, mean_distances[i], 'x', label = plot_labels[i] + ' mean distance solutions')
         ax3.plot(budgets, flow_differences_new_situation[i], '--')
-
+    ax1.legend()
     ax2.legend()
+    ax3.legend()
+
+    if sensitive_areas == True:
+        fig, (ax1, ax2) = plt.subplots(1, 2)
+        for i in range(len(plot_labels)):
+            ax1.plot(budgets, flow_sensitive_area[i]/flow_total[i], label = plot_labels[i])
+            # ax2.plot(budgets, flow_total[i], label = plot_labels[i])
+        ax1.legend()
 
 
 #%%
@@ -104,24 +114,24 @@ def compare_runs(filenames, labels, fixed_index):
 
 def change_n_nodes():
     year = 2022
-    node_dists = [50, 70, 120, 150]
+    # node_dists = [50, 70, 120, 150]
 
     # for dist in node_dists:
     #     G, n, K, K_i, betas, alpha, C, b, c, B, w = load_instance.MIP_input(year, dist, random_wind = False)
     #     load_instance.write_outputs(G, n, K, K_i, betas, alpha, C, b, c, B, w, str(n)+'nodes.txt')
 
 
-    filenames = ['308nodes.txt', 'init_prob_uniform10_308nodes.txt', 'init_prob_choice10_308nodes.txt', 'init_prob_uniform20_308nodes.txt', 'init_prob_choice20_308nodes.txt','init_prob_uniform_308nodes.txt']
-    labels = ['estimated', 'estimated+-10percent uniform', 'estimated+-10percent choice', 'estimated+-20percent uniform', 'estimated+-20percent choice','uniform init prob']
-    filenames = ['308nodes.txt', '338nodes.txt']
-    labels = ['d=100', 'd=90']
+    # filenames = ['308nodes.txt', 'init_prob_uniform10_308nodes.txt', 'init_prob_choice10_308nodes.txt', 'init_prob_uniform20_308nodes.txt', 'init_prob_choice20_308nodes.txt','init_prob_uniform_308nodes.txt']
+    # labels = ['estimated', 'estimated+-10percent uniform', 'estimated+-10percent choice', 'estimated+-20percent uniform', 'estimated+-20percent choice','uniform init prob']
+    filenames = ['308nodes.txt', '198nodes.txt', '250nodes.txt', '444nodes.txt', '622nodes.txt']
+    labels = ['d=100', 'd=50', 'd=70', 'd=120', 'd=150']
 
     fixed_index = 0
 
     compare_runs(filenames, labels, fixed_index)
     plt.suptitle("Sensitivity analysis of number of nodes")
 
-# change_n_nodes()
+change_n_nodes()
 
 def change_init_prob(G, n, K, K_i, betas, alpha, C, b, c, B, w):
     # run for different perturbations of b, save to output files
@@ -143,15 +153,15 @@ def change_init_prob(G, n, K, K_i, betas, alpha, C, b, c, B, w):
     # load_instance.write_outputs(G, n, K, K_i, betas, alpha, C, b_new, c, B, w, 'init_prob_uniform_'+str(n)+'nodes.txt')
 
     # plot differences in solution and flow caught
-    filenames = ['308nodes.txt', 'init_prob_uniform10_308nodes.txt', 'init_prob_choice10_308nodes.txt', 'init_prob_uniform20_308nodes.txt', 'init_prob_choice20_308nodes.txt','init_prob_uniform_308nodes.txt']
-    labels = ['estimated', 'estimated+-10percent uniform', 'estimated+-10percent choice', 'estimated+-20percent uniform', 'estimated+-20percent choice','uniform init prob']
+    filenames = ['308nodes.txt', 'init_prob_choice10_308nodes.txt', 'init_prob_choice20_308nodes.txt', 'init_prob_choice30_308nodes.txt', 'init_prob_uniform_308nodes.txt']
+    labels = ['estimated', 'estimated+-10percent choice', 'estimated+-20percent choice','estimated+-30percent choice', 'uniform init prob']
     fixed_index = 0
 
     compare_runs(filenames, labels, fixed_index)
     plt.suptitle("Sensitivity analysis of initial distribution")
 
 
-# change_init_prob(G, n, K, K_i, betas, alpha, C, b, c, B, w)
+change_init_prob(G, n, K, K_i, betas, alpha, C, b, c, B, w)
 
 
 def change_transition_prob():
@@ -266,19 +276,19 @@ def change_stuck_prob(vary_factor, G, n, K, K_i, betas, alpha, C, b, c, B, w):
         plt.suptitle("Sensitivity analysis of shore vegetation in stuck probability")
 
     elif vary_factor == 5:
-        for perc in [0, 0.3, 0.6, 0.9]:
-            for node in G.nodes():
-                new_water_veg_prob =  perc if G.nodes[node]['water_veg_prob'] > 0.1 else 0
-                nx.set_node_attributes(G, {node: {'water_veg_prob': new_water_veg_prob}})
-                probs = np.array([G.nodes[node]['dead_ends_prob'], G.nodes[node]['sharp_corners_prob'], G.nodes[node]['shore_boats_prob'], G.nodes[node]['shore_veg_prob'], G.nodes[node]['water_veg_prob']])
-                nx.set_node_attributes(G, {node: {'stuck_probability': (1-np.prod(1-probs))}})
+        # for perc in [0, 0.3, 0.6, 0.9]:
+        #     for node in G.nodes():
+        #         new_water_veg_prob =  perc if G.nodes[node]['water_veg_prob'] > 0.1 else 0
+        #         nx.set_node_attributes(G, {node: {'water_veg_prob': new_water_veg_prob}})
+        #         probs = np.array([G.nodes[node]['dead_ends_prob'], G.nodes[node]['sharp_corners_prob'], G.nodes[node]['shore_boats_prob'], G.nodes[node]['shore_veg_prob'], G.nodes[node]['water_veg_prob']])
+        #         nx.set_node_attributes(G, {node: {'stuck_probability': (1-np.prod(1-probs))}})
 
-            stuck = [G.nodes[node]['stuck_probability'] for node in G.nodes()]
-            stuck_matrix = np.repeat([stuck], len(stuck), axis = 0).T
+        #     stuck = [G.nodes[node]['stuck_probability'] for node in G.nodes()]
+        #     stuck_matrix = np.repeat([stuck], len(stuck), axis = 0).T
 
-            A = nx.adjacency_matrix(G, nodelist = G.nodes(), weight = 'transition_probability').toarray()
-            C_new = (1-stuck_matrix) * A
-            load_instance.write_outputs(G, n, K, K_i, betas, alpha, C_new, b, c, B, w, 'water_veg_'+str(int(perc*100))+'percent_'+str(n)+'nodes.txt')
+        #     A = nx.adjacency_matrix(G, nodelist = G.nodes(), weight = 'transition_probability').toarray()
+        #     C_new = (1-stuck_matrix) * A
+        #     load_instance.write_outputs(G, n, K, K_i, betas, alpha, C_new, b, c, B, w, 'water_veg_'+str(int(perc*100))+'percent_'+str(n)+'nodes.txt')
 
         filenames = ['308nodes.txt', 'water_veg_0percent_308nodes.txt', 'water_veg_30percent_308nodes.txt', 'water_veg_60percent_308nodes.txt', 'water_veg_90percent_308nodes.txt']
         labels = ['estimated', 'water_veg_prob = 0', 'shore_veg_prob = 0.3', 'shore_veg_prob = 0.6', 'shore_veg_prob = 0.9']
@@ -287,26 +297,24 @@ def change_stuck_prob(vary_factor, G, n, K, K_i, betas, alpha, C, b, c, B, w):
         compare_runs(filenames, labels, fixed_index)
         plt.suptitle("Sensitivity analysis of water vegetation in stuck probability")
 
-
-
-
+change_stuck_prob(1, G, n, K, K_i, betas, alpha, C, b, c, B, w)
 change_stuck_prob(2, G, n, K, K_i, betas, alpha, C, b, c, B, w)
 change_stuck_prob(3, G, n, K, K_i, betas, alpha, C, b, c, B, w)
 change_stuck_prob(4, G, n, K, K_i, betas, alpha, C, b, c, B, w)
-# change_stuck_prob(5, G, n, K, K_i, betas, alpha, C, b, c, B, w)
+change_stuck_prob(5, G, n, K, K_i, betas, alpha, C, b, c, B, w)
 
 
 def change_catching_prob(G, n, K, K_i, betas, alpha, C, b, c, B, w):
-    for perc in [-0.2, -0.1, 0.1, 0.2]:
-        for node in G.nodes():
-            new_catching_prob =  G.nodes[node]['catching_probability']*(1+perc)
-            nx.set_node_attributes(G, {node: {'catching_probability': new_catching_prob}})
+    # for perc in [-0.2, -0.1, 0.1, 0.2]:
+    #     for node in G.nodes():
+    #         new_catching_prob =  G.nodes[node]['catching_probability']*(1+perc)
+    #         nx.set_node_attributes(G, {node: {'catching_probability': new_catching_prob}})
 
-        catching = np.array([G.nodes[node]['catching_probability'] for node in G.nodes()])
-        new_betas = np.stack((0.98*catching, 0.85*catching)).T
+    #     catching = np.array([G.nodes[node]['catching_probability'] for node in G.nodes()])
+    #     new_betas = np.stack((0.98*catching, 0.85*catching)).T
 
 
-        load_instance.write_outputs(G, n, K, K_i, new_betas, alpha, C, b, c, B, w, 'catching_'+str(int(perc*100))+'percent_'+str(n)+'nodes.txt')
+    #     load_instance.write_outputs(G, n, K, K_i, new_betas, alpha, C, b, c, B, w, 'catching_'+str(int(perc*100))+'percent_'+str(n)+'nodes.txt')
 
     filenames = ['308nodes.txt', 'catching_-20percent_308nodes.txt', 'catching_-10percent_308nodes.txt', 'catching_10percent_308nodes.txt', 'catching_20percent_308nodes.txt']
     labels = ['estimated', 'estimated-20percent', 'estimated-10percent', 'estimated+10percent', 'estimated+20percent']
@@ -315,21 +323,72 @@ def change_catching_prob(G, n, K, K_i, betas, alpha, C, b, c, B, w):
     compare_runs(filenames, labels, fixed_index)
     plt.suptitle("Sensitivity analysis of catching probability")
 
-# change_catching_prob(G, n, K, K_i, betas, alpha, C, b, c, B, w)
+change_catching_prob(G, n, K, K_i, betas, alpha, C, b, c, B, w)
 
-
-def change_impact_factor():
-    ### create three figures
-
-    ### impact factor the same value everywhere
+def change_impact_factor(G, n, K, K_i, betas, alpha, C, b, c, B, w):
+    ### 1. impact factor the same value everywhere, higher lower etc
     ### impact factor = 0
-    # nodes_layer_path = layers_folder + 'final_network_nodes_attributes_d'+ str(max_dist_nodes)+'.geojson'
+    alpha_new = n * [0]
+    # load_instance.write_outputs(G, n, K, K_i, betas, alpha_new, C, b, c, B, w, 'impact_factor_0_'+str(n)+'nodes.txt')
+
+    ### examine M1 and M2 for values of alpha
+    
+    # M1 = b.T @ np.linalg.inv(np.eye(n)-C)
+    M2 = np.zeros((n,K))
+    for i in range(n):
+        for k in range(K):
+            diagB = np.eye(n)
+            diagB[i,i] = 1 - betas[i,k]
+            M2[i,k] = (b.T @ np.linalg.inv(np.eye(n)- diagB @ C))[i]
+    
+    
+    # alpha_new = n * [np.mean((betas*M2)[(betas*M2) > 0])]
+    # load_instance.write_outputs(G, n, K, K_i, betas, alpha_new, C, b, c, B, w, 'impact_factor_meanbetaM2_'+str(n)+'nodes.txt')
+
+    # alpha_new = n * [np.max((betas*M2)[(betas*M2) > 0])]
+    # load_instance.write_outputs(G, n, K, K_i, betas, alpha_new, C, b, c, B, w, 'impact_factor_maxbetaM2_'+str(n)+'nodes.txt')
+
+    filenames = ['308nodes.txt', 'impact_factor_0_308nodes.txt', 'impact_factor_meanbetaM2_308nodes.txt', 'impact_factor_maxbetaM2_308nodes.txt']
+    labels = ['estimated', 'alpha = 0', 'alpha = mean(beta*M2)', 'alpha = max(beta*M2)']
+    fixed_index = 0
+
+    compare_runs(filenames, labels, fixed_index)
+    plt.suptitle("Sensitivity analysis of impact factor")
 
 
-    pass
+    ### 2. impact factor zero with value for area, higher lower
+    ### impact factor value everywhere and extra value for area, higher and lower
+    ## plot amount of flow caught in total vs amount of flow in area
+    # alpha_new = copy.copy(alpha)
+    # alpha_new2 = copy.copy(alpha)
+    # alpha_new4 = copy.copy(alpha)
+    # alpha_new6 = copy.copy(alpha)
+    # for index, node in enumerate(G.nodes()):
+    #     alpha_new[index] += G.nodes[node]['impact_factor']
+    #     alpha_new2[index] += G.nodes[node]['impact_factor']*2
+    #     alpha_new4[index] += G.nodes[node]['impact_factor']*4
+    #     alpha_new6[index] += G.nodes[node]['impact_factor']*6
+    # load_instance.write_outputs(G, n, K, K_i, betas, alpha_new, C, b, c, B, w, 'impact_factor_area0.1_'+str(n)+'nodes.txt', show_impact_flow = True)
+    # load_instance.write_outputs(G, n, K, K_i, betas, alpha_new2, C, b, c, B, w, 'impact_factor_area0.2_'+str(n)+'nodes.txt', show_impact_flow = True)
+    # load_instance.write_outputs(G, n, K, K_i, betas, alpha_new4, C, b, c, B, w, 'impact_factor_area0.4_'+str(n)+'nodes.txt', show_impact_flow = True)
+    # load_instance.write_outputs(G, n, K, K_i, betas, alpha_new6, C, b, c, B, w, 'impact_factor_area0.6_'+str(n)+'nodes.txt', show_impact_flow = True)
+
+    filenames = ['308nodes.txt', 'impact_factor_area0.1_308nodes.txt', 'impact_factor_area0.2_308nodes.txt', 'impact_factor_area0.4_308nodes.txt', 'impact_factor_area0.6_308nodes.txt']
+    labels = ['estimated', 'alpha = 0.1', 'alpha = 0.2', 'alpha = 0.4', 'alpha = 0.6']
+    fixed_index = 0
 
 
 
+    ### 3. impact factor zero and value for edge, higher lower
+    ### impact factor value everywhere and extra for edge, higher and lower
+    ## plot amount of flow caught in total vs amount of flow in area
+
+
+
+
+change_impact_factor(G, n, K, K_i, betas, alpha, C, b, c, B, w)
+
+#%% test w term in obj function
 
 
 #%%
@@ -434,4 +493,3 @@ def change_impact_factor():
 #     ax2.plot(budgets, flow_differences[i], '--', label = plot_labels[i])
 
 # plt.legend()
-

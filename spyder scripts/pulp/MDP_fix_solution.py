@@ -54,7 +54,7 @@ def fixed_solution_caught_flow(G, n, K, K_i, betas, alpha, C, b, c, B, w, x_fixe
 
     ### constraint for fixed xs
     for i in range(n):
-        for k in range(k):
+        for k in range(K):
             prob += xs[i][k] == x_fixed[i][k]
 
     ### create objective function

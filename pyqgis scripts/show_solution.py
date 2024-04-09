@@ -1,7 +1,8 @@
 folder = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/thesis_noria/spyder scripts/"
-file = 'init_prob_uniform308nodes.txt'
+file = 'init_prob_uniform_308nodes.txt'
+file = '308nodes.txt'
 solution_file_path = folder + file
-B = 1
+B = 4
 
 ### read solution file
 with open(solution_file_path) as f:
@@ -11,8 +12,8 @@ run1 = [eval(line.strip()) for line in run1]
 temp_layer = QgsVectorLayer("Point?crs=EPSG:28992","solution_layer_"+file,"memory")
 
 temp_layer.startEditing()
-for index, line in enumerate(run1):
-    if line[0] == B:
+for index, line in enumerate(run1[1:]):
+    if round(float(line[0]), 1) == B:
         for catching_system in run1[index][-1]:
             # locations = [list(i[-1]) for i in run1[index][-1]]
             # types = [i[1] for i in run1[index][-1]]
