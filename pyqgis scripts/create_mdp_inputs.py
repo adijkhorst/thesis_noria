@@ -11,6 +11,7 @@ sys.path.insert(1, "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Inter
 import wind_data
 
 layers_folder = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/"
+layers_folder = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Static model/Static Model Groningen Leeuwarden/"
 
 RADIUS_SOURCES_IMPACT = 100
 
@@ -53,16 +54,25 @@ def initial_probabilities(nodes_layer, sources_layer_path, radius_impact):
 
     total = 0
     nodes_layer.startEditing()
+    n = nodes_layer.featureCount()
     for feature in nodes_layer.getFeatures():
         geom_buffer = feature.geometry().buffer(radius_impact, 10)
         close_sources = [feat for feat in sources_layer.getFeatures() if feat.geometry().intersects(geom_buffer)]
         num_sources = len(close_sources)
-        total += num_sources
-        nodes_layer.changeAttributeValue(feature.id(), attr_id, num_sources)
+        if num_sources == 0:
+            prob = 1/n
+        elif num_sources > 0 and num_sources <= 5:
+            prob = 2/n
+        elif num_sources > 5 and num_sources <= 10:
+            prob = 3/n
+        else:
+            prob = 4/n
+        total += prob
+        nodes_layer.changeAttributeValue(feature.id(), attr_id, float(prob))
 
     for feature in nodes_layer.getFeatures():
-        prob = feature['init_probability']/total
-        nodes_layer.changeAttributeValue(feature.id(), attr_id, float(prob))
+        normalized_prob = feature['init_probability']/total
+        nodes_layer.changeAttributeValue(feature.id(), attr_id, float(normalized_prob))
 
     nodes_layer.commitChanges()
     nodes_layer.endEditCommand()
@@ -348,36 +358,44 @@ def sensitive_area(nodes_layer, impact_factor_layer_path, G):
     nodes_layer.commitChanges()
     nodes_layer.endEditCommand()
 
-MAX_DIST_NODES = 100
+MAX_DIST_NODES = 200
 
 final_network_layer_path = layers_folder +"delft_final_network_exploded_d"+str(MAX_DIST_NODES)+".geojson"
+final_network_layer_path = layers_folder +"groningen_final_network_exploded_d"+str(MAX_DIST_NODES)+".geojson"
+
 final_network_layer = iface.addVectorLayer(final_network_layer_path, "final_network", "ogr")
 
-nodes_attributes_layer_path = layers_folder + "final_network_nodes_attributes_d"+str(MAX_DIST_NODES)+"node_indices.geojson"
+nodes_attributes_layer_path = layers_folder + "final_network_nodes_attributes_d"+str(MAX_DIST_NODES)+".geojson"
 nodes_attributes_layer = create_nodes_layer(final_network_layer_path, nodes_attributes_layer_path)
 
 RADIUS_SOURCES_IMPACT = 100
 sources_layer_path = layers_folder + "producers_no_market_reprojected.geojson"
+sources_layer_path = layers_folder + "sources_groningen.geojson"
 initial_probabilities(nodes_attributes_layer, sources_layer_path, RADIUS_SOURCES_IMPACT)
 
 G = create_network(final_network_layer_path)
 G = get_transition_probabilities(G)
 
 polygon_layer_path = layers_folder + "waterpolygon_delft_reprojected_exploded.geojson"
+polygon_layer_path = layers_folder + "waterpolygons_groningen_final.geojson"
 polygon_layer = QgsVectorLayer(polygon_layer_path, '', "ogr")
 
 max_boat_width_path = layers_folder + "max_boat_width_delft.geojson"
+max_boat_width_path = layers_folder + "max_boat_width_groningen.geojson"
 max_boat_width_layer = QgsVectorLayer(max_boat_width_path, '', "ogr")
 MAX_CANAL_WIDTH = 100
 
 catching_probabilities(nodes_attributes_layer, polygon_layer, max_boat_width_layer, MAX_CANAL_WIDTH)
 
 shore_layer_path = layers_folder + "shore_types_delft_reprojected.geojson"
+shore_layer_path = layers_folder + "shore_types_groningen.geojson"
 water_vegetation_path = layers_folder + "water_vegetation_delft.geojson"
 corners_layer_path = layers_folder + "sharp_corners_delft.geojson"
+corners_layer_path = layers_folder + "sharp_corners_groningen.geojson"
 
 stuck_probabilities(nodes_attributes_layer, G, shore_layer_path, MAX_DIST_NODES, water_vegetation_path, corners_layer_path)
 display_probabilities_map(G, final_network_layer)
 
 impact_factor_layer_path = layers_folder + "impact_factor_citycenter.geojson"
+layers_folder + "impact_factor_groningen.geojson"
 sensitive_area(nodes_attributes_layer, impact_factor_layer_path, G)

@@ -6,15 +6,16 @@ from math import *
 import numpy as np
 import shutil
 
-MAX_DIST_NODES = 150
+MAX_DIST_NODES = 350
 
 
 original_layer_path = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/waterway_canal_delft_exploded_fewnodes.geojson"
+original_layer_path = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Static model/Static Model Groningen Leeuwarden/waterways_groningen_final.geojson"
 new_layer_path = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/delft_final_network.geojson"
-
+new_layer_path = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Static model/Static Model Groningen Leeuwarden/groningen_final_network.geojson"
 shutil.copy(original_layer_path, new_layer_path)
 line_layer = QgsVectorLayer(new_layer_path, "final_network_layer", "ogr")
-# QgsProject.instance().addMapLayer(line_layer)
+QgsProject.instance().addMapLayer(line_layer)
 
 def add_nodes(line_layer):
     line_layer.startEditing()

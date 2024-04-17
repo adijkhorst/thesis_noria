@@ -12,10 +12,24 @@ import geopandas as gpd
 
 import transition_probabilities_wind
 
-layers_folder ='C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/'
+
+import os
+dirname = os.path.dirname(__file__)
+layers_folder = os.path.normpath(os.path.join(dirname, '../../'))
+
+import sys
+sys.path.insert(1, dirname+'\\pulp_scripts')
+import MDP_exact
+import MDP_heuristic
+import time
+import MDP_fix_solution
+
+
+# layers_folder ='C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/'
+
 
 def no_catching_system():
-    gdf = gpd.read_file(layers_folder + 'corner_vertices_delft.geojson')
+    gdf = gpd.read_file(layers_folder + '\\corner_vertices_delft.geojson')
 
     no_system = []
     # Iterate through the GeoDataFrame
@@ -123,8 +137,8 @@ def create_network(line_layer_path, plot = 0):
 
 
 def MIP_input(year, max_dist_nodes, random_wind = False):
-    line_layer_path = layers_folder + 'delft_final_network_exploded_d'+ str(max_dist_nodes)+'.geojson'
-    nodes_layer_path = layers_folder + 'final_network_nodes_attributes_d'+ str(max_dist_nodes)+'.geojson'
+    line_layer_path = layers_folder + '\\delft_final_network_exploded_d'+ str(max_dist_nodes)+'.geojson'
+    nodes_layer_path = layers_folder + '\\final_network_nodes_attributes_d'+ str(max_dist_nodes)+'.geojson'
 
     # import the networkx graph from network_creation.py, get transition probabilities and initial probabilities
     G = create_network(line_layer_path)
@@ -182,21 +196,10 @@ def MIP_input(year, max_dist_nodes, random_wind = False):
 
     return G, n, K, K_i, betas, alpha, C, b, c, B, w
 
-#%%
-
-sys.path.insert(1, "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/thesis_noria/spyder scripts/pulp")
-import MDP_exact
-import MDP_heuristic
-import time
-import MDP_fix_solution
-
-
 
 #%%
 
 def write_outputs(G, n, K, K_i, betas, alpha, C, b, c, B, w, filename, show_impact_flow = False):
-    totalstart = time.time()
-    test_flow_fixed = []
 
     with open('308nodes_fixed_solutions.txt') as f:
         fixed_solutions = f.readlines()
@@ -204,26 +207,26 @@ def write_outputs(G, n, K, K_i, betas, alpha, C, b, c, B, w, filename, show_impa
 
     label_to_position = {value: key for key, value in nx.get_node_attributes(G, 'label').items()}
     
-    output1 = [['budget', 'runtime', 'objective_value', 'flow_caught_optimal', 'flow_caught_fixed_solution', 'flow_impact_area', ['solution']]]
-    # for B in range(1,5):
+    output = [['budget', 'runtime', 'objective_value', 'flow_caught_optimal', 'flow_caught_fixed_solution', 'flow_impact_area', ['solution']]]
     j = 0
+    old_solution = n*[K*[0]]
     for B in np.arange(0.2, 4.2, 0.2):
         start = time.time()
-        prob, G, solution, flow_caught, flow_impact_area = MDP_exact.solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w, False, show_impact_flow)
+        prob, G, solution, flow_caught, flow_impact_area, old_solution = MDP_exact.solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w, show_impact_flow, old_solution, warm_start = True)
         end = time.time()
 
         x_fixed = fixed_solutions[j]
         # _, _, _, flow_caught_fixed_solution = MDP_fix_solution.fixed_solution_caught_flow(G, n, K, K_i, betas, alpha, C, b, c, B, w, x_fixed)
-        flow_caught_fixed_solution = 0
-        flow_caught_fixed_solution1 = MDP_heuristic.flow_caught(x_fixed, n, betas, alpha, C, b)
-        test_flow_fixed += [flow_caught_fixed_solution1]
+        if n == 308:
+            flow_caught_fixed_solution = MDP_heuristic.flow_caught(x_fixed, n, betas, alpha, C, b)
+        else:
+            flow_caught_fixed_solution = 0
+
         j+= 1
 
 
-        output1 += [[B, end-start, value(prob.objective), flow_caught, flow_caught_fixed_solution, flow_impact_area, [[system[0], system[1], label_to_position[system[0]]] for system in solution]]]
+        output += [[B, end-start, value(prob.objective), flow_caught, flow_caught_fixed_solution, flow_impact_area, [[system[0], system[1], label_to_position[system[0]]] for system in solution]]]
 
-    totalend = time.time()
-    print(totalend-totalstart)
     with open(filename, 'w+') as f:
     # with open('without_gurobi'+str(n)+'nodes.txt', 'w+') as f:
         # write elements of list
@@ -240,11 +243,30 @@ if __name__ == '__main__':
     year = 2022
     MAX_DIST_NODES = 100
     G, n, K, K_i, betas, alpha, C, b, c, B, w = MIP_input(year, MAX_DIST_NODES)
-    # write_outputs(G, n, K, K_i, betas, alpha, C, b, c, B, w, str(n)+'nodes.txt')
+    write_outputs(G, n, K, K_i, betas, alpha, C, b, c, B, w, str(n)+'nodes.txt', show_impact_flow = True)
 
     # start = time.time()
     # prob, G, solution, folow_caught = solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w)
     # end = time.time()
+
+
+    ### write output file with all fixed solutions that will be used to compare sensitivity analysis
+    # G, n, K, K_i, betas, alpha, C, b, c, B, w = load_instance.MIP_input(2022, 100, random_wind = False)
+
+    # output = []
+    # for B in np.arange(0.2, 4.2, 0.2):
+    #     start = time.time()
+    #     _, _, _, _, x_fixed = MDP_exact.solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w)
+    #     end = time.time()
+    #     output += [x_fixed]
+
+    # with open('308nodes_fixed_solutions.txt', 'w+') as f:
+    # # with open('without_gurobi'+str(n)+'nodes.txt', 'w+') as f:
+    #     # write elements of list
+    #     for items in output:
+    #         f.write('%s\n' %items)
+    #     print("File written successfully")
+    # f.close()
 
 #%%
 
@@ -268,3 +290,4 @@ if __name__ == '__main__':
  
 # # close the file
 # f.close()
+

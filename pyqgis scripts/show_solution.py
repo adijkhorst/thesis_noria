@@ -2,7 +2,7 @@ folder = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne
 file = 'init_prob_uniform_308nodes.txt'
 file = '308nodes.txt'
 solution_file_path = folder + file
-B = 4
+B = 0.6
 
 ### read solution file
 with open(solution_file_path) as f:
@@ -14,7 +14,7 @@ temp_layer = QgsVectorLayer("Point?crs=EPSG:28992","solution_layer_"+file,"memor
 temp_layer.startEditing()
 for index, line in enumerate(run1[1:]):
     if round(float(line[0]), 1) == B:
-        for catching_system in run1[index][-1]:
+        for catching_system in run1[index+1][-1]:
             # locations = [list(i[-1]) for i in run1[index][-1]]
             # types = [i[1] for i in run1[index][-1]]
             point = QgsPointXY(catching_system[2][0], catching_system[2][1])
