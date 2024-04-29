@@ -9,7 +9,7 @@ from pulp import *
 import networkx as nx
 import numpy as np
 
-def solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w, show_impact_flow = False, init_solution = [], warm_start = False):
+def solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w, show_impact_flow = False, init_solution = [], warm_start = False, without_gurobi = False):
     #(number_nodes, number_catching_systems, possible_catching_systems, catching_probabilities, impact_factor, transition_matrix, initial_distribution, costs, budget):
     prob = LpProblem("MDP-FCLM", LpMaximize)
 
@@ -63,9 +63,14 @@ def solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w, show_impact_flow = Fals
     prob += obj_function
 
     ### solve
-    # status = prob.solve(GUROBI_CMD(keepFiles=True, warmStart = warm_start, options = [('LogToConsole', 1)]))
-    status = prob.solve(GUROBI(mip = True, msg = False, warmStart = warm_start))
-    # status = prob.solve(keepFiles = True)
+    if without_gurobi == False:
+        # status = prob.solve(GUROBI_CMD(keepFiles=True, warmStart = warm_start, options = [('LogToConsole', 1)]))
+        status = prob.solve(GUROBI(mip = True, msg = False, warmStart = warm_start))
+        # status = prob.solve(CPLEX_PY(warmStart = warm_start))
+    else:
+        # status = prob.solve()
+        # status = prob.solve(GLPK_CMD())
+        status = prob.solve(PULP_CBC_CMD(msg = False, warmStart = warm_start))
 
     print('Solution is: ', LpStatus[status])
 
@@ -94,7 +99,7 @@ def solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w, show_impact_flow = Fals
     for index, node in enumerate(G.nodes()):
         flow_attrs[node] = {'plastic_flow': M1[index]}
     nx.set_node_attributes(G, flow_attrs)
-    x = [[value(xik) for xik in xi] for xi in xs]
+    x = [[round(value(xik)) for xik in xi] for xi in xs]
     
     print('Solution time: ', prob.solutionTime)
     
@@ -119,96 +124,77 @@ if __name__ == '__main__':
     import transition_probabilities_wind
     import init_probability
 
-    ### TEST DELFT
-    np.random.seed(1)
+    # ### TEST DELFT
+    # np.random.seed(1)
 
-    year = 2022
+    # year = 2022
 
-    # import the networkx graph from network_creation.py, get transition probabilities and initial probabilities
-    G = network_creation.create_network()
-    transition_probabilities_wind.get_transition_probabilities(G, year)
-    init_probability.get_initial_probabilities(G)
-    init_probability.get_stuck_probabilities(G)
+    # # import the networkx graph from network_creation.py, get transition probabilities and initial probabilities
+    # G = network_creation.create_network()
+    # transition_probabilities_wind.get_transition_probabilities(G, year)
+    # init_probability.get_initial_probabilities(G)
+    # init_probability.get_stuck_probabilities(G)
 
-    b = np.array([G.nodes[node]['init_probability'] for node in G.nodes()])
+    # b = np.array([G.nodes[node]['init_probability'] for node in G.nodes()])
 
-    n = len(G.nodes())
-    K = 2
-
-    stuck = [G.nodes[node]['stuck_probability'] for node in G.nodes()]
-    stuck_matrix = np.repeat([stuck], len(stuck), axis = 0).T
-
-    A = nx.adjacency_matrix(G, nodelist = G.nodes(), weight = 'transition_probability').toarray()
-
-    C = (1-stuck_matrix) * A
-
-    attrs = {}
-    for index, node in enumerate(G.nodes()):
-        attrs[node] = {'label': index+1, 'position' : node}
-    nx.set_node_attributes(G, attrs)
-
-    ### instance parameters
-
-    no_system = init_probability.no_catching_system()
-    K_i = {}
-    for node in G.nodes():
-        if node in no_system:
-            K_i[G.nodes[node]['label']] = {}
-        else:
-            K_i[G.nodes[node]['label']] = {1, 2}
-
-    betas = np.random.uniform(0.1, 0.8, (n, K))
-    c = [1, 1]
-    B = 8.5
-    w = 0.001
-    # alpha = 0.001*np.ones(n)
-    alpha = np.zeros(n)
-    alpha = np.random.uniform(0.001, 0.01, n)
-    alpha = np.ones(n)*0.1
-
-    #%%
-
-    # n = 6
+    # n = len(G.nodes())
     # K = 2
-    
+
+    # stuck = [G.nodes[node]['stuck_probability'] for node in G.nodes()]
+    # stuck_matrix = np.repeat([stuck], len(stuck), axis = 0).T
+
+    # A = nx.adjacency_matrix(G, nodelist = G.nodes(), weight = 'transition_probability').toarray()
+
+    # C = (1-stuck_matrix) * A
+
+    # attrs = {}
+    # for index, node in enumerate(G.nodes()):
+    #     attrs[node] = {'label': index+1, 'position' : node}
+    # nx.set_node_attributes(G, attrs)
+
+    # ### instance parameters
+
+    # no_system = init_probability.no_catching_system()
     # K_i = {}
-    # for i in range(1,7):
-    #     K_i[i] = {1,2} #try with two types of catching systems later
-    #     if i == 5:s
-    #         K_i[i] = {}
+    # for node in G.nodes():
+    #     if node in no_system:
+    #         K_i[G.nodes[node]['label']] = {}
+    #     else:
+    #         K_i[G.nodes[node]['label']] = {1, 2}
 
-    # np.random.seed(0)
     # betas = np.random.uniform(0.1, 0.8, (n, K))
-    # alpha = 0.1
-    # c_1 = 1
-    # B = 1.5
-    
-    # Q = np.zeros((7,7));
-    # indices = [[0, 0], [1, 0], [2, 1], [3, 4], [4, 5], [5, 2], [6, 5]]
-    # for i in indices:
-    #     Q[i[0], i[1]] = 1
-    
-    # C = Q[1:, 1:]
-    
-    
-    # b = np.array([0, 0, 0.6, 0, 0, 0.4]) #should this include 0 and n+1?
+    # c = [1, 1]
+    # B = 8.5
+    # w = 0.001
+    # # alpha = 0.001*np.ones(n)
+    # alpha = np.zeros(n)
+    # alpha = np.random.uniform(0.001, 0.01, n)
+    # alpha = np.ones(n)*0.1
+
 
     #%%
-    import time
-    start = time.time()
-    prob, G, solution, flow_caught, impact_area_flow = solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w)
+    # import time
+    # start = time.time()
+    # prob, G, solution, flow_caught, impact_area_flow = solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w)
 
-    end = time.time()
-    print('runtime for ', B, ' catching systems', end-start)
+    # end = time.time()
+    # print('runtime for ', B, ' catching systems', end-start)
 
     #%%
-    nx.write_gml(G, 'test.gml')
+    import load_instance
+
+    for dist in [50, 75, 100, 125, 150]:
+        year = 2022
+        G, n, K, K_i, betas, alpha, C, b, c, B, w = load_instance.MIP_input(year, dist)
+        B = 0
+        prob, G, solution_nodes, flow_caught, _, _ = solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w)
+        nx.write_gml(G, str(n)+'nodes.gml')
 
     #%% testing caught flow per catching system to check if value of w works correctly
-    test = []
-    for i in range(n):
-        for k in range(K):
-            if value(xs[i][k]) > 0:
-                test += [betas[i][k]*value(v2[i][k])]
-                print(betas[i][k]*value(v2[i][k]), betas[i][k]*M2[i][k])
-    test.sort()
+    # test = []
+    # for i in range(n):
+    #     for k in range(K):
+    #         if value(xs[i][k]) > 0:
+    #             test += [betas[i][k]*value(v2[i][k])]
+    #             print(betas[i][k]*value(v2[i][k]), betas[i][k]*M2[i][k])
+    # test.sort()

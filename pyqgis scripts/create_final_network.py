@@ -6,7 +6,7 @@ from math import *
 import numpy as np
 import shutil
 
-MAX_DIST_NODES = 350
+MAX_DIST_NODES = 50
 
 
 original_layer_path = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/waterway_canal_delft_exploded_fewnodes.geojson"

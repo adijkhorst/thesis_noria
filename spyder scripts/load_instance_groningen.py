@@ -10,6 +10,9 @@ import numpy as np
 import networkx as nx
 import geopandas as gpd
 
+from scipy.spatial import distance
+from scipy.optimize import linear_sum_assignment
+
 import transition_probabilities_wind
 
 
@@ -137,7 +140,7 @@ def create_network(line_layer_path, plot = 0):
 
 
 
-def MIP_input(year, max_dist_nodes, random_wind = False):
+def MIP_input(year, max_dist_nodes, random_wind = False, wind_groningen = False):
     line_layer_path = layers_folder + '\\groningen_final_network_exploded_d'+ str(max_dist_nodes)+'.geojson'
     nodes_layer_path = layers_folder + '\\final_network_nodes_attributes_d'+ str(max_dist_nodes)+'.geojson'
 
@@ -145,7 +148,7 @@ def MIP_input(year, max_dist_nodes, random_wind = False):
     G = create_network(line_layer_path)
 
     if random_wind == False:
-        transition_probabilities_wind.get_transition_probabilities(G, year)
+        transition_probabilities_wind.get_transition_probabilities(G, year, wind_groningen)
     else:
         transition_probabilities_wind.random_transition_probabilities(G)
 
@@ -202,31 +205,50 @@ def MIP_input(year, max_dist_nodes, random_wind = False):
 
 def write_outputs(G, n, K, K_i, betas, alpha, C, b, c, B, w, filename, show_impact_flow = False):
 
-    with open('output_groningen/291nodes_fixed_solutions.txt') as f:
+    with open('output_groningen/583nodes_solutions.txt') as f:
         fixed_solutions = f.readlines()
     fixed_solutions = [eval(line.strip()) for line in fixed_solutions]
+
+    if n != 583:
+        with open('output_groningen/583nodes.txt') as f:
+            fixed_solutions = f.readlines()
+        fixed_solutions_types = [[system[1] for system in eval(line.strip())[-1]] for line in fixed_solutions[1:]]
+        fixed_solutions = [[[system[2][0], system[2][1]] for system in eval(line.strip())[-1]] for line in fixed_solutions[1:]]
+
+        no_catching_location = no_catching_system()
+        new_node_locations = [[node[0], node[1]] if node not in no_catching_location else [0, 0] for node in G.nodes()]
 
     label_to_position = {value: key for key, value in nx.get_node_attributes(G, 'label').items()}
     
     output = [['budget', 'runtime', 'objective_value', 'flow_caught_optimal', 'flow_caught_fixed_solution', 'flow_impact_area', ['solution']]]
+    output2 = []
     j = 0
-    old_solution = n*[K*[0]]
-    for B in np.arange(0.2, 4.2, 0.2):
+    old_solution = np.zeros((n, K))#n*[K*[0]]
+    for B in np.arange(0.2, 1.4, 0.2):
         start = time.time()
         prob, G, solution, flow_caught, flow_impact_area, old_solution = MDP_exact.solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w, show_impact_flow, old_solution, warm_start = True)
         end = time.time()
 
-        x_fixed = fixed_solutions[j]
         # _, _, _, flow_caught_fixed_solution = MDP_fix_solution.fixed_solution_caught_flow(G, n, K, K_i, betas, alpha, C, b, c, B, w, x_fixed)
-        if n == 308:
+        if n == 583:
+            x_fixed = np.array(fixed_solutions[j])
             flow_caught_fixed_solution = MDP_heuristic.flow_caught(x_fixed, n, betas, alpha, C, b)
         else:
-            flow_caught_fixed_solution = 0
-
+            locations_solution = fixed_solutions[j]
+            pairwise_distances = distance.cdist(locations_solution, new_node_locations)
+            row_ind, col_ind = linear_sum_assignment(pairwise_distances)
+            x_fixed = np.zeros((n, K))
+            for col, row in zip(col_ind, row_ind):
+                x_fixed[col][fixed_solutions_types[j][row]-1] = 1
+            flow_caught_fixed_solution = MDP_heuristic.flow_caught(x_fixed, n, betas, alpha, C, b)
+            print("flow caught fixed solution: ", flow_caught_fixed_solution)
+            # _, _, _, flow_caught_fixed_solution = MDP_fix_solution.fixed_solution_caught_flow(G, n, K, K_i, betas, alpha, C, b, c, B, w, x_fixed)
+            output2 += [[new_node_locations[i] for i in col_ind]]
         j+= 1
 
 
         output += [[B, end-start, value(prob.objective), flow_caught, flow_caught_fixed_solution, flow_impact_area, [[system[0], system[1], label_to_position[system[0]]] for system in solution]]]
+
 
     groningen_filename = 'output_groningen/'+filename
     with open(groningen_filename, 'w+') as f:
@@ -238,56 +260,37 @@ def write_outputs(G, n, K, K_i, betas, alpha, C, b, c, B, w, filename, show_impa
     f.close()
 
 
+    if n != 583:
+        with open('output_groningen/'+str(n)+'nodes_fixed_solutions_d100.txt', 'w+') as f:
+            # write elements of list
+            for items in output2:
+                f.write('%s\n' %items)
+            print("File written successfully")
+        f.close()
+
+
 if __name__ == '__main__':
 
-
+#%% d = 100, n = 583 as fixed situation
     ### write output file with all fixed solutions that will be used to compare sensitivity analysis
-    G, n, K, K_i, betas, alpha, C, b, c, B, w = MIP_input(2022, 200, random_wind = False)
+    year = 2022
+    MAX_DIST_NODES = 100
+    G, n, K, K_i, betas, alpha, C, b, c, B, w = MIP_input(year, MAX_DIST_NODES, random_wind = False, wind_groningen = True)
 
     output = []
-    for B in np.arange(0.2, 4.2, 0.2):
+    for B in np.arange(0.2, 2.2, 0.2):
         start = time.time()
         _, _, _, _, _, x_fixed = MDP_exact.solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w)
         end = time.time()
         output += [x_fixed]
 
-    with open('output_groningen/'+str(n)+'nodes_fixed_solutions.txt', 'w+') as f:
+    with open('output_groningen/'+str(n)+'nodes_solutions.txt', 'w+') as f:
+    # with open('without_gurobi'+str(n)+'nodes.txt', 'w+') as f:
         # write elements of list
         for items in output:
             f.write('%s\n' %items)
         print("File written successfully")
     f.close()
 
-#%%
-    year = 2022
-    MAX_DIST_NODES = 200
-    G, n, K, K_i, betas, alpha, C, b, c, B, w = MIP_input(year, MAX_DIST_NODES)
-    write_outputs(G, n, K, K_i, betas, alpha, C, b, c, B, w, 'output_groningen/'+str(n)+'nodes.txt', show_impact_flow = True)
-
-    # start = time.time()
-    # prob, G, solution, folow_caught = solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w)
-    # end = time.time()
-
-#%%
-
-# output = [['budget', 'runtime', ['solution']]]
-# for B in range(1,5):
-#     start = time.time()
-#     x, objective, solution = MDP_heuristic.MDP_heuristic(n, K, K_i, betas, alpha, C, b, c, B, w)
-#     end = time.time()
-#     # print('runtime for ', B, ' catching systems', end-start)
-#     output += [[B, end-start, solution]]
-
-# # open file
-# with open('heuristic'+str(n)+'nodes.txt', 'w+') as f:
-     
-#     # write elements of list
-#     for items in output:
-#         f.write('%s\n' %items)
-     
-#     print("File written successfully")
- 
- 
-# # close the file
-# f.close()
+    write_outputs(G, n, K, K_i, betas, alpha, C, b, c, B, w, str(n)+'nodes.txt', show_impact_flow = True)
 

@@ -1,0 +1,31 @@
+Solution is:  Optimal
+Catching systems located at:
+x1222 1.0
+x2012 1.0
+x2962 1.0
+x4312 1.0
+x472 1.0
+0.08953771006829696
+flow caught:  0.08974793018613698
+Solution time:  77.16344666481018
+runtime exact:  111.1317389011383
+First stage of heuristic:
+{296, 201, 47, 431, 122}
+[[ 46   1]
+ [121   1]
+ [200   1]
+ [295   1]
+ [430   1]]
+0.08953771050022816
+runtime heuristic:  44.897377729415894
+Solution is:  Optimal
+Catching systems located at:
+x1222 1.0
+x2012 1.0
+x2962 1.0
+x4312 1.0
+x472 1.0
+0.08953771006829696
+flow caught:  0.08974793018613698
+Solution time:  76.2376823425293
+runtime warm exact:  109.74627327919006

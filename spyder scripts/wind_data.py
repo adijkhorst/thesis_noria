@@ -8,11 +8,13 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os
 
-def get_wind_directions(year):
+def get_wind_directions(year, wind_groningen = False):
     ### adjust later such that year and file are inputs to the function!!!
     weather_data_path = 'C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/6. Model/etmgeg_344.txt'
     dirname = os.path.dirname(__file__)
     weather_data_path = dirname + '\etmgeg_344.txt'
+    if wind_groningen == True:
+        weather_data_path = dirname + '\etmgeg_280.txt'
     # weather_data_path = os.path.normpath(os.path.join(dirname, '\etmgeg_344.txt'))
     
     

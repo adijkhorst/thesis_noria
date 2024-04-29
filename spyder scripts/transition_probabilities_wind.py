@@ -10,10 +10,10 @@ import numpy as np
 import networkx as nx
 
 
-def get_transition_probabilities(G, year):
+def get_transition_probabilities(G, year, wind_groningen = False):
     ### Calculate transition probabilities and put as attribute on edges
     attrs = {}
-    wind_directions = wind_data.get_wind_directions(year)
+    wind_directions = wind_data.get_wind_directions(year, wind_groningen)
     for node in G.nodes():
         neighbors = [neighbor for neighbor in G.neighbors(node)]
         num_neighbors = len(neighbors)

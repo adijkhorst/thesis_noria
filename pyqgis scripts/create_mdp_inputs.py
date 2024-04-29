@@ -10,6 +10,9 @@ import sys
 sys.path.insert(1, "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/thesis_noria/spyder scripts")
 import wind_data
 
+# import os
+# layers_folder = os.getcwd()
+
 layers_folder = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/"
 layers_folder = "C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Static model/Static Model Groningen Leeuwarden/"
 
@@ -358,7 +361,7 @@ def sensitive_area(nodes_layer, impact_factor_layer_path, G):
     nodes_layer.commitChanges()
     nodes_layer.endEditCommand()
 
-MAX_DIST_NODES = 200
+MAX_DIST_NODES = 50
 
 final_network_layer_path = layers_folder +"delft_final_network_exploded_d"+str(MAX_DIST_NODES)+".geojson"
 final_network_layer_path = layers_folder +"groningen_final_network_exploded_d"+str(MAX_DIST_NODES)+".geojson"
