@@ -9,7 +9,7 @@ from pulp import *
 import networkx as nx
 import numpy as np
 
-def solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w, show_impact_flow = False, init_solution = [], warm_start = False, without_gurobi = False):
+def solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w, show_impact_flow = False, init_solution = [], warm_start = False, without_gurobi = False, time_limit = None):
     #(number_nodes, number_catching_systems, possible_catching_systems, catching_probabilities, impact_factor, transition_matrix, initial_distribution, costs, budget):
     prob = LpProblem("MDP-FCLM", LpMaximize)
 
@@ -65,12 +65,12 @@ def solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w, show_impact_flow = Fals
     ### solve
     if without_gurobi == False:
         # status = prob.solve(GUROBI_CMD(keepFiles=True, warmStart = warm_start, options = [('LogToConsole', 1)]))
-        status = prob.solve(GUROBI(mip = True, msg = False, warmStart = warm_start))
+        status = prob.solve(GUROBI(mip = True, msg = False, timeLimit = time_limit, warmStart = warm_start))
         # status = prob.solve(CPLEX_PY(warmStart = warm_start))
     else:
         # status = prob.solve()
         # status = prob.solve(GLPK_CMD())
-        status = prob.solve(PULP_CBC_CMD(msg = False, warmStart = warm_start))
+        status = prob.solve(PULP_CBC_CMD(msg = False, timeLimit=time_limit, warmStart = warm_start))
 
     print('Solution is: ', LpStatus[status])
 

@@ -46,14 +46,14 @@ def MDP_heuristic(n, K, K_i, betas, alpha, C, b, c, B, w):
     x = np.zeros((n,K))
     N_not_Ak = set(np.arange(1,n+1))
     Ak = set()
-    objective = 0
+    objective = -10000
     
     #save second best options
     second_best = set()
     
     stop = False
     while not stop:
-        objectives = np.zeros((n,K))
+        objectives = -10000*np.ones((n,K))
         for i in N_not_Ak: #i in the set is the actual i, not index
             for k in K_i[i]:
                 if round(costs + c[k-1],7) <= B:
@@ -62,10 +62,12 @@ def MDP_heuristic(n, K, K_i, betas, alpha, C, b, c, B, w):
                     objectives[i-1, k-1] = objective_value(n, b, betas, C, x_plus1, w, costs+c[k-1], alpha)
     
         #check if objective can still improve and check if any objective values were calculated, otherwise there is no i,k left within the budget
-        if not np.any(objectives > 0) or np.max(objectives) < objective:
+        if not np.any(objectives > -10000) or np.max(objectives) < objective:
             stop = True
         else:
-            relative_objectives = (np.array(objectives)-objective)/np.repeat([c], n, axis = 0)
+            objectives_without_cost_term =np.array(objectives) + w*np.repeat([c], n, axis = 0)
+            # relative_objectives = (np.array(objectives)-objective)/np.repeat([c], n, axis = 0)
+            relative_objectives = (objectives_without_cost_term-objective+w*costs)/np.repeat([c], n, axis = 0)
             index_i, index_k = np.unravel_index(np.argmax(relative_objectives), relative_objectives.shape) #indices of maximum objective value
 
             #to find second best element and save it

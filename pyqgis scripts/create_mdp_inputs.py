@@ -361,7 +361,7 @@ def sensitive_area(nodes_layer, impact_factor_layer_path, G):
     nodes_layer.commitChanges()
     nodes_layer.endEditCommand()
 
-MAX_DIST_NODES = 50
+MAX_DIST_NODES = 150
 
 final_network_layer_path = layers_folder +"delft_final_network_exploded_d"+str(MAX_DIST_NODES)+".geojson"
 final_network_layer_path = layers_folder +"groningen_final_network_exploded_d"+str(MAX_DIST_NODES)+".geojson"

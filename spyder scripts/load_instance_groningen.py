@@ -197,20 +197,22 @@ def MIP_input(year, max_dist_nodes, random_wind = False, wind_groningen = False)
     
     
     alpha = n * [np.min((betas*M2)[(betas*M2) > 0])]
+    alpha =  n * [0.25*np.max((betas*M2)[(betas*M2) > 0])]
+
 
     return G, n, K, K_i, betas, alpha, C, b, c, B, w
 
 
 #%%
 
-def write_outputs(G, n, K, K_i, betas, alpha, C, b, c, B, w, filename, show_impact_flow = False):
+def write_outputs(G, n, K, K_i, betas, alpha, C, b, c, Bmax, w, filename, show_impact_flow = False):
 
-    with open('output_groningen/583nodes_solutions.txt') as f:
+    with open('output_groningen/976nodes_solutions.txt') as f:
         fixed_solutions = f.readlines()
     fixed_solutions = [eval(line.strip()) for line in fixed_solutions]
 
-    if n != 583:
-        with open('output_groningen/583nodes.txt') as f:
+    if n != 976:
+        with open('output_groningen/976nodes.txt') as f:
             fixed_solutions = f.readlines()
         fixed_solutions_types = [[system[1] for system in eval(line.strip())[-1]] for line in fixed_solutions[1:]]
         fixed_solutions = [[[system[2][0], system[2][1]] for system in eval(line.strip())[-1]] for line in fixed_solutions[1:]]
@@ -224,13 +226,15 @@ def write_outputs(G, n, K, K_i, betas, alpha, C, b, c, B, w, filename, show_impa
     output2 = []
     j = 0
     old_solution = np.zeros((n, K))#n*[K*[0]]
-    for B in np.arange(0.2, 1.4, 0.2):
+    for B in np.arange(0.2, Bmax+0.2, 0.2):
         start = time.time()
-        prob, G, solution, flow_caught, flow_impact_area, old_solution = MDP_exact.solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w, show_impact_flow, old_solution, warm_start = True)
+        prob, G, solution, flow_caught, flow_impact_area, old_solution = MDP_exact.solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w, show_impact_flow, old_solution, warm_start = True, without_gurobi = False, time_limit = 3600)
         end = time.time()
 
+        if end-start > 3600:
+            break
         # _, _, _, flow_caught_fixed_solution = MDP_fix_solution.fixed_solution_caught_flow(G, n, K, K_i, betas, alpha, C, b, c, B, w, x_fixed)
-        if n == 583:
+        if n == 976:
             x_fixed = np.array(fixed_solutions[j])
             flow_caught_fixed_solution = MDP_heuristic.flow_caught(x_fixed, n, betas, alpha, C, b)
         else:
@@ -260,8 +264,8 @@ def write_outputs(G, n, K, K_i, betas, alpha, C, b, c, B, w, filename, show_impa
     f.close()
 
 
-    if n != 583:
-        with open('output_groningen/'+str(n)+'nodes_fixed_solutions_d100.txt', 'w+') as f:
+    if n != 976:
+        with open('output_groningen/'+str(n)+'nodes_fixed_solutions_d60.txt', 'w+') as f:
             # write elements of list
             for items in output2:
                 f.write('%s\n' %items)
@@ -274,23 +278,23 @@ if __name__ == '__main__':
 #%% d = 100, n = 583 as fixed situation
     ### write output file with all fixed solutions that will be used to compare sensitivity analysis
     year = 2022
-    MAX_DIST_NODES = 100
-    G, n, K, K_i, betas, alpha, C, b, c, B, w = MIP_input(year, MAX_DIST_NODES, random_wind = False, wind_groningen = True)
+    # MAX_DIST_NODES = 100
+    # G, n, K, K_i, betas, alpha, C, b, c, B, w = MIP_input(year, MAX_DIST_NODES, random_wind = False, wind_groningen = True)
 
-    output = []
-    for B in np.arange(0.2, 2.2, 0.2):
-        start = time.time()
-        _, _, _, _, _, x_fixed = MDP_exact.solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w)
-        end = time.time()
-        output += [x_fixed]
+    # output = []
+    # for B in np.arange(0.2, 2.2, 0.2):
+    #     start = time.time()
+    #     _, _, _, _, _, x_fixed = MDP_exact.solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w)
+    #     end = time.time()
+    #     output += [x_fixed]
 
-    with open('output_groningen/'+str(n)+'nodes_solutions.txt', 'w+') as f:
-    # with open('without_gurobi'+str(n)+'nodes.txt', 'w+') as f:
-        # write elements of list
-        for items in output:
-            f.write('%s\n' %items)
-        print("File written successfully")
-    f.close()
+    # with open('output_groningen/'+str(n)+'nodes_solutions.txt', 'w+') as f:
+    # # with open('without_gurobi'+str(n)+'nodes.txt', 'w+') as f:
+    #     # write elements of list
+    #     for items in output:
+    #         f.write('%s\n' %items)
+    #     print("File written successfully")
+    # f.close()
 
-    write_outputs(G, n, K, K_i, betas, alpha, C, b, c, B, w, str(n)+'nodes.txt', show_impact_flow = True)
+    # write_outputs(G, n, K, K_i, betas, alpha, C, b, c, B, w, str(n)+'nodes.txt', show_impact_flow = True)
 

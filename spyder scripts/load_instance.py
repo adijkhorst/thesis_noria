@@ -139,7 +139,7 @@ def create_network(line_layer_path, plot = 0):
 
 
 
-def MIP_input(year, max_dist_nodes, random_wind = False):
+def MIP_input(year, max_dist_nodes, random_wind = False, version_alpha = '25maxbeta'):
     line_layer_path = layers_folder + '\\delft_final_network_exploded_d'+ str(max_dist_nodes)+'.geojson'
     nodes_layer_path = layers_folder + '\\final_network_nodes_attributes_d'+ str(max_dist_nodes)+'.geojson'
 
@@ -193,28 +193,34 @@ def MIP_input(year, max_dist_nodes, random_wind = False):
             diagB = np.eye(n)
             diagB[i,i] = 1 - betas[i,k]
             M2[i,k] = (b.T @ np.linalg.inv(np.eye(n)- diagB @ C))[i]
-    
-    
-    alpha = n * [np.min((betas*M2)[(betas*M2) > 0])]
+
+    if version_alpha == '25maxbeta':
+        alpha = n * [0.25*np.max((betas*M2)[(betas*M2) > 0])]
+
+    else:
+        alpha = n * [np.min((betas*M2)[(betas*M2) > 0])]
 
     return G, n, K, K_i, betas, alpha, C, b, c, B, w
 
 
 #%%
 
-def write_outputs(G, n, K, K_i, betas, alpha, C, b, c, B, w, filename, show_impact_flow = False):
+def write_outputs(G, n, K, K_i, betas, alpha, C, b, c, Bmax, w, filename, show_impact_flow = False):
 
-    with open('308nodes_solutions.txt') as f:
-    # with open('522nodes_solutions.txt') as f:
+    # with open('308nodes_solutions.txt') as f:
+    with open('522nodes_solutions.txt') as f:
+    # with open('622nodes_solutions.txt') as f:
         fixed_solutions = f.readlines()
     fixed_solutions = [eval(line.strip()) for line in fixed_solutions]
 
     # only necessary for fixed flow of base situation in new situation with different amount of nodes
 
-    if n != 308:
-        with open('308nodes.txt') as f:
-    # if n != 522:
-    #     with open('522nodes_B2.txt') as f:
+    # if n != 308:
+    #     with open('308nodes.txt') as f:
+    if n != 522:
+        with open('522nodes_B2.txt') as f:
+    # if n != 622:
+    #     with open('622nodes_B2.txt') as f:
             fixed_solutions = f.readlines()
         fixed_solutions_types = [[system[1] for system in eval(line.strip())[-1]] for line in fixed_solutions[1:]]
         fixed_solutions = [[[system[2][0], system[2][1]] for system in eval(line.strip())[-1]] for line in fixed_solutions[1:]]
@@ -228,14 +234,17 @@ def write_outputs(G, n, K, K_i, betas, alpha, C, b, c, B, w, filename, show_impa
     output2 = []
     j = 0
     old_solution = np.zeros((n, K))#n*[K*[0]]
-    for B in np.arange(0.2, 3.2, 0.2):
+    for B in np.arange(0.2, Bmax+0.2, 0.2):
         start = time.time()
-        prob, G, solution, flow_caught, flow_impact_area, old_solution = MDP_exact.solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w, show_impact_flow, old_solution, warm_start = True)
+        prob, G, solution, flow_caught, flow_impact_area, old_solution = MDP_exact.solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w, show_impact_flow, old_solution, warm_start = True, without_gurobi=False, time_limit = 3600)
         end = time.time()
 
+        if end-start > 3600:
+            break
         # _, _, _, flow_caught_fixed_solution = MDP_fix_solution.fixed_solution_caught_flow(G, n, K, K_i, betas, alpha, C, b, c, B, w, x_fixed)
-        if n == 308:
-        # if n == 522:
+        # if n == 308:
+        if n == 522:
+        # if n == 622:
             x_fixed = np.array(fixed_solutions[j])
             flow_caught_fixed_solution = MDP_heuristic.flow_caught(x_fixed, n, betas, alpha, C, b)
         else:
@@ -254,6 +263,7 @@ def write_outputs(G, n, K, K_i, betas, alpha, C, b, c, B, w, filename, show_impa
 
         output += [[B, end-start, value(prob.objective), flow_caught, flow_caught_fixed_solution, flow_impact_area, [[system[0], system[1], label_to_position[system[0]]] for system in solution]]]
 
+
     with open(filename, 'w+') as f:
         # write elements of list
         for items in output:
@@ -261,10 +271,12 @@ def write_outputs(G, n, K, K_i, betas, alpha, C, b, c, B, w, filename, show_impa
         print("File written successfully")
     f.close()
 
-    if n != 308:
-        with open(str(n)+'nodes_fixed_solutions.txt', 'w+') as f:
-    # if n != 522:
-    #     with open(str(n)+'nodes_fixed_solutions_d60.txt', 'w+') as f:
+    # if n != 308:
+        # with open(str(n)+'nodes_fixed_solutions.txt', 'w+') as f:
+    if n != 522:
+        with open(str(n)+'nodes_fixed_solutions_d60.txt', 'w+') as f:
+    # if n != 622:
+    #     with open(str(n)+'nodes_fixed_solutions_d50.txt', 'w+') as f:
             # write elements of list
             for items in output2:
                 f.write('%s\n' %items)
@@ -317,6 +329,8 @@ def write_outputs_warm_heuristic(G, n, K, K_i, betas, alpha, C, b, c, B, w, file
             output2 += [[new_node_locations[i] for i in col_ind]]
         j+= 1
 
+        if end-start > 3600:
+            break
 
         output += [[B, end-start, value(prob.objective), flow_caught, flow_caught_fixed_solution, flow_impact_area, [[system[0], system[1], label_to_position[system[0]]] for system in solution]]]
 
@@ -336,16 +350,16 @@ def write_outputs_warm_heuristic(G, n, K, K_i, betas, alpha, C, b, c, B, w, file
         f.close()
 
 
-def write_outputs_heuristic(G, n, K, K_i, betas, alpha, C, b, c, B, w, filename):
+def write_outputs_heuristic(G, n, K, K_i, betas, alpha, C, b, c, Bmax, w, filename):
 
-    with open('308nodes_solutions.txt') as f:
+    with open('runs_different_n/compared_n308d100/308nodes_solutions.txt') as f:
         fixed_solutions = f.readlines()
     fixed_solutions = [eval(line.strip()) for line in fixed_solutions]
 
     # only necessary for fixed flow of base situation in new situation with different amount of nodes
 
     if n != 308:
-        with open('308nodes.txt') as f:
+        with open('runs_different_n/compared_n308d100/308nodes.txt') as f:
             fixed_solutions = f.readlines()
         fixed_solutions_types = [[system[1] for system in eval(line.strip())[-1]] for line in fixed_solutions[1:]]
         fixed_solutions = [[[system[2][0], system[2][1]] for system in eval(line.strip())[-1]] for line in fixed_solutions[1:]]
@@ -358,7 +372,7 @@ def write_outputs_heuristic(G, n, K, K_i, betas, alpha, C, b, c, B, w, filename)
     output = [['budget', 'runtime', 'objective_value', 'flow_caught_optimal', 'flow_caught_fixed_solution', 'flow_impact_area', ['solution']]]
     output2 = []
     j = 0
-    for B in np.arange(0.2, 2.2, 0.2):
+    for B in np.arange(0.2, Bmax+0.2, 0.2):
         start = time.time()
         x, objective, solution = MDP_heuristic.MDP_heuristic(n, K, K_i, betas, alpha, C, b, c, B, w)
         end = time.time()
@@ -380,10 +394,11 @@ def write_outputs_heuristic(G, n, K, K_i, betas, alpha, C, b, c, B, w, filename)
             output2 += [[new_node_locations[i] for i in col_ind]]
         j+= 1
 
-
+        if end-start > 3600:
+            break
         output += [[B, end-start, objective, flow_caught, flow_caught_fixed_solution, flow_caught_impact_area, [[system[0], system[1], label_to_position[system[0]]] for system in solution]]]
 
-    with open('heuristic_'+filename, 'w+') as f:
+    with open('heuristic_v2_'+filename, 'w+') as f:
         # write elements of list
         for items in output:
             f.write('%s\n' %items)
@@ -396,12 +411,13 @@ if __name__ == '__main__':
     ### TEST DELFT
     # np.random.seed(0)
 
-    year = 2022
-    MAX_DIST_NODES = 50
-    G, n, K, K_i, betas, alpha, C, b, c, B, w = MIP_input(year, MAX_DIST_NODES)
-    for index, node in enumerate(G.nodes()):
-        nx.set_node_attributes(G, {node: {'impact_factor': alpha[index]}})
-    write_outputs(G, n, K, K_i, betas, alpha, C, b, c, B, w, str(n)+'nodes.txt', show_impact_flow = True)
+    # year = 2022
+    # MAX_DIST_NODES = 60
+    # Bmax = 2
+    # G, n, K, K_i, betas, alpha, C, b, c, B, w = MIP_input(year, MAX_DIST_NODES)
+    # for index, node in enumerate(G.nodes()):
+    #     nx.set_node_attributes(G, {node: {'impact_factor': alpha[index]}})
+    # write_outputs(G, n, K, K_i, betas, alpha, C, b, c, Bmax, w, str(n)+'nodes.txt', show_impact_flow = True)
 
     # start = time.time()
     # prob, G, solution, folow_caught = solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w)
@@ -429,8 +445,8 @@ if __name__ == '__main__':
 
 #%% second version, d = 60, n = 522 as fixed situation, third with d=50 as fixed situation to check
     ## write output file with all fixed solutions that will be used to compare sensitivity analysis
-    # G, n, K, K_i, betas, alpha, C, b, c, B, w = MIP_input(2022, 60, random_wind = False)
-    G, n, K, K_i, betas, alpha, C, b, c, B, w = MIP_input(2022, 50, random_wind = False)
+    G, n, K, K_i, betas, alpha, C, b, c, B, w = MIP_input(2022, 60, random_wind = False)
+    # G, n, K, K_i, betas, alpha, C, b, c, B, w = MIP_input(2022, 50, random_wind = False)
 
     output = []
     for B in np.arange(0.2, 2.2, 0.2):
@@ -439,7 +455,7 @@ if __name__ == '__main__':
         end = time.time()
         output += [x_fixed]
 
-    with open('622nodes_solutions.txt', 'w+') as f:
+    with open('522nodes_solutions.txt', 'w+') as f:
     # with open('without_gurobi'+str(n)+'nodes.txt', 'w+') as f:
         # write elements of list
         for items in output:
@@ -469,10 +485,10 @@ if __name__ == '__main__':
     # f.close()
 
     #%% test runtime of exact, heuristic and exact with warm start using heuristic WITHOUT GUROBI
-    year = 2022
-    MAX_DIST_NODES = 100
-    G, n, K, K_i, betas, alpha, C, b, c, B, w = MIP_input(year, MAX_DIST_NODES)
-    B = 2
+    # year = 2022
+    # MAX_DIST_NODES = 100
+    # G, n, K, K_i, betas, alpha, C, b, c, B, w = MIP_input(year, MAX_DIST_NODES)
+    # B = 2
 
     # start_exact = time.time()
     # prob, G, solution, flow_caught, flow_impact_area, old_solution = MDP_exact.solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w, False, [], False, without_gurobi = True)
@@ -495,11 +511,11 @@ if __name__ == '__main__':
     # G, n, K, K_i, betas, alpha, C, b, c, B, w = MIP_input(year, MAX_DIST_NODES)
     # B = 2.6
 
-    start_exact = time.time()
-    prob, G, solution, flow_caught, flow_impact_area, old_solution = MDP_exact.solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w)
-    print(prob.solutionTime)
-    end_exact = time.time()
-    print('runtime exact: ', end_exact-start_exact)
+    # start_exact = time.time()
+    # prob, G, solution, flow_caught, flow_impact_area, old_solution = MDP_exact.solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w)
+    # print(prob.solutionTime)
+    # end_exact = time.time()
+    # print('runtime exact: ', end_exact-start_exact)
 
     # start_heur = time.time()
     # x, objective, solution = MDP_heuristic.MDP_heuristic(n, K, K_i, betas, alpha, C, b, c, B, w)
