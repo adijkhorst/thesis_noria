@@ -1,8 +1,0 @@
-{
-"type": "FeatureCollection",
-"name": "sensitive_area",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::28992" } },
-"features": [
-{ "type": "Feature", "properties": { "id": null, "full_id": null, "osm_id": null, "osm_type": null, "water": null, "type": null, "natural": null, "max_boat_width": null }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ 84453.007857121963752, 446856.725780769833364 ], [ 85048.405813740362646, 447306.2512380167027 ], [ 84997.796987427806016, 447526.548481965553947 ], [ 84426.214949074128526, 448163.624295547197107 ], [ 83997.528420308881323, 447862.948327454912942 ], [ 83997.528420308881323, 447865.925317238026764 ], [ 84453.007857121963752, 446856.725780769833364 ] ] ] ] } }
-]
-}
