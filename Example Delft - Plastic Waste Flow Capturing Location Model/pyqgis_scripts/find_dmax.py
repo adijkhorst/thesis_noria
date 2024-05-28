@@ -6,7 +6,7 @@ def myround(x, base=5):
     return base * round(x/base)
 
 def find_dmax():
-    max_gurobi_nodes = 400 # check this!
+    max_gurobi_nodes = 375 # approximately, depends on number of locations where no catching system is allowed
     
     dirname = os.path.dirname(__file__)
     layers_folder = os.path.normpath(os.path.join(dirname, '../'))
@@ -31,7 +31,7 @@ def find_dmax():
 
     while done == False:
         test_d += 5
-        nodes_count = 0
+        nodes_count = corner_nodes
         for edge in lengths:
             nodes_count += 2*(edge//test_d)
         if nodes_count <= max_gurobi_nodes:

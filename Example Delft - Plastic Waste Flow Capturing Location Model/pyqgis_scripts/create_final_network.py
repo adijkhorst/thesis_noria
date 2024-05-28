@@ -7,10 +7,14 @@ import numpy as np
 import shutil
 import os
 
+current_directory = QgsProject.instance().readPath("./")
+
+sys.path.insert(1, current_directory + "\\pyqgis_scripts")
 import find_dmax
 MAX_DIST_NODES = find_dmax.find_dmax()
 
-current_directory = os.getcwd()
+# current_directory = os.getcwd()
+
 original_layer_path = current_directory + "\\waterways_simplified.geojson"
 new_layer_path = current_directory + "\\final_network.geojson"
 

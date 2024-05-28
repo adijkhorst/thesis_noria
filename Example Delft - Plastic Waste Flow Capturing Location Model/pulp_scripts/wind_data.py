@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import os
 
 def get_wind_directions(year):
-    wind_data_path = os.getcwd()+'\\wind_data.txt'
+    wind_data_path = os.path.dirname(__file__)+'\\wind_data.txt'
 
     df = pd.read_csv(wind_data_path, skiprows=50)
     

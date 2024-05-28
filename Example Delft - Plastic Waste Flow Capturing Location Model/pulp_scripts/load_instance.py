@@ -185,6 +185,7 @@ def MIP_input(year, max_dist_nodes):
 ### choose the alpha!
     alpha = n * [0.25*np.max((betas*M2)[(betas*M2) > 0])]
     # alpha = n * [np.min((betas*M2)[(betas*M2) > 0])]
+    # alpha = n*[0]
 
     return G, n, K, K_i, betas, alpha, C, b, c, B, w
 
@@ -195,13 +196,13 @@ def write_outputs(G, n, K, K_i, betas, alpha, C, b, c, B, w, show_impact_flow = 
 
     label_to_position = {value: key for key, value in nx.get_node_attributes(G, 'label').items()}
     
-    output = [['budget', 'runtime', 'objective_value', 'flow_caught_optimal', 'flow_impact_area', ['solution']]]
+    output = [['budget', 'runtime', 'objective_value', 'flow_caught_optimal', 'flow_impact_area', 'flow_total_area', ['solution']]]
 
     start = time.time()
-    prob, G, solution, flow_caught, flow_impact_area, _ = MDP_exact.solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w, show_impact_flow, [], warm_start = False, without_gurobi=False, time_limit = 3600)
+    prob, G, solution, flow_caught, flow_impact_area, flow_total_area, _ = MDP_exact.solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w, show_impact_flow, [], warm_start = False, without_gurobi=False, time_limit = 3600)
     end = time.time()
 
-    output += [[B, end-start, value(prob.objective), flow_caught, flow_impact_area, [[system[0], system[1], label_to_position[system[0]]]+system[2:] for system in solution]]]
+    output += [[B, end-start, value(prob.objective), flow_caught, flow_impact_area, flow_total_area, [[system[0], system[1], label_to_position[system[0]]]+system[2:] for system in solution]]]
 
 
     with open('solution.txt', 'w+') as f:
@@ -216,14 +217,14 @@ def write_outputs_warm_heuristic(G, n, K, K_i, betas, alpha, C, b, c, B, w, show
 
     label_to_position = {value: key for key, value in nx.get_node_attributes(G, 'label').items()}
     
-    output = [['budget', 'runtime', 'objective_value', 'flow_caught_optimal', 'flow_impact_area', ['solution']]]
+    output = [['budget', 'runtime', 'objective_value', 'flow_caught_optimal', 'flow_impact_area', 'flow_total_area', ['solution']]]
 
     x_heur, objective, solution = MDP_heuristic.MDP_heuristic(n, K, K_i, betas, alpha, C, b, c, B, w)
     start = time.time()
-    prob, G, solution, flow_caught, flow_impact_area, _ = MDP_exact.solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w, show_impact_flow, x_heur, warm_start = True)
+    prob, G, solution, flow_caught, flow_impact_area, flow_total_area, _ = MDP_exact.solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w, show_impact_flow, x_heur, warm_start = True)
     end = time.time()
 
-    output += [[B, end-start, value(prob.objective), flow_caught, flow_impact_area, [[system[0], system[1], label_to_position[system[0]]]+system[2:] for system in solution]]]
+    output += [[B, end-start, value(prob.objective), flow_caught, flow_impact_area, flow_total_area, [[system[0], system[1], label_to_position[system[0]]]+system[2:] for system in solution]]]
 
     with open('solution.txt', 'w+') as f:
         # write elements of list
@@ -236,7 +237,7 @@ def write_outputs_warm_heuristic(G, n, K, K_i, betas, alpha, C, b, c, B, w, show
 def write_outputs_heuristic(G, n, K, K_i, betas, alpha, C, b, c, B, w):
     label_to_position = {value: key for key, value in nx.get_node_attributes(G, 'label').items()}
     
-    output = [['budget', 'runtime', 'objective_value', 'flow_caught_optimal', 'flow_impact_area', ['solution']]]
+    output = [['budget', 'runtime', 'objective_value', 'flow_caught_optimal', 'flow_impact_area', 'flow_total_area', ['solution']]]
     start = time.time()
     x, objective, solution = MDP_heuristic.MDP_heuristic(n, K, K_i, betas, alpha, C, b, c, B, w)
     end = time.time()

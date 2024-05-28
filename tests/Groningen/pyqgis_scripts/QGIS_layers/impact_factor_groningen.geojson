@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "impact_factor_groningen",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::28992" } },
+"features": [
+{ "type": "Feature", "properties": { "full_id": "w94068476", "osm_id": "94068476", "osm_type": "way", "building": null, "bridge:support": null, "seasonal": null, "height": null, "layer": null, "place": null, "harbour": null, "website": null, "seamark:type": null, "seamark:name": null, "seamark:harbour:category": null, "leisure": null, "ref:rce": null, "historic": null, "heritage:operator": null, "heritage": null, "image": null, "salt": null, "intermittent": null, "leaf_type": null, "landuse": null, "sport": null, "wikipedia": null, "wikidata": null, "alt_name": null, "name": "Zuiderhaven", "water": null, "type": null, "natural": "water", "id": null, "_uid_": null, "layer_3": null, "full_id_2": null, "osm_id_2": null, "osm_type_2": null, "natural_2": null, "layer_2": null, "image_2": null, "water_2": null, "name_2": null, "max_boat_width": 4.0, "impact_factor": 0.1 }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ 233215.279744810133707, 581327.843807790894061 ], [ 233096.863152632984566, 582172.356284684035927 ], [ 233905.561830916180043, 582477.351214779424481 ], [ 234423.128985017421655, 581839.634542761836201 ], [ 234540.96793528154376, 581516.155071448534727 ], [ 234077.699121007841313, 581216.936560483649373 ], [ 233929.245149351569125, 581195.563809700543061 ], [ 233822.381395435571903, 581177.656910395715386 ], [ 233378.174764292896725, 581206.539006048580632 ], [ 233215.279744810133707, 581327.843807790894061 ] ] ] ] } }
+]
+}

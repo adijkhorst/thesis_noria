@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "water_vegetation_groningen",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::28992" } },
+"features": [
+
+]
+}

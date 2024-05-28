@@ -10,6 +10,7 @@ import find_dmax
 import sys
 import os
 layers_folder = os.getcwd()
+layers_folder = QgsProject.instance().readPath("./")
 sys.path.insert(1, layers_folder + "\\pulp_scripts")
 import wind_data
 
@@ -347,7 +348,7 @@ def sensitive_area(nodes_layer, impact_factor_layer_path, G):
 MAX_DIST_NODES = find_dmax.find_dmax()
 
 final_network_layer_path = layers_folder +"\\final_network_exploded_d"+str(MAX_DIST_NODES)+".geojson"
-final_network_layer = QgsVectorLayer(final_network_layer_path, "final_network", "ogr")
+final_network_layer = iface.addVectorLayer(final_network_layer_path, "final_network", "ogr")
 
 nodes_attributes_layer_path = layers_folder + "\\final_network_nodes_attributes_d"+str(MAX_DIST_NODES)+".geojson"
 nodes_attributes_layer = create_nodes_layer(final_network_layer_path, nodes_attributes_layer_path)

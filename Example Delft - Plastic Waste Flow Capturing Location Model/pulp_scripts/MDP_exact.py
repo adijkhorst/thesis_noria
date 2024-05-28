@@ -111,7 +111,9 @@ def solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w, show_impact_flow = Fals
             if G.nodes[node]['impact_factor'] > 0.0:
                 impact_area_flow = impact_area_flow + value(v1[index]) + sum((1-betas[index][k])*value(v2[index][k]) for k in range(K))
                 impact_area[index] = True
-        return prob, G, solution_nodes, flow_caught, impact_area_flow, x
+
+        total_area_flow = sum(value(v1[i]) for i in range(n)) + sum((1-betas[index][k])*value(v2[index][k]) for k in range(K))
+        return prob, G, solution_nodes, flow_caught, impact_area_flow, total_area_flow, x
     else:
-        return prob, G, solution_nodes, flow_caught, 0, x
+        return prob, G, solution_nodes, flow_caught, 0, 0, x
 

@@ -17,7 +17,7 @@ attributes_layer = QgsVectorLayer(folder+'\\final_network_nodes_attributes_d'+st
 
 temp_layer.startEditing()
 layer_provider = temp_layer.dataProvider()
-layer_provider.addAttributes([QgsField('type', QVariant.Int), QgsField('angle', QVariant.Double)])
+layer_provider.addAttributes([QgsField('type', QVariant.Int), QgsField('angle', QVariant.Double), QgsField('catching_probability', QVariant.Double), QgsField('plastic_flow', QVariant.Double), QgsField('flow_caught', QVariant.Double)])
 temp_layer.commitChanges()
 
 
@@ -33,10 +33,39 @@ for index, line in enumerate(run1[1:]):
         new_feature = QgsFeature()
         new_feature.setGeometry(QgsGeometry.fromPointXY(point))
         type = catching_system[1]
-        new_feature.setAttributes([type, angle])#[:len(test_layer.attributeList())])
+        new_feature.setAttributes([type, angle, catching_system[3], catching_system[4], round(catching_system[5], 3)])#[:len(test_layer.attributeList())])
         temp_layer.addFeature(new_feature, QgsFeatureSink.FastInsert)
 temp_layer.updateExtents()
 temp_layer.commitChanges()
 temp_layer.endEditCommand()
 
 QgsProject.instance().addMapLayer(temp_layer)
+
+##### PLOT PLASTIC WASTE FLOW IN OLD NODES_ATTRIBUTES LAYER
+import networkx as nx
+
+nodes_layer_path = folder + "\\final_network_nodes_attributes_d"+str(MAX_DIST_NODES)+".geojson"
+
+nodes_layer = QgsVectorLayer(nodes_layer_path, 'nodes_attributes_d'+str(MAX_DIST_NODES), "ogr")
+QgsProject.instance().addMapLayer(nodes_layer)
+name_list = [field.name() for field in nodes_layer.fields()]
+if not 'plastic_flow' in name_list:
+    nodes_layer.startEditing()
+    layer_provider = nodes_layer.dataProvider()
+    layer_provider.addAttributes([QgsField('plastic_flow', QVariant.Double)])
+    nodes_layer.commitChanges()
+
+name_list = [field.name() for field in nodes_layer.fields()]
+plastic_flow_id = name_list.index("plastic_flow")
+
+G = nx.read_gml(folder + "\\pulp_scripts\\solution.gml")
+
+nodes_layer.startEditing()
+for feature in nodes_layer.getFeatures():
+    coords = '('+str(feature.geometry().asPoint().x())+','+str(feature.geometry().asPoint().y())+')'
+    nodes_layer.changeAttributeValue(feature.id(), plastic_flow_id, float(G.nodes[coords]['plastic_flow']))
+
+# # Refresh map
+nodes_layer.commitChanges()
+nodes_layer.endEditCommand()
+iface.mapCanvas().refresh()

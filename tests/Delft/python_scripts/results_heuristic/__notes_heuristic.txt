@@ -1,0 +1,3 @@
+heuristic_v2 was run on Noria PC with new situation: 
+- changed objective function that was being evaluated at each iteration of heuristic, no longer with term w*costs
+- also changed objective function such that negative objective values are also allowed
