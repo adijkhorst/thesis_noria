@@ -9,11 +9,9 @@ def find_dmax():
     max_gurobi_nodes = 375 # approximately, depends on number of locations where no catching system is allowed
     
     dirname = os.path.dirname(__file__)
-    layers_folder = os.path.normpath(os.path.join(dirname, '../'))
+    layers_folder = os.path.normpath(os.path.join(dirname, '../'))+"\\QGIS_layers"
     waterways_layer_path = layers_folder + "\\waterways_simplified.geojson"
     corner_nodes_layer_path = layers_folder + "\\corner_nodes.geojson"
-# gdf = gpd.read_file("C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/waterway_canal_delft_exploded_fewnodes.geojson")
-# gdf2 = gpd.read_file("C:/Users/Anne-Fleur/OneDrive - Noria/Documents - Noria Internship/Anne Fleur/1. Working Folder/3. GIS/Network FCLM/corner_vertices_delft.geojson")
 
     gdf = gpd.read_file(waterways_layer_path)
     gdf2 = gpd.read_file(corner_nodes_layer_path)

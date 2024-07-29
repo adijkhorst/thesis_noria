@@ -72,10 +72,15 @@ def solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w, show_impact_flow = Fals
 
     solution_nodes = []
     print('Catching systems located at:')
-    for i in prob.variables():
-        if i.varValue == 1.0:
-            print(i, i.varValue)
-            solution_nodes += [[int(str(i)[1:-1]), int(str(i)[-1])]]
+    for i in range(n):
+        for k in range(K):
+            if xs[i][k].varValue == 1.0:
+                print(xs[i][k], xs[i][k].varValue, 'flow caught= ', betas[i][k]*v2[i][k].varValue)
+                solution_nodes += [[int(str(xs[i][k])[1:-1]), int(str(xs[i][k])[-1]), betas[i][k], v2[i][k].varValue, betas[i][k]*v2[i][k].varValue]]
+    # for i in prob.variables():
+    #     if i.varValue == 1.0:
+    #         print(i, i.varValue)
+    #         solution_nodes += [[int(str(i)[1:-1]), int(str(i)[-1])]]
     
     print(value(prob.objective))
     flow_caught = value(sum(betas[i,k]*v2[i][k] for i in range(n) for k in range(K)))
@@ -106,7 +111,9 @@ def solve_MDP(G, n, K, K_i, betas, alpha, C, b, c, B, w, show_impact_flow = Fals
             if G.nodes[node]['impact_factor'] > 0.0:
                 impact_area_flow = impact_area_flow + value(v1[index]) + sum((1-betas[index][k])*value(v2[index][k]) for k in range(K))
                 impact_area[index] = True
-        return prob, G, solution_nodes, flow_caught, impact_area_flow, x
+
+        total_area_flow = sum(value(v1[i]) for i in range(n)) + sum((1-betas[index][k])*value(v2[index][k]) for k in range(K))
+        return prob, G, solution_nodes, flow_caught, impact_area_flow, total_area_flow, x
     else:
-        return prob, G, solution_nodes, flow_caught, 0, x
+        return prob, G, solution_nodes, flow_caught, 0, 0, x
 

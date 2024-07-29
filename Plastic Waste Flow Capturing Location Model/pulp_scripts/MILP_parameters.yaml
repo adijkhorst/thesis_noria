@@ -1,0 +1,26 @@
+### costs and accuracy of the 2 types of catching systems and total budget
+#
+# The first element  in each list corresponds to active catching systems (CirCleaner) and the second element in each list corresponds to passive catching systems (CanalCleaner/plastic litter trap). Choose the budget such that it represents how many active/passive systems can be placed in total.
+
+costs: [1, 0.2]
+accuracy: [0.98, 0.85]
+
+budget: 0.6
+
+### wind year
+wind_year: 2022
+
+
+### tests for value of alpha
+# default start values: [0.1, 0.5, 1, 5, 10]
+# the amount of flow caught for different impact factor for sensitive areas and catching early is first plotted for different values of alpha, before deciding which value is best for the final model. The following different values are tested:
+tests_catching_early: [0.1, 0.5, 1, 5, 10]
+tests_sensitive_area: [0.1, 0.5, 1, 5, 10]
+
+
+
+### final setting of alpha and w parameters
+impact_factor_catching_early: 0
+impact_factor_sensitive_areas: 0
+weight_costs: 0.001
+

@@ -1,11 +1,10 @@
 import numpy as np
-import os
 
-current_directory = os.getcwd()
+current_directory = QgsProject.instance().readPath("./")
 sys.path.insert(1, current_directory + "\\pulp_scripts")
 import wind_data
 
-polygon_layer_path = current_directory + "\\waterpolygons.geojson"
+polygon_layer_path = current_directory + "\\QGIS_layers\\waterpolygons.geojson"
 
 def write_sharp_corners_file(polygon_layer_path):
     # Load layers

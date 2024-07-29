@@ -5,15 +5,20 @@
 import numpy as np
 import networkx as nx
 import geopandas as gpd
-import find_dmax
+import yaml
 
 import sys
-import os
-layers_folder = os.getcwd()
-sys.path.insert(1, layers_folder + "\\pulp_scripts")
+layers_folder = QgsProject.instance().readPath("./")+"\\QGIS_layers"
+sys.path.insert(1, QgsProject.instance().readPath("./") + "\\pyqgis_scripts")
+import find_dmax
+sys.path.insert(1, QgsProject.instance().readPath("./") + "\\pulp_scripts")
 import wind_data
 
-RADIUS_SOURCES_IMPACT = 100
+os.chdir(QgsProject.instance().readPath("./") + "\\pyqgis_scripts")
+with open('data_parameters.yaml', 'r') as file:
+    data = yaml.safe_load(file)
+
+
 
 def create_nodes_layer(final_network_layer_path, nodes_attributes_layer_path):
     nodes_attributes_layer = processing.run("native:extractvertices", {'INPUT': final_network_layer_path,
@@ -282,9 +287,7 @@ def stuck_probabilities(nodes_layer, G, shore_layer_path, MAX_DIST_NODES, water_
         if sum(1 for _ in G.successors(position)) == 1:
             for x in G.predecessors(position):
                 forward_prob = G[x][position]['transition_probability']
-            # for x in G.successors(position):
-                # G[position][x]['transition_probability'] = 1-forward_prob*0.5
-            dead_ends_prob = 0.5*forward_prob
+            dead_ends_prob = data['dead_ends_prob']*forward_prob #0.5
         else:
             dead_ends_prob = 0
         
@@ -292,18 +295,18 @@ def stuck_probabilities(nodes_layer, G, shore_layer_path, MAX_DIST_NODES, water_
         #check close sharp corners
         geom_buffer = feature.geometry().buffer(RADIUS_SHORE_IMPACT, 10)
         close_sharp_corners = np.array([feat['wind_prob'] for feat in corners_layer.getFeatures() if (feat.geometry().intersects(geom_buffer) and feat['sharp']==1)])
-        sharp_corners_prob = 1-np.prod(1-0.5*close_sharp_corners)
+        sharp_corners_prob = 1-np.prod(1-data['sharp_corners_prob']*close_sharp_corners) #0.5
         
         #check if shore types close to node are reasons to get stuck (houseboats or vegetation)
         close_shore_features = [feat for feat in shore_layer.getFeatures() if feat.geometry().intersects(geom_buffer)]
         for feat in close_shore_features:
-            shore_boats_prob = 0.3 if feat['type'] == 'houseboat' else 0
-            shore_veg_prob = 0.3 if feat['type'] == 'vegetation' else 0
+            shore_boats_prob = data['shore_boats_prob'] if feat['type'] == 'houseboat' else 0 #0.3
+            shore_veg_prob = data['shore_veg_prob'] if feat['type'] == 'vegetation' else 0 #0.3
             # ALSO ADD MOORING SPOTS FOR TEMPORARY BOATS
             
         
         #check if water vegetation
-        water_veg_prob = 0.45 if len(index.intersects(feature.geometry().boundingBox()))>0 else 0
+        water_veg_prob = data['water_veg_prob'] if len(index.intersects(feature.geometry().boundingBox()))>0 else 0 #0.45
             
         
         stuck_prob = 1 - np.prod(1-np.array([dead_ends_prob, sharp_corners_prob, shore_boats_prob, shore_veg_prob, water_veg_prob]))
@@ -347,12 +350,12 @@ def sensitive_area(nodes_layer, impact_factor_layer_path, G):
 MAX_DIST_NODES = find_dmax.find_dmax()
 
 final_network_layer_path = layers_folder +"\\final_network_exploded_d"+str(MAX_DIST_NODES)+".geojson"
-final_network_layer = QgsVectorLayer(final_network_layer_path, "final_network", "ogr")
+final_network_layer = iface.addVectorLayer(final_network_layer_path, "final_network", "ogr")
 
 nodes_attributes_layer_path = layers_folder + "\\final_network_nodes_attributes_d"+str(MAX_DIST_NODES)+".geojson"
 nodes_attributes_layer = create_nodes_layer(final_network_layer_path, nodes_attributes_layer_path)
 
-RADIUS_SOURCES_IMPACT = 100
+RADIUS_SOURCES_IMPACT = data['RADIUS_SOURCES_IMPACT'] #100
 sources_layer_path = layers_folder + "\\sources.geojson"
 initial_probabilities(nodes_attributes_layer, sources_layer_path, RADIUS_SOURCES_IMPACT)
 
@@ -364,7 +367,7 @@ polygon_layer = QgsVectorLayer(polygon_layer_path, '', "ogr")
 
 max_boat_width_path = layers_folder + "\\max_boat_width.geojson"
 max_boat_width_layer = QgsVectorLayer(max_boat_width_path, '', "ogr")
-MAX_CANAL_WIDTH = 100
+MAX_CANAL_WIDTH = data['MAX_CANAL_WIDTH']
 
 catching_probabilities(nodes_attributes_layer, polygon_layer, max_boat_width_layer, MAX_CANAL_WIDTH)
 

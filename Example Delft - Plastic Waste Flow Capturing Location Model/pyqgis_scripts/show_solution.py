@@ -1,5 +1,3 @@
-import os
-folder = os.getcwd()
 folder = QgsProject.instance().readPath("./")
 sys.path.insert(1, folder + "\\pyqgis_scripts")
 import find_dmax
@@ -13,7 +11,7 @@ with open(solution_file_path) as f:
 run1 = [eval(line.strip()) for line in run1]
 
 temp_layer = QgsVectorLayer("Point?crs=EPSG:28992","solution_layer","memory")
-attributes_layer = QgsVectorLayer(folder+'\\final_network_nodes_attributes_d'+str(int(MAX_DIST_NODES))+'.geojson', '', 'ogr')
+attributes_layer = QgsVectorLayer(folder+'\\QGIS_layers\\final_network_nodes_attributes_d'+str(int(MAX_DIST_NODES))+'.geojson', '', 'ogr')
 
 temp_layer.startEditing()
 layer_provider = temp_layer.dataProvider()
@@ -44,7 +42,7 @@ QgsProject.instance().addMapLayer(temp_layer)
 ##### PLOT PLASTIC WASTE FLOW IN OLD NODES_ATTRIBUTES LAYER
 import networkx as nx
 
-nodes_layer_path = folder + "\\final_network_nodes_attributes_d"+str(MAX_DIST_NODES)+".geojson"
+nodes_layer_path = folder + "\\QGIS_layers\\final_network_nodes_attributes_d"+str(MAX_DIST_NODES)+".geojson"
 
 nodes_layer = QgsVectorLayer(nodes_layer_path, 'nodes_attributes_d'+str(MAX_DIST_NODES), "ogr")
 QgsProject.instance().addMapLayer(nodes_layer)

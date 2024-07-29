@@ -1,0 +1,7 @@
+MAX_CANAL_WIDTH : 100
+RADIUS_SOURCES_IMPACT : 100
+dead_ends_prob : 0.5
+sharp_corners_prob : 0.5
+shore_boats_prob : 0.3
+shore_veg_prob : 0.3
+water_veg_prob : 0.45

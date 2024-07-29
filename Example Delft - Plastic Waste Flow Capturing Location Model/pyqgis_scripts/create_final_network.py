@@ -1,11 +1,9 @@
 ### input: geojson with simplified waterlines
 ### output: layer with extra nodes and edges for directed network
 ## new attribute: angle of water segment
-
 from math import *
 import numpy as np
 import shutil
-import os
 
 current_directory = QgsProject.instance().readPath("./")
 
@@ -13,10 +11,8 @@ sys.path.insert(1, current_directory + "\\pyqgis_scripts")
 import find_dmax
 MAX_DIST_NODES = find_dmax.find_dmax()
 
-# current_directory = os.getcwd()
-
-original_layer_path = current_directory + "\\waterways_simplified.geojson"
-new_layer_path = current_directory + "\\final_network.geojson"
+original_layer_path = current_directory + "\\QGIS_layers\\waterways_simplified.geojson"
+new_layer_path = current_directory + "\\QGIS_layers\\final_network.geojson"
 
 shutil.copy(original_layer_path, new_layer_path)
 line_layer = QgsVectorLayer(new_layer_path, "final_network", "ogr")
